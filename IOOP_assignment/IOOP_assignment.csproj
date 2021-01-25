@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LibrarianHomepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrarianHomepage.Designer.cs">
+      <DependentUpon>LibrarianHomepage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -67,6 +73,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrarianHomepage.resx">
+      <DependentUpon>LibrarianHomepage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentHomepage.resx">
       <DependentUpon>StudentHomepage.cs</DependentUpon>
@@ -100,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_edited.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pending.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

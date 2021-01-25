@@ -29,9 +29,11 @@ namespace IOOP_assignment
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formStudentHomepage));
             this.lblWelcome_SHomepage = new System.Windows.Forms.Label();
             this.lblPrompt_SHomepage = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnLogout_SHomepage = new System.Windows.Forms.Button();
             this.btnRequestStatus_SHomepage = new System.Windows.Forms.Button();
             this.btnModifyReservation_SHomepage = new System.Windows.Forms.Button();
@@ -44,7 +46,7 @@ namespace IOOP_assignment
             // 
             this.lblWelcome_SHomepage.AutoSize = true;
             this.lblWelcome_SHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome_SHomepage.Location = new System.Drawing.Point(44, 48);
+            this.lblWelcome_SHomepage.Location = new System.Drawing.Point(45, 45);
             this.lblWelcome_SHomepage.Name = "lblWelcome_SHomepage";
             this.lblWelcome_SHomepage.Size = new System.Drawing.Size(311, 37);
             this.lblWelcome_SHomepage.TabIndex = 0;
@@ -54,7 +56,7 @@ namespace IOOP_assignment
             // 
             this.lblPrompt_SHomepage.AutoSize = true;
             this.lblPrompt_SHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrompt_SHomepage.Location = new System.Drawing.Point(44, 96);
+            this.lblPrompt_SHomepage.Location = new System.Drawing.Point(45, 96);
             this.lblPrompt_SHomepage.Name = "lblPrompt_SHomepage";
             this.lblPrompt_SHomepage.Size = new System.Drawing.Size(382, 37);
             this.lblPrompt_SHomepage.TabIndex = 1;
@@ -67,10 +69,11 @@ namespace IOOP_assignment
             this.btnLogout_SHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogout_SHomepage.FlatAppearance.BorderSize = 0;
             this.btnLogout_SHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout_SHomepage.Location = new System.Drawing.Point(814, 424);
+            this.btnLogout_SHomepage.Location = new System.Drawing.Point(982, 271);
             this.btnLogout_SHomepage.Name = "btnLogout_SHomepage";
             this.btnLogout_SHomepage.Size = new System.Drawing.Size(225, 225);
             this.btnLogout_SHomepage.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.btnLogout_SHomepage, "Logout");
             this.btnLogout_SHomepage.UseVisualStyleBackColor = true;
             // 
             // btnRequestStatus_SHomepage
@@ -79,10 +82,11 @@ namespace IOOP_assignment
             this.btnRequestStatus_SHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRequestStatus_SHomepage.FlatAppearance.BorderSize = 0;
             this.btnRequestStatus_SHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRequestStatus_SHomepage.Location = new System.Drawing.Point(260, 424);
+            this.btnRequestStatus_SHomepage.Location = new System.Drawing.Point(670, 271);
             this.btnRequestStatus_SHomepage.Name = "btnRequestStatus_SHomepage";
             this.btnRequestStatus_SHomepage.Size = new System.Drawing.Size(225, 225);
             this.btnRequestStatus_SHomepage.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.btnRequestStatus_SHomepage, "Check reservation status");
             this.btnRequestStatus_SHomepage.UseVisualStyleBackColor = true;
             // 
             // btnModifyReservation_SHomepage
@@ -91,10 +95,11 @@ namespace IOOP_assignment
             this.btnModifyReservation_SHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModifyReservation_SHomepage.FlatAppearance.BorderSize = 0;
             this.btnModifyReservation_SHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModifyReservation_SHomepage.Location = new System.Drawing.Point(814, 175);
+            this.btnModifyReservation_SHomepage.Location = new System.Drawing.Point(358, 271);
             this.btnModifyReservation_SHomepage.Name = "btnModifyReservation_SHomepage";
             this.btnModifyReservation_SHomepage.Size = new System.Drawing.Size(225, 225);
             this.btnModifyReservation_SHomepage.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.btnModifyReservation_SHomepage, "Modify reservation");
             this.btnModifyReservation_SHomepage.UseVisualStyleBackColor = true;
             // 
             // btnReserveRoom_SHomepage
@@ -103,16 +108,17 @@ namespace IOOP_assignment
             this.btnReserveRoom_SHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReserveRoom_SHomepage.FlatAppearance.BorderSize = 0;
             this.btnReserveRoom_SHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReserveRoom_SHomepage.Location = new System.Drawing.Point(260, 175);
+            this.btnReserveRoom_SHomepage.Location = new System.Drawing.Point(46, 271);
             this.btnReserveRoom_SHomepage.Name = "btnReserveRoom_SHomepage";
             this.btnReserveRoom_SHomepage.Size = new System.Drawing.Size(225, 225);
             this.btnReserveRoom_SHomepage.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btnReserveRoom_SHomepage, "Reserve a room");
             this.btnReserveRoom_SHomepage.UseVisualStyleBackColor = true;
             // 
             // pbxProfilePic_SHomepage
             // 
             this.pbxProfilePic_SHomepage.Image = ((System.Drawing.Image)(resources.GetObject("pbxProfilePic_SHomepage.Image")));
-            this.pbxProfilePic_SHomepage.Location = new System.Drawing.Point(457, 33);
+            this.pbxProfilePic_SHomepage.Location = new System.Drawing.Point(433, 33);
             this.pbxProfilePic_SHomepage.Name = "pbxProfilePic_SHomepage";
             this.pbxProfilePic_SHomepage.Size = new System.Drawing.Size(100, 100);
             this.pbxProfilePic_SHomepage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,7 +138,7 @@ namespace IOOP_assignment
             this.Controls.Add(this.lblPrompt_SHomepage);
             this.Controls.Add(this.lblWelcome_SHomepage);
             this.Name = "formStudentHomepage";
-            this.Text = "Form2";
+            this.Text = "Homepage";
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_SHomepage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -148,5 +154,6 @@ namespace IOOP_assignment
         private System.Windows.Forms.Button btnModifyReservation_SHomepage;
         private System.Windows.Forms.Button btnRequestStatus_SHomepage;
         private System.Windows.Forms.Button btnLogout_SHomepage;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
