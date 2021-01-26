@@ -41,6 +41,9 @@ namespace IOOP_assignment
             this.btnModifyReservation_LHomepage = new System.Windows.Forms.Button();
             this.btnReserveRoom_LHomepage = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_LHomepage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,11 +156,44 @@ namespace IOOP_assignment
             this.toolTip1.SetToolTip(this.btnReserveRoom_LHomepage, "Reserve a room");
             this.btnReserveRoom_LHomepage.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1114, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 29);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "10:01 PM";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1041, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(186, 29);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "26 January 2021";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1087, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 29);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Wednesday";
+            // 
             // formLibrarianHomepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGenerateReport_LHomepage);
             this.Controls.Add(this.btnStudentRequest_LHomepage);
             this.Controls.Add(this.pbxProfilePic_LHomepage);
@@ -187,5 +223,8 @@ namespace IOOP_assignment
         private System.Windows.Forms.Button btnStudentRequest_LHomepage;
         private System.Windows.Forms.Button btnGenerateReport_LHomepage;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
