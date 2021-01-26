@@ -83,7 +83,7 @@
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.Lime;
             this.btnConfirm.FlatAppearance.BorderSize = 0;
-            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.Black;
             this.btnConfirm.Location = new System.Drawing.Point(493, 504);
@@ -98,7 +98,7 @@
             this.btnBack.BackColor = System.Drawing.Color.Aquamarine;
             this.btnBack.BackgroundImage = global::IOOP_assignment.Properties.Resources.back1;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btnBack.Location = new System.Drawing.Point(1164, 613);
