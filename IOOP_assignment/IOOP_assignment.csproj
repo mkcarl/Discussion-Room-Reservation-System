@@ -104,5 +104,26 @@
   <ItemGroup>
     <None Include="Resources\left.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Feb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

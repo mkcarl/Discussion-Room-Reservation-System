@@ -104,10 +104,10 @@ namespace IOOP_assignment
             // lblPendingStudentReq
             // 
             this.lblPendingStudentReq.AutoSize = true;
-            this.lblPendingStudentReq.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPendingStudentReq.Location = new System.Drawing.Point(467, 9);
+            this.lblPendingStudentReq.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPendingStudentReq.Location = new System.Drawing.Point(442, 9);
             this.lblPendingStudentReq.Name = "lblPendingStudentReq";
-            this.lblPendingStudentReq.Size = new System.Drawing.Size(244, 25);
+            this.lblPendingStudentReq.Size = new System.Drawing.Size(268, 25);
             this.lblPendingStudentReq.TabIndex = 2;
             this.lblPendingStudentReq.Text = "Pending Student Requests";
             // 
