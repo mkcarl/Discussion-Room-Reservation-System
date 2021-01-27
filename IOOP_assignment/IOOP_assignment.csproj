@@ -128,5 +128,8 @@
   <ItemGroup>
     <None Include="Resources\APU logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

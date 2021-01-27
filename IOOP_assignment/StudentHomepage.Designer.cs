@@ -49,7 +49,7 @@ namespace IOOP_assignment
             // 
             this.lblWelcome_SHomepage.AutoSize = true;
             this.lblWelcome_SHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome_SHomepage.Location = new System.Drawing.Point(45, 45);
+            this.lblWelcome_SHomepage.Location = new System.Drawing.Point(22, 32);
             this.lblWelcome_SHomepage.Name = "lblWelcome_SHomepage";
             this.lblWelcome_SHomepage.Size = new System.Drawing.Size(311, 37);
             this.lblWelcome_SHomepage.TabIndex = 0;
@@ -59,7 +59,7 @@ namespace IOOP_assignment
             // 
             this.lblPrompt_SHomepage.AutoSize = true;
             this.lblPrompt_SHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrompt_SHomepage.Location = new System.Drawing.Point(45, 96);
+            this.lblPrompt_SHomepage.Location = new System.Drawing.Point(22, 83);
             this.lblPrompt_SHomepage.Name = "lblPrompt_SHomepage";
             this.lblPrompt_SHomepage.Size = new System.Drawing.Size(382, 37);
             this.lblPrompt_SHomepage.TabIndex = 1;
@@ -72,22 +72,22 @@ namespace IOOP_assignment
             this.btnLogout_SHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogout_SHomepage.FlatAppearance.BorderSize = 0;
             this.btnLogout_SHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout_SHomepage.Location = new System.Drawing.Point(982, 271);
+            this.btnLogout_SHomepage.Location = new System.Drawing.Point(724, 230);
             this.btnLogout_SHomepage.Name = "btnLogout_SHomepage";
-            this.btnLogout_SHomepage.Size = new System.Drawing.Size(225, 225);
+            this.btnLogout_SHomepage.Size = new System.Drawing.Size(150, 150);
             this.btnLogout_SHomepage.TabIndex = 6;
             this.toolTip1.SetToolTip(this.btnLogout_SHomepage, "Logout");
             this.btnLogout_SHomepage.UseVisualStyleBackColor = true;
             // 
             // btnRequestStatus_SHomepage
             // 
-            this.btnRequestStatus_SHomepage.BackgroundImage = global::IOOP_assignment.Properties.Resources._56_512;
+            this.btnRequestStatus_SHomepage.BackgroundImage = global::IOOP_assignment.Properties.Resources.status;
             this.btnRequestStatus_SHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRequestStatus_SHomepage.FlatAppearance.BorderSize = 0;
             this.btnRequestStatus_SHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRequestStatus_SHomepage.Location = new System.Drawing.Point(670, 271);
+            this.btnRequestStatus_SHomepage.Location = new System.Drawing.Point(506, 230);
             this.btnRequestStatus_SHomepage.Name = "btnRequestStatus_SHomepage";
-            this.btnRequestStatus_SHomepage.Size = new System.Drawing.Size(225, 225);
+            this.btnRequestStatus_SHomepage.Size = new System.Drawing.Size(150, 150);
             this.btnRequestStatus_SHomepage.TabIndex = 5;
             this.toolTip1.SetToolTip(this.btnRequestStatus_SHomepage, "Check reservation status");
             this.btnRequestStatus_SHomepage.UseVisualStyleBackColor = true;
@@ -98,9 +98,9 @@ namespace IOOP_assignment
             this.btnModifyReservation_SHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModifyReservation_SHomepage.FlatAppearance.BorderSize = 0;
             this.btnModifyReservation_SHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModifyReservation_SHomepage.Location = new System.Drawing.Point(358, 271);
+            this.btnModifyReservation_SHomepage.Location = new System.Drawing.Point(288, 230);
             this.btnModifyReservation_SHomepage.Name = "btnModifyReservation_SHomepage";
-            this.btnModifyReservation_SHomepage.Size = new System.Drawing.Size(225, 225);
+            this.btnModifyReservation_SHomepage.Size = new System.Drawing.Size(150, 150);
             this.btnModifyReservation_SHomepage.TabIndex = 4;
             this.toolTip1.SetToolTip(this.btnModifyReservation_SHomepage, "Modify reservation");
             this.btnModifyReservation_SHomepage.UseVisualStyleBackColor = true;
@@ -111,9 +111,9 @@ namespace IOOP_assignment
             this.btnReserveRoom_SHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReserveRoom_SHomepage.FlatAppearance.BorderSize = 0;
             this.btnReserveRoom_SHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReserveRoom_SHomepage.Location = new System.Drawing.Point(46, 271);
+            this.btnReserveRoom_SHomepage.Location = new System.Drawing.Point(70, 230);
             this.btnReserveRoom_SHomepage.Name = "btnReserveRoom_SHomepage";
-            this.btnReserveRoom_SHomepage.Size = new System.Drawing.Size(225, 225);
+            this.btnReserveRoom_SHomepage.Size = new System.Drawing.Size(150, 150);
             this.btnReserveRoom_SHomepage.TabIndex = 3;
             this.toolTip1.SetToolTip(this.btnReserveRoom_SHomepage, "Reserve a room");
             this.btnReserveRoom_SHomepage.UseVisualStyleBackColor = true;
@@ -121,7 +121,7 @@ namespace IOOP_assignment
             // pbxProfilePic_SHomepage
             // 
             this.pbxProfilePic_SHomepage.Image = ((System.Drawing.Image)(resources.GetObject("pbxProfilePic_SHomepage.Image")));
-            this.pbxProfilePic_SHomepage.Location = new System.Drawing.Point(433, 33);
+            this.pbxProfilePic_SHomepage.Location = new System.Drawing.Point(410, 20);
             this.pbxProfilePic_SHomepage.Name = "pbxProfilePic_SHomepage";
             this.pbxProfilePic_SHomepage.Size = new System.Drawing.Size(100, 100);
             this.pbxProfilePic_SHomepage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,7 +132,7 @@ namespace IOOP_assignment
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1087, 33);
+            this.label1.Location = new System.Drawing.Point(780, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 29);
             this.label1.TabIndex = 7;
@@ -142,7 +142,7 @@ namespace IOOP_assignment
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1041, 71);
+            this.label2.Location = new System.Drawing.Point(734, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(186, 29);
             this.label2.TabIndex = 8;
@@ -152,7 +152,7 @@ namespace IOOP_assignment
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1114, 107);
+            this.label3.Location = new System.Drawing.Point(807, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 29);
             this.label3.TabIndex = 9;
@@ -162,7 +162,7 @@ namespace IOOP_assignment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(944, 501);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
