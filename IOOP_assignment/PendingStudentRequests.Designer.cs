@@ -29,7 +29,7 @@ namespace IOOP_assignment
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvStudentRequests = new System.Windows.Forms.DataGridView();
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Room = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,60 +37,56 @@ namespace IOOP_assignment
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.lblPendingStudentReq = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentRequests)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvStudentRequests
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvStudentRequests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvStudentRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudentRequests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Time,
             this.Day,
             this.Room,
             this.Number_Of_Students,
             this.Status});
-            this.dataGridView1.Location = new System.Drawing.Point(43, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1154, 500);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvStudentRequests.Location = new System.Drawing.Point(43, 67);
+            this.dgvStudentRequests.Name = "dgvStudentRequests";
+            this.dgvStudentRequests.RowHeadersWidth = 51;
+            this.dgvStudentRequests.RowTemplate.Height = 24;
+            this.dgvStudentRequests.Size = new System.Drawing.Size(1158, 500);
+            this.dgvStudentRequests.TabIndex = 0;
+            this.dgvStudentRequests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Time
             // 
             this.Time.HeaderText = "Time";
             this.Time.MinimumWidth = 6;
             this.Time.Name = "Time";
-            this.Time.Width = 125;
             // 
             // Day
             // 
             this.Day.HeaderText = "Day";
             this.Day.MinimumWidth = 6;
             this.Day.Name = "Day";
-            this.Day.Width = 125;
             // 
             // Room
             // 
             this.Room.HeaderText = "Room";
             this.Room.MinimumWidth = 6;
             this.Room.Name = "Room";
-            this.Room.Width = 125;
             // 
             // Number_Of_Students
             // 
             this.Number_Of_Students.HeaderText = "Number_Of_Students";
             this.Number_Of_Students.MinimumWidth = 6;
             this.Number_Of_Students.Name = "Number_Of_Students";
-            this.Number_Of_Students.Width = 125;
             // 
             // Status
             // 
             this.Status.HeaderText = "Status";
             this.Status.MinimumWidth = 6;
             this.Status.Name = "Status";
-            this.Status.Width = 125;
             // 
             // btnConfirm
             // 
@@ -105,7 +101,7 @@ namespace IOOP_assignment
             // 
             this.lblPendingStudentReq.AutoSize = true;
             this.lblPendingStudentReq.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPendingStudentReq.Location = new System.Drawing.Point(442, 9);
+            this.lblPendingStudentReq.Location = new System.Drawing.Point(462, 24);
             this.lblPendingStudentReq.Name = "lblPendingStudentReq";
             this.lblPendingStudentReq.Size = new System.Drawing.Size(268, 25);
             this.lblPendingStudentReq.TabIndex = 2;
@@ -118,10 +114,10 @@ namespace IOOP_assignment
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.lblPendingStudentReq);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvStudentRequests);
             this.Name = "PendingStudentRequests";
             this.Text = "PendingStudentRequests";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentRequests)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,7 +125,7 @@ namespace IOOP_assignment
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvStudentRequests;
         private System.Windows.Forms.DataGridViewTextBoxColumn Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn Day;
         private System.Windows.Forms.DataGridViewTextBoxColumn Room;
