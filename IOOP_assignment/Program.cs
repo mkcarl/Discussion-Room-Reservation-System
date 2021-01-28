@@ -17,6 +17,8 @@ namespace IOOP_assignment
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new GenerateDailyReport());
+            Application.Run(new GenerateMonthlyReport());
+            Application.Run(new PendingStudentRequests());
         }
     }
 }

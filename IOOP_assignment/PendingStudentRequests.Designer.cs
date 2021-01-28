@@ -120,14 +120,15 @@ namespace IOOP_assignment
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnBack.Location = new System.Drawing.Point(864, 436);
+            this.btnBack.Location = new System.Drawing.Point(855, 436);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(78, 56);
+            this.btnBack.Size = new System.Drawing.Size(87, 56);
             this.btnBack.TabIndex = 40;
             this.btnBack.Text = "Back";
             this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnBack.UseVisualStyleBackColor = false;
             // 
             // PendingStudentRequests

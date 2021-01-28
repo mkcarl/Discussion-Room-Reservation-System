@@ -34,8 +34,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabMonthly = new System.Windows.Forms.TabPage();
             this.tabDaily = new System.Windows.Forms.TabPage();
-            this.btnBack = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,23 +97,6 @@
             this.tabDaily.Text = "Daily";
             this.tabDaily.ToolTipText = "Daily";
             // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnBack.BackgroundImage = global::IOOP_assignment.Properties.Resources.back1;
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnBack.Location = new System.Drawing.Point(865, 439);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(78, 56);
-            this.btnBack.TabIndex = 41;
-            this.btnBack.Text = "Back";
-            this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnBack.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
@@ -121,20 +104,38 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(360, 450);
+            this.button1.Location = new System.Drawing.Point(375, 439);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 45);
             this.button1.TabIndex = 42;
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnBack.BackgroundImage = global::IOOP_assignment.Properties.Resources.back1;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnBack.Location = new System.Drawing.Point(856, 439);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(87, 56);
+            this.btnBack.TabIndex = 43;
+            this.btnBack.Text = "Back";
+            this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnBack.UseVisualStyleBackColor = false;
+            // 
             // GenerateDailyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 495);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(942, 493);
             this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblGenerateDailyReport);
             this.Controls.Add(this.lstReport);
@@ -154,8 +155,8 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabMonthly;
         private System.Windows.Forms.TabPage tabDaily;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
     }
 }
 
