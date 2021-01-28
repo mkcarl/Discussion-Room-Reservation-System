@@ -31,11 +31,11 @@
             this.mthCalendar = new System.Windows.Forms.MonthCalendar();
             this.lstReport = new System.Windows.Forms.ListBox();
             this.lblGenerateDailyReport = new System.Windows.Forms.Label();
-            this.btnConfirm = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabMonthly = new System.Windows.Forms.TabPage();
             this.tabDaily = new System.Windows.Forms.TabPage();
             this.btnBack = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,20 +62,6 @@
             this.lblGenerateDailyReport.Size = new System.Drawing.Size(228, 23);
             this.lblGenerateDailyReport.TabIndex = 6;
             this.lblGenerateDailyReport.Text = "Generate Daily Report";
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.BackColor = System.Drawing.Color.Lime;
-            this.btnConfirm.FlatAppearance.BorderSize = 0;
-            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirm.Location = new System.Drawing.Point(365, 419);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(117, 52);
-            this.btnConfirm.TabIndex = 20;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = false;
             // 
             // tabControl1
             // 
@@ -118,24 +104,38 @@
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnBack.Location = new System.Drawing.Point(856, 435);
+            this.btnBack.Location = new System.Drawing.Point(865, 439);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(90, 62);
-            this.btnBack.TabIndex = 21;
+            this.btnBack.Size = new System.Drawing.Size(78, 56);
+            this.btnBack.TabIndex = 41;
             this.btnBack.Text = "Back";
             this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBack.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(360, 450);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 45);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Confirm";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // GenerateDailyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 495);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblGenerateDailyReport);
             this.Controls.Add(this.lstReport);
             this.Controls.Add(this.mthCalendar);
@@ -151,11 +151,11 @@
         private System.Windows.Forms.MonthCalendar mthCalendar;
         private System.Windows.Forms.ListBox lstReport;
         private System.Windows.Forms.Label lblGenerateDailyReport;
-        private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabMonthly;
         private System.Windows.Forms.TabPage tabDaily;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button button1;
     }
 }
 

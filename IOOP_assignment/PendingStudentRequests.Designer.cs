@@ -37,6 +37,7 @@ namespace IOOP_assignment
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPendingStudentReq = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentRequests)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@ namespace IOOP_assignment
             this.dgvStudentRequests.Name = "dgvStudentRequests";
             this.dgvStudentRequests.RowHeadersWidth = 51;
             this.dgvStudentRequests.RowTemplate.Height = 24;
-            this.dgvStudentRequests.Size = new System.Drawing.Size(1158, 500);
+            this.dgvStudentRequests.Size = new System.Drawing.Size(858, 336);
             this.dgvStudentRequests.TabIndex = 0;
             this.dgvStudentRequests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -92,7 +93,7 @@ namespace IOOP_assignment
             // 
             this.lblPendingStudentReq.AutoSize = true;
             this.lblPendingStudentReq.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPendingStudentReq.Location = new System.Drawing.Point(462, 24);
+            this.lblPendingStudentReq.Location = new System.Drawing.Point(305, 22);
             this.lblPendingStudentReq.Name = "lblPendingStudentReq";
             this.lblPendingStudentReq.Size = new System.Drawing.Size(268, 25);
             this.lblPendingStudentReq.TabIndex = 2;
@@ -102,21 +103,39 @@ namespace IOOP_assignment
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.Lime;
             this.btnConfirm.FlatAppearance.BorderSize = 0;
-            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirm.Location = new System.Drawing.Point(525, 597);
+            this.btnConfirm.Location = new System.Drawing.Point(365, 436);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(129, 52);
-            this.btnConfirm.TabIndex = 20;
+            this.btnConfirm.Size = new System.Drawing.Size(148, 45);
+            this.btnConfirm.TabIndex = 39;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnBack.BackgroundImage = global::IOOP_assignment.Properties.Resources.back1;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnBack.Location = new System.Drawing.Point(864, 436);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(78, 56);
+            this.btnBack.TabIndex = 40;
+            this.btnBack.Text = "Back";
+            this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBack.UseVisualStyleBackColor = false;
             // 
             // PendingStudentRequests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(942, 493);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.lblPendingStudentReq);
             this.Controls.Add(this.dgvStudentRequests);
@@ -138,5 +157,6 @@ namespace IOOP_assignment
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Label lblPendingStudentReq;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnBack;
     }
 }

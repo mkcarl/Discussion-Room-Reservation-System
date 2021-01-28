@@ -29,7 +29,6 @@ namespace IOOP_assignment
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnConfirm = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
             this.lstMonthlyReport = new System.Windows.Forms.ListBox();
             this.lblYear = new System.Windows.Forms.Label();
@@ -50,48 +49,35 @@ namespace IOOP_assignment
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnLeftArrow = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnJan = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.BackColor = System.Drawing.Color.Lime;
-            this.btnConfirm.FlatAppearance.BorderSize = 0;
-            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirm.Location = new System.Drawing.Point(535, 505);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(129, 52);
-            this.btnConfirm.TabIndex = 19;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = false;
             // 
             // lblMessage
             // 
             this.lblMessage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMessage.Location = new System.Drawing.Point(439, 570);
+            this.lblMessage.Location = new System.Drawing.Point(270, 464);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(336, 32);
+            this.lblMessage.Size = new System.Drawing.Size(336, 23);
             this.lblMessage.TabIndex = 20;
             // 
             // lstMonthlyReport
             // 
             this.lstMonthlyReport.FormattingEnabled = true;
             this.lstMonthlyReport.ItemHeight = 16;
-            this.lstMonthlyReport.Location = new System.Drawing.Point(753, 164);
+            this.lstMonthlyReport.Location = new System.Drawing.Point(513, 137);
             this.lstMonthlyReport.Name = "lstMonthlyReport";
-            this.lstMonthlyReport.Size = new System.Drawing.Size(432, 276);
+            this.lstMonthlyReport.Size = new System.Drawing.Size(375, 244);
             this.lstMonthlyReport.TabIndex = 21;
             // 
             // lblYear
             // 
             this.lblYear.AutoSize = true;
             this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.Location = new System.Drawing.Point(234, 164);
+            this.lblYear.Location = new System.Drawing.Point(170, 115);
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(56, 25);
             this.lblYear.TabIndex = 22;
@@ -101,7 +87,7 @@ namespace IOOP_assignment
             // 
             this.lblGenerateReport.AutoSize = true;
             this.lblGenerateReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenerateReport.Location = new System.Drawing.Point(453, 66);
+            this.lblGenerateReport.Location = new System.Drawing.Point(303, 26);
             this.lblGenerateReport.Name = "lblGenerateReport";
             this.lblGenerateReport.Size = new System.Drawing.Size(229, 25);
             this.lblGenerateReport.TabIndex = 23;
@@ -147,9 +133,9 @@ namespace IOOP_assignment
             this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button12.Location = new System.Drawing.Point(399, 392);
+            this.button12.Location = new System.Drawing.Point(308, 335);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(56, 57);
+            this.button12.Size = new System.Drawing.Size(53, 46);
             this.button12.TabIndex = 35;
             this.button12.UseVisualStyleBackColor = true;
             // 
@@ -159,9 +145,9 @@ namespace IOOP_assignment
             this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Location = new System.Drawing.Point(286, 392);
+            this.button11.Location = new System.Drawing.Point(209, 335);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(56, 57);
+            this.button11.Size = new System.Drawing.Size(53, 46);
             this.button11.TabIndex = 34;
             this.button11.UseVisualStyleBackColor = true;
             // 
@@ -171,9 +157,9 @@ namespace IOOP_assignment
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button10.Location = new System.Drawing.Point(179, 392);
+            this.button10.Location = new System.Drawing.Point(111, 335);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(56, 57);
+            this.button10.Size = new System.Drawing.Size(53, 46);
             this.button10.TabIndex = 33;
             this.button10.UseVisualStyleBackColor = true;
             // 
@@ -183,9 +169,9 @@ namespace IOOP_assignment
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Location = new System.Drawing.Point(80, 392);
+            this.button9.Location = new System.Drawing.Point(18, 335);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(56, 57);
+            this.button9.Size = new System.Drawing.Size(53, 46);
             this.button9.TabIndex = 32;
             this.button9.UseVisualStyleBackColor = true;
             // 
@@ -195,9 +181,9 @@ namespace IOOP_assignment
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Location = new System.Drawing.Point(80, 308);
+            this.button8.Location = new System.Drawing.Point(18, 251);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(56, 57);
+            this.button8.Size = new System.Drawing.Size(53, 46);
             this.button8.TabIndex = 31;
             this.button8.UseVisualStyleBackColor = true;
             // 
@@ -207,9 +193,9 @@ namespace IOOP_assignment
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Location = new System.Drawing.Point(179, 308);
+            this.button7.Location = new System.Drawing.Point(112, 251);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(56, 57);
+            this.button7.Size = new System.Drawing.Size(53, 46);
             this.button7.TabIndex = 30;
             this.button7.UseVisualStyleBackColor = true;
             // 
@@ -219,9 +205,9 @@ namespace IOOP_assignment
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Location = new System.Drawing.Point(286, 308);
+            this.button6.Location = new System.Drawing.Point(209, 251);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(56, 57);
+            this.button6.Size = new System.Drawing.Size(53, 46);
             this.button6.TabIndex = 29;
             this.button6.UseVisualStyleBackColor = true;
             // 
@@ -231,9 +217,9 @@ namespace IOOP_assignment
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(399, 229);
+            this.button5.Location = new System.Drawing.Point(308, 172);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(56, 57);
+            this.button5.Size = new System.Drawing.Size(53, 46);
             this.button5.TabIndex = 28;
             this.button5.UseVisualStyleBackColor = true;
             // 
@@ -243,9 +229,9 @@ namespace IOOP_assignment
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(286, 229);
+            this.button4.Location = new System.Drawing.Point(209, 172);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 57);
+            this.button4.Size = new System.Drawing.Size(53, 46);
             this.button4.TabIndex = 27;
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -255,9 +241,9 @@ namespace IOOP_assignment
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(399, 308);
+            this.button3.Location = new System.Drawing.Point(308, 251);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(56, 57);
+            this.button3.Size = new System.Drawing.Size(53, 46);
             this.button3.TabIndex = 26;
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -267,9 +253,9 @@ namespace IOOP_assignment
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(179, 229);
+            this.button2.Location = new System.Drawing.Point(111, 172);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 57);
+            this.button2.Size = new System.Drawing.Size(53, 46);
             this.button2.TabIndex = 25;
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -280,9 +266,9 @@ namespace IOOP_assignment
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(296, 157);
+            this.button1.Location = new System.Drawing.Point(225, 115);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 32);
+            this.button1.Size = new System.Drawing.Size(52, 26);
             this.button1.TabIndex = 24;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -293,27 +279,11 @@ namespace IOOP_assignment
             this.btnLeftArrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLeftArrow.FlatAppearance.BorderSize = 0;
             this.btnLeftArrow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLeftArrow.Location = new System.Drawing.Point(174, 164);
+            this.btnLeftArrow.Location = new System.Drawing.Point(112, 115);
             this.btnLeftArrow.Name = "btnLeftArrow";
-            this.btnLeftArrow.Size = new System.Drawing.Size(54, 32);
+            this.btnLeftArrow.Size = new System.Drawing.Size(52, 26);
             this.btnLeftArrow.TabIndex = 17;
             this.btnLeftArrow.UseVisualStyleBackColor = false;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnBack.BackgroundImage = global::IOOP_assignment.Properties.Resources.back1;
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnBack.Location = new System.Drawing.Point(1166, 617);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(98, 61);
-            this.btnBack.TabIndex = 16;
-            this.btnBack.Text = "Back";
-            this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnBack.UseVisualStyleBackColor = false;
             // 
             // btnJan
             // 
@@ -321,18 +291,51 @@ namespace IOOP_assignment
             this.btnJan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnJan.FlatAppearance.BorderSize = 0;
             this.btnJan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJan.Location = new System.Drawing.Point(80, 229);
+            this.btnJan.Location = new System.Drawing.Point(18, 172);
             this.btnJan.Name = "btnJan";
-            this.btnJan.Size = new System.Drawing.Size(56, 57);
+            this.btnJan.Size = new System.Drawing.Size(53, 46);
             this.btnJan.TabIndex = 0;
             this.btnJan.UseVisualStyleBackColor = true;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnBack.BackgroundImage = global::IOOP_assignment.Properties.Resources.back1;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnBack.Location = new System.Drawing.Point(867, 441);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(78, 56);
+            this.btnBack.TabIndex = 41;
+            this.btnBack.Text = "Back";
+            this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBack.UseVisualStyleBackColor = false;
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.BackColor = System.Drawing.Color.Lime;
+            this.btnConfirm.FlatAppearance.BorderSize = 0;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.Black;
+            this.btnConfirm.Location = new System.Drawing.Point(360, 416);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(148, 45);
+            this.btnConfirm.TabIndex = 42;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = false;
             // 
             // GenerateMonthlyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(943, 494);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
@@ -350,9 +353,7 @@ namespace IOOP_assignment
             this.Controls.Add(this.lblYear);
             this.Controls.Add(this.lstMonthlyReport);
             this.Controls.Add(this.lblMessage);
-            this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnLeftArrow);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnJan);
             this.Name = "GenerateMonthlyReport";
             this.Text = "Form2";
@@ -365,8 +366,6 @@ namespace IOOP_assignment
         #endregion
 
         private System.Windows.Forms.Button btnJan;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.ListBox lstMonthlyReport;
         private System.Windows.Forms.Label lblYear;
@@ -387,5 +386,7 @@ namespace IOOP_assignment
         private System.Windows.Forms.TabPage tabDaily;
         private System.Windows.Forms.TabPage tabMonthly;
         private System.Windows.Forms.Button btnLeftArrow;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnConfirm;
     }
 }
