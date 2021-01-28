@@ -41,7 +41,7 @@
             // 
             // mthCalendar
             // 
-            this.mthCalendar.Location = new System.Drawing.Point(112, 178);
+            this.mthCalendar.Location = new System.Drawing.Point(67, 165);
             this.mthCalendar.Name = "mthCalendar";
             this.mthCalendar.TabIndex = 4;
             // 
@@ -49,15 +49,15 @@
             // 
             this.lstReport.FormattingEnabled = true;
             this.lstReport.ItemHeight = 16;
-            this.lstReport.Location = new System.Drawing.Point(509, 157);
+            this.lstReport.Location = new System.Drawing.Point(513, 130);
             this.lstReport.Name = "lstReport";
-            this.lstReport.Size = new System.Drawing.Size(367, 228);
+            this.lstReport.Size = new System.Drawing.Size(407, 260);
             this.lstReport.TabIndex = 5;
             // 
             // lblGenerateDailyReport
             // 
             this.lblGenerateDailyReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenerateDailyReport.Location = new System.Drawing.Point(312, 80);
+            this.lblGenerateDailyReport.Location = new System.Drawing.Point(310, 55);
             this.lblGenerateDailyReport.Name = "lblGenerateDailyReport";
             this.lblGenerateDailyReport.Size = new System.Drawing.Size(228, 23);
             this.lblGenerateDailyReport.TabIndex = 6;
@@ -104,7 +104,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(375, 439);
+            this.button1.Location = new System.Drawing.Point(360, 425);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 45);
             this.button1.TabIndex = 42;

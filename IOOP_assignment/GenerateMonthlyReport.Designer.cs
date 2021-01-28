@@ -86,10 +86,10 @@ namespace IOOP_assignment
             // lblGenerateReport
             // 
             this.lblGenerateReport.AutoSize = true;
-            this.lblGenerateReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenerateReport.Location = new System.Drawing.Point(329, 41);
+            this.lblGenerateReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenerateReport.Location = new System.Drawing.Point(310, 38);
             this.lblGenerateReport.Name = "lblGenerateReport";
-            this.lblGenerateReport.Size = new System.Drawing.Size(229, 25);
+            this.lblGenerateReport.Size = new System.Drawing.Size(252, 25);
             this.lblGenerateReport.TabIndex = 23;
             this.lblGenerateReport.Text = "Generate Monthly Report";
             // 
@@ -304,9 +304,9 @@ namespace IOOP_assignment
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirm.Location = new System.Drawing.Point(369, 420);
+            this.btnConfirm.Location = new System.Drawing.Point(369, 415);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(139, 41);
+            this.btnConfirm.Size = new System.Drawing.Size(139, 46);
             this.btnConfirm.TabIndex = 42;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
