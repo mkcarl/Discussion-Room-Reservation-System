@@ -28,40 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDaily = new System.Windows.Forms.Button();
-            this.btnMonthly = new System.Windows.Forms.Button();
             this.mthCalendar = new System.Windows.Forms.MonthCalendar();
             this.lstReport = new System.Windows.Forms.ListBox();
             this.lblGenerateDailyReport = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabMonthly = new System.Windows.Forms.TabPage();
+            this.tabDaily = new System.Windows.Forms.TabPage();
+            this.btnBack = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnDaily
-            // 
-            this.btnDaily.Location = new System.Drawing.Point(-1, 0);
-            this.btnDaily.Name = "btnDaily";
-            this.btnDaily.Size = new System.Drawing.Size(100, 53);
-            this.btnDaily.TabIndex = 0;
-            this.btnDaily.Text = "Daily";
-            this.btnDaily.UseVisualStyleBackColor = true;
-            // 
-            // btnMonthly
-            // 
-            this.btnMonthly.Location = new System.Drawing.Point(96, 0);
-            this.btnMonthly.Name = "btnMonthly";
-            this.btnMonthly.Size = new System.Drawing.Size(100, 53);
-            this.btnMonthly.TabIndex = 1;
-            this.btnMonthly.Text = "Monthly";
-            this.btnMonthly.UseVisualStyleBackColor = true;
-            // 
             // mthCalendar
             // 
-            this.mthCalendar.Location = new System.Drawing.Point(161, 188);
+            this.mthCalendar.Location = new System.Drawing.Point(112, 178);
             this.mthCalendar.Name = "mthCalendar";
             this.mthCalendar.TabIndex = 4;
             // 
@@ -69,15 +49,15 @@
             // 
             this.lstReport.FormattingEnabled = true;
             this.lstReport.ItemHeight = 16;
-            this.lstReport.Location = new System.Drawing.Point(684, 129);
+            this.lstReport.Location = new System.Drawing.Point(509, 157);
             this.lstReport.Name = "lstReport";
-            this.lstReport.Size = new System.Drawing.Size(552, 324);
+            this.lstReport.Size = new System.Drawing.Size(367, 228);
             this.lstReport.TabIndex = 5;
             // 
             // lblGenerateDailyReport
             // 
             this.lblGenerateDailyReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenerateDailyReport.Location = new System.Drawing.Point(442, 56);
+            this.lblGenerateDailyReport.Location = new System.Drawing.Point(312, 80);
             this.lblGenerateDailyReport.Name = "lblGenerateDailyReport";
             this.lblGenerateDailyReport.Size = new System.Drawing.Size(228, 23);
             this.lblGenerateDailyReport.TabIndex = 6;
@@ -90,72 +70,75 @@
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirm.Location = new System.Drawing.Point(493, 504);
+            this.btnConfirm.Location = new System.Drawing.Point(365, 419);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(129, 52);
+            this.btnConfirm.Size = new System.Drawing.Size(117, 52);
             this.btnConfirm.TabIndex = 20;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabDaily);
+            this.tabControl1.Controls.Add(this.tabMonthly);
+            this.tabControl1.Location = new System.Drawing.Point(0, 1);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(109, 30);
+            this.tabControl1.TabIndex = 22;
+            // 
+            // tabMonthly
+            // 
+            this.tabMonthly.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabMonthly.Location = new System.Drawing.Point(4, 25);
+            this.tabMonthly.Name = "tabMonthly";
+            this.tabMonthly.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMonthly.Size = new System.Drawing.Size(101, 1);
+            this.tabMonthly.TabIndex = 1;
+            this.tabMonthly.Text = "Monthly";
+            this.tabMonthly.ToolTipText = "Monthly";
+            this.tabMonthly.UseVisualStyleBackColor = true;
+            // 
+            // tabDaily
+            // 
+            this.tabDaily.BackColor = System.Drawing.Color.White;
+            this.tabDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabDaily.Location = new System.Drawing.Point(4, 25);
+            this.tabDaily.Name = "tabDaily";
+            this.tabDaily.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDaily.Size = new System.Drawing.Size(101, 1);
+            this.tabDaily.TabIndex = 0;
+            this.tabDaily.Text = "Daily";
+            this.tabDaily.ToolTipText = "Daily";
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Aquamarine;
             this.btnBack.BackgroundImage = global::IOOP_assignment.Properties.Resources.back1;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnBack.Location = new System.Drawing.Point(1164, 613);
+            this.btnBack.Location = new System.Drawing.Point(856, 435);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(98, 61);
+            this.btnBack.Size = new System.Drawing.Size(90, 62);
             this.btnBack.TabIndex = 21;
             this.btnBack.Text = "Back";
             this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBack.UseVisualStyleBackColor = false;
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 74);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(165, 51);
-            this.tabControl1.TabIndex = 22;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(157, 22);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(157, 22);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // GenerateDailyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(942, 495);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.lblGenerateDailyReport);
             this.Controls.Add(this.lstReport);
             this.Controls.Add(this.mthCalendar);
-            this.Controls.Add(this.btnMonthly);
-            this.Controls.Add(this.btnDaily);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GenerateDailyReport";
             this.Text = "Form1";
@@ -165,17 +148,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnDaily;
-        private System.Windows.Forms.Button btnMonthly;
         private System.Windows.Forms.MonthCalendar mthCalendar;
         private System.Windows.Forms.ListBox lstReport;
         private System.Windows.Forms.Label lblGenerateDailyReport;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabMonthly;
+        private System.Windows.Forms.TabPage tabDaily;
     }
 }
 
