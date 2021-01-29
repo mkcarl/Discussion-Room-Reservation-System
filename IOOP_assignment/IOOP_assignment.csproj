@@ -131,5 +131,32 @@
   <ItemGroup>
     <None Include="Resources\left3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\May.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\July.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\July1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sep.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
