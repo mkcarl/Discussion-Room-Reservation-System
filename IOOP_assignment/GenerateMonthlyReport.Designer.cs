@@ -309,6 +309,7 @@ namespace IOOP_assignment
             this.btnLeftArrow.BackColor = System.Drawing.SystemColors.Control;
             this.btnLeftArrow.BackgroundImage = global::IOOP_assignment.Properties.Resources.left3;
             this.btnLeftArrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLeftArrow.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnLeftArrow.FlatAppearance.BorderSize = 0;
             this.btnLeftArrow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLeftArrow.Location = new System.Drawing.Point(119, 107);
