@@ -29,74 +29,17 @@ namespace IOOP_assignment
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblMessage = new System.Windows.Forms.Label();
-            this.lstMonthlyReport = new System.Windows.Forms.ListBox();
-            this.lblYear = new System.Windows.Forms.Label();
-            this.lblGenerateReport = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabDaily = new System.Windows.Forms.TabPage();
             this.tabMonthly = new System.Windows.Forms.TabPage();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnLeftArrow = new System.Windows.Forms.Button();
-            this.btnJan = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMessage.Location = new System.Drawing.Point(264, 464);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(336, 23);
-            this.lblMessage.TabIndex = 20;
-            // 
-            // lstMonthlyReport
-            // 
-            this.lstMonthlyReport.FormattingEnabled = true;
-            this.lstMonthlyReport.ItemHeight = 16;
-            this.lstMonthlyReport.Location = new System.Drawing.Point(537, 116);
-            this.lstMonthlyReport.Name = "lstMonthlyReport";
-            this.lstMonthlyReport.Size = new System.Drawing.Size(375, 244);
-            this.lstMonthlyReport.TabIndex = 21;
-            // 
-            // lblYear
-            // 
-            this.lblYear.AutoSize = true;
-            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.Location = new System.Drawing.Point(177, 107);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(56, 25);
-            this.lblYear.TabIndex = 22;
-            this.lblYear.Text = "2021";
-            // 
-            // lblGenerateReport
-            // 
-            this.lblGenerateReport.AutoSize = true;
-            this.lblGenerateReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenerateReport.Location = new System.Drawing.Point(310, 38);
-            this.lblGenerateReport.Name = "lblGenerateReport";
-            this.lblGenerateReport.Size = new System.Drawing.Size(252, 25);
-            this.lblGenerateReport.TabIndex = 23;
-            this.lblGenerateReport.Text = "Generate Monthly Report";
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabDaily);
             this.tabControl1.Controls.Add(this.tabMonthly);
+            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl1.Location = new System.Drawing.Point(0, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -121,214 +64,11 @@ namespace IOOP_assignment
             this.tabMonthly.Location = new System.Drawing.Point(4, 25);
             this.tabMonthly.Name = "tabMonthly";
             this.tabMonthly.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMonthly.Size = new System.Drawing.Size(102, 0);
+            this.tabMonthly.Size = new System.Drawing.Size(934, 464);
             this.tabMonthly.TabIndex = 1;
             this.tabMonthly.Text = "Monthly";
             this.tabMonthly.ToolTipText = "Monthly";
             this.tabMonthly.UseVisualStyleBackColor = true;
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.BackColor = System.Drawing.Color.Lime;
-            this.btnConfirm.FlatAppearance.BorderSize = 0;
-            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirm.Location = new System.Drawing.Point(369, 415);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(139, 46);
-            this.btnConfirm.TabIndex = 42;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackgroundImage = global::IOOP_assignment.Properties.Resources.Sep;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(25, 327);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(55, 46);
-            this.button9.TabIndex = 51;
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.BackgroundImage = global::IOOP_assignment.Properties.Resources.Oct;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(118, 327);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(55, 46);
-            this.button12.TabIndex = 50;
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.BackgroundImage = global::IOOP_assignment.Properties.Resources.Nov;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(216, 327);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(55, 46);
-            this.button11.TabIndex = 49;
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.BackgroundImage = global::IOOP_assignment.Properties.Resources.Dec;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Location = new System.Drawing.Point(315, 327);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(55, 46);
-            this.button13.TabIndex = 48;
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::IOOP_assignment.Properties.Resources.Aug;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(315, 243);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(55, 46);
-            this.button3.TabIndex = 47;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = global::IOOP_assignment.Properties.Resources.July1;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(216, 243);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(55, 46);
-            this.button6.TabIndex = 46;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::IOOP_assignment.Properties.Resources.Jun;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(118, 243);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(55, 46);
-            this.button7.TabIndex = 45;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.BackgroundImage = global::IOOP_assignment.Properties.Resources.May;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(25, 243);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(55, 46);
-            this.button8.TabIndex = 44;
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnBack.BackgroundImage = global::IOOP_assignment.Properties.Resources.back1;
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnBack.Location = new System.Drawing.Point(857, 441);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(87, 56);
-            this.btnBack.TabIndex = 43;
-            this.btnBack.Text = "Back";
-            this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnBack.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = global::IOOP_assignment.Properties.Resources.Apr;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(315, 164);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(55, 46);
-            this.button5.TabIndex = 28;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::IOOP_assignment.Properties.Resources.Mar;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(216, 164);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(55, 46);
-            this.button4.TabIndex = 27;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::IOOP_assignment.Properties.Resources.Feb;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(118, 164);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(55, 46);
-            this.button2.TabIndex = 25;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.BackgroundImage = global::IOOP_assignment.Properties.Resources.right;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(232, 107);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 26);
-            this.button1.TabIndex = 24;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnLeftArrow
-            // 
-            this.btnLeftArrow.BackColor = System.Drawing.SystemColors.Control;
-            this.btnLeftArrow.BackgroundImage = global::IOOP_assignment.Properties.Resources.left3;
-            this.btnLeftArrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLeftArrow.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnLeftArrow.FlatAppearance.BorderSize = 0;
-            this.btnLeftArrow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLeftArrow.Location = new System.Drawing.Point(119, 107);
-            this.btnLeftArrow.Name = "btnLeftArrow";
-            this.btnLeftArrow.Size = new System.Drawing.Size(54, 26);
-            this.btnLeftArrow.TabIndex = 17;
-            this.btnLeftArrow.UseVisualStyleBackColor = false;
-            // 
-            // btnJan
-            // 
-            this.btnJan.BackgroundImage = global::IOOP_assignment.Properties.Resources.Jan;
-            this.btnJan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnJan.FlatAppearance.BorderSize = 0;
-            this.btnJan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJan.Location = new System.Drawing.Point(25, 164);
-            this.btnJan.Name = "btnJan";
-            this.btnJan.Size = new System.Drawing.Size(55, 46);
-            this.btnJan.TabIndex = 0;
-            this.btnJan.UseVisualStyleBackColor = true;
             // 
             // GenerateMonthlyReport
             // 
@@ -336,60 +76,18 @@ namespace IOOP_assignment
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(942, 493);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblGenerateReport);
-            this.Controls.Add(this.lblYear);
-            this.Controls.Add(this.lstMonthlyReport);
-            this.Controls.Add(this.lblMessage);
-            this.Controls.Add(this.btnLeftArrow);
-            this.Controls.Add(this.btnJan);
             this.Name = "GenerateMonthlyReport";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.GenerateMonthlyReport_Load);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnJan;
-        private System.Windows.Forms.Label lblMessage;
-        private System.Windows.Forms.ListBox lstMonthlyReport;
-        private System.Windows.Forms.Label lblYear;
-        private System.Windows.Forms.Label lblGenerateReport;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabDaily;
         private System.Windows.Forms.TabPage tabMonthly;
-        private System.Windows.Forms.Button btnLeftArrow;
-        private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button9;
     }
 }
