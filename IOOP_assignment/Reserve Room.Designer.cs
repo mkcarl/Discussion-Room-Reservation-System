@@ -184,7 +184,7 @@ namespace IOOP_assignment
             // 
             this.pictureBox1.BackgroundImage = global::IOOP_assignment.Properties.Resources.people_icon;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(462, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(456, 54);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.TabIndex = 20;

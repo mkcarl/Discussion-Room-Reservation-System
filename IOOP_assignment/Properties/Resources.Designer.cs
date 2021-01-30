@@ -123,9 +123,9 @@ namespace IOOP_assignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap status {
+        internal static System.Drawing.Bitmap status11 {
             get {
-                object obj = ResourceManager.GetObject("status", resourceCulture);
+                object obj = ResourceManager.GetObject("status11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

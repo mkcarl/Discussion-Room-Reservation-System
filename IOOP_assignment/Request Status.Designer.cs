@@ -150,7 +150,7 @@ namespace IOOP_assignment
             // 
             this.pictureBox3.BackgroundImage = global::IOOP_assignment.Properties.Resources.time;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(54, 285);
+            this.pictureBox3.Location = new System.Drawing.Point(56, 285);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.TabIndex = 15;
@@ -160,7 +160,7 @@ namespace IOOP_assignment
             // 
             this.pictureBox2.BackgroundImage = global::IOOP_assignment.Properties.Resources.room;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(55, 167);
+            this.pictureBox2.Location = new System.Drawing.Point(56, 167);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.TabIndex = 14;
@@ -169,11 +169,12 @@ namespace IOOP_assignment
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.BackgroundImage = global::IOOP_assignment.Properties.Resources.status;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 70);
+            this.pictureBox1.Image = global::IOOP_assignment.Properties.Resources.status11;
+            this.pictureBox1.Location = new System.Drawing.Point(56, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
