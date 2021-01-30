@@ -16,5 +16,10 @@ namespace IOOP_assignment
         {
             InitializeComponent();
         }
+
+        private void Generate_Report_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
