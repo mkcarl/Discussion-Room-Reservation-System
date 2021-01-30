@@ -36,5 +36,10 @@ namespace IOOP_assignment
         {
 
         }
+
+        private void FormModify_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
