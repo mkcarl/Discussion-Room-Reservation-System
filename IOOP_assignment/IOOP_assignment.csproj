@@ -111,7 +111,7 @@
     <None Include="Resources\back-button-6-921315.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\status.png" />
+    <None Include="Resources\checkstatus.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\room.png" />
