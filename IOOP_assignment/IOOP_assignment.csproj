@@ -52,10 +52,34 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Request Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Request Status.Designer.cs">
+      <DependentUpon>Request Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modify Reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modify Reservation.Designer.cs">
+      <DependentUpon>Modify Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reserve Room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reserve Room.Designer.cs">
+      <DependentUpon>Reserve Room.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Request Status.resx">
+      <DependentUpon>Request Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modify Reservation.resx">
+      <DependentUpon>Modify Reservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +90,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reserve Room.resx">
+      <DependentUpon>Reserve Room.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
