@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment
 {
-    public partial class GenerateMonthlyReport : Form
+    public partial class Pending_Student_Requests : Form
     {
-        public GenerateMonthlyReport()
+        public Pending_Student_Requests()
         {
             InitializeComponent();
         }
 
-        private void GenerateMonthlyReport_Load(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

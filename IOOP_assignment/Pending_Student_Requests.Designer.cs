@@ -1,7 +1,7 @@
 ﻿
 namespace IOOP_assignment
 {
-    partial class PendingStudentRequests
+    partial class Pending_Student_Requests
     {
         /// <summary>
         /// Required designer variable.
@@ -51,7 +51,7 @@ namespace IOOP_assignment
             this.Room,
             this.Number_Of_Students,
             this.Status});
-            this.dgvStudentRequests.Location = new System.Drawing.Point(43, 67);
+            this.dgvStudentRequests.Location = new System.Drawing.Point(26, 82);
             this.dgvStudentRequests.Name = "dgvStudentRequests";
             this.dgvStudentRequests.RowHeadersWidth = 51;
             this.dgvStudentRequests.RowTemplate.Height = 24;
@@ -92,10 +92,10 @@ namespace IOOP_assignment
             // lblPendingStudentReq
             // 
             this.lblPendingStudentReq.AutoSize = true;
-            this.lblPendingStudentReq.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPendingStudentReq.Location = new System.Drawing.Point(305, 22);
+            this.lblPendingStudentReq.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPendingStudentReq.Location = new System.Drawing.Point(229, 19);
             this.lblPendingStudentReq.Name = "lblPendingStudentReq";
-            this.lblPendingStudentReq.Size = new System.Drawing.Size(268, 25);
+            this.lblPendingStudentReq.Size = new System.Drawing.Size(395, 36);
             this.lblPendingStudentReq.TabIndex = 2;
             this.lblPendingStudentReq.Text = "Pending Student Requests";
             // 

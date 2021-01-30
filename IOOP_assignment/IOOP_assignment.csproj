@@ -46,34 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GenerateDailyReport.cs">
+    <Compile Include="Generate_Report.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GenerateDailyReport.Designer.cs">
-      <DependentUpon>GenerateDailyReport.cs</DependentUpon>
+    <Compile Include="Generate_Report.Designer.cs">
+      <DependentUpon>Generate_Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="GenerateMonthlyReport.cs">
+    <Compile Include="Pending_Student_Requests.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GenerateMonthlyReport.Designer.cs">
-      <DependentUpon>GenerateMonthlyReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PendingStudentRequests.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PendingStudentRequests.Designer.cs">
-      <DependentUpon>PendingStudentRequests.cs</DependentUpon>
+    <Compile Include="Pending_Student_Requests.Designer.cs">
+      <DependentUpon>Pending_Student_Requests.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GenerateDailyReport.resx">
-      <DependentUpon>GenerateDailyReport.cs</DependentUpon>
+    <EmbeddedResource Include="Generate_Report.resx">
+      <DependentUpon>Generate_Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GenerateMonthlyReport.resx">
-      <DependentUpon>GenerateMonthlyReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PendingStudentRequests.resx">
-      <DependentUpon>PendingStudentRequests.cs</DependentUpon>
+    <EmbeddedResource Include="Pending_Student_Requests.resx">
+      <DependentUpon>Pending_Student_Requests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

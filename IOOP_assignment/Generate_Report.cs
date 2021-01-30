@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment
 {
-    public partial class PendingStudentRequests : Form
+    public partial class Generate_Report : Form
     {
-        public PendingStudentRequests()
+        public Generate_Report()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
