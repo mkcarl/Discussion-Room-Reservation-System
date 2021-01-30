@@ -51,11 +51,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Generate_Report.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Generate_Report.Designer.cs">
+      <DependentUpon>Generate_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pending_Student_Requests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pending_Student_Requests.Designer.cs">
+      <DependentUpon>Pending_Student_Requests.cs</DependentUpon>
     </Compile>
     <Compile Include="LibrarianHomepage.cs">
       <SubType>Form</SubType>
@@ -82,8 +88,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Generate_Report.resx">
+      <DependentUpon>Generate_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pending_Student_Requests.resx">
+      <DependentUpon>Pending_Student_Requests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibrarianHomepage.resx">
       <DependentUpon>LibrarianHomepage.cs</DependentUpon>
@@ -102,6 +111,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -116,6 +126,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Feb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\May.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\July.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\July1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\daily report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pending11.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add1.png" />

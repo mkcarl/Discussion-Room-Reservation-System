@@ -1,4 +1,5 @@
-﻿namespace IOOP_assignment
+﻿
+namespace IOOP_assignment
 {
     partial class Form1
     {
@@ -38,11 +39,8 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.ResumeLayout(false);
-
         }
 
         #endregion
     }
 }
-
