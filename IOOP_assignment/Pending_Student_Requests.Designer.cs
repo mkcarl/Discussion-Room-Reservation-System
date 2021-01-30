@@ -54,7 +54,7 @@ namespace IOOP_assignment
             this.Number_Of_Students,
             this.Status});
             this.dgvStudentRequests.Location = new System.Drawing.Point(56, 68);
-            this.dgvStudentRequests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvStudentRequests.Margin = new System.Windows.Forms.Padding(2);
             this.dgvStudentRequests.Name = "dgvStudentRequests";
             this.dgvStudentRequests.RowHeadersWidth = 51;
             this.dgvStudentRequests.RowTemplate.Height = 24;
@@ -148,9 +148,9 @@ namespace IOOP_assignment
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblPendingStudentReq);
             this.Controls.Add(this.dgvStudentRequests);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Pending_Student_Requests";
-            this.Text = "PendingStudentRequests";
+            this.Text = "Pending Student Requests";
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentRequests)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
