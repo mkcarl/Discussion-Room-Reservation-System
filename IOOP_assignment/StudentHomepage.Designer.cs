@@ -176,6 +176,7 @@ namespace IOOP_assignment
             this.Controls.Add(this.lblWelcome_SHomepage);
             this.Name = "formStudentHomepage";
             this.Text = "Homepage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formStudentHomepage_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_SHomepage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

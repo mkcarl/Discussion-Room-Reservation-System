@@ -16,5 +16,11 @@ namespace IOOP_assignment
         {
             InitializeComponent();
         }
+
+        private void formStudentHomepage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
 }

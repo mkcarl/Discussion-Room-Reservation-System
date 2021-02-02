@@ -89,17 +89,23 @@ namespace IOOP_assignment
                 dr.Read();
                 if (dr["Role"].ToString() == "Librarian")
                 {
-                    MessageBox.Show("Librarian login");
+                    formLibrarianHomepage LHome = new formLibrarianHomepage();
+                    LHome.Show();
+                    this.Hide();
+                    // MessageBox.Show("Librarian login");
                 }
                 else if (dr["Role"].ToString() == "Student")
                 {
-                    MessageBox.Show("Student login");
+                    formStudentHomepage SHome = new formStudentHomepage();
+                    SHome.Show();
+                    this.Hide();
+                    // MessageBox.Show("Student login");
                 }
-                else { }
+                else { } // just in case there is any vulnerability, they are not able to access the homepage. 
             }
             else
             {
-                MessageBox.Show("wrong credentials");
+                MessageBox.Show("Invalid credentials. Please check the StudentID or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             conn.Close();
 
