@@ -111,5 +111,10 @@ namespace IOOP_assignment
 
 
         }
+
+        private void formLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

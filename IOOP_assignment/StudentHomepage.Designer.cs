@@ -78,6 +78,7 @@ namespace IOOP_assignment
             this.btnLogout_SHomepage.TabIndex = 6;
             this.toolTip1.SetToolTip(this.btnLogout_SHomepage, "Logout");
             this.btnLogout_SHomepage.UseVisualStyleBackColor = true;
+            this.btnLogout_SHomepage.Click += new System.EventHandler(this.btnLogout_SHomepage_Click);
             // 
             // btnRequestStatus_SHomepage
             // 
