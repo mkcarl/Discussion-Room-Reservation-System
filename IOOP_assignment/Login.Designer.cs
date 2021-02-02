@@ -103,6 +103,7 @@ namespace IOOP_assignment
             this.btnLogin_Login.TabIndex = 6;
             this.btnLogin_Login.Text = "Login";
             this.btnLogin_Login.UseVisualStyleBackColor = true;
+            this.btnLogin_Login.Click += new System.EventHandler(this.btnLogin_Login_Click);
             // 
             // pbxApuLogo_Login
             // 

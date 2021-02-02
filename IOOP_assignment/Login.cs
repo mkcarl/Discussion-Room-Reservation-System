@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Data.SqlClient;
 
 namespace IOOP_assignment
 {
@@ -51,12 +52,58 @@ namespace IOOP_assignment
         // TODO: move showHint() to Controller class. 
         private void showErrorHint(string message, Control control)
         {
-            SystemSounds.Asterisk.Play();
+            SystemSounds.Asterisk.Play(); // https://stackoverflow.com/a/72488
             ToolTip tt = new ToolTip();
             tt.IsBalloon = true;
             tt.Show(message, control, 150, -30, 500);
 
             // https://stackoverflow.com/questions/14695357/show-tooltip-on-textbox-entry
+        }
+
+        private void btnLogin_Login_Click(object sender, EventArgs e)
+        {
+            /* Pseudocode
+             * if credentials correct, 
+             *      if role is librarian,
+             *          open librarian homepage; 
+             *      else 
+             *          open student homepage; 
+             * else 
+             *      show messagebox error
+             */
+
+            string sqlLogin= "SELECT * FROM Student WHERE StudentID = @studentid AND Password = @pwd;";
+
+            // TODO: move showHint() to Controller class. 
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
+            conn.Open();
+            SqlCommand cmdLoginRole = new SqlCommand(sqlLogin, conn);
+
+            cmdLoginRole.Parameters.AddWithValue("@studentid", txtStudentID_Login.Text.ToString());
+            cmdLoginRole.Parameters.AddWithValue("@pwd", txtPassword_Login.Text.ToString());
+
+            SqlDataReader dr = cmdLoginRole.ExecuteReader();
+
+            if (dr.HasRows)
+            {
+                dr.Read();
+                if (dr["Role"].ToString() == "Librarian")
+                {
+                    MessageBox.Show("Librarian login");
+                }
+                else if (dr["Role"].ToString() == "Student")
+                {
+                    MessageBox.Show("Student login");
+                }
+                else { }
+            }
+            else
+            {
+                MessageBox.Show("wrong credentials");
+            }
+            conn.Close();
+
+
         }
     }
 }

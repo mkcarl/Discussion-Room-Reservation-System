@@ -1,0 +1,1 @@
+﻿SELECT * FROM Student WHERE StudentID = '100005' AND Password = 'admin123';
