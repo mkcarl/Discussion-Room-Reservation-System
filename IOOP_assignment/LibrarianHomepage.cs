@@ -16,5 +16,33 @@ namespace IOOP_assignment
         {
             InitializeComponent();
         }
+
+        private void btnReserveRoom_LHomepage_Click(object sender, EventArgs e)
+        {
+            FormReserve frmReserve = new FormReserve();
+            frmReserve.Show();
+        }
+
+        private void btnModifyReservation_LHomepage_Click(object sender, EventArgs e)
+        {
+            FormModify frmMod = new FormModify();
+            frmMod.Show();
+        }
+
+        private void btnRequestStatus_LHomepage_Click(object sender, EventArgs e)
+        {
+            FormRequest frmReq = new FormRequest();
+            frmReq.Show();
+        }
+
+        private void btnStudentRequest_LHomepage_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnGenerateReport_LHomepage_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

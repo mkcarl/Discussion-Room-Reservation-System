@@ -57,17 +57,17 @@
     <Compile Include="CustomControl1.Designer.cs">
       <DependentUpon>CustomControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Generate_Report.cs">
+    <Compile Include="Generate Report.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Generate_Report.Designer.cs">
-      <DependentUpon>Generate_Report.cs</DependentUpon>
+    <Compile Include="Generate Report.Designer.cs">
+      <DependentUpon>Generate Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pending_Student_Requests.cs">
+    <Compile Include="Pending Student Requests.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pending_Student_Requests.Designer.cs">
-      <DependentUpon>Pending_Student_Requests.cs</DependentUpon>
+    <Compile Include="Pending Student Requests.Designer.cs">
+      <DependentUpon>Pending Student Requests.cs</DependentUpon>
     </Compile>
     <Compile Include="LibrarianHomepage.cs">
       <SubType>Form</SubType>
@@ -112,11 +112,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Generate_Report.resx">
-      <DependentUpon>Generate_Report.cs</DependentUpon>
+    <EmbeddedResource Include="Generate Report.resx">
+      <DependentUpon>Generate Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pending_Student_Requests.resx">
-      <DependentUpon>Pending_Student_Requests.cs</DependentUpon>
+    <EmbeddedResource Include="Pending Student Requests.resx">
+      <DependentUpon>Pending Student Requests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibrarianHomepage.resx">
       <DependentUpon>LibrarianHomepage.cs</DependentUpon>
