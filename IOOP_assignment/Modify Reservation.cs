@@ -44,7 +44,7 @@ namespace IOOP_assignment
 
         private void button4_Click(object sender, EventArgs e)
         {
-           
+            this.Close();
         }
     }
 }

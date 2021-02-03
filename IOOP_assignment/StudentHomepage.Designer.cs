@@ -55,6 +55,7 @@ namespace IOOP_assignment
             this.lblWelcome_SHomepage.Size = new System.Drawing.Size(386, 46);
             this.lblWelcome_SHomepage.TabIndex = 0;
             this.lblWelcome_SHomepage.Text = "Welcome (Surname)";
+            this.lblWelcome_SHomepage.Click += new System.EventHandler(this.lblWelcome_SHomepage_Click);
             // 
             // lblPrompt_SHomepage
             // 
@@ -75,7 +76,7 @@ namespace IOOP_assignment
             this.btnLogout_SHomepage.FlatAppearance.BorderSize = 0;
             this.btnLogout_SHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout_SHomepage.Location = new System.Drawing.Point(965, 283);
-            this.btnLogout_SHomepage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogout_SHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout_SHomepage.Name = "btnLogout_SHomepage";
             this.btnLogout_SHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnLogout_SHomepage.TabIndex = 6;
@@ -90,7 +91,7 @@ namespace IOOP_assignment
             this.btnRequestStatus_SHomepage.FlatAppearance.BorderSize = 0;
             this.btnRequestStatus_SHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRequestStatus_SHomepage.Location = new System.Drawing.Point(675, 283);
-            this.btnRequestStatus_SHomepage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRequestStatus_SHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnRequestStatus_SHomepage.Name = "btnRequestStatus_SHomepage";
             this.btnRequestStatus_SHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnRequestStatus_SHomepage.TabIndex = 5;
@@ -105,7 +106,7 @@ namespace IOOP_assignment
             this.btnModifyReservation_SHomepage.FlatAppearance.BorderSize = 0;
             this.btnModifyReservation_SHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModifyReservation_SHomepage.Location = new System.Drawing.Point(384, 283);
-            this.btnModifyReservation_SHomepage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModifyReservation_SHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnModifyReservation_SHomepage.Name = "btnModifyReservation_SHomepage";
             this.btnModifyReservation_SHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnModifyReservation_SHomepage.TabIndex = 4;
@@ -120,7 +121,7 @@ namespace IOOP_assignment
             this.btnReserveRoom_SHomepage.FlatAppearance.BorderSize = 0;
             this.btnReserveRoom_SHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReserveRoom_SHomepage.Location = new System.Drawing.Point(93, 283);
-            this.btnReserveRoom_SHomepage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReserveRoom_SHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnReserveRoom_SHomepage.Name = "btnReserveRoom_SHomepage";
             this.btnReserveRoom_SHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnReserveRoom_SHomepage.TabIndex = 3;
@@ -132,13 +133,14 @@ namespace IOOP_assignment
             // 
             this.pbxProfilePic_SHomepage.Image = ((System.Drawing.Image)(resources.GetObject("pbxProfilePic_SHomepage.Image")));
             this.pbxProfilePic_SHomepage.Location = new System.Drawing.Point(547, 25);
-            this.pbxProfilePic_SHomepage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbxProfilePic_SHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.pbxProfilePic_SHomepage.Name = "pbxProfilePic_SHomepage";
             this.pbxProfilePic_SHomepage.Size = new System.Drawing.Size(133, 123);
             this.pbxProfilePic_SHomepage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxProfilePic_SHomepage.TabIndex = 2;
             this.pbxProfilePic_SHomepage.TabStop = false;
             this.toolTip1.SetToolTip(this.pbxProfilePic_SHomepage, "Edit profile");
+            this.pbxProfilePic_SHomepage.Click += new System.EventHandler(this.pbxProfilePic_SHomepage_Click);
             // 
             // lblDay_SHomepage
             // 
@@ -188,7 +190,7 @@ namespace IOOP_assignment
             this.Controls.Add(this.pbxProfilePic_SHomepage);
             this.Controls.Add(this.lblPrompt_SHomepage);
             this.Controls.Add(this.lblWelcome_SHomepage);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formStudentHomepage";
             this.Text = "Homepage";
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_SHomepage)).EndInit();

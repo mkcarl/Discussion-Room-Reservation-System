@@ -1,7 +1,7 @@
 ﻿
 namespace IOOP_assignment
 {
-    partial class Pending_Student_Requests
+    partial class Form_Pending_Student_Requests
     {
         /// <summary>
         /// Required designer variable.
@@ -107,7 +107,7 @@ namespace IOOP_assignment
             this.btnConfirm.FlatAppearance.BorderSize = 0;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.Location = new System.Drawing.Point(511, 559);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(167, 43);
             this.btnConfirm.TabIndex = 78;
@@ -120,7 +120,7 @@ namespace IOOP_assignment
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::IOOP_assignment.Properties.Resources.pending11;
             this.pictureBox1.Location = new System.Drawing.Point(353, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(73, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,13 +134,14 @@ namespace IOOP_assignment
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(1172, 559);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(87, 55);
             this.btnBack.TabIndex = 77;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // Pending_Student_Requests
+            // Form_Pending_Student_Requests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -152,7 +153,7 @@ namespace IOOP_assignment
             this.Controls.Add(this.lblPendingStudentReq);
             this.Controls.Add(this.dgvStudentRequests);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Pending_Student_Requests";
+            this.Name = "Form_Pending_Student_Requests";
             this.Text = "Pending Student Requests";
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentRequests)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

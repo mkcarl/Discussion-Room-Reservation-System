@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment
 {
-    public partial class Generate_Report : Form
+    public partial class Form_Generate_Report : Form
     {
-        public Generate_Report()
+        public Form_Generate_Report()
         {
             InitializeComponent();
         }
@@ -20,6 +20,11 @@ namespace IOOP_assignment
         private void Generate_Report_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

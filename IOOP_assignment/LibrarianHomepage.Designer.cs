@@ -77,7 +77,7 @@ namespace IOOP_assignment
             this.btnGenerateReport_LHomepage.FlatAppearance.BorderSize = 0;
             this.btnGenerateReport_LHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerateReport_LHomepage.Location = new System.Drawing.Point(521, 402);
-            this.btnGenerateReport_LHomepage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenerateReport_LHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerateReport_LHomepage.Name = "btnGenerateReport_LHomepage";
             this.btnGenerateReport_LHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnGenerateReport_LHomepage.TabIndex = 18;
@@ -92,7 +92,7 @@ namespace IOOP_assignment
             this.btnStudentRequest_LHomepage.FlatAppearance.BorderSize = 0;
             this.btnStudentRequest_LHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudentRequest_LHomepage.Location = new System.Drawing.Point(129, 402);
-            this.btnStudentRequest_LHomepage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStudentRequest_LHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnStudentRequest_LHomepage.Name = "btnStudentRequest_LHomepage";
             this.btnStudentRequest_LHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnStudentRequest_LHomepage.TabIndex = 17;
@@ -107,12 +107,13 @@ namespace IOOP_assignment
             this.btnLogout_LHomepage.FlatAppearance.BorderSize = 0;
             this.btnLogout_LHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout_LHomepage.Location = new System.Drawing.Point(913, 402);
-            this.btnLogout_LHomepage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogout_LHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout_LHomepage.Name = "btnLogout_LHomepage";
             this.btnLogout_LHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnLogout_LHomepage.TabIndex = 13;
             this.toolTip1.SetToolTip(this.btnLogout_LHomepage, "Logout");
             this.btnLogout_LHomepage.UseVisualStyleBackColor = true;
+            this.btnLogout_LHomepage.Click += new System.EventHandler(this.btnLogout_LHomepage_Click);
             // 
             // btnRequestStatus_LHomepage
             // 
@@ -121,7 +122,7 @@ namespace IOOP_assignment
             this.btnRequestStatus_LHomepage.FlatAppearance.BorderSize = 0;
             this.btnRequestStatus_LHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRequestStatus_LHomepage.Location = new System.Drawing.Point(913, 182);
-            this.btnRequestStatus_LHomepage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRequestStatus_LHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnRequestStatus_LHomepage.Name = "btnRequestStatus_LHomepage";
             this.btnRequestStatus_LHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnRequestStatus_LHomepage.TabIndex = 12;
@@ -136,7 +137,7 @@ namespace IOOP_assignment
             this.btnModifyReservation_LHomepage.FlatAppearance.BorderSize = 0;
             this.btnModifyReservation_LHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModifyReservation_LHomepage.Location = new System.Drawing.Point(521, 182);
-            this.btnModifyReservation_LHomepage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModifyReservation_LHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnModifyReservation_LHomepage.Name = "btnModifyReservation_LHomepage";
             this.btnModifyReservation_LHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnModifyReservation_LHomepage.TabIndex = 11;
@@ -151,7 +152,7 @@ namespace IOOP_assignment
             this.btnReserveRoom_LHomepage.FlatAppearance.BorderSize = 0;
             this.btnReserveRoom_LHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReserveRoom_LHomepage.Location = new System.Drawing.Point(129, 182);
-            this.btnReserveRoom_LHomepage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReserveRoom_LHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnReserveRoom_LHomepage.Name = "btnReserveRoom_LHomepage";
             this.btnReserveRoom_LHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnReserveRoom_LHomepage.TabIndex = 10;
@@ -163,7 +164,7 @@ namespace IOOP_assignment
             // 
             this.pbxProfilePic_LHomepage.Image = ((System.Drawing.Image)(resources.GetObject("pbxProfilePic_LHomepage.Image")));
             this.pbxProfilePic_LHomepage.Location = new System.Drawing.Point(547, 25);
-            this.pbxProfilePic_LHomepage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbxProfilePic_LHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.pbxProfilePic_LHomepage.Name = "pbxProfilePic_LHomepage";
             this.pbxProfilePic_LHomepage.Size = new System.Drawing.Size(133, 123);
             this.pbxProfilePic_LHomepage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -221,7 +222,7 @@ namespace IOOP_assignment
             this.Controls.Add(this.btnRequestStatus_LHomepage);
             this.Controls.Add(this.btnModifyReservation_LHomepage);
             this.Controls.Add(this.btnReserveRoom_LHomepage);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formLibrarianHomepage";
             this.Text = "Librarian Homepage";
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_LHomepage)).EndInit();

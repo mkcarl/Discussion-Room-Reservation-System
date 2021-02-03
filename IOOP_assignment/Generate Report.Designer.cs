@@ -1,6 +1,6 @@
 ﻿namespace IOOP_assignment
 {
-    partial class Generate_Report
+    partial class Form_Generate_Report
     {
         /// <summary>
         /// Required designer variable.
@@ -105,7 +105,7 @@
             this.pictureBox1.BackgroundImage = global::IOOP_assignment.Properties.Resources.daily_report;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(381, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(73, 66);
             this.pictureBox1.TabIndex = 77;
@@ -118,17 +118,18 @@
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(1157, 526);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(87, 55);
             this.btnBack.TabIndex = 76;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnEmail
             // 
             this.btnEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmail.Location = new System.Drawing.Point(597, 460);
-            this.btnEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEmail.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmail.Name = "btnEmail";
             this.btnEmail.Size = new System.Drawing.Size(203, 43);
             this.btnEmail.TabIndex = 75;
@@ -139,7 +140,7 @@
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(313, 460);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(167, 43);
             this.btnSave.TabIndex = 74;
@@ -211,7 +212,7 @@
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(597, 460);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(203, 43);
             this.button3.TabIndex = 76;
@@ -222,7 +223,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(313, 460);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(167, 43);
             this.button2.TabIndex = 75;
@@ -235,7 +236,7 @@
             this.pictureBox2.BackgroundImage = global::IOOP_assignment.Properties.Resources.daily_report;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(380, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(73, 66);
             this.pictureBox2.TabIndex = 78;
@@ -248,7 +249,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(1157, 526);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 55);
             this.button1.TabIndex = 77;
@@ -479,14 +480,14 @@
             this.btnApr.TabIndex = 61;
             this.btnApr.UseVisualStyleBackColor = true;
             // 
-            // Generate_Report
+            // Form_Generate_Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1259, 617);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Generate_Report";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Form_Generate_Report";
             this.Text = "Generate Report";
             this.Load += new System.EventHandler(this.Generate_Report_Load);
             this.tabControl1.ResumeLayout(false);
