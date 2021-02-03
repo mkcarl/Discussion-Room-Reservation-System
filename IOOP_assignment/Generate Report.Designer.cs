@@ -340,6 +340,7 @@
             this.btnLeftArrow.Size = new System.Drawing.Size(53, 26);
             this.btnLeftArrow.TabIndex = 53;
             this.btnLeftArrow.UseVisualStyleBackColor = false;
+            this.btnLeftArrow.Click += new System.EventHandler(this.btnLeftArrow_Click);
             // 
             // btnDec
             // 

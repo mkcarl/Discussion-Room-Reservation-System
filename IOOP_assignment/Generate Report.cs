@@ -26,5 +26,10 @@ namespace IOOP_assignment
         {
             this.Close();
         }
+
+        private void btnLeftArrow_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
