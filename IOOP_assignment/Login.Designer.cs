@@ -93,6 +93,7 @@ namespace IOOP_assignment
             this.btnRegister_Login.TabIndex = 5;
             this.btnRegister_Login.Text = "Register";
             this.btnRegister_Login.UseVisualStyleBackColor = true;
+            this.btnRegister_Login.Click += new System.EventHandler(this.btnRegister_Login_Click);
             // 
             // btnLogin_Login
             // 
@@ -129,6 +130,7 @@ namespace IOOP_assignment
             // 
             // formLogin
             // 
+            this.AcceptButton = this.btnLogin_Login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 501);
