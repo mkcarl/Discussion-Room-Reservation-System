@@ -128,6 +128,7 @@ namespace IOOP_assignment
             this.pbxProfilePic_SHomepage.TabIndex = 2;
             this.pbxProfilePic_SHomepage.TabStop = false;
             this.toolTip1.SetToolTip(this.pbxProfilePic_SHomepage, "Edit profile");
+            this.pbxProfilePic_SHomepage.Click += new System.EventHandler(this.pbxProfilePic_SHomepage_Click);
             // 
             // lblDay_SHomepage
             // 

@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="User_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Info.Designer.cs">
+      <DependentUpon>User_Info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Generate_Report.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="User_Info.resx">
+      <DependentUpon>User_Info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Generate_Report.resx">
       <DependentUpon>Generate_Report.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +291,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\status11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showpassicon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />

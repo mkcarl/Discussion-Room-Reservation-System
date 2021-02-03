@@ -16,5 +16,12 @@ namespace IOOP_assignment
         {
             InitializeComponent();
         }
+
+        private void pbxProfilePic_SHomepage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Add_User_Form f1 = new Add_User_Form();
+            f1.Show();
+        }
     }
 }
