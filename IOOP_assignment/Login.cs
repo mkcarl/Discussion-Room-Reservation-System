@@ -10,10 +10,12 @@ using System.Windows.Forms;
 using System.Media;
 using System.Data.SqlClient;
 
+
 namespace IOOP_assignment
 {
     public partial class formLogin : Form
     {
+
         public formLogin()
         {
             InitializeComponent();
@@ -89,19 +91,22 @@ namespace IOOP_assignment
                 dr.Read();
                 if (dr["Role"].ToString() == "Librarian")
                 {
-                    formLibrarianHomepage LHome = new formLibrarianHomepage();
+                    formLibrarianHomepage LHome;
+                    LHome = new formLibrarianHomepage();
+                    LHome.FormClosing += LHome_Closing;
                     LHome.Show();
-                    this.Hide();
                     // MessageBox.Show("Librarian login");
                 }
                 else if (dr["Role"].ToString() == "Student")
                 {
-                    formStudentHomepage SHome = new formStudentHomepage();
+                    formStudentHomepage SHome;
+                    SHome = new formStudentHomepage();
                     SHome.Show();
-                    this.Hide();
+                    SHome.FormClosing += SHome_Closing; 
                     // MessageBox.Show("Student login");
                 }
                 else { } // just in case there is any vulnerability, they are not able to access the homepage. 
+                this.Hide();
             }
             else
             {
@@ -112,9 +117,40 @@ namespace IOOP_assignment
 
         }
 
-        private void formLogin_FormClosed(object sender, FormClosedEventArgs e)
+        // when the homepage is closed, Login form will appear
+        private void LHome_Closing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            DialogResult logout = MessageBox.Show("Do you want to log out?", "Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (logout == DialogResult.Yes)
+            {
+                this.Show();
+            }
+            else if (logout == DialogResult.No)
+            {
+                this.Close();
+                //Application.Exit();
+            }
+            else if (logout == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+        }
+        private void SHome_Closing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult logout = MessageBox.Show("Do you want to log out?", "Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (logout == DialogResult.Yes)
+            {
+                this.Show();
+            }
+            else if (logout == DialogResult.No)
+            {
+                this.Close();
+                //Application.Exit();
+            }
+            else if (logout == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void btnRegister_Login_Click(object sender, EventArgs e)

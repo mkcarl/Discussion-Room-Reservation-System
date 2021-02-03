@@ -17,22 +17,16 @@ namespace IOOP_assignment
             InitializeComponent();
         }
 
-        private void formStudentHomepage_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-
-        }
 
         private void btnLogout_SHomepage_Click(object sender, EventArgs e)
         {
-            DialogResult logoutConfirm = MessageBox.Show("Logout?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            this.Close();
+            
+            //DialogResult logoutConfirm = MessageBox.Show("Logout?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (logoutConfirm == DialogResult.Yes)
-            {
-                formLogin login = new formLogin();
-                login.Show();
-                this.Hide();
-            }
+            //if (logoutConfirm == DialogResult.Yes)
+            //{
+            //}
         }
     }
 }

@@ -207,7 +207,6 @@ namespace IOOP_assignment
             this.Controls.Add(this.btnReserveRoom_LHomepage);
             this.Name = "formLibrarianHomepage";
             this.Text = "Librarian Homepage";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formLibrarianHomepage_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_LHomepage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
