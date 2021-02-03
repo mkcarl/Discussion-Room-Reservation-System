@@ -40,10 +40,10 @@ namespace IOOP_assignment
             this.btnRequestStatus_LHomepage = new System.Windows.Forms.Button();
             this.btnModifyReservation_LHomepage = new System.Windows.Forms.Button();
             this.btnReserveRoom_LHomepage = new System.Windows.Forms.Button();
+            this.pbxProfilePic_LHomepage = new System.Windows.Forms.PictureBox();
             this.lblTime_LHomepage = new System.Windows.Forms.Label();
             this.lblDate_LHomepage = new System.Windows.Forms.Label();
             this.lblDay_LHomepage = new System.Windows.Forms.Label();
-            this.pbxProfilePic_LHomepage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_LHomepage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,6 +146,18 @@ namespace IOOP_assignment
             this.toolTip1.SetToolTip(this.btnReserveRoom_LHomepage, "Reserve a room");
             this.btnReserveRoom_LHomepage.UseVisualStyleBackColor = true;
             // 
+            // pbxProfilePic_LHomepage
+            // 
+            this.pbxProfilePic_LHomepage.Image = ((System.Drawing.Image)(resources.GetObject("pbxProfilePic_LHomepage.Image")));
+            this.pbxProfilePic_LHomepage.Location = new System.Drawing.Point(410, 20);
+            this.pbxProfilePic_LHomepage.Name = "pbxProfilePic_LHomepage";
+            this.pbxProfilePic_LHomepage.Size = new System.Drawing.Size(100, 100);
+            this.pbxProfilePic_LHomepage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxProfilePic_LHomepage.TabIndex = 16;
+            this.pbxProfilePic_LHomepage.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbxProfilePic_LHomepage, "Edit profile");
+            this.pbxProfilePic_LHomepage.Click += new System.EventHandler(this.pbxProfilePic_LHomepage_Click);
+            // 
             // lblTime_LHomepage
             // 
             this.lblTime_LHomepage.AutoSize = true;
@@ -175,17 +187,6 @@ namespace IOOP_assignment
             this.lblDay_LHomepage.Size = new System.Drawing.Size(140, 29);
             this.lblDay_LHomepage.TabIndex = 19;
             this.lblDay_LHomepage.Text = "Wednesday";
-            // 
-            // pbxProfilePic_LHomepage
-            // 
-            this.pbxProfilePic_LHomepage.Image = ((System.Drawing.Image)(resources.GetObject("pbxProfilePic_LHomepage.Image")));
-            this.pbxProfilePic_LHomepage.Location = new System.Drawing.Point(410, 20);
-            this.pbxProfilePic_LHomepage.Name = "pbxProfilePic_LHomepage";
-            this.pbxProfilePic_LHomepage.Size = new System.Drawing.Size(100, 100);
-            this.pbxProfilePic_LHomepage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxProfilePic_LHomepage.TabIndex = 16;
-            this.pbxProfilePic_LHomepage.TabStop = false;
-            this.toolTip1.SetToolTip(this.pbxProfilePic_LHomepage, "Edit profile");
             // 
             // formLibrarianHomepage
             // 

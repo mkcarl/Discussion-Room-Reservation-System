@@ -45,8 +45,10 @@ namespace IOOP_assignment
             this.btnUserBack = new System.Windows.Forms.Button();
             this.tipSaveUser = new System.Windows.Forms.ToolTip(this.components);
             this.tipShowPassUser = new System.Windows.Forms.ToolTip(this.components);
-            this.picUserUser = new System.Windows.Forms.PictureBox();
             this.checkShowPassUser = new System.Windows.Forms.CheckBox();
+            this.picUserUser = new System.Windows.Forms.PictureBox();
+            this.lblEmailUser = new System.Windows.Forms.Label();
+            this.txtEmailUser = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picUserUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +74,7 @@ namespace IOOP_assignment
             // 
             this.lblGivenUser.AutoSize = true;
             this.lblGivenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblGivenUser.Location = new System.Drawing.Point(139, 203);
+            this.lblGivenUser.Location = new System.Drawing.Point(139, 187);
             this.lblGivenUser.Name = "lblGivenUser";
             this.lblGivenUser.Size = new System.Drawing.Size(134, 26);
             this.lblGivenUser.TabIndex = 2;
@@ -81,7 +83,7 @@ namespace IOOP_assignment
             // txtGivenUser
             // 
             this.txtGivenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtGivenUser.Location = new System.Drawing.Point(284, 203);
+            this.txtGivenUser.Location = new System.Drawing.Point(284, 186);
             this.txtGivenUser.Name = "txtGivenUser";
             this.txtGivenUser.Size = new System.Drawing.Size(266, 32);
             this.txtGivenUser.TabIndex = 3;
@@ -90,7 +92,7 @@ namespace IOOP_assignment
             // 
             this.lblStudentIDUser.AutoSize = true;
             this.lblStudentIDUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblStudentIDUser.Location = new System.Drawing.Point(139, 272);
+            this.lblStudentIDUser.Location = new System.Drawing.Point(139, 234);
             this.lblStudentIDUser.Name = "lblStudentIDUser";
             this.lblStudentIDUser.Size = new System.Drawing.Size(115, 26);
             this.lblStudentIDUser.TabIndex = 4;
@@ -99,7 +101,7 @@ namespace IOOP_assignment
             // txtStudentIDUser
             // 
             this.txtStudentIDUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtStudentIDUser.Location = new System.Drawing.Point(284, 272);
+            this.txtStudentIDUser.Location = new System.Drawing.Point(284, 235);
             this.txtStudentIDUser.Name = "txtStudentIDUser";
             this.txtStudentIDUser.ReadOnly = true;
             this.txtStudentIDUser.Size = new System.Drawing.Size(266, 32);
@@ -110,7 +112,7 @@ namespace IOOP_assignment
             // 
             this.lblPassUser.AutoSize = true;
             this.lblPassUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblPassUser.Location = new System.Drawing.Point(139, 330);
+            this.lblPassUser.Location = new System.Drawing.Point(139, 328);
             this.lblPassUser.Name = "lblPassUser";
             this.lblPassUser.Size = new System.Drawing.Size(108, 26);
             this.lblPassUser.TabIndex = 6;
@@ -119,10 +121,11 @@ namespace IOOP_assignment
             // txtPassUser
             // 
             this.txtPassUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtPassUser.Location = new System.Drawing.Point(284, 327);
+            this.txtPassUser.Location = new System.Drawing.Point(284, 333);
             this.txtPassUser.Name = "txtPassUser";
             this.txtPassUser.Size = new System.Drawing.Size(266, 32);
             this.txtPassUser.TabIndex = 7;
+            this.txtPassUser.UseSystemPasswordChar = true;
             this.txtPassUser.TextChanged += new System.EventHandler(this.txtPassUser_TextChanged);
             // 
             // lblTitleUser
@@ -166,6 +169,8 @@ namespace IOOP_assignment
             // 
             this.btnUserBack.BackgroundImage = global::IOOP_assignment.Properties.Resources.back2;
             this.btnUserBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUserBack.FlatAppearance.BorderSize = 0;
+            this.btnUserBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUserBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnUserBack.Location = new System.Drawing.Point(871, 439);
             this.btnUserBack.Name = "btnUserBack";
@@ -185,6 +190,19 @@ namespace IOOP_assignment
             this.tipShowPassUser.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Warning;
             this.tipShowPassUser.ToolTipTitle = "Show Password";
             // 
+            // checkShowPassUser
+            // 
+            this.checkShowPassUser.AutoSize = true;
+            this.checkShowPassUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.checkShowPassUser.Location = new System.Drawing.Point(556, 334);
+            this.checkShowPassUser.Name = "checkShowPassUser";
+            this.checkShowPassUser.Size = new System.Drawing.Size(86, 30);
+            this.checkShowPassUser.TabIndex = 14;
+            this.checkShowPassUser.Text = "Show";
+            this.tipShowPassUser.SetToolTip(this.checkShowPassUser, "Reveals User Password.");
+            this.checkShowPassUser.UseVisualStyleBackColor = true;
+            this.checkShowPassUser.CheckedChanged += new System.EventHandler(this.checkShowPassUser_CheckedChanged);
+            // 
             // picUserUser
             // 
             this.picUserUser.Image = global::IOOP_assignment.Properties.Resources.people_icon;
@@ -195,24 +213,31 @@ namespace IOOP_assignment
             this.picUserUser.TabIndex = 13;
             this.picUserUser.TabStop = false;
             // 
-            // checkShowPassUser
+            // lblEmailUser
             // 
-            this.checkShowPassUser.AutoSize = true;
-            this.checkShowPassUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.checkShowPassUser.Location = new System.Drawing.Point(556, 328);
-            this.checkShowPassUser.Name = "checkShowPassUser";
-            this.checkShowPassUser.Size = new System.Drawing.Size(86, 30);
-            this.checkShowPassUser.TabIndex = 14;
-            this.checkShowPassUser.Text = "Show";
-            this.tipShowPassUser.SetToolTip(this.checkShowPassUser, "Reveals User Password.");
-            this.checkShowPassUser.UseVisualStyleBackColor = true;
-            this.checkShowPassUser.CheckedChanged += new System.EventHandler(this.checkShowPassUser_CheckedChanged);
+            this.lblEmailUser.AutoSize = true;
+            this.lblEmailUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblEmailUser.Location = new System.Drawing.Point(139, 281);
+            this.lblEmailUser.Name = "lblEmailUser";
+            this.lblEmailUser.Size = new System.Drawing.Size(68, 26);
+            this.lblEmailUser.TabIndex = 15;
+            this.lblEmailUser.Text = "Email";
+            // 
+            // txtEmailUser
+            // 
+            this.txtEmailUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.txtEmailUser.Location = new System.Drawing.Point(284, 284);
+            this.txtEmailUser.Name = "txtEmailUser";
+            this.txtEmailUser.Size = new System.Drawing.Size(266, 32);
+            this.txtEmailUser.TabIndex = 16;
             // 
             // Add_User_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 501);
+            this.Controls.Add(this.txtEmailUser);
+            this.Controls.Add(this.lblEmailUser);
             this.Controls.Add(this.checkShowPassUser);
             this.Controls.Add(this.picUserUser);
             this.Controls.Add(this.lblTypeUser);
@@ -256,5 +281,7 @@ namespace IOOP_assignment
         private System.Windows.Forms.ToolTip tipShowPassUser;
         private System.Windows.Forms.PictureBox picUserUser;
         private System.Windows.Forms.CheckBox checkShowPassUser;
+        private System.Windows.Forms.Label lblEmailUser;
+        private System.Windows.Forms.TextBox txtEmailUser;
     }
 }

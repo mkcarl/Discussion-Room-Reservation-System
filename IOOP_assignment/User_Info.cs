@@ -29,16 +29,13 @@ namespace IOOP_assignment
 
         private void btnUserBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            formStudentHomepage f2 = new formStudentHomepage();
-            f2.Show();
+            this.Close();
         }
 
         private void btnSaveUser_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            formStudentHomepage f1 = new formStudentHomepage();
-            f1.Show();
+            //insert update database codes before this line
+            this.Close();
         }
 
         private void txtPassUser_TextChanged(object sender, EventArgs e)
@@ -60,7 +57,7 @@ namespace IOOP_assignment
 
         private void Add_User_Form_Load(object sender, EventArgs e)
         {
-            txtPassUser.UseSystemPasswordChar = true;
+            
         }
     }
 }
