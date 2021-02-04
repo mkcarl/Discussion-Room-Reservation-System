@@ -31,7 +31,7 @@ namespace IOOP_assignment
 
         private void btnModifyReservation_SHomepage_Click(object sender, EventArgs e)
         {
-            FormModify frmMod= new FormModify();
+            FormModify frmMod = new FormModify();
             frmMod.FormClosed += FormModify_Closed;
             frmMod.Show();
         }
@@ -47,7 +47,7 @@ namespace IOOP_assignment
             frmReq.FormClosed += FormRequest_Closed;
             frmReq.Show();
         }
-        
+
         private void FormRequest_Closed(object sender, FormClosedEventArgs e)
         {
             this.Show();
@@ -56,21 +56,21 @@ namespace IOOP_assignment
         private void btnLogout_SHomepage_Click(object sender, EventArgs e)
         {
             this.Close();
-            
+
             //DialogResult logoutConfirm = MessageBox.Show("Logout?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             //if (logoutConfirm == DialogResult.Yes)
             //{
             //}
-
-        private void pbxProfilePic_SHomepage_Click(object sender, EventArgs e)
-        {
-
         }
+            private void pbxProfilePic_SHomepage_Click(object sender, EventArgs e)
+            {
 
-        private void lblWelcome_SHomepage_Click(object sender, EventArgs e)
-        {
+            }
 
+            private void lblWelcome_SHomepage_Click(object sender, EventArgs e)
+            {
+
+            }
         }
     }
-}

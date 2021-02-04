@@ -20,7 +20,7 @@ namespace IOOP_assignment
         private void btnLogout_LHomepage_Click(object sender, EventArgs e)
         {
             this.Close();
-
+        }
         private void btnReserveRoom_LHomepage_Click(object sender, EventArgs e)
         {
             FormReserve frmReserve = new FormReserve();
@@ -83,4 +83,3 @@ namespace IOOP_assignment
 
         }
     }
-}
