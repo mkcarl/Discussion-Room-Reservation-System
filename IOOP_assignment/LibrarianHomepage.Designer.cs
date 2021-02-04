@@ -40,10 +40,10 @@ namespace IOOP_assignment
             this.btnRequestStatus_LHomepage = new System.Windows.Forms.Button();
             this.btnModifyReservation_LHomepage = new System.Windows.Forms.Button();
             this.btnReserveRoom_LHomepage = new System.Windows.Forms.Button();
+            this.pbxProfilePic_LHomepage = new System.Windows.Forms.PictureBox();
             this.lblTime_LHomepage = new System.Windows.Forms.Label();
             this.lblDate_LHomepage = new System.Windows.Forms.Label();
             this.lblDay_LHomepage = new System.Windows.Forms.Label();
-            this.pbxProfilePic_LHomepage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_LHomepage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,9 +51,10 @@ namespace IOOP_assignment
             // 
             this.lblPrompt_LHomepage.AutoSize = true;
             this.lblPrompt_LHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrompt_LHomepage.Location = new System.Drawing.Point(22, 83);
+            this.lblPrompt_LHomepage.Location = new System.Drawing.Point(29, 102);
+            this.lblPrompt_LHomepage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrompt_LHomepage.Name = "lblPrompt_LHomepage";
-            this.lblPrompt_LHomepage.Size = new System.Drawing.Size(382, 37);
+            this.lblPrompt_LHomepage.Size = new System.Drawing.Size(474, 46);
             this.lblPrompt_LHomepage.TabIndex = 15;
             this.lblPrompt_LHomepage.Text = "What do you want to do? ";
             this.lblPrompt_LHomepage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -62,9 +63,10 @@ namespace IOOP_assignment
             // 
             this.lblWelcome_LHomepage.AutoSize = true;
             this.lblWelcome_LHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome_LHomepage.Location = new System.Drawing.Point(22, 32);
+            this.lblWelcome_LHomepage.Location = new System.Drawing.Point(29, 39);
+            this.lblWelcome_LHomepage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWelcome_LHomepage.Name = "lblWelcome_LHomepage";
-            this.lblWelcome_LHomepage.Size = new System.Drawing.Size(311, 37);
+            this.lblWelcome_LHomepage.Size = new System.Drawing.Size(386, 46);
             this.lblWelcome_LHomepage.TabIndex = 14;
             this.lblWelcome_LHomepage.Text = "Welcome (Surname)";
             // 
@@ -74,12 +76,14 @@ namespace IOOP_assignment
             this.btnGenerateReport_LHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGenerateReport_LHomepage.FlatAppearance.BorderSize = 0;
             this.btnGenerateReport_LHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerateReport_LHomepage.Location = new System.Drawing.Point(391, 327);
+            this.btnGenerateReport_LHomepage.Location = new System.Drawing.Point(521, 402);
+            this.btnGenerateReport_LHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerateReport_LHomepage.Name = "btnGenerateReport_LHomepage";
-            this.btnGenerateReport_LHomepage.Size = new System.Drawing.Size(150, 150);
+            this.btnGenerateReport_LHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnGenerateReport_LHomepage.TabIndex = 18;
             this.toolTip1.SetToolTip(this.btnGenerateReport_LHomepage, "Generate daily/monthly report");
             this.btnGenerateReport_LHomepage.UseVisualStyleBackColor = true;
+            this.btnGenerateReport_LHomepage.Click += new System.EventHandler(this.btnGenerateReport_LHomepage_Click);
             // 
             // btnStudentRequest_LHomepage
             // 
@@ -87,12 +91,14 @@ namespace IOOP_assignment
             this.btnStudentRequest_LHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStudentRequest_LHomepage.FlatAppearance.BorderSize = 0;
             this.btnStudentRequest_LHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudentRequest_LHomepage.Location = new System.Drawing.Point(97, 327);
+            this.btnStudentRequest_LHomepage.Location = new System.Drawing.Point(129, 402);
+            this.btnStudentRequest_LHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnStudentRequest_LHomepage.Name = "btnStudentRequest_LHomepage";
-            this.btnStudentRequest_LHomepage.Size = new System.Drawing.Size(150, 150);
+            this.btnStudentRequest_LHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnStudentRequest_LHomepage.TabIndex = 17;
             this.toolTip1.SetToolTip(this.btnStudentRequest_LHomepage, "Pending student requests");
             this.btnStudentRequest_LHomepage.UseVisualStyleBackColor = true;
+            this.btnStudentRequest_LHomepage.Click += new System.EventHandler(this.btnStudentRequest_LHomepage_Click);
             // 
             // btnLogout_LHomepage
             // 
@@ -100,12 +106,14 @@ namespace IOOP_assignment
             this.btnLogout_LHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogout_LHomepage.FlatAppearance.BorderSize = 0;
             this.btnLogout_LHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout_LHomepage.Location = new System.Drawing.Point(685, 327);
+            this.btnLogout_LHomepage.Location = new System.Drawing.Point(913, 402);
+            this.btnLogout_LHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout_LHomepage.Name = "btnLogout_LHomepage";
-            this.btnLogout_LHomepage.Size = new System.Drawing.Size(150, 150);
+            this.btnLogout_LHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnLogout_LHomepage.TabIndex = 13;
             this.toolTip1.SetToolTip(this.btnLogout_LHomepage, "Logout");
             this.btnLogout_LHomepage.UseVisualStyleBackColor = true;
+            this.btnLogout_LHomepage.Click += new System.EventHandler(this.btnLogout_LHomepage_Click);
             // 
             // btnRequestStatus_LHomepage
             // 
@@ -113,12 +121,14 @@ namespace IOOP_assignment
             this.btnRequestStatus_LHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRequestStatus_LHomepage.FlatAppearance.BorderSize = 0;
             this.btnRequestStatus_LHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRequestStatus_LHomepage.Location = new System.Drawing.Point(685, 148);
+            this.btnRequestStatus_LHomepage.Location = new System.Drawing.Point(913, 182);
+            this.btnRequestStatus_LHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnRequestStatus_LHomepage.Name = "btnRequestStatus_LHomepage";
-            this.btnRequestStatus_LHomepage.Size = new System.Drawing.Size(150, 150);
+            this.btnRequestStatus_LHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnRequestStatus_LHomepage.TabIndex = 12;
             this.toolTip1.SetToolTip(this.btnRequestStatus_LHomepage, "Check reservation status");
             this.btnRequestStatus_LHomepage.UseVisualStyleBackColor = true;
+            this.btnRequestStatus_LHomepage.Click += new System.EventHandler(this.btnRequestStatus_LHomepage_Click);
             // 
             // btnModifyReservation_LHomepage
             // 
@@ -126,12 +136,14 @@ namespace IOOP_assignment
             this.btnModifyReservation_LHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModifyReservation_LHomepage.FlatAppearance.BorderSize = 0;
             this.btnModifyReservation_LHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModifyReservation_LHomepage.Location = new System.Drawing.Point(391, 148);
+            this.btnModifyReservation_LHomepage.Location = new System.Drawing.Point(521, 182);
+            this.btnModifyReservation_LHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnModifyReservation_LHomepage.Name = "btnModifyReservation_LHomepage";
-            this.btnModifyReservation_LHomepage.Size = new System.Drawing.Size(150, 150);
+            this.btnModifyReservation_LHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnModifyReservation_LHomepage.TabIndex = 11;
             this.toolTip1.SetToolTip(this.btnModifyReservation_LHomepage, "Modify a reservation");
             this.btnModifyReservation_LHomepage.UseVisualStyleBackColor = true;
+            this.btnModifyReservation_LHomepage.Click += new System.EventHandler(this.btnModifyReservation_LHomepage_Click);
             // 
             // btnReserveRoom_LHomepage
             // 
@@ -139,20 +151,35 @@ namespace IOOP_assignment
             this.btnReserveRoom_LHomepage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReserveRoom_LHomepage.FlatAppearance.BorderSize = 0;
             this.btnReserveRoom_LHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReserveRoom_LHomepage.Location = new System.Drawing.Point(97, 148);
+            this.btnReserveRoom_LHomepage.Location = new System.Drawing.Point(129, 182);
+            this.btnReserveRoom_LHomepage.Margin = new System.Windows.Forms.Padding(4);
             this.btnReserveRoom_LHomepage.Name = "btnReserveRoom_LHomepage";
-            this.btnReserveRoom_LHomepage.Size = new System.Drawing.Size(150, 150);
+            this.btnReserveRoom_LHomepage.Size = new System.Drawing.Size(200, 185);
             this.btnReserveRoom_LHomepage.TabIndex = 10;
             this.toolTip1.SetToolTip(this.btnReserveRoom_LHomepage, "Reserve a room");
             this.btnReserveRoom_LHomepage.UseVisualStyleBackColor = true;
+            this.btnReserveRoom_LHomepage.Click += new System.EventHandler(this.btnReserveRoom_LHomepage_Click);
+            // 
+            // pbxProfilePic_LHomepage
+            // 
+            this.pbxProfilePic_LHomepage.Image = ((System.Drawing.Image)(resources.GetObject("pbxProfilePic_LHomepage.Image")));
+            this.pbxProfilePic_LHomepage.Location = new System.Drawing.Point(547, 25);
+            this.pbxProfilePic_LHomepage.Margin = new System.Windows.Forms.Padding(4);
+            this.pbxProfilePic_LHomepage.Name = "pbxProfilePic_LHomepage";
+            this.pbxProfilePic_LHomepage.Size = new System.Drawing.Size(133, 123);
+            this.pbxProfilePic_LHomepage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxProfilePic_LHomepage.TabIndex = 16;
+            this.pbxProfilePic_LHomepage.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbxProfilePic_LHomepage, "Edit profile");
             // 
             // lblTime_LHomepage
             // 
             this.lblTime_LHomepage.AutoSize = true;
             this.lblTime_LHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime_LHomepage.Location = new System.Drawing.Point(807, 78);
+            this.lblTime_LHomepage.Location = new System.Drawing.Point(1076, 96);
+            this.lblTime_LHomepage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTime_LHomepage.Name = "lblTime_LHomepage";
-            this.lblTime_LHomepage.Size = new System.Drawing.Size(113, 29);
+            this.lblTime_LHomepage.Size = new System.Drawing.Size(144, 36);
             this.lblTime_LHomepage.TabIndex = 21;
             this.lblTime_LHomepage.Text = "10:01 PM";
             // 
@@ -160,9 +187,10 @@ namespace IOOP_assignment
             // 
             this.lblDate_LHomepage.AutoSize = true;
             this.lblDate_LHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate_LHomepage.Location = new System.Drawing.Point(734, 49);
+            this.lblDate_LHomepage.Location = new System.Drawing.Point(979, 60);
+            this.lblDate_LHomepage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate_LHomepage.Name = "lblDate_LHomepage";
-            this.lblDate_LHomepage.Size = new System.Drawing.Size(186, 29);
+            this.lblDate_LHomepage.Size = new System.Drawing.Size(239, 36);
             this.lblDate_LHomepage.TabIndex = 20;
             this.lblDate_LHomepage.Text = "26 January 2021";
             // 
@@ -170,28 +198,18 @@ namespace IOOP_assignment
             // 
             this.lblDay_LHomepage.AutoSize = true;
             this.lblDay_LHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDay_LHomepage.Location = new System.Drawing.Point(780, 20);
+            this.lblDay_LHomepage.Location = new System.Drawing.Point(1040, 25);
+            this.lblDay_LHomepage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDay_LHomepage.Name = "lblDay_LHomepage";
-            this.lblDay_LHomepage.Size = new System.Drawing.Size(140, 29);
+            this.lblDay_LHomepage.Size = new System.Drawing.Size(173, 36);
             this.lblDay_LHomepage.TabIndex = 19;
             this.lblDay_LHomepage.Text = "Wednesday";
             // 
-            // pbxProfilePic_LHomepage
-            // 
-            this.pbxProfilePic_LHomepage.Image = ((System.Drawing.Image)(resources.GetObject("pbxProfilePic_LHomepage.Image")));
-            this.pbxProfilePic_LHomepage.Location = new System.Drawing.Point(410, 20);
-            this.pbxProfilePic_LHomepage.Name = "pbxProfilePic_LHomepage";
-            this.pbxProfilePic_LHomepage.Size = new System.Drawing.Size(100, 100);
-            this.pbxProfilePic_LHomepage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxProfilePic_LHomepage.TabIndex = 16;
-            this.pbxProfilePic_LHomepage.TabStop = false;
-            this.toolTip1.SetToolTip(this.pbxProfilePic_LHomepage, "Edit profile");
-            // 
             // formLibrarianHomepage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 501);
+            this.ClientSize = new System.Drawing.Size(1259, 617);
             this.Controls.Add(this.lblTime_LHomepage);
             this.Controls.Add(this.lblDate_LHomepage);
             this.Controls.Add(this.lblDay_LHomepage);
@@ -204,6 +222,7 @@ namespace IOOP_assignment
             this.Controls.Add(this.btnRequestStatus_LHomepage);
             this.Controls.Add(this.btnModifyReservation_LHomepage);
             this.Controls.Add(this.btnReserveRoom_LHomepage);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formLibrarianHomepage";
             this.Text = "Librarian Homepage";
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_LHomepage)).EndInit();
