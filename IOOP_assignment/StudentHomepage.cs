@@ -17,6 +17,41 @@ namespace IOOP_assignment
             InitializeComponent();
         }
 
+        private void btnReserveRoom_SHomepage_Click(object sender, EventArgs e)
+        {
+            FormReserve frmReserve = new FormReserve();
+            frmReserve.FormClosed += FormReserve_Closed;
+            frmReserve.Show();
+        }
+
+        private void FormReserve_Closed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+
+        private void btnModifyReservation_SHomepage_Click(object sender, EventArgs e)
+        {
+            FormModify frmMod= new FormModify();
+            frmMod.FormClosed += FormModify_Closed;
+            frmMod.Show();
+        }
+
+        private void FormModify_Closed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+
+        private void btnRequestStatus_SHomepage_Click(object sender, EventArgs e)
+        {
+            FormRequest frmReq = new FormRequest();
+            frmReq.FormClosed += FormRequest_Closed;
+            frmReq.Show();
+        }
+        
+        private void FormRequest_Closed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
 
         private void btnLogout_SHomepage_Click(object sender, EventArgs e)
         {
@@ -27,6 +62,15 @@ namespace IOOP_assignment
             //if (logoutConfirm == DialogResult.Yes)
             //{
             //}
+
+        private void pbxProfilePic_SHomepage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblWelcome_SHomepage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

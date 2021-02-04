@@ -10,21 +10,26 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment
 {
-    public partial class FormReserve : Form
+    public partial class Form_Generate_Report : Form
     {
-        public FormReserve()
+        public Form_Generate_Report()
         {
             InitializeComponent();
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void Generate_Report_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnLeftArrow_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
