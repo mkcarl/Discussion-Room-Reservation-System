@@ -73,7 +73,7 @@
             this.tabControl1.Controls.Add(this.tabMonthly);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(944, 501);
@@ -91,9 +91,9 @@
             this.tabDaily.Controls.Add(this.lstReport);
             this.tabDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDaily.Location = new System.Drawing.Point(4, 22);
-            this.tabDaily.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabDaily.Margin = new System.Windows.Forms.Padding(2);
             this.tabDaily.Name = "tabDaily";
-            this.tabDaily.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabDaily.Padding = new System.Windows.Forms.Padding(2);
             this.tabDaily.Size = new System.Drawing.Size(936, 475);
             this.tabDaily.TabIndex = 0;
             this.tabDaily.Text = "Daily";
@@ -156,7 +156,7 @@
             // mthCalendar
             // 
             this.mthCalendar.Location = new System.Drawing.Point(88, 127);
-            this.mthCalendar.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.mthCalendar.Margin = new System.Windows.Forms.Padding(7);
             this.mthCalendar.Name = "mthCalendar";
             this.mthCalendar.TabIndex = 44;
             // 
@@ -166,7 +166,7 @@
             this.lstReport.FormattingEnabled = true;
             this.lstReport.ItemHeight = 20;
             this.lstReport.Location = new System.Drawing.Point(448, 88);
-            this.lstReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstReport.Margin = new System.Windows.Forms.Padding(2);
             this.lstReport.Name = "lstReport";
             this.lstReport.Size = new System.Drawing.Size(442, 202);
             this.lstReport.TabIndex = 45;
@@ -197,9 +197,9 @@
             this.tabMonthly.Controls.Add(this.btnApr);
             this.tabMonthly.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabMonthly.Location = new System.Drawing.Point(4, 22);
-            this.tabMonthly.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabMonthly.Margin = new System.Windows.Forms.Padding(2);
             this.tabMonthly.Name = "tabMonthly";
-            this.tabMonthly.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabMonthly.Padding = new System.Windows.Forms.Padding(2);
             this.tabMonthly.Size = new System.Drawing.Size(936, 475);
             this.tabMonthly.TabIndex = 1;
             this.tabMonthly.Text = "Monthly";
@@ -277,7 +277,7 @@
             this.btnJan.FlatAppearance.BorderSize = 0;
             this.btnJan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJan.Location = new System.Drawing.Point(41, 140);
-            this.btnJan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJan.Margin = new System.Windows.Forms.Padding(2);
             this.btnJan.Name = "btnJan";
             this.btnJan.Size = new System.Drawing.Size(80, 56);
             this.btnJan.TabIndex = 72;
@@ -290,7 +290,7 @@
             this.btnSep.FlatAppearance.BorderSize = 0;
             this.btnSep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSep.Location = new System.Drawing.Point(41, 274);
-            this.btnSep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSep.Margin = new System.Windows.Forms.Padding(2);
             this.btnSep.Name = "btnSep";
             this.btnSep.Size = new System.Drawing.Size(80, 56);
             this.btnSep.TabIndex = 71;
@@ -303,7 +303,7 @@
             this.btnOct.FlatAppearance.BorderSize = 0;
             this.btnOct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOct.Location = new System.Drawing.Point(123, 274);
-            this.btnOct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOct.Margin = new System.Windows.Forms.Padding(2);
             this.btnOct.Name = "btnOct";
             this.btnOct.Size = new System.Drawing.Size(80, 56);
             this.btnOct.TabIndex = 70;
@@ -316,7 +316,7 @@
             this.btnNov.FlatAppearance.BorderSize = 0;
             this.btnNov.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNov.Location = new System.Drawing.Point(204, 274);
-            this.btnNov.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNov.Margin = new System.Windows.Forms.Padding(2);
             this.btnNov.Name = "btnNov";
             this.btnNov.Size = new System.Drawing.Size(80, 56);
             this.btnNov.TabIndex = 69;
@@ -331,7 +331,7 @@
             this.btnLeftArrow.FlatAppearance.BorderSize = 0;
             this.btnLeftArrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLeftArrow.Location = new System.Drawing.Point(117, 89);
-            this.btnLeftArrow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLeftArrow.Margin = new System.Windows.Forms.Padding(2);
             this.btnLeftArrow.Name = "btnLeftArrow";
             this.btnLeftArrow.Size = new System.Drawing.Size(40, 21);
             this.btnLeftArrow.TabIndex = 53;
@@ -345,7 +345,7 @@
             this.btnDec.FlatAppearance.BorderSize = 0;
             this.btnDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDec.Location = new System.Drawing.Point(289, 274);
-            this.btnDec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDec.Margin = new System.Windows.Forms.Padding(2);
             this.btnDec.Name = "btnDec";
             this.btnDec.Size = new System.Drawing.Size(80, 56);
             this.btnDec.TabIndex = 68;
@@ -358,7 +358,7 @@
             this.btnAug.FlatAppearance.BorderSize = 0;
             this.btnAug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAug.Location = new System.Drawing.Point(287, 205);
-            this.btnAug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAug.Margin = new System.Windows.Forms.Padding(2);
             this.btnAug.Name = "btnAug";
             this.btnAug.Size = new System.Drawing.Size(80, 56);
             this.btnAug.TabIndex = 67;
@@ -369,7 +369,7 @@
             this.lstMonthlyReport.FormattingEnabled = true;
             this.lstMonthlyReport.ItemHeight = 20;
             this.lstMonthlyReport.Location = new System.Drawing.Point(516, 100);
-            this.lstMonthlyReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstMonthlyReport.Margin = new System.Windows.Forms.Padding(2);
             this.lstMonthlyReport.Name = "lstMonthlyReport";
             this.lstMonthlyReport.Size = new System.Drawing.Size(387, 204);
             this.lstMonthlyReport.TabIndex = 55;
@@ -392,7 +392,7 @@
             this.btnJul.FlatAppearance.BorderSize = 0;
             this.btnJul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJul.Location = new System.Drawing.Point(204, 205);
-            this.btnJul.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJul.Margin = new System.Windows.Forms.Padding(2);
             this.btnJul.Name = "btnJul";
             this.btnJul.Size = new System.Drawing.Size(80, 56);
             this.btnJul.TabIndex = 66;
@@ -405,7 +405,7 @@
             this.btnJun.FlatAppearance.BorderSize = 0;
             this.btnJun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJun.Location = new System.Drawing.Point(122, 205);
-            this.btnJun.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJun.Margin = new System.Windows.Forms.Padding(2);
             this.btnJun.Name = "btnJun";
             this.btnJun.Size = new System.Drawing.Size(80, 56);
             this.btnJun.TabIndex = 65;
@@ -420,7 +420,7 @@
             this.btnRightArrow.FlatAppearance.BorderSize = 0;
             this.btnRightArrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRightArrow.Location = new System.Drawing.Point(232, 89);
-            this.btnRightArrow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRightArrow.Margin = new System.Windows.Forms.Padding(2);
             this.btnRightArrow.Name = "btnRightArrow";
             this.btnRightArrow.Size = new System.Drawing.Size(40, 21);
             this.btnRightArrow.TabIndex = 58;
@@ -433,7 +433,7 @@
             this.btnMay.FlatAppearance.BorderSize = 0;
             this.btnMay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMay.Location = new System.Drawing.Point(41, 205);
-            this.btnMay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMay.Margin = new System.Windows.Forms.Padding(2);
             this.btnMay.Name = "btnMay";
             this.btnMay.Size = new System.Drawing.Size(80, 56);
             this.btnMay.TabIndex = 64;
@@ -446,7 +446,7 @@
             this.btnFeb.FlatAppearance.BorderSize = 0;
             this.btnFeb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFeb.Location = new System.Drawing.Point(122, 140);
-            this.btnFeb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFeb.Margin = new System.Windows.Forms.Padding(2);
             this.btnFeb.Name = "btnFeb";
             this.btnFeb.Size = new System.Drawing.Size(80, 56);
             this.btnFeb.TabIndex = 59;
@@ -459,7 +459,7 @@
             this.btnMar.FlatAppearance.BorderSize = 0;
             this.btnMar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMar.Location = new System.Drawing.Point(204, 140);
-            this.btnMar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMar.Name = "btnMar";
             this.btnMar.Size = new System.Drawing.Size(80, 56);
             this.btnMar.TabIndex = 60;
@@ -472,7 +472,7 @@
             this.btnApr.FlatAppearance.BorderSize = 0;
             this.btnApr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApr.Location = new System.Drawing.Point(288, 140);
-            this.btnApr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnApr.Margin = new System.Windows.Forms.Padding(2);
             this.btnApr.Name = "btnApr";
             this.btnApr.Size = new System.Drawing.Size(80, 56);
             this.btnApr.TabIndex = 61;
@@ -484,6 +484,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 501);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Generate_Report";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generate Report";

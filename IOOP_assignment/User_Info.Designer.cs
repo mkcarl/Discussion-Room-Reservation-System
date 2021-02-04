@@ -250,6 +250,9 @@ namespace IOOP_assignment
             this.Controls.Add(this.lblGivenUser);
             this.Controls.Add(this.txtSurnameUser);
             this.Controls.Add(this.lblSurnameUser);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Add_User_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Information";

@@ -142,6 +142,9 @@ namespace IOOP_assignment
             this.Controls.Add(this.txtPassword_Login);
             this.Controls.Add(this.txtStudentID_Login);
             this.Controls.Add(this.pbxApuLogo_Login);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

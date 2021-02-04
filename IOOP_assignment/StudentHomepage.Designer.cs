@@ -180,6 +180,9 @@ namespace IOOP_assignment
             this.Controls.Add(this.pbxProfilePic_SHomepage);
             this.Controls.Add(this.lblPrompt_SHomepage);
             this.Controls.Add(this.lblWelcome_SHomepage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "formStudentHomepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Homepage";
