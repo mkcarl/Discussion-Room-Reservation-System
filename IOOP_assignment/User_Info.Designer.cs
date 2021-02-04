@@ -251,6 +251,7 @@ namespace IOOP_assignment
             this.Controls.Add(this.txtSurnameUser);
             this.Controls.Add(this.lblSurnameUser);
             this.Name = "Add_User_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Information";
             this.tipShowPassUser.SetToolTip(this, "Reveals User Password");
             this.Load += new System.EventHandler(this.Add_User_Form_Load);

@@ -212,6 +212,7 @@ namespace IOOP_assignment
             this.Controls.Add(this.btnModifyReservation_LHomepage);
             this.Controls.Add(this.btnReserveRoom_LHomepage);
             this.Name = "formLibrarianHomepage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Librarian Homepage";
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_LHomepage)).EndInit();
             this.ResumeLayout(false);

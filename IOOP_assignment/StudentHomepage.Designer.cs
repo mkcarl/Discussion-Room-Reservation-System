@@ -181,6 +181,7 @@ namespace IOOP_assignment
             this.Controls.Add(this.lblPrompt_SHomepage);
             this.Controls.Add(this.lblWelcome_SHomepage);
             this.Name = "formStudentHomepage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Homepage";
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_SHomepage)).EndInit();
             this.ResumeLayout(false);
