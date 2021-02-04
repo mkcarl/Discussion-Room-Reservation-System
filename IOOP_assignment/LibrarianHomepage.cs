@@ -23,6 +23,7 @@ namespace IOOP_assignment
         }
         private void btnReserveRoom_LHomepage_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormReserve frmReserve = new FormReserve();
             frmReserve.FormClosed += FormReserve_Closed;
             frmReserve.Show();
@@ -35,6 +36,7 @@ namespace IOOP_assignment
 
         private void btnModifyReservation_LHomepage_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormModify frmMod = new FormModify();
             frmMod.FormClosed += FormModify_Closed;
             frmMod.Show();
@@ -47,6 +49,7 @@ namespace IOOP_assignment
 
         private void btnRequestStatus_LHomepage_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormRequest frmReq = new FormRequest();
             frmReq.FormClosed += FormRequest_Closed;
             frmReq.Show();
@@ -59,6 +62,7 @@ namespace IOOP_assignment
 
         private void btnStudentRequest_LHomepage_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Form_Pending_Student_Requests frmPendingStuReq = new Form_Pending_Student_Requests();
             frmPendingStuReq.FormClosed += Form_Pending_Student_Requests_Closed;
             frmPendingStuReq.Show();
@@ -71,6 +75,7 @@ namespace IOOP_assignment
 
         private void btnGenerateReport_LHomepage_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Form_Generate_Report frmGenReport = new Form_Generate_Report();
             frmGenReport.FormClosed += Form_Generate_Report;
             frmGenReport.Show();

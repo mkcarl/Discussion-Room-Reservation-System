@@ -19,6 +19,7 @@ namespace IOOP_assignment
 
         private void btnReserveRoom_SHomepage_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormReserve frmReserve = new FormReserve();
             frmReserve.FormClosed += FormReserve_Closed;
             frmReserve.Show();
@@ -31,6 +32,7 @@ namespace IOOP_assignment
 
         private void btnModifyReservation_SHomepage_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormModify frmMod = new FormModify();
             frmMod.FormClosed += FormModify_Closed;
             frmMod.Show();
@@ -43,6 +45,7 @@ namespace IOOP_assignment
 
         private void btnRequestStatus_SHomepage_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormRequest frmReq = new FormRequest();
             frmReq.FormClosed += FormRequest_Closed;
             frmReq.Show();
