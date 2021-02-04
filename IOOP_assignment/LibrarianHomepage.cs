@@ -81,8 +81,6 @@ namespace IOOP_assignment
             this.Show();
         }
 
-        }
-    }
 
         private void pbxProfilePic_LHomepage_Click(object sender, EventArgs e)
         {

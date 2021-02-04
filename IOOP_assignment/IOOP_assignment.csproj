@@ -57,7 +57,7 @@
     <Compile Include="User_Info.Designer.cs">
       <DependentUpon>User_Info.cs</DependentUpon>
     </Compile>
-    <Compile Include="Generate_Report.cs">
+    <Compile Include="Generate Report.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Generate Report.Designer.cs">
@@ -115,8 +115,8 @@
     <EmbeddedResource Include="User_Info.resx">
       <DependentUpon>User_Info.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Generate_Report.resx">
-      <DependentUpon>Generate_Report.cs</DependentUpon>
+    <EmbeddedResource Include="Generate Report.resx">
+      <DependentUpon>Generate Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pending Student Requests.resx">
       <DependentUpon>Pending Student Requests.cs</DependentUpon>
