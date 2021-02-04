@@ -63,14 +63,24 @@ namespace IOOP_assignment
             //{
             //}
         }
-            private void pbxProfilePic_SHomepage_Click(object sender, EventArgs e)
-            {
 
-            }
+        private void lblWelcome_SHomepage_Click(object sender, EventArgs e)
+        {
 
-            private void lblWelcome_SHomepage_Click(object sender, EventArgs e)
-            {
-
-            }
         }
-    }
+
+        private void pbxProfilePic_SHomepage_Click(object sender, EventArgs e)
+
+        {
+            this.Hide();
+            Add_User_Form f1 = new Add_User_Form();
+            f1.FormClosed += f1_Closed;
+            f1.Show();
+        }
+
+        private void f1_Closed(object senser, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+    }   
+}
