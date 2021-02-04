@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace IOOP_assignment
 {
@@ -57,7 +58,18 @@ namespace IOOP_assignment
 
         private void Add_User_Form_Load(object sender, EventArgs e)
         {
-            
+            //string sqllogin = "SELECT * from Student WHERE StudentID = @studentid AND Password = PrintControllerWithStatusDialog;";
+
+            //SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf; Integrated Security=True;Connect Timeout=30");
+
+            //conn.Open();
+            //SqlCommand cmdLoginRole = new SqlCommand(sqllogin, conn);
+
+            //cmdLoginRole.Parameters.AddWithValue("@studentid", txtStudentIDUser.Text.ToString());
+            //cmdLoginRole.Parameters.AddWithValue("@pwd", txtPassUser.Text.ToString());
+
+            txtPassUser.Text = 
+
         }
     }
 }
