@@ -17,6 +17,10 @@ namespace IOOP_assignment
             InitializeComponent();
         }
 
+        private void btnLogout_LHomepage_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         private void btnReserveRoom_LHomepage_Click(object sender, EventArgs e)
         {
             FormReserve frmReserve = new FormReserve();
@@ -77,17 +81,6 @@ namespace IOOP_assignment
             this.Show();
         }
 
-        private void btnLogout_LHomepage_Click(object sender, EventArgs e)
-        {
-            DialogResult reply;
-            reply = MessageBox.Show("Do you want to logout?", "Confirm Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (reply == DialogResult.Yes)
-            {
-                formLogin frmLogin = new formLogin();
-                this.Hide();
-                frmLogin.Show();
-            }
         }
     }
 }

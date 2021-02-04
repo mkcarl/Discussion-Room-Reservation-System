@@ -172,6 +172,17 @@ namespace IOOP_assignment
             this.pbxProfilePic_LHomepage.TabStop = false;
             this.toolTip1.SetToolTip(this.pbxProfilePic_LHomepage, "Edit profile");
             // 
+            // pbxProfilePic_LHomepage
+            // 
+            this.pbxProfilePic_LHomepage.Image = ((System.Drawing.Image)(resources.GetObject("pbxProfilePic_LHomepage.Image")));
+            this.pbxProfilePic_LHomepage.Location = new System.Drawing.Point(410, 20);
+            this.pbxProfilePic_LHomepage.Name = "pbxProfilePic_LHomepage";
+            this.pbxProfilePic_LHomepage.Size = new System.Drawing.Size(100, 100);
+            this.pbxProfilePic_LHomepage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxProfilePic_LHomepage.TabIndex = 16;
+            this.pbxProfilePic_LHomepage.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbxProfilePic_LHomepage, "Edit profile");
+            // 
             // lblTime_LHomepage
             // 
             this.lblTime_LHomepage.AutoSize = true;

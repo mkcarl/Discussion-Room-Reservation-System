@@ -16,8 +16,8 @@ namespace IOOP_assignment
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formStudentHomepage());
-            
+            formLogin mainApp = new formLogin(); 
+            Application.Run(mainApp);
         }
     }
 }
