@@ -18,15 +18,6 @@ namespace IOOP_assignment
             InitializeComponent();
         }
 
-        private void txtStudentIDUser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnShowPassUser_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnUserBack_Click(object sender, EventArgs e)
         {
@@ -37,11 +28,6 @@ namespace IOOP_assignment
         {
             //insert update database codes before this line
             this.Close();
-        }
-
-        private void txtPassUser_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void checkShowPassUser_CheckedChanged(object sender, EventArgs e)
@@ -57,18 +43,41 @@ namespace IOOP_assignment
         }
 
         private void Add_User_Form_Load(object sender, EventArgs e)
+
         {
-            //string sqllogin = "SELECT * from Student WHERE StudentID = @studentid AND Password = PrintControllerWithStatusDialog;";
+            //query first row 
+            string sqlquery = "SELECT TOP 1 * FROM Student";
+            //create the connection 
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf; Integrated Security=True;Connect Timeout=30");
 
-            //SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf; Integrated Security=True;Connect Timeout=30");
+            //opening the connection
+            conn.Open();
 
-            //conn.Open();
-            //SqlCommand cmdLoginRole = new SqlCommand(sqllogin, conn);
+            //command
+            SqlCommand cmdquery = new SqlCommand(sqlquery, conn);
 
-            //cmdLoginRole.Parameters.AddWithValue("@studentid", txtStudentIDUser.Text.ToString());
-            //cmdLoginRole.Parameters.AddWithValue("@pwd", txtPassUser.Text.ToString());
+            //defining the table to be used by C#
+            SqlDataReader table1;
 
-            txtPassUser.Text = 
+
+
+            //execute 
+            table1 = cmdquery.ExecuteReader();
+
+            //read the table
+            table1.Read();
+
+
+            txtStudentIDUser.Text = table1["StudentID"].ToString();
+            txtPassUser.Text = table1["Password"].ToString();
+            txtEmailUser.Text = table1["EmailAddress"].ToString();
+            txtGivenUser.Text = table1["GivenName"].ToString();
+            txtSurnameUser.Text = table1["Surname"].ToString();
+           
+            
+
+            
+            
 
         }
     }

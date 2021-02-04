@@ -106,7 +106,6 @@ namespace IOOP_assignment
             this.txtStudentIDUser.ReadOnly = true;
             this.txtStudentIDUser.Size = new System.Drawing.Size(266, 32);
             this.txtStudentIDUser.TabIndex = 5;
-            this.txtStudentIDUser.TextChanged += new System.EventHandler(this.txtStudentIDUser_TextChanged);
             // 
             // lblPassUser
             // 
@@ -126,7 +125,6 @@ namespace IOOP_assignment
             this.txtPassUser.Size = new System.Drawing.Size(266, 32);
             this.txtPassUser.TabIndex = 7;
             this.txtPassUser.UseSystemPasswordChar = true;
-            this.txtPassUser.TextChanged += new System.EventHandler(this.txtPassUser_TextChanged);
             // 
             // lblTitleUser
             // 
