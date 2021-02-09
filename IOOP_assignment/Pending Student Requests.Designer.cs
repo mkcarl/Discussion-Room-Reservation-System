@@ -35,6 +35,8 @@ namespace IOOP_assignment
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.Reservation_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Student_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Room_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +51,8 @@ namespace IOOP_assignment
             this.dgvStudentRequests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStudentRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudentRequests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Reservation_ID,
+            this.Student_ID,
             this.Date,
             this.Time,
             this.Room_Name,
@@ -67,7 +71,7 @@ namespace IOOP_assignment
             // 
             this.lblPendingStudentReq.AutoSize = true;
             this.lblPendingStudentReq.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPendingStudentReq.Location = new System.Drawing.Point(428, 25);
+            this.lblPendingStudentReq.Location = new System.Drawing.Point(514, 27);
             this.lblPendingStudentReq.Name = "lblPendingStudentReq";
             this.lblPendingStudentReq.Size = new System.Drawing.Size(395, 36);
             this.lblPendingStudentReq.TabIndex = 2;
@@ -90,7 +94,7 @@ namespace IOOP_assignment
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::IOOP_assignment.Properties.Resources.pending11;
-            this.pictureBox1.Location = new System.Drawing.Point(353, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(424, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(73, 66);
@@ -124,6 +128,20 @@ namespace IOOP_assignment
             this.button1.Text = "Approve";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // Reservation_ID
+            // 
+            this.Reservation_ID.FillWeight = 50F;
+            this.Reservation_ID.HeaderText = "Reservation ID";
+            this.Reservation_ID.MinimumWidth = 6;
+            this.Reservation_ID.Name = "Reservation_ID";
+            // 
+            // Student_ID
+            // 
+            this.Student_ID.FillWeight = 50F;
+            this.Student_ID.HeaderText = "Student ID";
+            this.Student_ID.MinimumWidth = 6;
+            this.Student_ID.Name = "Student_ID";
+            // 
             // Date
             // 
             this.Date.FillWeight = 60F;
@@ -133,7 +151,7 @@ namespace IOOP_assignment
             // 
             // Time
             // 
-            this.Time.FillWeight = 60F;
+            this.Time.FillWeight = 40F;
             this.Time.HeaderText = "Time";
             this.Time.MinimumWidth = 6;
             this.Time.Name = "Time";
@@ -146,14 +164,14 @@ namespace IOOP_assignment
             // 
             // Number_of_Students
             // 
-            this.Number_of_Students.FillWeight = 60F;
+            this.Number_of_Students.FillWeight = 65F;
             this.Number_of_Students.HeaderText = "Number of Students";
             this.Number_of_Students.MinimumWidth = 6;
             this.Number_of_Students.Name = "Number_of_Students";
             // 
             // Status
             // 
-            this.Status.FillWeight = 75F;
+            this.Status.FillWeight = 50F;
             this.Status.HeaderText = "Status";
             this.Status.MinimumWidth = 6;
             this.Status.Name = "Status";
@@ -192,6 +210,8 @@ namespace IOOP_assignment
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Reservation_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Student_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn Room_Name;
