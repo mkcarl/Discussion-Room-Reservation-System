@@ -199,9 +199,9 @@ namespace IOOP_assignment
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(868, 451);
+            this.button4.Location = new System.Drawing.Point(882, 439);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 50);
+            this.button4.Size = new System.Drawing.Size(50, 50);
             this.button4.TabIndex = 25;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -213,7 +213,7 @@ namespace IOOP_assignment
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(219, 49);
             this.button2.TabIndex = 24;
-            this.button2.Text = "Confirm Modification";
+            this.button2.Text = "Confirm Reservation";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button5
