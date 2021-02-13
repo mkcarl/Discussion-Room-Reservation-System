@@ -45,6 +45,9 @@ namespace IOOP_assignment
         private void Add_User_Form_Load(object sender, EventArgs e)
 
         {
+            // if login role not librarian, hide librarianID field 
+
+
             //query first row 
             string sqlquery = "SELECT TOP 1 * FROM Student";
             //create the connection 

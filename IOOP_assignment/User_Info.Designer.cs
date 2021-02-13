@@ -49,6 +49,8 @@ namespace IOOP_assignment
             this.picUserUser = new System.Windows.Forms.PictureBox();
             this.lblEmailUser = new System.Windows.Forms.Label();
             this.txtEmailUser = new System.Windows.Forms.TextBox();
+            this.lblLibrarianIDUser = new System.Windows.Forms.Label();
+            this.txtLibrarianIDUser = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picUserUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +58,7 @@ namespace IOOP_assignment
             // 
             this.lblSurnameUser.AutoSize = true;
             this.lblSurnameUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblSurnameUser.Location = new System.Drawing.Point(139, 140);
+            this.lblSurnameUser.Location = new System.Drawing.Point(44, 155);
             this.lblSurnameUser.Name = "lblSurnameUser";
             this.lblSurnameUser.Size = new System.Drawing.Size(101, 26);
             this.lblSurnameUser.TabIndex = 0;
@@ -65,16 +67,16 @@ namespace IOOP_assignment
             // txtSurnameUser
             // 
             this.txtSurnameUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtSurnameUser.Location = new System.Drawing.Point(284, 137);
+            this.txtSurnameUser.Location = new System.Drawing.Point(189, 152);
             this.txtSurnameUser.Name = "txtSurnameUser";
-            this.txtSurnameUser.Size = new System.Drawing.Size(266, 32);
+            this.txtSurnameUser.Size = new System.Drawing.Size(235, 32);
             this.txtSurnameUser.TabIndex = 1;
             // 
             // lblGivenUser
             // 
             this.lblGivenUser.AutoSize = true;
             this.lblGivenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblGivenUser.Location = new System.Drawing.Point(139, 189);
+            this.lblGivenUser.Location = new System.Drawing.Point(44, 240);
             this.lblGivenUser.Name = "lblGivenUser";
             this.lblGivenUser.Size = new System.Drawing.Size(134, 26);
             this.lblGivenUser.TabIndex = 2;
@@ -83,16 +85,16 @@ namespace IOOP_assignment
             // txtGivenUser
             // 
             this.txtGivenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtGivenUser.Location = new System.Drawing.Point(284, 186);
+            this.txtGivenUser.Location = new System.Drawing.Point(189, 237);
             this.txtGivenUser.Name = "txtGivenUser";
-            this.txtGivenUser.Size = new System.Drawing.Size(266, 32);
+            this.txtGivenUser.Size = new System.Drawing.Size(235, 32);
             this.txtGivenUser.TabIndex = 3;
             // 
             // lblStudentIDUser
             // 
             this.lblStudentIDUser.AutoSize = true;
             this.lblStudentIDUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblStudentIDUser.Location = new System.Drawing.Point(139, 238);
+            this.lblStudentIDUser.Location = new System.Drawing.Point(44, 325);
             this.lblStudentIDUser.Name = "lblStudentIDUser";
             this.lblStudentIDUser.Size = new System.Drawing.Size(115, 26);
             this.lblStudentIDUser.TabIndex = 4;
@@ -102,17 +104,17 @@ namespace IOOP_assignment
             // 
             this.txtStudentIDUser.Enabled = false;
             this.txtStudentIDUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtStudentIDUser.Location = new System.Drawing.Point(284, 235);
+            this.txtStudentIDUser.Location = new System.Drawing.Point(189, 322);
             this.txtStudentIDUser.Name = "txtStudentIDUser";
             this.txtStudentIDUser.ReadOnly = true;
-            this.txtStudentIDUser.Size = new System.Drawing.Size(266, 32);
+            this.txtStudentIDUser.Size = new System.Drawing.Size(235, 32);
             this.txtStudentIDUser.TabIndex = 5;
             // 
             // lblPassUser
             // 
             this.lblPassUser.AutoSize = true;
             this.lblPassUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblPassUser.Location = new System.Drawing.Point(139, 336);
+            this.lblPassUser.Location = new System.Drawing.Point(449, 240);
             this.lblPassUser.Name = "lblPassUser";
             this.lblPassUser.Size = new System.Drawing.Size(108, 26);
             this.lblPassUser.TabIndex = 6;
@@ -121,7 +123,7 @@ namespace IOOP_assignment
             // txtPassUser
             // 
             this.txtPassUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtPassUser.Location = new System.Drawing.Point(284, 333);
+            this.txtPassUser.Location = new System.Drawing.Point(576, 237);
             this.txtPassUser.Name = "txtPassUser";
             this.txtPassUser.Size = new System.Drawing.Size(266, 32);
             this.txtPassUser.TabIndex = 7;
@@ -131,7 +133,7 @@ namespace IOOP_assignment
             // 
             this.lblTitleUser.AutoSize = true;
             this.lblTitleUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.lblTitleUser.Location = new System.Drawing.Point(138, 71);
+            this.lblTitleUser.Location = new System.Drawing.Point(138, 66);
             this.lblTitleUser.Name = "lblTitleUser";
             this.lblTitleUser.Size = new System.Drawing.Size(234, 36);
             this.lblTitleUser.TabIndex = 8;
@@ -140,7 +142,7 @@ namespace IOOP_assignment
             // btnSaveUser
             // 
             this.btnSaveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnSaveUser.Location = new System.Drawing.Point(284, 392);
+            this.btnSaveUser.Location = new System.Drawing.Point(365, 400);
             this.btnSaveUser.Name = "btnSaveUser";
             this.btnSaveUser.Size = new System.Drawing.Size(192, 50);
             this.btnSaveUser.TabIndex = 10;
@@ -193,7 +195,7 @@ namespace IOOP_assignment
             // 
             this.checkShowPassUser.AutoSize = true;
             this.checkShowPassUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.checkShowPassUser.Location = new System.Drawing.Point(556, 334);
+            this.checkShowPassUser.Location = new System.Drawing.Point(857, 238);
             this.checkShowPassUser.Name = "checkShowPassUser";
             this.checkShowPassUser.Size = new System.Drawing.Size(86, 30);
             this.checkShowPassUser.TabIndex = 14;
@@ -205,7 +207,7 @@ namespace IOOP_assignment
             // picUserUser
             // 
             this.picUserUser.Image = global::IOOP_assignment.Properties.Resources.people_icon;
-            this.picUserUser.Location = new System.Drawing.Point(57, 50);
+            this.picUserUser.Location = new System.Drawing.Point(57, 45);
             this.picUserUser.Name = "picUserUser";
             this.picUserUser.Size = new System.Drawing.Size(75, 78);
             this.picUserUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -216,7 +218,7 @@ namespace IOOP_assignment
             // 
             this.lblEmailUser.AutoSize = true;
             this.lblEmailUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblEmailUser.Location = new System.Drawing.Point(139, 287);
+            this.lblEmailUser.Location = new System.Drawing.Point(449, 155);
             this.lblEmailUser.Name = "lblEmailUser";
             this.lblEmailUser.Size = new System.Drawing.Size(68, 26);
             this.lblEmailUser.TabIndex = 15;
@@ -225,16 +227,37 @@ namespace IOOP_assignment
             // txtEmailUser
             // 
             this.txtEmailUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtEmailUser.Location = new System.Drawing.Point(284, 284);
+            this.txtEmailUser.Location = new System.Drawing.Point(576, 152);
             this.txtEmailUser.Name = "txtEmailUser";
             this.txtEmailUser.Size = new System.Drawing.Size(266, 32);
             this.txtEmailUser.TabIndex = 16;
+            // 
+            // lblLibrarianIDUser
+            // 
+            this.lblLibrarianIDUser.AutoSize = true;
+            this.lblLibrarianIDUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblLibrarianIDUser.Location = new System.Drawing.Point(449, 325);
+            this.lblLibrarianIDUser.Name = "lblLibrarianIDUser";
+            this.lblLibrarianIDUser.Size = new System.Drawing.Size(124, 26);
+            this.lblLibrarianIDUser.TabIndex = 17;
+            this.lblLibrarianIDUser.Text = "Librarian ID";
+            // 
+            // txtLibrarianIDUser
+            // 
+            this.txtLibrarianIDUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.txtLibrarianIDUser.Location = new System.Drawing.Point(576, 322);
+            this.txtLibrarianIDUser.Name = "txtLibrarianIDUser";
+            this.txtLibrarianIDUser.Size = new System.Drawing.Size(266, 32);
+            this.txtLibrarianIDUser.TabIndex = 18;
+            this.txtLibrarianIDUser.UseSystemPasswordChar = true;
             // 
             // Add_User_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 501);
+            this.Controls.Add(this.txtLibrarianIDUser);
+            this.Controls.Add(this.lblLibrarianIDUser);
             this.Controls.Add(this.txtEmailUser);
             this.Controls.Add(this.lblEmailUser);
             this.Controls.Add(this.checkShowPassUser);
@@ -286,5 +309,7 @@ namespace IOOP_assignment
         private System.Windows.Forms.CheckBox checkShowPassUser;
         private System.Windows.Forms.Label lblEmailUser;
         private System.Windows.Forms.TextBox txtEmailUser;
+        private System.Windows.Forms.Label lblLibrarianIDUser;
+        private System.Windows.Forms.TextBox txtLibrarianIDUser;
     }
 }
