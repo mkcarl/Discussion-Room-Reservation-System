@@ -62,18 +62,7 @@ namespace IOOP_assignment
              * else 
              *      show messagebox error
              */
-
-            string sqlLogin= "SELECT * FROM Student WHERE StudentID = @studentid AND Password = @pwd;";
-
-            // TODO: move showHint() to Controller class. 
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
-            conn.Open();
-            SqlCommand cmdLoginRole = new SqlCommand(sqlLogin, conn);
-
-            cmdLoginRole.Parameters.AddWithValue("@studentid", txtStudentID_Login.Text.ToString());
-            cmdLoginRole.Parameters.AddWithValue("@pwd", txtPassword_Login.Text.ToString());
-
-            SqlDataReader dr = cmdLoginRole.ExecuteReader();
+            SqlDataReader dr = Controller.QueryLoginCredential(txtStudentID_Login.Text.ToString(), txtPassword_Login.Text.ToString());
 
             if (dr.HasRows)
             {
@@ -88,10 +77,18 @@ namespace IOOP_assignment
                 }
                 else if (dr["Role"].ToString() == "Student")
                 {
-                    formStudentHomepage SHome;
-                    SHome = new formStudentHomepage();
-                    SHome.Show();
-                    SHome.FormClosing += SHome_Closing; 
+                    /* 
+                     * instantiate student object
+                     * set the mainForm field of student to a new student form
+                     * add closing event handler to mainFomr
+                     * show form 
+                     */
+                    
+
+                    //formStudentHomepage SHome;
+                    //SHome = new formStudentHomepage();
+                    //SHome.Show();
+                    //SHome.FormClosing += SHome_Closing; 
                     // MessageBox.Show("Student login");
                 }
                 else { } // just in case there is any vulnerability, they are not able to access the homepage. 
@@ -101,7 +98,6 @@ namespace IOOP_assignment
             {
                 MessageBox.Show("Invalid credentials. Please check the StudentID or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            conn.Close();
 
 
         }
