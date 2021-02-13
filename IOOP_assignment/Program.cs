@@ -21,6 +21,7 @@ namespace IOOP_assignment
         }
 
         public static Student StudentUser;
-        public static Librarian LibrarianUser; 
+        public static Librarian LibrarianUser;
+        public static string LoginRole; 
     }
 }

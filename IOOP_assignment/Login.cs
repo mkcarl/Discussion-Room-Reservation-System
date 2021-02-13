@@ -61,11 +61,11 @@ namespace IOOP_assignment
              *      show messagebox error
              */
             SqlDataReader dr = Controller.QueryLoginCredential(txtStudentID_Login.Text.ToString(), txtPassword_Login.Text.ToString());
-
+            dr.Read();
+            Program.LoginRole = dr["Role"].ToString();
             if (dr.HasRows)
             {
-                dr.Read();
-                if (dr["Role"].ToString() == "Librarian")
+                if (Program.LoginRole == "Librarian")
                 {
                     Program.LibrarianUser = new Librarian(dr["StudentID"].ToString(),
                         dr["Password"].ToString(),
@@ -76,7 +76,7 @@ namespace IOOP_assignment
                     Program.LibrarianUser.MainForm.Show();
 
                 }
-                else if (dr["Role"].ToString() == "Student")
+                else if (Program.LoginRole == "Student")
                 {
                     /* 
                      * instantiate student object
