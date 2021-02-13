@@ -30,15 +30,18 @@ namespace IOOP_assignment
         private void InitializeComponent()
         {
             this.dgvStudentRequests = new System.Windows.Forms.DataGridView();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Room = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number_Of_Students = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPendingStudentReq = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Reservation_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Student_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Room_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number_of_Students = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentRequests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,70 +51,42 @@ namespace IOOP_assignment
             this.dgvStudentRequests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStudentRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudentRequests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Reservation_ID,
+            this.Student_ID,
+            this.Date,
             this.Time,
-            this.Day,
-            this.Room,
-            this.Number_Of_Students,
+            this.Room_Name,
+            this.Number_of_Students,
             this.Status});
-            this.dgvStudentRequests.Location = new System.Drawing.Point(56, 68);
-            this.dgvStudentRequests.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvStudentRequests.Location = new System.Drawing.Point(75, 84);
+            this.dgvStudentRequests.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvStudentRequests.Name = "dgvStudentRequests";
             this.dgvStudentRequests.RowHeadersWidth = 51;
             this.dgvStudentRequests.RowTemplate.Height = 24;
-            this.dgvStudentRequests.Size = new System.Drawing.Size(838, 367);
+            this.dgvStudentRequests.Size = new System.Drawing.Size(1117, 452);
             this.dgvStudentRequests.TabIndex = 0;
             this.dgvStudentRequests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Time
-            // 
-            this.Time.HeaderText = "Time";
-            this.Time.MinimumWidth = 6;
-            this.Time.Name = "Time";
-            // 
-            // Day
-            // 
-            this.Day.HeaderText = "Day";
-            this.Day.MinimumWidth = 6;
-            this.Day.Name = "Day";
-            // 
-            // Room
-            // 
-            this.Room.HeaderText = "Room";
-            this.Room.MinimumWidth = 6;
-            this.Room.Name = "Room";
-            // 
-            // Number_Of_Students
-            // 
-            this.Number_Of_Students.HeaderText = "Number of Students";
-            this.Number_Of_Students.MinimumWidth = 6;
-            this.Number_Of_Students.Name = "Number_Of_Students";
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.MinimumWidth = 6;
-            this.Status.Name = "Status";
             // 
             // lblPendingStudentReq
             // 
             this.lblPendingStudentReq.AutoSize = true;
             this.lblPendingStudentReq.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPendingStudentReq.Location = new System.Drawing.Point(321, 20);
-            this.lblPendingStudentReq.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPendingStudentReq.Location = new System.Drawing.Point(514, 27);
             this.lblPendingStudentReq.Name = "lblPendingStudentReq";
-            this.lblPendingStudentReq.Size = new System.Drawing.Size(323, 29);
+            this.lblPendingStudentReq.Size = new System.Drawing.Size(395, 36);
             this.lblPendingStudentReq.TabIndex = 2;
             this.lblPendingStudentReq.Text = "Pending Student Requests";
             // 
             // btnConfirm
             // 
             this.btnConfirm.FlatAppearance.BorderSize = 0;
-            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(383, 454);
+            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.Location = new System.Drawing.Point(377, 559);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(125, 35);
+            this.btnConfirm.Size = new System.Drawing.Size(167, 45);
             this.btnConfirm.TabIndex = 78;
-            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.Text = "Reject";
             this.btnConfirm.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
@@ -119,9 +94,10 @@ namespace IOOP_assignment
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::IOOP_assignment.Properties.Resources.pending11;
-            this.pictureBox1.Location = new System.Drawing.Point(265, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(424, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 54);
+            this.pictureBox1.Size = new System.Drawing.Size(73, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 79;
             this.pictureBox1.TabStop = false;
@@ -132,26 +108,88 @@ namespace IOOP_assignment
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(879, 454);
+            this.btnBack.Location = new System.Drawing.Point(1172, 559);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(65, 45);
+            this.btnBack.Size = new System.Drawing.Size(87, 55);
             this.btnBack.TabIndex = 77;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(673, 559);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(167, 43);
+            this.button1.TabIndex = 80;
+            this.button1.Text = "Approve";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // Reservation_ID
+            // 
+            this.Reservation_ID.FillWeight = 50F;
+            this.Reservation_ID.HeaderText = "Reservation ID";
+            this.Reservation_ID.MinimumWidth = 6;
+            this.Reservation_ID.Name = "Reservation_ID";
+            // 
+            // Student_ID
+            // 
+            this.Student_ID.FillWeight = 50F;
+            this.Student_ID.HeaderText = "Student ID";
+            this.Student_ID.MinimumWidth = 6;
+            this.Student_ID.Name = "Student_ID";
+            // 
+            // Date
+            // 
+            this.Date.FillWeight = 60F;
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            // 
+            // Time
+            // 
+            this.Time.FillWeight = 40F;
+            this.Time.HeaderText = "Time";
+            this.Time.MinimumWidth = 6;
+            this.Time.Name = "Time";
+            // 
+            // Room_Name
+            // 
+            this.Room_Name.HeaderText = "Room Name";
+            this.Room_Name.MinimumWidth = 6;
+            this.Room_Name.Name = "Room_Name";
+            // 
+            // Number_of_Students
+            // 
+            this.Number_of_Students.FillWeight = 65F;
+            this.Number_of_Students.HeaderText = "Number of Students";
+            this.Number_of_Students.MinimumWidth = 6;
+            this.Number_of_Students.Name = "Number_of_Students";
+            // 
+            // Status
+            // 
+            this.Status.FillWeight = 50F;
+            this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            // 
             // Form_Pending_Student_Requests
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(944, 501);
+            this.ClientSize = new System.Drawing.Size(1259, 617);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblPendingStudentReq);
             this.Controls.Add(this.dgvStudentRequests);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_Pending_Student_Requests";
@@ -170,11 +208,14 @@ namespace IOOP_assignment
         private System.Windows.Forms.Label lblPendingStudentReq;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Day;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Room;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Number_Of_Students;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Reservation_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Student_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Room_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number_of_Students;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }
