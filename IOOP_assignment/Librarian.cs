@@ -10,9 +10,9 @@ namespace IOOP_assignment
     {
         private string librarianID;
 
-        public Librarian(string studentID, string password, string fullName, string email, string librarianID):base(studentID, password, fullName, email) // inheriting from the base class
+        public Librarian(string studentID, string password, string fullName, string email):base(studentID, password, fullName, email) // inheriting from the base class
         {
-            this.librarianID = librarianID;
+            
         }
 
         public string LibrarianID { get => librarianID; set => librarianID = value; }

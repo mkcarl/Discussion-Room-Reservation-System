@@ -69,10 +69,18 @@ namespace IOOP_assignment
                 dr.Read();
                 if (dr["Role"].ToString() == "Librarian")
                 {
-                    formLibrarianHomepage LHome;
-                    LHome = new formLibrarianHomepage();
-                    LHome.FormClosing += LHome_Closing;
-                    LHome.Show();
+                    Program.User = new Librarian(dr["StudentID"].ToString(),
+                        dr["Password"].ToString(),
+                        dr["Surname"].ToString() + " " + dr["GivenName"].ToString(),
+                        dr["EmailAddress"].ToString());
+                    Program.User.MainForm = new formLibrarianHomepage();
+                    Program.User.MainForm.FormClosing += LHome_Closing;
+                    Program.User.MainForm.Show();
+
+                    //formLibrarianHomepage LHome;
+                    //LHome = new formLibrarianHomepage();
+                    //LHome.FormClosing += LHome_Closing;
+                    //LHome.Show();
                     // MessageBox.Show("Librarian login");
                 }
                 else if (dr["Role"].ToString() == "Student")
@@ -83,7 +91,13 @@ namespace IOOP_assignment
                      * add closing event handler to mainFomr
                      * show form 
                      */
-                    
+                    Program.User = new Student(dr["StudentID"].ToString(), 
+                        dr["Password"].ToString(), 
+                        dr["Surname"].ToString() + " " + dr["GivenName"].ToString(), 
+                        dr["EmailAddress"].ToString());
+                    Program.User.MainForm = new formStudentHomepage();
+                    Program.User.MainForm.FormClosing += SHome_Closing;
+                    Program.User.MainForm.Show();
 
                     //formStudentHomepage SHome;
                     //SHome = new formStudentHomepage();
