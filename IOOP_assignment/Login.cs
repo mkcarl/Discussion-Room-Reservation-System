@@ -34,8 +34,6 @@ namespace IOOP_assignment
            else reject, then tell that you only can insert numbers
 
             */
-
-
             if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))) // if the input is not number or a control like backspace
             {
                 Controller.ShowErrorHint("Only accept number inputs", txtStudentID_Login); // show the hint 
@@ -107,7 +105,7 @@ namespace IOOP_assignment
         }
 
         // when the homepage is closed, Login form will appear
-        private void LHome_Closing(object sender, FormClosingEventArgs e)
+        private void LHome_Closing(object sender, FormClosingEventArgs e) // event handler 
         {
             DialogResult logout = MessageBox.Show("Do you want exit the program?", "Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (logout == DialogResult.No)
@@ -124,7 +122,7 @@ namespace IOOP_assignment
                 e.Cancel = true;
             }
         }
-        private void SHome_Closing(object sender, FormClosingEventArgs e)
+        private void SHome_Closing(object sender, FormClosingEventArgs e) // event handler 
         {
             DialogResult logout = MessageBox.Show("Do you want exit the program?", "Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (logout == DialogResult.No)
@@ -144,34 +142,7 @@ namespace IOOP_assignment
 
         private void btnRegister_Login_Click(object sender, EventArgs e)
         {
-            /*
-             * if studentID not in database, 
-             *      insert 
-             *      
-             * else, 
-             *      message box say already exist
-             *     
-             */
-
-            string sqlRegister = "INSERT INTO Student (StudentID, Password) VALUES (@studentid, @pwd)";
-            
-            // TODO: move showHint() to Controller class. 
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
-            conn.Open();
-            SqlCommand cmdRegister = new SqlCommand(sqlRegister, conn);
-
-            cmdRegister.Parameters.AddWithValue("@studentid", txtStudentID_Login.Text.ToString());
-            cmdRegister.Parameters.AddWithValue("@pwd", txtPassword_Login.Text.ToString());
-
-            try
-            {
-                cmdRegister.ExecuteNonQuery();
-                MessageBox.Show("Successfully registered. You may proceed to log in now.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Student ID already registered.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            Controller.RegisterAccount(txtStudentID_Login.Text.ToString(), txtPassword_Login.Text.ToString());
         }
     }
 }

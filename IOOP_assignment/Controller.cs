@@ -45,5 +45,37 @@ namespace IOOP_assignment
             return dr;
         }
 
+        public static void RegisterAccount(string studentID, string password)
+        {
+            /*
+             * if studentID not in database, 
+             *      insert 
+             *      
+             * else, 
+             *      message box say already exist
+             *     
+             */
+
+            string sqlRegister = "INSERT INTO Student (StudentID, Password) VALUES (@studentid, @pwd)";
+
+            // TODO: move showHint() to Controller class. 
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
+            conn.Open();
+            SqlCommand cmdRegister = new SqlCommand(sqlRegister, conn);
+
+            cmdRegister.Parameters.AddWithValue("@studentid", studentID);
+            cmdRegister.Parameters.AddWithValue("@pwd", password);
+
+            try
+            {
+                cmdRegister.ExecuteNonQuery();
+                MessageBox.Show("Successfully registered. You may proceed to log in now.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Student ID already registered.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }
