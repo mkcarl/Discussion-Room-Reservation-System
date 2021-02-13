@@ -29,22 +29,22 @@ namespace IOOP_assignment
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.lblRoomTypeRequest = new System.Windows.Forms.Label();
+            this.txtRoomTypeRequest = new System.Windows.Forms.TextBox();
+            this.txtDateRequest = new System.Windows.Forms.TextBox();
+            this.lblDateRequest = new System.Windows.Forms.Label();
+            this.txtDetailsRequest = new System.Windows.Forms.TextBox();
+            this.lblDetailsRequest = new System.Windows.Forms.Label();
+            this.lblStatusRequest = new System.Windows.Forms.Label();
+            this.txtStatusRequest = new System.Windows.Forms.TextBox();
+            this.lblTimeRequest = new System.Windows.Forms.Label();
+            this.txtTimeRequest = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBackRequest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -52,96 +52,96 @@ namespace IOOP_assignment
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblRoomTypeRequest
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(104, 150);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Room Type";
+            this.lblRoomTypeRequest.AutoSize = true;
+            this.lblRoomTypeRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomTypeRequest.Location = new System.Drawing.Point(104, 150);
+            this.lblRoomTypeRequest.Name = "lblRoomTypeRequest";
+            this.lblRoomTypeRequest.Size = new System.Drawing.Size(122, 25);
+            this.lblRoomTypeRequest.TabIndex = 1;
+            this.lblRoomTypeRequest.Text = "Room Type";
             // 
-            // textBox1
+            // txtRoomTypeRequest
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(109, 178);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 31);
-            this.textBox1.TabIndex = 2;
+            this.txtRoomTypeRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoomTypeRequest.Location = new System.Drawing.Point(109, 178);
+            this.txtRoomTypeRequest.Name = "txtRoomTypeRequest";
+            this.txtRoomTypeRequest.Size = new System.Drawing.Size(288, 31);
+            this.txtRoomTypeRequest.TabIndex = 2;
             // 
-            // textBox2
+            // txtDateRequest
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(109, 277);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(288, 31);
-            this.textBox2.TabIndex = 3;
+            this.txtDateRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDateRequest.Location = new System.Drawing.Point(109, 277);
+            this.txtDateRequest.Name = "txtDateRequest";
+            this.txtDateRequest.Size = new System.Drawing.Size(288, 31);
+            this.txtDateRequest.TabIndex = 3;
             // 
-            // label2
+            // lblDateRequest
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(104, 249);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Date";
+            this.lblDateRequest.AutoSize = true;
+            this.lblDateRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateRequest.Location = new System.Drawing.Point(104, 249);
+            this.lblDateRequest.Name = "lblDateRequest";
+            this.lblDateRequest.Size = new System.Drawing.Size(57, 25);
+            this.lblDateRequest.TabIndex = 4;
+            this.lblDateRequest.Text = "Date";
             // 
-            // textBox3
+            // txtDetailsRequest
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(585, 79);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(254, 355);
-            this.textBox3.TabIndex = 7;
+            this.txtDetailsRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDetailsRequest.Location = new System.Drawing.Point(585, 79);
+            this.txtDetailsRequest.Multiline = true;
+            this.txtDetailsRequest.Name = "txtDetailsRequest";
+            this.txtDetailsRequest.Size = new System.Drawing.Size(254, 355);
+            this.txtDetailsRequest.TabIndex = 7;
             // 
-            // label4
+            // lblDetailsRequest
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(580, 51);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 25);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Details";
+            this.lblDetailsRequest.AutoSize = true;
+            this.lblDetailsRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetailsRequest.Location = new System.Drawing.Point(580, 51);
+            this.lblDetailsRequest.Name = "lblDetailsRequest";
+            this.lblDetailsRequest.Size = new System.Drawing.Size(78, 25);
+            this.lblDetailsRequest.TabIndex = 8;
+            this.lblDetailsRequest.Text = "Details";
             // 
-            // label5
+            // lblStatusRequest
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(104, 51);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 25);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Status";
+            this.lblStatusRequest.AutoSize = true;
+            this.lblStatusRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusRequest.Location = new System.Drawing.Point(104, 51);
+            this.lblStatusRequest.Name = "lblStatusRequest";
+            this.lblStatusRequest.Size = new System.Drawing.Size(73, 25);
+            this.lblStatusRequest.TabIndex = 17;
+            this.lblStatusRequest.Text = "Status";
             // 
-            // textBox4
+            // txtStatusRequest
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(109, 79);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(288, 31);
-            this.textBox4.TabIndex = 18;
+            this.txtStatusRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatusRequest.Location = new System.Drawing.Point(109, 79);
+            this.txtStatusRequest.Name = "txtStatusRequest";
+            this.txtStatusRequest.Size = new System.Drawing.Size(288, 31);
+            this.txtStatusRequest.TabIndex = 18;
             // 
-            // label3
+            // lblTimeRequest
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(104, 348);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 25);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Time";
+            this.lblTimeRequest.AutoSize = true;
+            this.lblTimeRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeRequest.Location = new System.Drawing.Point(104, 348);
+            this.lblTimeRequest.Name = "lblTimeRequest";
+            this.lblTimeRequest.Size = new System.Drawing.Size(59, 25);
+            this.lblTimeRequest.TabIndex = 20;
+            this.lblTimeRequest.Text = "Time";
             // 
-            // textBox5
+            // txtTimeRequest
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(109, 376);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(288, 31);
-            this.textBox5.TabIndex = 19;
+            this.txtTimeRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimeRequest.Location = new System.Drawing.Point(109, 376);
+            this.txtTimeRequest.Name = "txtTimeRequest";
+            this.txtTimeRequest.Size = new System.Drawing.Size(288, 31);
+            this.txtTimeRequest.TabIndex = 19;
             // 
             // pictureBox5
             // 
@@ -196,19 +196,19 @@ namespace IOOP_assignment
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button1
+            // btnBackRequest
             // 
-            this.button1.BackgroundImage = global::IOOP_assignment.Properties.Resources.back_button_6_921315;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(882, 439);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 12;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBackRequest.BackgroundImage = global::IOOP_assignment.Properties.Resources.back_button_6_921315;
+            this.btnBackRequest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBackRequest.FlatAppearance.BorderSize = 0;
+            this.btnBackRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackRequest.Location = new System.Drawing.Point(882, 439);
+            this.btnBackRequest.Name = "btnBackRequest";
+            this.btnBackRequest.Size = new System.Drawing.Size(50, 50);
+            this.btnBackRequest.TabIndex = 12;
+            this.btnBackRequest.UseVisualStyleBackColor = true;
+            this.btnBackRequest.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormRequest
             // 
@@ -216,21 +216,21 @@ namespace IOOP_assignment
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 501);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblTimeRequest);
+            this.Controls.Add(this.txtTimeRequest);
+            this.Controls.Add(this.txtStatusRequest);
+            this.Controls.Add(this.lblStatusRequest);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnBackRequest);
+            this.Controls.Add(this.lblDetailsRequest);
+            this.Controls.Add(this.txtDetailsRequest);
+            this.Controls.Add(this.lblDateRequest);
+            this.Controls.Add(this.txtDateRequest);
+            this.Controls.Add(this.txtRoomTypeRequest);
+            this.Controls.Add(this.lblRoomTypeRequest);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -249,21 +249,21 @@ namespace IOOP_assignment
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblRoomTypeRequest;
+        private System.Windows.Forms.TextBox txtRoomTypeRequest;
+        private System.Windows.Forms.TextBox txtDateRequest;
+        private System.Windows.Forms.Label lblDateRequest;
+        private System.Windows.Forms.TextBox txtDetailsRequest;
+        private System.Windows.Forms.Label lblDetailsRequest;
+        private System.Windows.Forms.Button btnBackRequest;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label lblStatusRequest;
+        private System.Windows.Forms.TextBox txtStatusRequest;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label lblTimeRequest;
+        private System.Windows.Forms.TextBox txtTimeRequest;
     }
 }

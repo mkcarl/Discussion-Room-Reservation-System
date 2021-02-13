@@ -30,104 +30,104 @@ namespace IOOP_assignment
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.radDaphneReserve = new System.Windows.Forms.RadioButton();
+            this.radCedarReserve = new System.Windows.Forms.RadioButton();
+            this.radBlackThornReserve = new System.Windows.Forms.RadioButton();
+            this.radAmberReseve = new System.Windows.Forms.RadioButton();
+            this.comboTimeReserve = new System.Windows.Forms.ComboBox();
+            this.comboPeopleReserve = new System.Windows.Forms.ComboBox();
+            this.lblPeopleReserve = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.confirmToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboDurationReserve = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.myMonthCalendar1 = new IOOP_assignment.MyMonthCalendar();
+            this.btnBackReserve = new System.Windows.Forms.Button();
+            this.btnConfirmReservation = new System.Windows.Forms.Button();
+            this.monthCalendarReserve = new IOOP_assignment.MyMonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // radioButton4
+            // radDaphneReserve
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(487, 361);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(106, 30);
-            this.radioButton4.TabIndex = 15;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Daphne";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radDaphneReserve.AutoSize = true;
+            this.radDaphneReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radDaphneReserve.Location = new System.Drawing.Point(487, 361);
+            this.radDaphneReserve.Name = "radDaphneReserve";
+            this.radDaphneReserve.Size = new System.Drawing.Size(106, 30);
+            this.radDaphneReserve.TabIndex = 15;
+            this.radDaphneReserve.TabStop = true;
+            this.radDaphneReserve.Text = "Daphne";
+            this.radDaphneReserve.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radCedarReserve
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(487, 326);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(89, 30);
-            this.radioButton3.TabIndex = 14;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Cedar";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radCedarReserve.AutoSize = true;
+            this.radCedarReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radCedarReserve.Location = new System.Drawing.Point(487, 326);
+            this.radCedarReserve.Name = "radCedarReserve";
+            this.radCedarReserve.Size = new System.Drawing.Size(89, 30);
+            this.radCedarReserve.TabIndex = 14;
+            this.radCedarReserve.TabStop = true;
+            this.radCedarReserve.Text = "Cedar";
+            this.radCedarReserve.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radBlackThornReserve
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(487, 291);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(139, 30);
-            this.radioButton2.TabIndex = 13;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "BlackThorn";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radBlackThornReserve.AutoSize = true;
+            this.radBlackThornReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radBlackThornReserve.Location = new System.Drawing.Point(487, 291);
+            this.radBlackThornReserve.Name = "radBlackThornReserve";
+            this.radBlackThornReserve.Size = new System.Drawing.Size(139, 30);
+            this.radBlackThornReserve.TabIndex = 13;
+            this.radBlackThornReserve.TabStop = true;
+            this.radBlackThornReserve.Text = "BlackThorn";
+            this.radBlackThornReserve.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radAmberReseve
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(487, 256);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(95, 30);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Amber";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radAmberReseve.AutoSize = true;
+            this.radAmberReseve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radAmberReseve.Location = new System.Drawing.Point(487, 256);
+            this.radAmberReseve.Name = "radAmberReseve";
+            this.radAmberReseve.Size = new System.Drawing.Size(95, 30);
+            this.radAmberReseve.TabIndex = 12;
+            this.radAmberReseve.TabStop = true;
+            this.radAmberReseve.Text = "Amber";
+            this.radAmberReseve.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // comboTimeReserve
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(487, 144);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(303, 33);
-            this.comboBox2.TabIndex = 11;
-            this.comboBox2.Text = "-Select Starting Time-";
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboTimeReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboTimeReserve.FormattingEnabled = true;
+            this.comboTimeReserve.Location = new System.Drawing.Point(487, 144);
+            this.comboTimeReserve.Name = "comboTimeReserve";
+            this.comboTimeReserve.Size = new System.Drawing.Size(303, 33);
+            this.comboTimeReserve.TabIndex = 11;
+            this.comboTimeReserve.Text = "-Select Starting Time-";
+            this.comboTimeReserve.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // comboBox1
+            // comboPeopleReserve
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(487, 82);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(195, 33);
-            this.comboBox1.TabIndex = 10;
+            this.comboPeopleReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboPeopleReserve.FormattingEnabled = true;
+            this.comboPeopleReserve.Location = new System.Drawing.Point(487, 82);
+            this.comboPeopleReserve.Name = "comboPeopleReserve";
+            this.comboPeopleReserve.Size = new System.Drawing.Size(195, 33);
+            this.comboPeopleReserve.TabIndex = 10;
             // 
-            // label1
+            // lblPeopleReserve
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(482, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 26);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Number of People";
+            this.lblPeopleReserve.AutoSize = true;
+            this.lblPeopleReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeopleReserve.Location = new System.Drawing.Point(482, 53);
+            this.lblPeopleReserve.Name = "lblPeopleReserve";
+            this.lblPeopleReserve.Size = new System.Drawing.Size(204, 26);
+            this.lblPeopleReserve.TabIndex = 9;
+            this.lblPeopleReserve.Text = "Number of People";
             // 
             // button3
             // 
@@ -144,15 +144,15 @@ namespace IOOP_assignment
             this.confirmToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.confirmToolTip.ToolTipTitle = "Confirm Reservation";
             // 
-            // comboBox3
+            // comboDurationReserve
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(487, 205);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(303, 33);
-            this.comboBox3.TabIndex = 19;
-            this.comboBox3.Text = "-Duration-";
+            this.comboDurationReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboDurationReserve.FormattingEnabled = true;
+            this.comboDurationReserve.Location = new System.Drawing.Point(487, 205);
+            this.comboDurationReserve.Name = "comboDurationReserve";
+            this.comboDurationReserve.Size = new System.Drawing.Size(303, 33);
+            this.comboDurationReserve.TabIndex = 19;
+            this.comboDurationReserve.Text = "-Duration-";
             // 
             // pictureBox3
             // 
@@ -184,57 +184,57 @@ namespace IOOP_assignment
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // button4
+            // btnBackReserve
             // 
-            this.button4.BackgroundImage = global::IOOP_assignment.Properties.Resources.back_button_6_921315;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(882, 439);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 50);
-            this.button4.TabIndex = 25;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnBackReserve.BackgroundImage = global::IOOP_assignment.Properties.Resources.back_button_6_921315;
+            this.btnBackReserve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBackReserve.FlatAppearance.BorderSize = 0;
+            this.btnBackReserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackReserve.Location = new System.Drawing.Point(882, 439);
+            this.btnBackReserve.Name = "btnBackReserve";
+            this.btnBackReserve.Size = new System.Drawing.Size(50, 50);
+            this.btnBackReserve.TabIndex = 25;
+            this.btnBackReserve.UseVisualStyleBackColor = true;
+            this.btnBackReserve.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button2
+            // btnConfirmReservation
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(487, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(219, 49);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Confirm Reservation";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnConfirmReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmReservation.Location = new System.Drawing.Point(487, 415);
+            this.btnConfirmReservation.Name = "btnConfirmReservation";
+            this.btnConfirmReservation.Size = new System.Drawing.Size(219, 49);
+            this.btnConfirmReservation.TabIndex = 24;
+            this.btnConfirmReservation.Text = "Confirm Reservation";
+            this.btnConfirmReservation.UseVisualStyleBackColor = true;
             // 
-            // myMonthCalendar1
+            // monthCalendarReserve
             // 
-            this.myMonthCalendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myMonthCalendar1.Location = new System.Drawing.Point(78, 97);
-            this.myMonthCalendar1.Name = "myMonthCalendar1";
-            this.myMonthCalendar1.TabIndex = 26;
+            this.monthCalendarReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthCalendarReserve.Location = new System.Drawing.Point(78, 97);
+            this.monthCalendarReserve.Name = "monthCalendarReserve";
+            this.monthCalendarReserve.TabIndex = 26;
             // 
             // FormReserve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 501);
-            this.Controls.Add(this.myMonthCalendar1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.monthCalendarReserve);
+            this.Controls.Add(this.btnBackReserve);
+            this.Controls.Add(this.btnConfirmReservation);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboDurationReserve);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.radDaphneReserve);
+            this.Controls.Add(this.radCedarReserve);
+            this.Controls.Add(this.radBlackThornReserve);
+            this.Controls.Add(this.radAmberReseve);
+            this.Controls.Add(this.comboTimeReserve);
+            this.Controls.Add(this.comboPeopleReserve);
+            this.Controls.Add(this.lblPeopleReserve);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -251,21 +251,21 @@ namespace IOOP_assignment
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radDaphneReserve;
+        private System.Windows.Forms.RadioButton radCedarReserve;
+        private System.Windows.Forms.RadioButton radBlackThornReserve;
+        private System.Windows.Forms.RadioButton radAmberReseve;
+        private System.Windows.Forms.ComboBox comboTimeReserve;
+        private System.Windows.Forms.ComboBox comboPeopleReserve;
+        private System.Windows.Forms.Label lblPeopleReserve;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolTip confirmToolTip;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboDurationReserve;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private MyMonthCalendar myMonthCalendar1;
+        private System.Windows.Forms.Button btnBackReserve;
+        private System.Windows.Forms.Button btnConfirmReservation;
+        private MyMonthCalendar monthCalendarReserve;
     }
 }

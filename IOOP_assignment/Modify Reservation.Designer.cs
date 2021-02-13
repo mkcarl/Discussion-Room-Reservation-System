@@ -29,214 +29,214 @@ namespace IOOP_assignment
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.comboTimeNewModify = new System.Windows.Forms.ComboBox();
+            this.radAmberNewModify = new System.Windows.Forms.RadioButton();
+            this.radBlackThornNewModify = new System.Windows.Forms.RadioButton();
+            this.radCedarNewModify = new System.Windows.Forms.RadioButton();
+            this.radDaphneNewModify = new System.Windows.Forms.RadioButton();
+            this.btnResetModify = new System.Windows.Forms.Button();
+            this.btnConfirmModification = new System.Windows.Forms.Button();
+            this.mthCalendarNewModify = new System.Windows.Forms.MonthCalendar();
+            this.comboPeopleNewModify = new System.Windows.Forms.ComboBox();
+            this.lblTitleNewModify = new System.Windows.Forms.Label();
+            this.lblNoPeopleCurrentModify = new System.Windows.Forms.Label();
+            this.lblCurrentTitleModify = new System.Windows.Forms.Label();
+            this.lblDateCurrentModify = new System.Windows.Forms.Label();
+            this.lblTimeCurrentModify = new System.Windows.Forms.Label();
+            this.lblRoomCurrentModify = new System.Windows.Forms.Label();
+            this.btnBackModify = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox2
+            // comboTimeNewModify
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(640, 156);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(224, 33);
-            this.comboBox2.TabIndex = 3;
-            this.comboBox2.Text = "-Select a Time-";
+            this.comboTimeNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboTimeNewModify.FormattingEnabled = true;
+            this.comboTimeNewModify.Location = new System.Drawing.Point(640, 156);
+            this.comboTimeNewModify.Name = "comboTimeNewModify";
+            this.comboTimeNewModify.Size = new System.Drawing.Size(224, 33);
+            this.comboTimeNewModify.TabIndex = 3;
+            this.comboTimeNewModify.Text = "-Select a Time-";
             // 
-            // radioButton1
+            // radAmberNewModify
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.radioButton1.Location = new System.Drawing.Point(645, 203);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 28);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Amber";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radAmberNewModify.AutoSize = true;
+            this.radAmberNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.radAmberNewModify.Location = new System.Drawing.Point(645, 203);
+            this.radAmberNewModify.Name = "radAmberNewModify";
+            this.radAmberNewModify.Size = new System.Drawing.Size(85, 28);
+            this.radAmberNewModify.TabIndex = 4;
+            this.radAmberNewModify.TabStop = true;
+            this.radAmberNewModify.Text = "Amber";
+            this.radAmberNewModify.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radBlackThornNewModify
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.radioButton2.Location = new System.Drawing.Point(645, 243);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(124, 28);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "BlackThorn";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radBlackThornNewModify.AutoSize = true;
+            this.radBlackThornNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.radBlackThornNewModify.Location = new System.Drawing.Point(645, 243);
+            this.radBlackThornNewModify.Name = "radBlackThornNewModify";
+            this.radBlackThornNewModify.Size = new System.Drawing.Size(124, 28);
+            this.radBlackThornNewModify.TabIndex = 5;
+            this.radBlackThornNewModify.TabStop = true;
+            this.radBlackThornNewModify.Text = "BlackThorn";
+            this.radBlackThornNewModify.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radCedarNewModify
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.radioButton3.Location = new System.Drawing.Point(645, 283);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(79, 28);
-            this.radioButton3.TabIndex = 6;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Cedar";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radCedarNewModify.AutoSize = true;
+            this.radCedarNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.radCedarNewModify.Location = new System.Drawing.Point(645, 283);
+            this.radCedarNewModify.Name = "radCedarNewModify";
+            this.radCedarNewModify.Size = new System.Drawing.Size(79, 28);
+            this.radCedarNewModify.TabIndex = 6;
+            this.radCedarNewModify.TabStop = true;
+            this.radCedarNewModify.Text = "Cedar";
+            this.radCedarNewModify.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // radDaphneNewModify
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.radioButton4.Location = new System.Drawing.Point(645, 323);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(95, 28);
-            this.radioButton4.TabIndex = 7;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Daphne";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radDaphneNewModify.AutoSize = true;
+            this.radDaphneNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.radDaphneNewModify.Location = new System.Drawing.Point(645, 323);
+            this.radDaphneNewModify.Name = "radDaphneNewModify";
+            this.radDaphneNewModify.Size = new System.Drawing.Size(95, 28);
+            this.radDaphneNewModify.TabIndex = 7;
+            this.radDaphneNewModify.TabStop = true;
+            this.radDaphneNewModify.Text = "Daphne";
+            this.radDaphneNewModify.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnResetModify
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(398, 367);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 49);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Reset";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnResetModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetModify.Location = new System.Drawing.Point(398, 367);
+            this.btnResetModify.Name = "btnResetModify";
+            this.btnResetModify.Size = new System.Drawing.Size(185, 49);
+            this.btnResetModify.TabIndex = 8;
+            this.btnResetModify.Text = "Reset";
+            this.btnResetModify.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnConfirmModification
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(609, 367);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(219, 49);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Confirm Modification";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnConfirmModification.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmModification.Location = new System.Drawing.Point(609, 367);
+            this.btnConfirmModification.Name = "btnConfirmModification";
+            this.btnConfirmModification.Size = new System.Drawing.Size(219, 49);
+            this.btnConfirmModification.TabIndex = 9;
+            this.btnConfirmModification.Text = "Confirm Modification";
+            this.btnConfirmModification.UseVisualStyleBackColor = true;
             // 
-            // monthCalendar1
+            // mthCalendarNewModify
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(397, 111);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 17;
+            this.mthCalendarNewModify.Location = new System.Drawing.Point(397, 111);
+            this.mthCalendarNewModify.Name = "mthCalendarNewModify";
+            this.mthCalendarNewModify.TabIndex = 17;
             // 
-            // comboBox4
+            // comboPeopleNewModify
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(640, 111);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(224, 33);
-            this.comboBox4.TabIndex = 19;
-            this.comboBox4.Text = "-Number of People-";
+            this.comboPeopleNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboPeopleNewModify.FormattingEnabled = true;
+            this.comboPeopleNewModify.Location = new System.Drawing.Point(640, 111);
+            this.comboPeopleNewModify.Name = "comboPeopleNewModify";
+            this.comboPeopleNewModify.Size = new System.Drawing.Size(224, 33);
+            this.comboPeopleNewModify.TabIndex = 19;
+            this.comboPeopleNewModify.Text = "-Number of People-";
             // 
-            // label1
+            // lblTitleNewModify
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(392, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 26);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Modify Reservation";
+            this.lblTitleNewModify.AutoSize = true;
+            this.lblTitleNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTitleNewModify.Location = new System.Drawing.Point(392, 69);
+            this.lblTitleNewModify.Name = "lblTitleNewModify";
+            this.lblTitleNewModify.Size = new System.Drawing.Size(216, 26);
+            this.lblTitleNewModify.TabIndex = 20;
+            this.lblTitleNewModify.Text = "Modify Reservation";
             // 
-            // label2
+            // lblNoPeopleCurrentModify
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.Location = new System.Drawing.Point(58, 205);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 26);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Number of People";
+            this.lblNoPeopleCurrentModify.AutoSize = true;
+            this.lblNoPeopleCurrentModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblNoPeopleCurrentModify.Location = new System.Drawing.Point(58, 205);
+            this.lblNoPeopleCurrentModify.Name = "lblNoPeopleCurrentModify";
+            this.lblNoPeopleCurrentModify.Size = new System.Drawing.Size(188, 26);
+            this.lblNoPeopleCurrentModify.TabIndex = 11;
+            this.lblNoPeopleCurrentModify.Text = "Number of People";
             // 
-            // label3
+            // lblCurrentTitleModify
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(58, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(225, 26);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Current Reservation";
+            this.lblCurrentTitleModify.AutoSize = true;
+            this.lblCurrentTitleModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.lblCurrentTitleModify.Location = new System.Drawing.Point(58, 69);
+            this.lblCurrentTitleModify.Name = "lblCurrentTitleModify";
+            this.lblCurrentTitleModify.Size = new System.Drawing.Size(225, 26);
+            this.lblCurrentTitleModify.TabIndex = 12;
+            this.lblCurrentTitleModify.Text = "Current Reservation";
             // 
-            // label4
+            // lblDateCurrentModify
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label4.Location = new System.Drawing.Point(58, 113);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 26);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Date ";
+            this.lblDateCurrentModify.AutoSize = true;
+            this.lblDateCurrentModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblDateCurrentModify.Location = new System.Drawing.Point(58, 113);
+            this.lblDateCurrentModify.Name = "lblDateCurrentModify";
+            this.lblDateCurrentModify.Size = new System.Drawing.Size(64, 26);
+            this.lblDateCurrentModify.TabIndex = 13;
+            this.lblDateCurrentModify.Text = "Date ";
             // 
-            // label5
+            // lblTimeCurrentModify
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label5.Location = new System.Drawing.Point(58, 159);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 26);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Time";
+            this.lblTimeCurrentModify.AutoSize = true;
+            this.lblTimeCurrentModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblTimeCurrentModify.Location = new System.Drawing.Point(58, 159);
+            this.lblTimeCurrentModify.Name = "lblTimeCurrentModify";
+            this.lblTimeCurrentModify.Size = new System.Drawing.Size(60, 26);
+            this.lblTimeCurrentModify.TabIndex = 14;
+            this.lblTimeCurrentModify.Text = "Time";
             // 
-            // label6
+            // lblRoomCurrentModify
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label6.Location = new System.Drawing.Point(58, 251);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 26);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Room";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.lblRoomCurrentModify.AutoSize = true;
+            this.lblRoomCurrentModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblRoomCurrentModify.Location = new System.Drawing.Point(58, 251);
+            this.lblRoomCurrentModify.Name = "lblRoomCurrentModify";
+            this.lblRoomCurrentModify.Size = new System.Drawing.Size(71, 26);
+            this.lblRoomCurrentModify.TabIndex = 15;
+            this.lblRoomCurrentModify.Text = "Room";
+            this.lblRoomCurrentModify.Click += new System.EventHandler(this.label6_Click);
             // 
-            // button4
+            // btnBackModify
             // 
-            this.button4.BackgroundImage = global::IOOP_assignment.Properties.Resources.back_button_6_921315;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(882, 439);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 50);
-            this.button4.TabIndex = 16;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnBackModify.BackgroundImage = global::IOOP_assignment.Properties.Resources.back_button_6_921315;
+            this.btnBackModify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBackModify.FlatAppearance.BorderSize = 0;
+            this.btnBackModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackModify.Location = new System.Drawing.Point(882, 439);
+            this.btnBackModify.Name = "btnBackModify";
+            this.btnBackModify.Size = new System.Drawing.Size(50, 50);
+            this.btnBackModify.TabIndex = 16;
+            this.btnBackModify.UseVisualStyleBackColor = true;
+            this.btnBackModify.Click += new System.EventHandler(this.button4_Click);
             // 
             // FormModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 501);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.lblTitleNewModify);
+            this.Controls.Add(this.comboPeopleNewModify);
+            this.Controls.Add(this.mthCalendarNewModify);
+            this.Controls.Add(this.btnBackModify);
+            this.Controls.Add(this.lblRoomCurrentModify);
+            this.Controls.Add(this.lblTimeCurrentModify);
+            this.Controls.Add(this.lblDateCurrentModify);
+            this.Controls.Add(this.lblCurrentTitleModify);
+            this.Controls.Add(this.lblNoPeopleCurrentModify);
+            this.Controls.Add(this.btnConfirmModification);
+            this.Controls.Add(this.btnResetModify);
+            this.Controls.Add(this.radDaphneNewModify);
+            this.Controls.Add(this.radCedarNewModify);
+            this.Controls.Add(this.radBlackThornNewModify);
+            this.Controls.Add(this.radAmberNewModify);
+            this.Controls.Add(this.comboTimeNewModify);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -250,21 +250,21 @@ namespace IOOP_assignment
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboTimeNewModify;
+        private System.Windows.Forms.RadioButton radAmberNewModify;
+        private System.Windows.Forms.RadioButton radBlackThornNewModify;
+        private System.Windows.Forms.RadioButton radCedarNewModify;
+        private System.Windows.Forms.RadioButton radDaphneNewModify;
+        private System.Windows.Forms.Button btnResetModify;
+        private System.Windows.Forms.Button btnConfirmModification;
+        private System.Windows.Forms.Button btnBackModify;
+        private System.Windows.Forms.MonthCalendar mthCalendarNewModify;
+        private System.Windows.Forms.ComboBox comboPeopleNewModify;
+        private System.Windows.Forms.Label lblTitleNewModify;
+        private System.Windows.Forms.Label lblNoPeopleCurrentModify;
+        private System.Windows.Forms.Label lblCurrentTitleModify;
+        private System.Windows.Forms.Label lblDateCurrentModify;
+        private System.Windows.Forms.Label lblTimeCurrentModify;
+        private System.Windows.Forms.Label lblRoomCurrentModify;
     }
 }
