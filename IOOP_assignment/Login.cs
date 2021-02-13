@@ -69,19 +69,14 @@ namespace IOOP_assignment
                 dr.Read();
                 if (dr["Role"].ToString() == "Librarian")
                 {
-                    Program.User = new Librarian(dr["StudentID"].ToString(),
+                    Program.LibrarianUser = new Librarian(dr["StudentID"].ToString(),
                         dr["Password"].ToString(),
                         dr["Surname"].ToString() + " " + dr["GivenName"].ToString(),
                         dr["EmailAddress"].ToString());
-                    Program.User.MainForm = new formLibrarianHomepage();
-                    Program.User.MainForm.FormClosing += LHome_Closing;
-                    Program.User.MainForm.Show();
+                    Program.LibrarianUser.MainForm = new formLibrarianHomepage();
+                    Program.LibrarianUser.MainForm.FormClosing += LHome_Closing;
+                    Program.LibrarianUser.MainForm.Show();
 
-                    //formLibrarianHomepage LHome;
-                    //LHome = new formLibrarianHomepage();
-                    //LHome.FormClosing += LHome_Closing;
-                    //LHome.Show();
-                    // MessageBox.Show("Librarian login");
                 }
                 else if (dr["Role"].ToString() == "Student")
                 {
@@ -91,19 +86,14 @@ namespace IOOP_assignment
                      * add closing event handler to mainFomr
                      * show form 
                      */
-                    Program.User = new Student(dr["StudentID"].ToString(), 
+                    Program.StudentUser = new Student(dr["StudentID"].ToString(), 
                         dr["Password"].ToString(), 
                         dr["Surname"].ToString() + " " + dr["GivenName"].ToString(), 
                         dr["EmailAddress"].ToString());
-                    Program.User.MainForm = new formStudentHomepage();
-                    Program.User.MainForm.FormClosing += SHome_Closing;
-                    Program.User.MainForm.Show();
+                    Program.StudentUser.MainForm = new formStudentHomepage();
+                    Program.StudentUser.MainForm.FormClosing += SHome_Closing;
+                    Program.StudentUser.MainForm.Show();
 
-                    //formStudentHomepage SHome;
-                    //SHome = new formStudentHomepage();
-                    //SHome.Show();
-                    //SHome.FormClosing += SHome_Closing; 
-                    // MessageBox.Show("Student login");
                 }
                 else { } // just in case there is any vulnerability, they are not able to access the homepage. 
                 this.Hide();

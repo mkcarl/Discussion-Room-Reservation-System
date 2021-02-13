@@ -20,6 +20,7 @@ namespace IOOP_assignment
             Application.Run(mainApp);
         }
 
-        public static Student User;
+        public static Student StudentUser;
+        public static Librarian LibrarianUser; 
     }
 }
