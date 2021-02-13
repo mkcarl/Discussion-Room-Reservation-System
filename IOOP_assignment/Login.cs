@@ -38,28 +38,17 @@ namespace IOOP_assignment
 
             if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))) // if the input is not number or a control like backspace
             {
-                showErrorHint("Only accept number inputs", txtStudentID_Login); // show the hint 
+                Controller.ShowErrorHint("Only accept number inputs", txtStudentID_Login); // show the hint 
                 e.Handled = true; // stop the input
             }
             else if (txtStudentID_Login.Text.Length>=6) // if the input is more than 6 characters
             {
                 if (!char.IsControl(e.KeyChar)) { 
                     e.Handled = true;
-                    showErrorHint("Student ID is only 6 characters long.", txtStudentID_Login);
+                    Controller.ShowErrorHint("Student ID is only 6 characters long.", txtStudentID_Login);
                 }
                 
             }
-        }
-
-        // TODO: move showHint() to Controller class. 
-        private void showErrorHint(string message, Control control)
-        {
-            SystemSounds.Asterisk.Play(); // https://stackoverflow.com/a/72488
-            ToolTip tt = new ToolTip();
-            tt.IsBalloon = true;
-            tt.Show(message, control, 150, -30, 500);
-
-            // https://stackoverflow.com/questions/14695357/show-tooltip-on-textbox-entry
         }
 
         private void btnLogin_Login_Click(object sender, EventArgs e)
