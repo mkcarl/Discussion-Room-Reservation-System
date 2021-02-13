@@ -74,7 +74,7 @@ namespace IOOP_assignment
             // 
             this.lblGivenUser.AutoSize = true;
             this.lblGivenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblGivenUser.Location = new System.Drawing.Point(139, 187);
+            this.lblGivenUser.Location = new System.Drawing.Point(139, 189);
             this.lblGivenUser.Name = "lblGivenUser";
             this.lblGivenUser.Size = new System.Drawing.Size(134, 26);
             this.lblGivenUser.TabIndex = 2;
@@ -92,7 +92,7 @@ namespace IOOP_assignment
             // 
             this.lblStudentIDUser.AutoSize = true;
             this.lblStudentIDUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblStudentIDUser.Location = new System.Drawing.Point(139, 234);
+            this.lblStudentIDUser.Location = new System.Drawing.Point(139, 238);
             this.lblStudentIDUser.Name = "lblStudentIDUser";
             this.lblStudentIDUser.Size = new System.Drawing.Size(115, 26);
             this.lblStudentIDUser.TabIndex = 4;
@@ -111,7 +111,7 @@ namespace IOOP_assignment
             // 
             this.lblPassUser.AutoSize = true;
             this.lblPassUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblPassUser.Location = new System.Drawing.Point(139, 328);
+            this.lblPassUser.Location = new System.Drawing.Point(139, 336);
             this.lblPassUser.Name = "lblPassUser";
             this.lblPassUser.Size = new System.Drawing.Size(108, 26);
             this.lblPassUser.TabIndex = 6;
@@ -170,7 +170,7 @@ namespace IOOP_assignment
             this.btnUserBack.FlatAppearance.BorderSize = 0;
             this.btnUserBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUserBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnUserBack.Location = new System.Drawing.Point(871, 439);
+            this.btnUserBack.Location = new System.Drawing.Point(882, 439);
             this.btnUserBack.Name = "btnUserBack";
             this.btnUserBack.Size = new System.Drawing.Size(50, 50);
             this.btnUserBack.TabIndex = 9;
@@ -215,7 +215,7 @@ namespace IOOP_assignment
             // 
             this.lblEmailUser.AutoSize = true;
             this.lblEmailUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblEmailUser.Location = new System.Drawing.Point(139, 281);
+            this.lblEmailUser.Location = new System.Drawing.Point(139, 287);
             this.lblEmailUser.Name = "lblEmailUser";
             this.lblEmailUser.Size = new System.Drawing.Size(68, 26);
             this.lblEmailUser.TabIndex = 15;
