@@ -36,5 +36,14 @@ namespace IOOP_assignment
             return dr;
         }
 
+        public static SqlDataReader Query(string sqlQuery)
+        {
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
+            conn.Open();
+            SqlCommand cmdLoginRole = new SqlCommand(sqlQuery, conn);
+            SqlDataReader dr = cmdLoginRole.ExecuteReader();
+            return dr;
+        }
+
     }
 }
