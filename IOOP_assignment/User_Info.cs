@@ -46,6 +46,11 @@ namespace IOOP_assignment
 
         {
             // if login role not librarian, hide librarianID field 
+            if (Program.LoginRole != "Librarian")
+            {
+                lblLibrarianIDUser.Hide();
+                txtLibrarianIDUser.Hide();
+            }
 
 
             //query first row 

@@ -19,5 +19,9 @@ namespace IOOP_assignment
             formLogin mainApp = new formLogin(); 
             Application.Run(mainApp);
         }
+
+        public static Student StudentUser;
+        public static Librarian LibrarianUser;
+        public static string LoginRole; 
     }
 }
