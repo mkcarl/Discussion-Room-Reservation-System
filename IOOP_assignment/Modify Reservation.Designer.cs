@@ -51,7 +51,7 @@ namespace IOOP_assignment
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(640, 159);
+            this.comboBox2.Location = new System.Drawing.Point(640, 156);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(224, 33);
             this.comboBox2.TabIndex = 3;
@@ -108,7 +108,7 @@ namespace IOOP_assignment
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(397, 359);
+            this.button1.Location = new System.Drawing.Point(398, 367);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(185, 49);
             this.button1.TabIndex = 8;
@@ -118,7 +118,7 @@ namespace IOOP_assignment
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(608, 359);
+            this.button2.Location = new System.Drawing.Point(609, 367);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(219, 49);
             this.button2.TabIndex = 9;
@@ -135,11 +135,11 @@ namespace IOOP_assignment
             // 
             this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(640, 115);
+            this.comboBox4.Location = new System.Drawing.Point(640, 111);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(224, 33);
             this.comboBox4.TabIndex = 19;
-            this.comboBox4.Text = "Number of People";
+            this.comboBox4.Text = "-Number of People-";
             // 
             // label1
             // 
@@ -209,9 +209,9 @@ namespace IOOP_assignment
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(856, 440);
+            this.button4.Location = new System.Drawing.Point(882, 439);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 50);
+            this.button4.Size = new System.Drawing.Size(50, 50);
             this.button4.TabIndex = 16;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);

@@ -120,12 +120,12 @@ namespace IOOP_assignment
         // when the homepage is closed, Login form will appear
         private void LHome_Closing(object sender, FormClosingEventArgs e)
         {
-            DialogResult logout = MessageBox.Show("Do you want to log out?", "Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (logout == DialogResult.Yes)
+            DialogResult logout = MessageBox.Show("Do you want exit the program?", "Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (logout == DialogResult.No)
             {
                 this.Show();
             }
-            else if (logout == DialogResult.No)
+            else if (logout == DialogResult.Yes)
             {
                 this.Close();
                 //Application.Exit();
@@ -137,12 +137,12 @@ namespace IOOP_assignment
         }
         private void SHome_Closing(object sender, FormClosingEventArgs e)
         {
-            DialogResult logout = MessageBox.Show("Do you want to log out?", "Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (logout == DialogResult.Yes)
+            DialogResult logout = MessageBox.Show("Do you want exit the program?", "Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (logout == DialogResult.No)
             {
                 this.Show();
             }
-            else if (logout == DialogResult.No)
+            else if (logout == DialogResult.Yes)
             {
                 this.Close();
                 //Application.Exit();

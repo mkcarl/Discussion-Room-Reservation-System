@@ -100,6 +100,7 @@ namespace IOOP_assignment
             // 
             // txtStudentIDUser
             // 
+            this.txtStudentIDUser.Enabled = false;
             this.txtStudentIDUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.txtStudentIDUser.Location = new System.Drawing.Point(284, 235);
             this.txtStudentIDUser.Name = "txtStudentIDUser";
@@ -129,10 +130,10 @@ namespace IOOP_assignment
             // lblTitleUser
             // 
             this.lblTitleUser.AutoSize = true;
-            this.lblTitleUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.lblTitleUser.Location = new System.Drawing.Point(138, 72);
+            this.lblTitleUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.lblTitleUser.Location = new System.Drawing.Point(138, 71);
             this.lblTitleUser.Name = "lblTitleUser";
-            this.lblTitleUser.Size = new System.Drawing.Size(215, 31);
+            this.lblTitleUser.Size = new System.Drawing.Size(234, 36);
             this.lblTitleUser.TabIndex = 8;
             this.lblTitleUser.Text = "User Information";
             // 
