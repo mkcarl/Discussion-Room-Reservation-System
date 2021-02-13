@@ -39,14 +39,13 @@ namespace IOOP_assignment
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.confirmToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.myMonthCalendar1 = new IOOP_assignment.MyMonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -94,10 +93,10 @@ namespace IOOP_assignment
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(487, 256);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(101, 30);
+            this.radioButton1.Size = new System.Drawing.Size(95, 30);
             this.radioButton1.TabIndex = 12;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = " Amber";
+            this.radioButton1.Text = "Amber";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // comboBox2
@@ -144,13 +143,6 @@ namespace IOOP_assignment
             // 
             this.confirmToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.confirmToolTip.ToolTipTitle = "Confirm Reservation";
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthCalendar1.Location = new System.Drawing.Point(105, 144);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 18;
             // 
             // comboBox3
             // 
@@ -209,36 +201,32 @@ namespace IOOP_assignment
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(624, 415);
+            this.button2.Location = new System.Drawing.Point(487, 415);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(219, 49);
             this.button2.TabIndex = 24;
             this.button2.Text = "Confirm Reservation";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // myMonthCalendar1
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(390, 415);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(185, 49);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Cancel";
-            this.button5.UseVisualStyleBackColor = true;
+            this.myMonthCalendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myMonthCalendar1.Location = new System.Drawing.Point(78, 97);
+            this.myMonthCalendar1.Name = "myMonthCalendar1";
+            this.myMonthCalendar1.TabIndex = 26;
             // 
             // FormReserve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 501);
+            this.Controls.Add(this.myMonthCalendar1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
@@ -272,13 +260,12 @@ namespace IOOP_assignment
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolTip confirmToolTip;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
+        private MyMonthCalendar myMonthCalendar1;
     }
 }
