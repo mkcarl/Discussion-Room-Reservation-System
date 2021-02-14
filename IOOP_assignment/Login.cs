@@ -69,7 +69,8 @@ namespace IOOP_assignment
                 {
                     Program.LibrarianUser = new Librarian(dr["StudentID"].ToString(),
                         dr["Password"].ToString(),
-                        dr["Surname"].ToString() + " " + dr["GivenName"].ToString(),
+                        dr["Surname"].ToString() , 
+                        dr["GivenName"].ToString(),
                         dr["EmailAddress"].ToString());
                     Program.LibrarianUser.MainForm = new formLibrarianHomepage();
                     Program.LibrarianUser.MainForm.FormClosing += LHome_Closing;
@@ -86,7 +87,8 @@ namespace IOOP_assignment
                      */
                     Program.StudentUser = new Student(dr["StudentID"].ToString(), 
                         dr["Password"].ToString(), 
-                        dr["Surname"].ToString() + " " + dr["GivenName"].ToString(), 
+                        dr["Surname"].ToString() ,
+                        dr["GivenName"].ToString(), 
                         dr["EmailAddress"].ToString());
                     Program.StudentUser.MainForm = new formStudentHomepage();
                     Program.StudentUser.MainForm.FormClosing += SHome_Closing;

@@ -100,9 +100,18 @@ namespace IOOP_assignment
             lblDay_SHomepage.Text = DateTime.Now.DayOfWeek.ToString();
             lblDate_SHomepage.Text = DateTime.Now.ToString("dd MMMM yyy"); // https://www.c-sharpcorner.com/blogs/date-and-time-format-in-c-sharp-programming1
             lblTime_SHomepage.Text = DateTime.Now.ToString("hh:mm tt");
-            
+
             // load the students name when form load 
-            lblWelcome_SHomepage.Text = "Welcome " + Program.StudentUser.FullName.Split(' ')[0];
+            string studentSurname;
+            if (Program.LibrarianUser.Surname == null)
+            {
+                studentSurname = Program.StudentUser.Surname;
+            }
+            else
+            {
+                studentSurname = "Student";
+            }
+            lblWelcome_SHomepage.Text = "Welcome " + studentSurname;
 
         }
     }   

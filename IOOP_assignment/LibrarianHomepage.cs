@@ -114,7 +114,16 @@ namespace IOOP_assignment
             lblTime_LHomepage.Text = DateTime.Now.ToString("hh:mm tt");
 
             // load the student's surname in when form load
-            lblWelcome_LHomepage.Text = "Welcome " + Program.LibrarianUser.FullName.Split(' ')[0]; 
+            string librarianSurname;
+            if (Program.LibrarianUser.Surname == null)
+            {
+                librarianSurname = Program.LibrarianUser.Surname;
+            }
+            else
+            {
+                librarianSurname = "Librarian";
+            }
+            lblWelcome_LHomepage.Text = "Welcome " + librarianSurname; 
         }
     }
 }
