@@ -44,6 +44,7 @@ namespace IOOP_assignment
             this.lblTime_LHomepage = new System.Windows.Forms.Label();
             this.lblDate_LHomepage = new System.Windows.Forms.Label();
             this.lblDay_LHomepage = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_LHomepage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,33 +167,37 @@ namespace IOOP_assignment
             // 
             // lblTime_LHomepage
             // 
-            this.lblTime_LHomepage.AutoSize = true;
             this.lblTime_LHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime_LHomepage.Location = new System.Drawing.Point(807, 78);
+            this.lblTime_LHomepage.Location = new System.Drawing.Point(713, 78);
             this.lblTime_LHomepage.Name = "lblTime_LHomepage";
-            this.lblTime_LHomepage.Size = new System.Drawing.Size(113, 29);
+            this.lblTime_LHomepage.Size = new System.Drawing.Size(207, 29);
             this.lblTime_LHomepage.TabIndex = 21;
             this.lblTime_LHomepage.Text = "10:01 PM";
+            this.lblTime_LHomepage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblDate_LHomepage
             // 
-            this.lblDate_LHomepage.AutoSize = true;
             this.lblDate_LHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate_LHomepage.Location = new System.Drawing.Point(734, 49);
+            this.lblDate_LHomepage.Location = new System.Drawing.Point(713, 49);
             this.lblDate_LHomepage.Name = "lblDate_LHomepage";
-            this.lblDate_LHomepage.Size = new System.Drawing.Size(186, 29);
+            this.lblDate_LHomepage.Size = new System.Drawing.Size(207, 29);
             this.lblDate_LHomepage.TabIndex = 20;
             this.lblDate_LHomepage.Text = "26 January 2021";
+            this.lblDate_LHomepage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblDay_LHomepage
             // 
-            this.lblDay_LHomepage.AutoSize = true;
             this.lblDay_LHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDay_LHomepage.Location = new System.Drawing.Point(780, 20);
+            this.lblDay_LHomepage.Location = new System.Drawing.Point(713, 20);
             this.lblDay_LHomepage.Name = "lblDay_LHomepage";
-            this.lblDay_LHomepage.Size = new System.Drawing.Size(140, 29);
+            this.lblDay_LHomepage.Size = new System.Drawing.Size(207, 29);
             this.lblDay_LHomepage.TabIndex = 19;
             this.lblDay_LHomepage.Text = "Wednesday";
+            this.lblDay_LHomepage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // formLibrarianHomepage
             // 
@@ -217,6 +222,7 @@ namespace IOOP_assignment
             this.Name = "formLibrarianHomepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Librarian Homepage";
+            this.Load += new System.EventHandler(this.formLibrarianHomepage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_LHomepage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -238,5 +244,6 @@ namespace IOOP_assignment
         private System.Windows.Forms.Label lblTime_LHomepage;
         private System.Windows.Forms.Label lblDate_LHomepage;
         private System.Windows.Forms.Label lblDay_LHomepage;
+        private System.Windows.Forms.Timer timer1;
     }
 }

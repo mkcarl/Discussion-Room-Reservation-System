@@ -42,6 +42,7 @@ namespace IOOP_assignment
             this.lblDay_SHomepage = new System.Windows.Forms.Label();
             this.lblDate_SHomepage = new System.Windows.Forms.Label();
             this.lblTime_SHomepage = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_SHomepage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,33 +138,39 @@ namespace IOOP_assignment
             // 
             // lblDay_SHomepage
             // 
-            this.lblDay_SHomepage.AutoSize = true;
             this.lblDay_SHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDay_SHomepage.Location = new System.Drawing.Point(780, 22);
+            this.lblDay_SHomepage.Location = new System.Drawing.Point(712, 22);
             this.lblDay_SHomepage.Name = "lblDay_SHomepage";
-            this.lblDay_SHomepage.Size = new System.Drawing.Size(140, 29);
+            this.lblDay_SHomepage.Size = new System.Drawing.Size(208, 29);
             this.lblDay_SHomepage.TabIndex = 7;
             this.lblDay_SHomepage.Text = "Wednesday";
+            this.lblDay_SHomepage.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblDate_SHomepage
             // 
-            this.lblDate_SHomepage.AutoSize = true;
             this.lblDate_SHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate_SHomepage.Location = new System.Drawing.Point(734, 51);
+            this.lblDate_SHomepage.Location = new System.Drawing.Point(712, 51);
             this.lblDate_SHomepage.Name = "lblDate_SHomepage";
-            this.lblDate_SHomepage.Size = new System.Drawing.Size(186, 29);
+            this.lblDate_SHomepage.Size = new System.Drawing.Size(208, 29);
             this.lblDate_SHomepage.TabIndex = 8;
             this.lblDate_SHomepage.Text = "26 January 2021";
+            this.lblDate_SHomepage.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblTime_SHomepage
             // 
-            this.lblTime_SHomepage.AutoSize = true;
             this.lblTime_SHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime_SHomepage.Location = new System.Drawing.Point(807, 80);
+            this.lblTime_SHomepage.Location = new System.Drawing.Point(712, 80);
             this.lblTime_SHomepage.Name = "lblTime_SHomepage";
-            this.lblTime_SHomepage.Size = new System.Drawing.Size(113, 29);
+            this.lblTime_SHomepage.Size = new System.Drawing.Size(208, 29);
             this.lblTime_SHomepage.TabIndex = 9;
             this.lblTime_SHomepage.Text = "10:01 PM";
+            this.lblTime_SHomepage.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // formStudentHomepage
             // 
@@ -186,6 +193,7 @@ namespace IOOP_assignment
             this.Name = "formStudentHomepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Homepage";
+            this.Load += new System.EventHandler(this.formStudentHomepage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePic_SHomepage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -205,5 +213,6 @@ namespace IOOP_assignment
         private System.Windows.Forms.Label lblDay_SHomepage;
         private System.Windows.Forms.Label lblDate_SHomepage;
         private System.Windows.Forms.Label lblTime_SHomepage;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -98,5 +98,19 @@ namespace IOOP_assignment
         {
             this.Show();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblDay_LHomepage.Text = DateTime.Now.DayOfWeek.ToString();
+            lblDate_LHomepage.Text = DateTime.Now.ToString("dd MMMM yyy"); // https://www.c-sharpcorner.com/blogs/date-and-time-format-in-c-sharp-programming1
+            lblTime_LHomepage.Text = DateTime.Now.ToString("hh:mm tt");
+        }
+
+        private void formLibrarianHomepage_Load(object sender, EventArgs e)
+        {
+            lblDay_LHomepage.Text = DateTime.Now.DayOfWeek.ToString();
+            lblDate_LHomepage.Text = DateTime.Now.ToString("dd MMMM yyy"); // https://www.c-sharpcorner.com/blogs/date-and-time-format-in-c-sharp-programming1
+            lblTime_LHomepage.Text = DateTime.Now.ToString("hh:mm tt");
+        }
     }
 }
