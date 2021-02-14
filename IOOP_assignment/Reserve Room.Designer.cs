@@ -207,6 +207,7 @@ namespace IOOP_assignment
             this.btnConfirmReservation.TabIndex = 24;
             this.btnConfirmReservation.Text = "Confirm Reservation";
             this.btnConfirmReservation.UseVisualStyleBackColor = true;
+            this.btnConfirmReservation.Click += new System.EventHandler(this.btnConfirmReservation_Click);
             // 
             // monthCalendarReserve
             // 

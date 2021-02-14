@@ -77,5 +77,96 @@ namespace IOOP_assignment
             }
         }
 
+        public static void GenerateRooms(DateTime targetDay)
+        {
+            string[] rooms = { "Amber", "BlackThorn", "Cedar", "Daphne"};
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
+            conn.Open();
+
+            // last number 
+            int counter;
+            try
+            {
+                SqlDataReader dr = Query("SELECT TOP 1 RoomID FROM Room ORDER BY RoomID DESC;");
+                dr.Read();
+                counter = int.Parse(dr["RoomID"].ToString().Substring(2)); // basically selecting the last row and extract the number from it 
+            }
+            catch (InvalidOperationException)
+            {
+                counter = 0;
+            }
+
+            foreach (string roomType in rooms)
+            {
+                int roomCount = 0;
+                switch (roomType) 
+                {
+                    case "Amber":
+                        roomCount = 5; 
+                        break;
+                    case "BlackThorn":
+                        roomCount = 4;
+                        break;
+                    case "Cedar":
+                        roomCount = 6;
+                        break;
+                    case "Daphne":
+                        roomCount = 5;
+                        break;
+                }
+
+                
+                for (int roomNum = 1; roomNum <= roomCount; roomNum++)
+                {
+                    DateTime timeSlot = new DateTime(targetDay.Year, targetDay.Month, targetDay.Day, 8, 0, 0);
+                    for (int i = 0; i < 12; i++)
+                    {
+                        counter++;
+                        string roomID = "RM" + counter.ToString("000000");
+                        string roomName = roomType + roomNum.ToString();
+                        SqlCommand cmdCreateRoom = new SqlCommand(
+                            "INSERT INTO Room (RoomID, Capacity, TimeSlot, RoomName) VALUES (@rid, @cap, @time, @rname)"
+                            , conn);
+                        cmdCreateRoom.Parameters.AddWithValue("@rid", roomID);
+                        cmdCreateRoom.Parameters.AddWithValue("@time", timeSlot);
+                        cmdCreateRoom.Parameters.AddWithValue("@rname", roomName);
+                        switch (roomType) // differnt capacity depending on the room type
+                        {
+                            case "Amber":
+                                cmdCreateRoom.Parameters.AddWithValue("@cap", 10);
+                                break;
+                            case "BlackThorn":
+                                cmdCreateRoom.Parameters.AddWithValue("@cap", 8);
+                                break;
+                            case "Cedar":
+                                cmdCreateRoom.Parameters.AddWithValue("@cap", 4);
+                                break;
+                            case "Daphne":
+                                cmdCreateRoom.Parameters.AddWithValue("@cap", 2);
+                                break;
+                        }
+                        cmdCreateRoom.ExecuteNonQuery();
+                        timeSlot = timeSlot.AddHours(1);
+                    }
+                }
+            }
+            conn.Close();
+            //SqlCommand cmdCreateRoom = new SqlCommand("INSERT INTO Room (RoomID, Capacity, TimeSlot, RoomName) VALUES ('RM001', 10, @time, 'Amber1')", conn);
+            //cmdCreateRoom.Parameters.AddWithValue("@time", DateTime.Now.ToString());
+            //cmdCreateRoom.ExecuteNonQuery(); 
+
+            /*
+             counter = last row of the table, if null, counter = 0
+             for every roomtype in [Amber, B, C, D]: 
+                if roomtype == amber: 
+                    repeat 5 times :
+                        timeslot = 8am 
+                        repeat 12 times : 
+                            counter += 1 ;
+                            roomID = "RM" + counter; 
+                            insert (roomID, 10, timeslot, AmberN); 
+                            timeslot += 1hr ;
+             */
+        }
     }
 }

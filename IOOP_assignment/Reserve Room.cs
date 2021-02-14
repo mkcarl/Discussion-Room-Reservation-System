@@ -26,5 +26,10 @@ namespace IOOP_assignment
         {
             this.Close();
         }
+
+        private void btnConfirmReservation_Click(object sender, EventArgs e)
+        {
+            Controller.GenerateRooms(DateTime.Now);
+        }
     }
 }

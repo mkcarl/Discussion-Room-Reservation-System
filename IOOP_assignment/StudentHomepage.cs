@@ -103,7 +103,7 @@ namespace IOOP_assignment
 
             // load the students name when form load 
             string studentSurname;
-            if (Program.LibrarianUser.Surname == null)
+            if (Program.StudentUser.Surname == null)
             {
                 studentSurname = Program.StudentUser.Surname;
             }
