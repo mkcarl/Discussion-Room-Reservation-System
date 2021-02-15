@@ -26,5 +26,23 @@ namespace IOOP_assignment
         {
             this.Close();
         }
+
+        private void comboPeopleReserve_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboPeopleReserve.ToString.Text();
+
+            if (comboPeopleReserve < 8)
+            {
+
+            }
+            
+        }
+
+        private void monthCalendarReserve_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            monthCalendarReserve.MinDate = DateTime.Now.AddDays(2);
+            monthCalendarReserve.MaxDate = DateTime.Now.AddDays(7);
+
+        }
     }
 }
