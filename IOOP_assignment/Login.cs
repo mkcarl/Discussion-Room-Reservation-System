@@ -153,11 +153,11 @@ namespace IOOP_assignment
 
             for (DateTime targetDay = today; targetDay <= today.AddDays(7); targetDay = targetDay.AddDays(1))
             {
-
-                if (!(Controller.Query($"SELECT * FROM Room WHERE " +
-                    $"TimeSlot >{targetDay.ToString("yyyy-MM-dd")} " +
+                bool hasRecord = (Controller.Query($"SELECT * FROM Room WHERE " +
+                    $"TimeSlot >='{targetDay.ToString("yyyy-MM-dd")}' " +
                     $"and " +
-                    $"TimeSlot<{targetDay.AddDays(1).ToString("yyyy-MM-dd")}").HasRows))
+                    $"TimeSlot<'{targetDay.AddDays(1).ToString("yyyy-MM-dd")}'").HasRows);
+                if (!hasRecord)
                 {
                     Controller.GenerateRooms(targetDay); 
                 }

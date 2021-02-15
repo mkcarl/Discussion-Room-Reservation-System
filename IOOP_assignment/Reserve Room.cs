@@ -31,5 +31,9 @@ namespace IOOP_assignment
         {
 
         }
+
+        private void FormReserve_Load(object sender, EventArgs e)
+        {
+        }
     }
 }
