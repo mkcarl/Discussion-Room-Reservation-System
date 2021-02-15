@@ -29,7 +29,7 @@ namespace IOOP_assignment
 
         private void btnConfirmReservation_Click(object sender, EventArgs e)
         {
-            Controller.GenerateRooms(DateTime.Now);
+
         }
     }
 }

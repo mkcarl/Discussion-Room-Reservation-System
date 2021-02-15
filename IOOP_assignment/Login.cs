@@ -146,5 +146,22 @@ namespace IOOP_assignment
         {
             Controller.RegisterAccount(txtStudentID_Login.Text.ToString(), txtPassword_Login.Text.ToString());
         }
+
+        private void formLogin_Load(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Now.Date;
+
+            for (DateTime targetDay = today; targetDay <= today.AddDays(7); targetDay = targetDay.AddDays(1))
+            {
+
+                if (!(Controller.Query($"SELECT * FROM Room WHERE " +
+                    $"TimeSlot >{targetDay.ToString("yyyy-MM-dd")} " +
+                    $"and " +
+                    $"TimeSlot<{targetDay.AddDays(1).ToString("yyyy-MM-dd")}").HasRows))
+                {
+                    Controller.GenerateRooms(targetDay); 
+                }
+            }
+        }
     }
 }

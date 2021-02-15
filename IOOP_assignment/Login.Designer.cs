@@ -148,6 +148,7 @@ namespace IOOP_assignment
             this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.formLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxApuLogo_Login)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
