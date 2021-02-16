@@ -11,7 +11,10 @@ using System.Windows.Forms;
 namespace IOOP_assignment
 {
     public partial class FormReserve : Form
-    {
+    {   
+        //explicit array declaration
+        int[] durationList = new int[6];
+
         public FormReserve()
         {
             InitializeComponent();
@@ -27,13 +30,61 @@ namespace IOOP_assignment
             this.Close();
         }
 
-        private void btnConfirmReservation_Click(object sender, EventArgs e)
+        private void comboPeopleReserve_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (int.Parse(comboPeopleReserve.SelectedItem.ToString()) > 8)
+            {
+                radAmberReseve.Enabled = true;
+                radBlackThornReserve.Enabled = false;
+                radCedarReserve.Enabled = false;
+                radDaphneReserve.Enabled = false;
+            }
+
+            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) <= 8) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) >= 4))
+            {
+                radAmberReseve.Enabled = true;
+                radBlackThornReserve.Enabled = true;
+                radCedarReserve.Enabled = false;
+                radDaphneReserve.Enabled = false;
+            }
+            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) < 4) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) >= 2))
+            {
+                radAmberReseve.Enabled = true;
+                radBlackThornReserve.Enabled = true;
+                radCedarReserve.Enabled = true;
+                radDaphneReserve.Enabled = true;
+            }
+            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) < 2) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) >= 0))
+            {
+                radAmberReseve.Enabled = false;
+                radBlackThornReserve.Enabled = true;
+                radCedarReserve.Enabled = true;
+                radDaphneReserve.Enabled = true;
+            }
+        }
+
+        private void monthCalendarReserve_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            monthCalendarReserve.MinDate = DateTime.Now.AddDays(2);
+            monthCalendarReserve.MaxDate = DateTime.Now.AddDays(7);
 
         }
 
         private void FormReserve_Load(object sender, EventArgs e)
         {
+            monthCalendarReserve.MinDate = DateTime.Now.AddDays(2);
+            monthCalendarReserve.MaxDate = DateTime.Now.AddDays(7);
         }
+
+        private void comboDurationReserve_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirmReservation_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

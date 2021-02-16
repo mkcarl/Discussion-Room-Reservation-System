@@ -55,7 +55,7 @@ namespace IOOP_assignment
             // 
             this.radDaphneReserve.AutoSize = true;
             this.radDaphneReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radDaphneReserve.Location = new System.Drawing.Point(487, 361);
+            this.radDaphneReserve.Location = new System.Drawing.Point(487, 227);
             this.radDaphneReserve.Name = "radDaphneReserve";
             this.radDaphneReserve.Size = new System.Drawing.Size(106, 30);
             this.radDaphneReserve.TabIndex = 15;
@@ -67,7 +67,7 @@ namespace IOOP_assignment
             // 
             this.radCedarReserve.AutoSize = true;
             this.radCedarReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radCedarReserve.Location = new System.Drawing.Point(487, 326);
+            this.radCedarReserve.Location = new System.Drawing.Point(487, 192);
             this.radCedarReserve.Name = "radCedarReserve";
             this.radCedarReserve.Size = new System.Drawing.Size(89, 30);
             this.radCedarReserve.TabIndex = 14;
@@ -79,7 +79,7 @@ namespace IOOP_assignment
             // 
             this.radBlackThornReserve.AutoSize = true;
             this.radBlackThornReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radBlackThornReserve.Location = new System.Drawing.Point(487, 291);
+            this.radBlackThornReserve.Location = new System.Drawing.Point(487, 157);
             this.radBlackThornReserve.Name = "radBlackThornReserve";
             this.radBlackThornReserve.Size = new System.Drawing.Size(139, 30);
             this.radBlackThornReserve.TabIndex = 13;
@@ -91,7 +91,7 @@ namespace IOOP_assignment
             // 
             this.radAmberReseve.AutoSize = true;
             this.radAmberReseve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radAmberReseve.Location = new System.Drawing.Point(487, 256);
+            this.radAmberReseve.Location = new System.Drawing.Point(487, 122);
             this.radAmberReseve.Name = "radAmberReseve";
             this.radAmberReseve.Size = new System.Drawing.Size(95, 30);
             this.radAmberReseve.TabIndex = 12;
@@ -103,7 +103,7 @@ namespace IOOP_assignment
             // 
             this.comboTimeReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTimeReserve.FormattingEnabled = true;
-            this.comboTimeReserve.Location = new System.Drawing.Point(487, 144);
+            this.comboTimeReserve.Location = new System.Drawing.Point(487, 323);
             this.comboTimeReserve.Name = "comboTimeReserve";
             this.comboTimeReserve.Size = new System.Drawing.Size(303, 33);
             this.comboTimeReserve.TabIndex = 11;
@@ -114,10 +114,21 @@ namespace IOOP_assignment
             // 
             this.comboPeopleReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPeopleReserve.FormattingEnabled = true;
+            this.comboPeopleReserve.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.comboPeopleReserve.Location = new System.Drawing.Point(487, 82);
             this.comboPeopleReserve.Name = "comboPeopleReserve";
             this.comboPeopleReserve.Size = new System.Drawing.Size(195, 33);
             this.comboPeopleReserve.TabIndex = 10;
+            this.comboPeopleReserve.SelectedIndexChanged += new System.EventHandler(this.comboPeopleReserve_SelectedIndexChanged);
             // 
             // lblPeopleReserve
             // 
@@ -148,17 +159,25 @@ namespace IOOP_assignment
             // 
             this.comboDurationReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboDurationReserve.FormattingEnabled = true;
-            this.comboDurationReserve.Location = new System.Drawing.Point(487, 205);
+            this.comboDurationReserve.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.comboDurationReserve.Location = new System.Drawing.Point(487, 263);
             this.comboDurationReserve.Name = "comboDurationReserve";
             this.comboDurationReserve.Size = new System.Drawing.Size(303, 33);
             this.comboDurationReserve.TabIndex = 19;
             this.comboDurationReserve.Text = "-Duration-";
+            this.comboDurationReserve.SelectedIndexChanged += new System.EventHandler(this.comboDurationReserve_SelectedIndexChanged);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = global::IOOP_assignment.Properties.Resources.duration;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(456, 208);
+            this.pictureBox3.Location = new System.Drawing.Point(456, 266);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
             this.pictureBox3.TabIndex = 22;
@@ -168,7 +187,7 @@ namespace IOOP_assignment
             // 
             this.pictureBox2.BackgroundImage = global::IOOP_assignment.Properties.Resources.time;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(456, 148);
+            this.pictureBox2.Location = new System.Drawing.Point(456, 327);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.TabIndex = 21;
@@ -201,7 +220,7 @@ namespace IOOP_assignment
             // btnConfirmReservation
             // 
             this.btnConfirmReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmReservation.Location = new System.Drawing.Point(487, 415);
+            this.btnConfirmReservation.Location = new System.Drawing.Point(487, 375);
             this.btnConfirmReservation.Name = "btnConfirmReservation";
             this.btnConfirmReservation.Size = new System.Drawing.Size(219, 49);
             this.btnConfirmReservation.TabIndex = 24;
@@ -215,6 +234,7 @@ namespace IOOP_assignment
             this.monthCalendarReserve.Location = new System.Drawing.Point(78, 97);
             this.monthCalendarReserve.Name = "monthCalendarReserve";
             this.monthCalendarReserve.TabIndex = 26;
+            this.monthCalendarReserve.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendarReserve_DateChanged);
             // 
             // FormReserve
             // 
