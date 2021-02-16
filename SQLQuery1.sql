@@ -1,0 +1,1 @@
+﻿SELECT Pax from Reservation where RoomId = 2;
