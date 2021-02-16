@@ -115,7 +115,7 @@ namespace IOOP_assignment
 
             // load the student's surname in when form load
             string librarianSurname;
-            if (Program.LibrarianUser.Surname != null)
+            if (Program.LibrarianUser.Surname != "")
             {
                 librarianSurname = Program.LibrarianUser.Surname;
             }
