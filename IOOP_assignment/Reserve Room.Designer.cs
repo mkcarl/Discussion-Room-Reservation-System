@@ -115,8 +115,6 @@ namespace IOOP_assignment
             this.comboPeopleReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPeopleReserve.FormattingEnabled = true;
             this.comboPeopleReserve.Items.AddRange(new object[] {
-            "0",
-            "1",
             "2",
             "3",
             "4",
@@ -161,11 +159,19 @@ namespace IOOP_assignment
             // 
             this.comboDurationReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboDurationReserve.FormattingEnabled = true;
+            this.comboDurationReserve.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
             this.comboDurationReserve.Location = new System.Drawing.Point(487, 263);
             this.comboDurationReserve.Name = "comboDurationReserve";
             this.comboDurationReserve.Size = new System.Drawing.Size(303, 33);
             this.comboDurationReserve.TabIndex = 19;
             this.comboDurationReserve.Text = "-Duration-";
+            this.comboDurationReserve.SelectedIndexChanged += new System.EventHandler(this.comboDurationReserve_SelectedIndexChanged);
             // 
             // pictureBox3
             // 

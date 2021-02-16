@@ -11,7 +11,10 @@ using System.Windows.Forms;
 namespace IOOP_assignment
 {
     public partial class FormReserve : Form
-    {
+    {   
+        //explicit array declaration
+        int[] durationList = new int[6];
+
         public FormReserve()
         {
             InitializeComponent();
@@ -37,21 +40,21 @@ namespace IOOP_assignment
                 radDaphneReserve.Enabled = false;
             }
 
-            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) < 8) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) > 4))
+            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) <= 8) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) >= 4))
             {
                 radAmberReseve.Enabled = true;
                 radBlackThornReserve.Enabled = true;
                 radCedarReserve.Enabled = false;
                 radDaphneReserve.Enabled = false;
             }
-            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) < 4) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) > 2))
+            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) < 4) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) >= 2))
             {
                 radAmberReseve.Enabled = true;
                 radBlackThornReserve.Enabled = true;
                 radCedarReserve.Enabled = true;
-                radDaphneReserve.Enabled = false;
+                radDaphneReserve.Enabled = true;
             }
-            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) < 2) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) > 0))
+            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) < 2) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) >= 0))
             {
                 radAmberReseve.Enabled = false;
                 radBlackThornReserve.Enabled = true;
@@ -69,7 +72,12 @@ namespace IOOP_assignment
 
         private void FormReserve_Load(object sender, EventArgs e)
         {
-            
+            monthCalendarReserve.MinDate = DateTime.Now.AddDays(2);
+            monthCalendarReserve.MaxDate = DateTime.Now.AddDays(7);
+        }
+
+        private void comboDurationReserve_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
