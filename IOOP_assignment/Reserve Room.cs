@@ -26,5 +26,14 @@ namespace IOOP_assignment
         {
             this.Close();
         }
+
+        private void btnConfirmReservation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormReserve_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

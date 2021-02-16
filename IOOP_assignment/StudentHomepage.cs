@@ -86,5 +86,33 @@ namespace IOOP_assignment
         {
             this.Show();
         }
+        
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblDay_SHomepage.Text = DateTime.Now.DayOfWeek.ToString();
+            lblDate_SHomepage.Text = DateTime.Now.ToString("dd MMMM yyy"); // https://www.c-sharpcorner.com/blogs/date-and-time-format-in-c-sharp-programming1
+            lblTime_SHomepage.Text = DateTime.Now.ToString("hh:mm tt");
+        }
+
+        private void formStudentHomepage_Load(object sender, EventArgs e)
+        {
+            // load the time when form loads 
+            lblDay_SHomepage.Text = DateTime.Now.DayOfWeek.ToString();
+            lblDate_SHomepage.Text = DateTime.Now.ToString("dd MMMM yyy"); // https://www.c-sharpcorner.com/blogs/date-and-time-format-in-c-sharp-programming1
+            lblTime_SHomepage.Text = DateTime.Now.ToString("hh:mm tt");
+
+            // load the students name when form load 
+            string studentSurname;
+            if (Program.StudentUser.Surname != "")
+            {
+                studentSurname = Program.StudentUser.Surname;
+            }
+            else
+            {
+                studentSurname = "Student";
+            }
+            lblWelcome_SHomepage.Text = "Welcome " + studentSurname;
+
+        }
     }   
 }

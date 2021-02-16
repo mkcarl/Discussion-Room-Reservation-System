@@ -153,13 +153,14 @@ namespace IOOP_assignment
             // 
             // lblTypeUser
             // 
-            this.lblTypeUser.AutoSize = true;
             this.lblTypeUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblTypeUser.Location = new System.Drawing.Point(777, 25);
             this.lblTypeUser.Name = "lblTypeUser";
             this.lblTypeUser.Size = new System.Drawing.Size(144, 26);
             this.lblTypeUser.TabIndex = 11;
             this.lblTypeUser.Text = "Account Type";
+            this.lblTypeUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTypeUser.Click += new System.EventHandler(this.lblTypeUser_Click);
             // 
             // tipBackUser
             // 
@@ -249,7 +250,6 @@ namespace IOOP_assignment
             this.txtLibrarianIDUser.Name = "txtLibrarianIDUser";
             this.txtLibrarianIDUser.Size = new System.Drawing.Size(266, 32);
             this.txtLibrarianIDUser.TabIndex = 18;
-            this.txtLibrarianIDUser.UseSystemPasswordChar = true;
             // 
             // Add_User_Form
             // 

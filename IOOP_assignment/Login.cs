@@ -69,7 +69,8 @@ namespace IOOP_assignment
                 {
                     Program.LibrarianUser = new Librarian(dr["StudentID"].ToString(),
                         dr["Password"].ToString(),
-                        dr["Surname"].ToString() + " " + dr["GivenName"].ToString(),
+                        dr["Surname"].ToString() , 
+                        dr["GivenName"].ToString(),
                         dr["EmailAddress"].ToString());
                     Program.LibrarianUser.MainForm = new formLibrarianHomepage();
                     Program.LibrarianUser.MainForm.FormClosing += LHome_Closing;
@@ -86,7 +87,8 @@ namespace IOOP_assignment
                      */
                     Program.StudentUser = new Student(dr["StudentID"].ToString(), 
                         dr["Password"].ToString(), 
-                        dr["Surname"].ToString() + " " + dr["GivenName"].ToString(), 
+                        dr["Surname"].ToString() ,
+                        dr["GivenName"].ToString(), 
                         dr["EmailAddress"].ToString());
                     Program.StudentUser.MainForm = new formStudentHomepage();
                     Program.StudentUser.MainForm.FormClosing += SHome_Closing;
@@ -143,6 +145,23 @@ namespace IOOP_assignment
         private void btnRegister_Login_Click(object sender, EventArgs e)
         {
             Controller.RegisterAccount(txtStudentID_Login.Text.ToString(), txtPassword_Login.Text.ToString());
+        }
+
+        private void formLogin_Load(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Now.Date;
+
+            for (DateTime targetDay = today; targetDay <= today.AddDays(7); targetDay = targetDay.AddDays(1))
+            {
+                bool hasRecord = (Controller.Query($"SELECT * FROM Room WHERE " +
+                    $"TimeSlot >='{targetDay.ToString("yyyy-MM-dd")}' " +
+                    $"and " +
+                    $"TimeSlot<'{targetDay.AddDays(1).ToString("yyyy-MM-dd")}'").HasRows);
+                if (!hasRecord)
+                {
+                    Controller.GenerateRooms(targetDay); 
+                }
+            }
         }
     }
 }
