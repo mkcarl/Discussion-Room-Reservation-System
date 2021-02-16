@@ -45,18 +45,21 @@ namespace IOOP_assignment
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBackRequest = new System.Windows.Forms.Button();
+            this.picUserUser = new System.Windows.Forms.PictureBox();
+            this.lblTitleUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUserUser)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRoomTypeRequest
             // 
             this.lblRoomTypeRequest.AutoSize = true;
             this.lblRoomTypeRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoomTypeRequest.Location = new System.Drawing.Point(104, 150);
+            this.lblRoomTypeRequest.Location = new System.Drawing.Point(114, 196);
             this.lblRoomTypeRequest.Name = "lblRoomTypeRequest";
             this.lblRoomTypeRequest.Size = new System.Drawing.Size(122, 25);
             this.lblRoomTypeRequest.TabIndex = 1;
@@ -65,24 +68,28 @@ namespace IOOP_assignment
             // txtRoomTypeRequest
             // 
             this.txtRoomTypeRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRoomTypeRequest.Location = new System.Drawing.Point(109, 178);
+            this.txtRoomTypeRequest.Location = new System.Drawing.Point(119, 224);
             this.txtRoomTypeRequest.Name = "txtRoomTypeRequest";
+            this.txtRoomTypeRequest.ReadOnly = true;
             this.txtRoomTypeRequest.Size = new System.Drawing.Size(288, 31);
             this.txtRoomTypeRequest.TabIndex = 2;
+            this.txtRoomTypeRequest.TabStop = false;
             // 
             // txtDateRequest
             // 
             this.txtDateRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDateRequest.Location = new System.Drawing.Point(109, 277);
+            this.txtDateRequest.Location = new System.Drawing.Point(119, 323);
             this.txtDateRequest.Name = "txtDateRequest";
+            this.txtDateRequest.ReadOnly = true;
             this.txtDateRequest.Size = new System.Drawing.Size(288, 31);
             this.txtDateRequest.TabIndex = 3;
+            this.txtDateRequest.TabStop = false;
             // 
             // lblDateRequest
             // 
             this.lblDateRequest.AutoSize = true;
             this.lblDateRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateRequest.Location = new System.Drawing.Point(104, 249);
+            this.lblDateRequest.Location = new System.Drawing.Point(114, 295);
             this.lblDateRequest.Name = "lblDateRequest";
             this.lblDateRequest.Size = new System.Drawing.Size(57, 25);
             this.lblDateRequest.TabIndex = 4;
@@ -91,17 +98,19 @@ namespace IOOP_assignment
             // txtDetailsRequest
             // 
             this.txtDetailsRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDetailsRequest.Location = new System.Drawing.Point(585, 79);
+            this.txtDetailsRequest.Location = new System.Drawing.Point(572, 125);
             this.txtDetailsRequest.Multiline = true;
             this.txtDetailsRequest.Name = "txtDetailsRequest";
-            this.txtDetailsRequest.Size = new System.Drawing.Size(254, 355);
+            this.txtDetailsRequest.ReadOnly = true;
+            this.txtDetailsRequest.Size = new System.Drawing.Size(282, 328);
             this.txtDetailsRequest.TabIndex = 7;
+            this.txtDetailsRequest.TabStop = false;
             // 
             // lblDetailsRequest
             // 
             this.lblDetailsRequest.AutoSize = true;
             this.lblDetailsRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetailsRequest.Location = new System.Drawing.Point(580, 51);
+            this.lblDetailsRequest.Location = new System.Drawing.Point(567, 97);
             this.lblDetailsRequest.Name = "lblDetailsRequest";
             this.lblDetailsRequest.Size = new System.Drawing.Size(78, 25);
             this.lblDetailsRequest.TabIndex = 8;
@@ -111,7 +120,7 @@ namespace IOOP_assignment
             // 
             this.lblStatusRequest.AutoSize = true;
             this.lblStatusRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusRequest.Location = new System.Drawing.Point(104, 51);
+            this.lblStatusRequest.Location = new System.Drawing.Point(114, 97);
             this.lblStatusRequest.Name = "lblStatusRequest";
             this.lblStatusRequest.Size = new System.Drawing.Size(73, 25);
             this.lblStatusRequest.TabIndex = 17;
@@ -120,16 +129,19 @@ namespace IOOP_assignment
             // txtStatusRequest
             // 
             this.txtStatusRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatusRequest.Location = new System.Drawing.Point(109, 79);
+            this.txtStatusRequest.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtStatusRequest.Location = new System.Drawing.Point(119, 125);
             this.txtStatusRequest.Name = "txtStatusRequest";
+            this.txtStatusRequest.ReadOnly = true;
             this.txtStatusRequest.Size = new System.Drawing.Size(288, 31);
             this.txtStatusRequest.TabIndex = 18;
+            this.txtStatusRequest.TabStop = false;
             // 
             // lblTimeRequest
             // 
             this.lblTimeRequest.AutoSize = true;
             this.lblTimeRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeRequest.Location = new System.Drawing.Point(104, 348);
+            this.lblTimeRequest.Location = new System.Drawing.Point(114, 394);
             this.lblTimeRequest.Name = "lblTimeRequest";
             this.lblTimeRequest.Size = new System.Drawing.Size(59, 25);
             this.lblTimeRequest.TabIndex = 20;
@@ -138,16 +150,18 @@ namespace IOOP_assignment
             // txtTimeRequest
             // 
             this.txtTimeRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimeRequest.Location = new System.Drawing.Point(109, 376);
+            this.txtTimeRequest.Location = new System.Drawing.Point(119, 422);
             this.txtTimeRequest.Name = "txtTimeRequest";
+            this.txtTimeRequest.ReadOnly = true;
             this.txtTimeRequest.Size = new System.Drawing.Size(288, 31);
             this.txtTimeRequest.TabIndex = 19;
+            this.txtTimeRequest.TabStop = false;
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackgroundImage = global::IOOP_assignment.Properties.Resources.time;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(56, 357);
+            this.pictureBox5.Location = new System.Drawing.Point(66, 403);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 50);
             this.pictureBox5.TabIndex = 21;
@@ -157,7 +171,7 @@ namespace IOOP_assignment
             // 
             this.pictureBox4.BackgroundImage = global::IOOP_assignment.Properties.Resources.details;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(652, 51);
+            this.pictureBox4.Location = new System.Drawing.Point(639, 97);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(25, 25);
             this.pictureBox4.TabIndex = 16;
@@ -167,7 +181,7 @@ namespace IOOP_assignment
             // 
             this.pictureBox3.BackgroundImage = global::IOOP_assignment.Properties.Resources._360_F_216967096_bKABKaGs7sp5lTUleicjwkdtgR5bEvtg1;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(56, 258);
+            this.pictureBox3.Location = new System.Drawing.Point(66, 304);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.TabIndex = 15;
@@ -177,7 +191,7 @@ namespace IOOP_assignment
             // 
             this.pictureBox2.BackgroundImage = global::IOOP_assignment.Properties.Resources.room;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(56, 159);
+            this.pictureBox2.Location = new System.Drawing.Point(66, 205);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.TabIndex = 14;
@@ -188,7 +202,7 @@ namespace IOOP_assignment
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Image = global::IOOP_assignment.Properties.Resources.status11;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 60);
+            this.pictureBox1.Location = new System.Drawing.Point(66, 106);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -210,11 +224,33 @@ namespace IOOP_assignment
             this.btnBackRequest.UseVisualStyleBackColor = true;
             this.btnBackRequest.Click += new System.EventHandler(this.button1_Click);
             // 
+            // picUserUser
+            // 
+            this.picUserUser.Image = global::IOOP_assignment.Properties.Resources.showpassicon;
+            this.picUserUser.Location = new System.Drawing.Point(31, 26);
+            this.picUserUser.Name = "picUserUser";
+            this.picUserUser.Size = new System.Drawing.Size(75, 78);
+            this.picUserUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picUserUser.TabIndex = 23;
+            this.picUserUser.TabStop = false;
+            // 
+            // lblTitleUser
+            // 
+            this.lblTitleUser.AutoSize = true;
+            this.lblTitleUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.lblTitleUser.Location = new System.Drawing.Point(112, 47);
+            this.lblTitleUser.Name = "lblTitleUser";
+            this.lblTitleUser.Size = new System.Drawing.Size(379, 37);
+            this.lblTitleUser.TabIndex = 22;
+            this.lblTitleUser.Text = "Room Reservation Status";
+            // 
             // FormRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 501);
+            this.Controls.Add(this.picUserUser);
+            this.Controls.Add(this.lblTitleUser);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.lblTimeRequest);
             this.Controls.Add(this.txtTimeRequest);
@@ -243,6 +279,7 @@ namespace IOOP_assignment
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUserUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,5 +302,7 @@ namespace IOOP_assignment
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lblTimeRequest;
         private System.Windows.Forms.TextBox txtTimeRequest;
+        private System.Windows.Forms.PictureBox picUserUser;
+        private System.Windows.Forms.Label lblTitleUser;
     }
 }

@@ -43,7 +43,7 @@ namespace IOOP_assignment
                 DateTime dtime = (DateTime)dr["Starting Time"];
                 txtRoomTypeRequest.Text = dr["RoomName"].ToString();
                 txtStatusRequest.Text = dr["ApprovalStatus"].ToString();
-                txtDateRequest.Text = dtime.ToString("dd-MM-yyyy");
+                txtDateRequest.Text = dtime.ToString("dd MMMM yyyy");
                 txtTimeRequest.Text = dtime.ToString("hh:mm tt");
             }
 
