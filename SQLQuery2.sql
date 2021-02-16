@@ -1,0 +1,1 @@
+﻿SELECT Pax FROM [Reservation] inner join Student on [Student].StudentID = student.StudentID

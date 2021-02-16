@@ -42,8 +42,29 @@ namespace IOOP_assignment
 
         private void FormModify_Load(object sender, EventArgs e)
         {
+            
             mthCalendarNewModify.MinDate = DateTime.Now.AddDays(2);
             mthCalendarNewModify.MaxDate = DateTime.Now.AddDays(7);
+
+            SqlDataReader dr = Controller.Query("SELECT Pax FROM Reservation where StudentRegistered = 100003 inner join TimeSlot FROM Room");
+            dr.Read();
+
+            if (dr.HasRows)
+            {
+                lblNoPeopleCurrentModify.Text = dr["Pax"].ToString();
+                lblDateCurrentModify.Text = dr["TimeSlot"].ToString();
+
+            }
+
+            //SqlDataReader dr2 = Controller.Query("SELECT TimeSlot FROM Room");
+            //dr.Read();
+
+            //if (dr2.HasRows)
+            //{
+            //    lblDateCurrentModify.Text = dr2["TimeSlot"].ToString();
+
+            //}
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -79,26 +100,7 @@ namespace IOOP_assignment
 
         private void lblNoPeopleCurrentModify_Click(object sender, EventArgs e)
         {
-            //SqlConnection con = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf=;Integrated Security = True; Connect Timeout = 30");
-
-            //con.Open();
-
-            //SqlCommand cmd = new SqlCommand("SELECT Pax FROM Reservation where StudentRegistered = @StudentID", con);
-            //SqlDataReader dr = cmd.ExecuteReader();
-            ////cmd.Parameters.AddWithValue("@StudentID", 100003);
-            SqlDataReader dr = Controller.Query("SELECT Pax FROM Reservation where StudentRegistered = 100003");
-            dr.Read();
-
-            if (dr.HasRows)
-            {
-                lblNoPeopleCurrentModify.Text = dr["Pax"].ToString();
-               
-            }
-          
-
-            //con.Close();
-
-
+            
         }
 
         private void radAmberNewModify_CheckedChanged(object sender, EventArgs e)
