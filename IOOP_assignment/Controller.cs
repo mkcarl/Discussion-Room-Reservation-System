@@ -23,7 +23,8 @@ namespace IOOP_assignment
 
         public static SqlDataReader QueryLoginCredential(string studentID, string passsword)
         {
-            string sqlLogin = "SELECT * FROM Student WHERE StudentID = @studentid AND Password = @pwd;";
+            // make query case sensitive :  https://docs.microsoft.com/en-us/ef/core/miscellaneous/collations-and-case-sensitivity 
+            string sqlLogin = "SELECT * FROM Student WHERE StudentID = @studentid AND Password = @pwd COLLATE SQL_Latin1_General_CP1_CS_AS;";
 
             SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
