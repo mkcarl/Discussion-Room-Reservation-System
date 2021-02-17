@@ -144,7 +144,19 @@ namespace IOOP_assignment
 
         private void btnRegister_Login_Click(object sender, EventArgs e)
         {
-            Controller.RegisterAccount(txtStudentID_Login.Text.ToString(), txtPassword_Login.Text.ToString());
+            if (txtStudentID_Login.TextLength == 6 && txtPassword_Login.Text != "")
+            {
+                Controller.RegisterAccount(txtStudentID_Login.Text.ToString(), txtPassword_Login.Text.ToString());
+            }
+            else if (txtStudentID_Login.TextLength < 6)
+            {
+                MessageBox.Show("Student ID must be a 6 digit number.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (txtPassword_Login.Text == "")
+            {
+                MessageBox.Show("Password cannot be empty.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void formLogin_Load(object sender, EventArgs e)
