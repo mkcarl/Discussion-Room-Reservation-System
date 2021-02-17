@@ -1,0 +1,1 @@
+﻿SELECT [Reservation-Room].ReservationID, [Reservation-Room].RoomID, [Room].RoomName FROM [Reservation-Room] RIGHT JOIN [Room] ON [Reservation-Room].RoomID = [Room].RoomID

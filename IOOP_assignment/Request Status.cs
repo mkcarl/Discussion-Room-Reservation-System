@@ -58,5 +58,15 @@ namespace IOOP_assignment
         {
             this.Close();
         }
+
+        private void txtStatusRequest_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDateRequest_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

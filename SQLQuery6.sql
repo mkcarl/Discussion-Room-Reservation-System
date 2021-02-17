@@ -1,0 +1,1 @@
+﻿UPDATE  Reservation SET Pax = '" + comboPeopleNewModify.ToString() + "', ApprovalStatus = 'Pending', Comments = 'Still pending' WHERE StudentRegistered = 100001

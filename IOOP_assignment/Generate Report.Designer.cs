@@ -30,7 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabDaily = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnEmail = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@
             this.lblGenerateDailyReport = new System.Windows.Forms.Label();
             this.mthCalendar = new System.Windows.Forms.MonthCalendar();
             this.crysDailyReport = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.MonthReport = new IOOP_assignment.DailyReport();
             this.tabMonthly = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -60,7 +60,6 @@
             this.btnFeb = new System.Windows.Forms.Button();
             this.btnMar = new System.Windows.Forms.Button();
             this.btnApr = new System.Windows.Forms.Button();
-            this.MonthReport = new IOOP_assignment.DailyReport();
             this.tabControl1.SuspendLayout();
             this.tabDaily.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,7 +82,6 @@
             // tabDaily
             // 
             this.tabDaily.BackColor = System.Drawing.Color.White;
-            this.tabDaily.Controls.Add(this.label1);
             this.tabDaily.Controls.Add(this.pictureBox1);
             this.tabDaily.Controls.Add(this.btnBack);
             this.tabDaily.Controls.Add(this.btnEmail);
@@ -100,16 +98,6 @@
             this.tabDaily.TabIndex = 0;
             this.tabDaily.Text = "Daily";
             this.tabDaily.ToolTipText = "Daily";
-            // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(324, 438);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 19);
-            this.label1.TabIndex = 55;
             // 
             // pictureBox1
             // 
@@ -197,7 +185,7 @@
             this.crysDailyReport.ShowRefreshButton = false;
             this.crysDailyReport.ShowTextSearchButton = false;
             this.crysDailyReport.ShowZoomButton = false;
-            this.crysDailyReport.Size = new System.Drawing.Size(618, 279);
+            this.crysDailyReport.Size = new System.Drawing.Size(618, 283);
             this.crysDailyReport.TabIndex = 78;
             this.crysDailyReport.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.crysDailyReport.Load += new System.EventHandler(this.crystalReportViewer1_Load);
@@ -552,7 +540,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crysDailyReport;
         private DailyReport MonthReport;
     }

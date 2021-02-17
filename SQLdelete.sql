@@ -1,0 +1,1 @@
+﻿DELETE FROM [Reservation-Room] WHERE ReservationID = {target};
