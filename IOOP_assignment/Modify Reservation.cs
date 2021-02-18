@@ -65,10 +65,10 @@ namespace IOOP_assignment
             if (dr.HasRows)
             {
                 DateTime dtime = (DateTime)dr["Starting Time"];
-                lblNoPeopleCurrentModify.Text = dr["Pax"].ToString();
-                lblDateCurrentModify.Text = dtime.ToString("dd MMMM yyyy");
-                lblTimeCurrentModify.Text = dtime.ToString("hh:mm tt");
-                lblRoomCurrentModify.Text = dr["RoomName"].ToString();
+                lblNoPeopleCurrentModify.Text = "Number of People: "+dr["Pax"].ToString();
+                lblDateCurrentModify.Text = "Date: "+dtime.ToString("dd MMMM yyyy");
+                lblTimeCurrentModify.Text = "Time: "+dtime.ToString("hh:mm tt");
+                lblRoomCurrentModify.Text = "Room Name: "+dr["RoomName"].ToString();
             }
 
             else
@@ -113,6 +113,8 @@ namespace IOOP_assignment
         {
             Student mainUser;
             string timeslot;
+            string freedate;
+            string selecteddate;
 
             if (Program.LoginRole == "Student")
             {
@@ -123,52 +125,67 @@ namespace IOOP_assignment
                 mainUser = Program.LibrarianUser;
             }
 
-            //string query = "UPDATE Reservation SET Pax = '" + comboPeopleNewModify.ToString();
+
+            
+            //DateTime dtime = (DateTime)dr["Starting Time"];
+            //freedate = dtime.ToString("dd MMMM yyyy");
+            //selecteddate = mthCalendarNewModify.SelectionRange.ToString();
 
             SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
 
            //dateselected
-            timeslot = ("mthCalendarNewModify.SelectionRange.ToString()" + "comboTimeNewModify.SelectedItem.ToString()");
+            timeslot = mthCalendarNewModify.SelectionRange.ToString();
 
 
             if (radAmberNewModify.Enabled == true)
             {
-                string updatereservation = ($"UPDATE Reservation SET Pax = '{comboPeopleNewModify.SelectedItem.ToString()}' WHERE StudentRegistered = {mainUser.StudentID}");
-                string updateroom = ($"UPDATE Room SET BookStatus = 'Booked' WHERE TimeSlot = '{timeslot}' AND Capacity = '10' AND BookStatus = 'Free'");
-                // target reservationID which is used for modification
-                string target = ($"Select ReservationID From Reservation where StudentRegistered = {mainUser.StudentID}");
-                // temporarily delete records of reservationID 
-                string delete = ($"DELETE FROM [Reservation-Room] WHERE ReservationID = {target}");
+                SqlDataReader dr = Controller.Query ($"Select distinct TimeSlot from Room where TimeSlot >=  and BookStatus = 'Free' and RoomName Like 'Amber'");
 
-                //query all the old room which corresponds to the reservationID and store in a var called old rooms
-                //for each loop- for every room in old rooms, update BookStatus of room to Free where the reservationID == {target}
-                // insert ReservationId, RoomID into Reservation-Room
+                DateTime dtime = (DateTime) dr["TimeSlot"];
+                //freedate = dtime.ToString("dd MMMM yyyy");
+                //selecteddate = mthCalendarNewModify.SelectionRange.ToString();
 
-                string selectupdatedRoomID = ("Select TOP 1 RoomID from Room where BookStatus = 'Booked' order by BookStatus desc");
-                string selectupdatedReservationID = ($"Select TOP 1 ReservationID from Reservation where StudentRegistered = {mainUser.StudentID} order by StudentRegistered desc");
-                string insertRoomID = ($"INSERT INTO Reservation-Room (RoomID) VALUES ({selectupdatedRoomID})");
-                string insertReservationID = ($"INSERT INTO Reservation-Room (ReservationID) where ReservationID = '' VALUES ({selectupdatedReservationID})");
+                if (dr.HasRows)
+                {
+                    comboTimeNewModify.Items.Add(dtime.ToString("hh:mm tt"));
+                }
 
-                //string query3 = ($"DELETE FROM Reservation-Room WHERE ReservationID = [ReservationID].StudentRegistered );
+                //string updatereservation = ($"UPDATE Reservation SET Pax = '{comboPeopleNewModify.SelectedItem.ToString()}' WHERE StudentRegistered = {mainUser.StudentID}");
+                //string updateroom = ($"UPDATE Room SET BookStatus = 'Booked' WHERE TimeSlot = '{timeslot}' AND Capacity = '10' AND BookStatus = 'Free'");
+                //// target reservationID which is used for modification
+                //string target = ($"Select ReservationID From Reservation where StudentRegistered = {mainUser.StudentID}");
+                //// temporarily delete records of reservationID 
+                //string delete = ($"DELETE FROM [Reservation-Room] WHERE ReservationID = {target}");
+
+                ////query all the old room which corresponds to the reservationID and store in a var called old rooms
+                ////for each loop- for every room in old rooms, update BookStatus of room to Free where the reservationID == {target}
+                //// insert ReservationId, RoomID into Reservation-Room
+
+                //string selectupdatedRoomID = ("Select TOP 1 RoomID from Room where BookStatus = 'Booked' order by BookStatus desc");
+                //string selectupdatedReservationID = ($"Select TOP 1 ReservationID from Reservation where StudentRegistered = {mainUser.StudentID} order by StudentRegistered desc");
+                //string insertRoomID = ($"INSERT INTO Reservation-Room (RoomID) VALUES ({selectupdatedRoomID})");
+                //string insertReservationID = ($"INSERT INTO Reservation-Room (ReservationID) where ReservationID = '' VALUES ({selectupdatedReservationID})");
+
+                ////string query3 = ($"DELETE FROM Reservation-Room WHERE ReservationID = [ReservationID].StudentRegistered );
 
 
-                SqlCommand cmd = new SqlCommand(updatereservation,conn);
-                cmd.ExecuteNonQuery();
+                //SqlCommand cmd = new SqlCommand(updatereservation,conn);
+                //cmd.ExecuteNonQuery();
                 //SqlCommand cmd2 = new SqlCommand(updateroom, conn);
-               // cmd2.ExecuteNonQuery();
-                SqlCommand cmd3 = new SqlCommand(target, conn);
-                cmd3.ExecuteNonQuery();
-                SqlCommand cmd4 = new SqlCommand(delete, conn);
-                cmd4.ExecuteNonQuery();
-                SqlCommand cmd5 = new SqlCommand(selectupdatedRoomID, conn);
-                cmd5.ExecuteNonQuery();
-                SqlCommand cmd6 = new SqlCommand(selectupdatedReservationID, conn);
-                cmd6.ExecuteNonQuery();
-                SqlCommand cmd7 = new SqlCommand(insertRoomID, conn);
-                cmd7.ExecuteNonQuery();
-                SqlCommand cmd8 = new SqlCommand(insertReservationID, conn);
-                cmd8.ExecuteNonQuery();
+                //cmd2.ExecuteNonQuery();
+                //SqlCommand cmd3 = new SqlCommand(target, conn);
+                //cmd3.ExecuteNonQuery();
+                //SqlCommand cmd4 = new SqlCommand(delete, conn);
+                //cmd4.ExecuteNonQuery();
+                //SqlCommand cmd5 = new SqlCommand(selectupdatedRoomID, conn);
+                //cmd5.ExecuteNonQuery();
+                //SqlCommand cmd6 = new SqlCommand(selectupdatedReservationID, conn);
+                //cmd6.ExecuteNonQuery();
+                //SqlCommand cmd7 = new SqlCommand(insertRoomID, conn);
+                //cmd7.ExecuteNonQuery();
+                //SqlCommand cmd8 = new SqlCommand(insertReservationID, conn);
+                //cmd8.ExecuteNonQuery();
 
                 MessageBox.Show("Successfully Updated");
 
@@ -211,6 +228,8 @@ namespace IOOP_assignment
                 SqlCommand cmd2 = new SqlCommand(query2, conn);
                 cmd2.ExecuteNonQuery();
             }
+
+            conn.Close();
 
         }
 

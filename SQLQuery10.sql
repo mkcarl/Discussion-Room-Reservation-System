@@ -1,0 +1,1 @@
+﻿SELECT TimeSlot FROM Room WHERE BookStatus = 'Booked'
