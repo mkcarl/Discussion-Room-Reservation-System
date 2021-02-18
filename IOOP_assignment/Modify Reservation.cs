@@ -35,11 +35,6 @@ namespace IOOP_assignment
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormModify_Load(object sender, EventArgs e)
         {
             Student mainUser;
@@ -214,30 +209,6 @@ namespace IOOP_assignment
 
         }
 
-        private void lblCurrentTitleModify_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void lblDateCurrentModify_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void lblTimeCurrentModify_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void lblNoPeopleCurrentModify_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void radAmberNewModify_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
 
         private void comboPeopleNewModify_SelectedIndexChanged(object sender, EventArgs e)
         {

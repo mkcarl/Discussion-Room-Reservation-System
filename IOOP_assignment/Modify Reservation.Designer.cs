@@ -67,7 +67,7 @@ namespace IOOP_assignment
             ""});
             this.comboTimeNewModify.Location = new System.Drawing.Point(640, 156);
             this.comboTimeNewModify.Name = "comboTimeNewModify";
-            this.comboTimeNewModify.Size = new System.Drawing.Size(224, 39);
+            this.comboTimeNewModify.Size = new System.Drawing.Size(224, 33);
             this.comboTimeNewModify.TabIndex = 3;
             this.comboTimeNewModify.Text = "-Select a Time-";
             this.comboTimeNewModify.SelectedIndexChanged += new System.EventHandler(this.comboTimeNewModify_SelectedIndexChanged);
@@ -78,12 +78,11 @@ namespace IOOP_assignment
             this.radAmberNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.radAmberNewModify.Location = new System.Drawing.Point(645, 203);
             this.radAmberNewModify.Name = "radAmberNewModify";
-            this.radAmberNewModify.Size = new System.Drawing.Size(105, 33);
+            this.radAmberNewModify.Size = new System.Drawing.Size(85, 28);
             this.radAmberNewModify.TabIndex = 4;
             this.radAmberNewModify.TabStop = true;
             this.radAmberNewModify.Text = "Amber";
             this.radAmberNewModify.UseVisualStyleBackColor = true;
-            this.radAmberNewModify.CheckedChanged += new System.EventHandler(this.radAmberNewModify_CheckedChanged);
             // 
             // radBlackThornNewModify
             // 
@@ -91,7 +90,7 @@ namespace IOOP_assignment
             this.radBlackThornNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.radBlackThornNewModify.Location = new System.Drawing.Point(645, 243);
             this.radBlackThornNewModify.Name = "radBlackThornNewModify";
-            this.radBlackThornNewModify.Size = new System.Drawing.Size(157, 33);
+            this.radBlackThornNewModify.Size = new System.Drawing.Size(124, 28);
             this.radBlackThornNewModify.TabIndex = 5;
             this.radBlackThornNewModify.TabStop = true;
             this.radBlackThornNewModify.Text = "BlackThorn";
@@ -103,7 +102,7 @@ namespace IOOP_assignment
             this.radCedarNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.radCedarNewModify.Location = new System.Drawing.Point(645, 283);
             this.radCedarNewModify.Name = "radCedarNewModify";
-            this.radCedarNewModify.Size = new System.Drawing.Size(100, 33);
+            this.radCedarNewModify.Size = new System.Drawing.Size(79, 28);
             this.radCedarNewModify.TabIndex = 6;
             this.radCedarNewModify.TabStop = true;
             this.radCedarNewModify.Text = "Cedar";
@@ -115,7 +114,7 @@ namespace IOOP_assignment
             this.radDaphneNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.radDaphneNewModify.Location = new System.Drawing.Point(645, 323);
             this.radDaphneNewModify.Name = "radDaphneNewModify";
-            this.radDaphneNewModify.Size = new System.Drawing.Size(118, 33);
+            this.radDaphneNewModify.Size = new System.Drawing.Size(95, 28);
             this.radDaphneNewModify.TabIndex = 7;
             this.radDaphneNewModify.TabStop = true;
             this.radDaphneNewModify.Text = "Daphne";
@@ -167,7 +166,7 @@ namespace IOOP_assignment
             "10"});
             this.comboPeopleNewModify.Location = new System.Drawing.Point(640, 111);
             this.comboPeopleNewModify.Name = "comboPeopleNewModify";
-            this.comboPeopleNewModify.Size = new System.Drawing.Size(224, 39);
+            this.comboPeopleNewModify.Size = new System.Drawing.Size(224, 33);
             this.comboPeopleNewModify.TabIndex = 19;
             this.comboPeopleNewModify.Text = "-Number of People-";
             this.comboPeopleNewModify.SelectedIndexChanged += new System.EventHandler(this.comboPeopleNewModify_SelectedIndexChanged);
@@ -178,7 +177,7 @@ namespace IOOP_assignment
             this.lblTitleNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.lblTitleNewModify.Location = new System.Drawing.Point(366, 69);
             this.lblTitleNewModify.Name = "lblTitleNewModify";
-            this.lblTitleNewModify.Size = new System.Drawing.Size(265, 31);
+            this.lblTitleNewModify.Size = new System.Drawing.Size(216, 26);
             this.lblTitleNewModify.TabIndex = 20;
             this.lblTitleNewModify.Text = "Modify Reservation";
             // 
@@ -188,10 +187,9 @@ namespace IOOP_assignment
             this.lblNoPeopleCurrentModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblNoPeopleCurrentModify.Location = new System.Drawing.Point(58, 205);
             this.lblNoPeopleCurrentModify.Name = "lblNoPeopleCurrentModify";
-            this.lblNoPeopleCurrentModify.Size = new System.Drawing.Size(231, 31);
+            this.lblNoPeopleCurrentModify.Size = new System.Drawing.Size(188, 26);
             this.lblNoPeopleCurrentModify.TabIndex = 11;
             this.lblNoPeopleCurrentModify.Text = "Number of People";
-            this.lblNoPeopleCurrentModify.Click += new System.EventHandler(this.lblNoPeopleCurrentModify_Click);
             // 
             // lblCurrentTitleModify
             // 
@@ -199,10 +197,9 @@ namespace IOOP_assignment
             this.lblCurrentTitleModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.lblCurrentTitleModify.Location = new System.Drawing.Point(58, 69);
             this.lblCurrentTitleModify.Name = "lblCurrentTitleModify";
-            this.lblCurrentTitleModify.Size = new System.Drawing.Size(277, 31);
+            this.lblCurrentTitleModify.Size = new System.Drawing.Size(225, 26);
             this.lblCurrentTitleModify.TabIndex = 12;
             this.lblCurrentTitleModify.Text = "Current Reservation";
-            this.lblCurrentTitleModify.Click += new System.EventHandler(this.lblCurrentTitleModify_Click);
             // 
             // lblDateCurrentModify
             // 
@@ -210,10 +207,9 @@ namespace IOOP_assignment
             this.lblDateCurrentModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblDateCurrentModify.Location = new System.Drawing.Point(58, 113);
             this.lblDateCurrentModify.Name = "lblDateCurrentModify";
-            this.lblDateCurrentModify.Size = new System.Drawing.Size(79, 31);
+            this.lblDateCurrentModify.Size = new System.Drawing.Size(64, 26);
             this.lblDateCurrentModify.TabIndex = 13;
             this.lblDateCurrentModify.Text = "Date ";
-            this.lblDateCurrentModify.Click += new System.EventHandler(this.lblDateCurrentModify_Click);
             // 
             // lblTimeCurrentModify
             // 
@@ -221,10 +217,9 @@ namespace IOOP_assignment
             this.lblTimeCurrentModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblTimeCurrentModify.Location = new System.Drawing.Point(58, 159);
             this.lblTimeCurrentModify.Name = "lblTimeCurrentModify";
-            this.lblTimeCurrentModify.Size = new System.Drawing.Size(74, 31);
+            this.lblTimeCurrentModify.Size = new System.Drawing.Size(60, 26);
             this.lblTimeCurrentModify.TabIndex = 14;
             this.lblTimeCurrentModify.Text = "Time";
-            this.lblTimeCurrentModify.Click += new System.EventHandler(this.lblTimeCurrentModify_Click);
             // 
             // lblRoomCurrentModify
             // 
@@ -232,10 +227,9 @@ namespace IOOP_assignment
             this.lblRoomCurrentModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblRoomCurrentModify.Location = new System.Drawing.Point(58, 251);
             this.lblRoomCurrentModify.Name = "lblRoomCurrentModify";
-            this.lblRoomCurrentModify.Size = new System.Drawing.Size(86, 31);
+            this.lblRoomCurrentModify.Size = new System.Drawing.Size(71, 26);
             this.lblRoomCurrentModify.TabIndex = 15;
             this.lblRoomCurrentModify.Text = "Room";
-            this.lblRoomCurrentModify.Click += new System.EventHandler(this.label6_Click);
             // 
             // btnBackModify
             // 
