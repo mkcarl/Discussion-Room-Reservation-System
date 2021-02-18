@@ -127,6 +127,7 @@ namespace IOOP_assignment
             this.txtPassUser.Name = "txtPassUser";
             this.txtPassUser.Size = new System.Drawing.Size(266, 32);
             this.txtPassUser.TabIndex = 7;
+            this.txtPassUser.TabStop = false;
             this.txtPassUser.UseSystemPasswordChar = true;
             // 
             // lblTitleUser
@@ -232,6 +233,7 @@ namespace IOOP_assignment
             this.txtEmailUser.Name = "txtEmailUser";
             this.txtEmailUser.Size = new System.Drawing.Size(266, 32);
             this.txtEmailUser.TabIndex = 16;
+            this.txtEmailUser.TabStop = false;
             // 
             // lblLibrarianIDUser
             // 
@@ -250,6 +252,7 @@ namespace IOOP_assignment
             this.txtLibrarianIDUser.Name = "txtLibrarianIDUser";
             this.txtLibrarianIDUser.Size = new System.Drawing.Size(266, 32);
             this.txtLibrarianIDUser.TabIndex = 18;
+            this.txtLibrarianIDUser.TabStop = false;
             // 
             // Add_User_Form
             // 

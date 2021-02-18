@@ -77,6 +77,11 @@ namespace IOOP_assignment
                 MessageBox.Show("Your information is not complete, please fill in the info and save changes. Note : Surname and Given Name cannot be changed once set.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); 
 
             }
+            else if (!(txtSurnameUser.Text == "" || txtGivenUser.Text == "" || txtEmailUser.Text == ""))
+            {
+                txtSurnameUser.Enabled = false;
+                txtGivenUser.Enabled = false; 
+            }
 
 
 
