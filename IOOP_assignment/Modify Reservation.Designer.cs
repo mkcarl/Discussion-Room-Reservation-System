@@ -279,7 +279,6 @@ namespace IOOP_assignment
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox comboTimeNewModify;
         private System.Windows.Forms.RadioButton radAmberNewModify;
         private System.Windows.Forms.RadioButton radBlackThornNewModify;
         private System.Windows.Forms.RadioButton radCedarNewModify;
@@ -295,5 +294,6 @@ namespace IOOP_assignment
         private System.Windows.Forms.Label lblDateCurrentModify;
         private System.Windows.Forms.Label lblTimeCurrentModify;
         private System.Windows.Forms.Label lblRoomCurrentModify;
+        private System.Windows.Forms.ComboBox comboTimeNewModify;
     }
 }
