@@ -28,7 +28,11 @@ namespace IOOP_assignment
         private void btnSaveUser_Click(object sender, EventArgs e)
         {
             //insert update database codes before this line
-            this.Close();
+
+                mainUser.UpdateInfo(txtPassUser.Text.ToString(), txtSurnameUser.Text.ToString(), txtGivenUser.Text.ToString(), txtEmailUser.Text.ToString());
+                MessageBox.Show("Changes saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                this.Close();
+            
         }
 
         private void checkShowPassUser_CheckedChanged(object sender, EventArgs e)
@@ -45,7 +49,7 @@ namespace IOOP_assignment
 
         private void Add_User_Form_Load(object sender, EventArgs e)
         {
-
+ 
             // if login role not librarian, hide librarianID field 
             if (Program.LoginRole == "Librarian")
             {
@@ -59,6 +63,8 @@ namespace IOOP_assignment
                 mainUser = Program.StudentUser; 
             }
 
+            mainUser.FetchInfo();
+
             lblTypeUser.Text = Program.LoginRole;
             txtSurnameUser.Text = mainUser.Surname;
             txtGivenUser.Text = mainUser.GivenName;
@@ -66,7 +72,11 @@ namespace IOOP_assignment
             txtEmailUser.Text = mainUser.Email;
             txtPassUser.Text = mainUser.Password; 
 
-            
+            if (txtSurnameUser.Text == "" || txtGivenUser.Text == "" || txtEmailUser.Text == "")
+            {
+                MessageBox.Show("Your information is not complete, please fill in the info and save changes. Note : Surname and Given Name cannot be changed once set.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); 
+
+            }
 
 
 
