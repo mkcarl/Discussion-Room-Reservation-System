@@ -108,9 +108,19 @@ namespace IOOP_assignment
 
         private void btnConfirmModification_Click(object sender, EventArgs e)
         {
+            string roomchoice = ""; 
+            if (radAmberNewModify.Checked) {roomchoice = "Amber";}
+            else if (radBlackThornNewModify.Checked)
+            {roomchoice = "BlackThorn";}
+            else if (radCedarNewModify.Checked){roomchoice = "Cedar";}
+            else {roomchoice = "Daphne";}
+
+
             string datetime = $"{mthCalendarNewModify.SelectionStart.ToString("yyyy-MM-dd")} {comboTimeNewModify.SelectedItem.ToString()}";
             DateTime newtime = DateTime.ParseExact(datetime, "yyyy-MM-dd h:mm tt", CultureInfo.InvariantCulture);
             // https://stackoverflow.com/a/28672247
+
+
 
             // query the latest reservation of the student (that is pending, and after today)
             // delete records from rr
@@ -148,10 +158,9 @@ namespace IOOP_assignment
             // change status for respective room 
             // find the first n, with starting time of (user input)
 
-
             // get all the new rooms
             List<string> newRooms;
-            SqlDataReader drNewRooms = Controller.Query($"SELECT TOP {oldRooms.Count} * FROM Room WHERE TimeSlot >= '{newtime.ToString("yyyy-MM-dd hh:mm:ss tt")}' and BookStatus = 'Free' and RoomName LIKE 'Amber%'");
+            SqlDataReader drNewRooms = Controller.Query($"SELECT TOP {oldRooms.Count} * FROM Room WHERE TimeSlot >= '{newtime.ToString("yyyy-MM-dd hh:mm:ss tt")}' and BookStatus = 'Free' and RoomName LIKE '{roomchoice}%'");
             newRooms = (from IDataRecord r in drNewRooms select (string)r["RoomID"]).ToList();
             // change all new room to Booked
             foreach (string room in newRooms)
@@ -169,6 +178,8 @@ namespace IOOP_assignment
                 cmd.ExecuteNonQuery();
 
             }
+            MessageBox.Show("Your request have been modified.", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
 
