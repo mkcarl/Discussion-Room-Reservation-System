@@ -113,6 +113,7 @@ namespace IOOP_assignment
         {
             Student mainUser;
             string timeslot;
+
             if (Program.LoginRole == "Student")
             {
                 mainUser = Program.StudentUser;
@@ -127,19 +128,27 @@ namespace IOOP_assignment
             SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
 
+           //dateselected
             timeslot = ("mthCalendarNewModify.SelectionRange.ToString()" + "comboTimeNewModify.SelectedItem.ToString()");
 
 
             if (radAmberNewModify.Enabled == true)
             {
                 string updatereservation = ($"UPDATE Reservation SET Pax = '{comboPeopleNewModify.SelectedItem.ToString()}' WHERE StudentRegistered = {mainUser.StudentID}");
-                //string updateroom = ($"UPDATE Room SET BookStatus = 'Booked' WHERE TimeSlot = '{timeslot}' AND Capacity = '10' AND BookStatus = 'Free'");
+                string updateroom = ($"UPDATE Room SET BookStatus = 'Booked' WHERE TimeSlot = '{timeslot}' AND Capacity = '10' AND BookStatus = 'Free'");
+                // target reservationID which is used for modification
                 string target = ($"Select ReservationID From Reservation where StudentRegistered = {mainUser.StudentID}");
+                // temporarily delete records of reservationID 
                 string delete = ($"DELETE FROM [Reservation-Room] WHERE ReservationID = {target}");
+
+                //query all the old room which corresponds to the reservationID and store in a var called old rooms
+                //for each loop- for every room in old rooms, update BookStatus of room to Free where the reservationID == {target}
+                // insert ReservationId, RoomID into Reservation-Room
+
                 string selectupdatedRoomID = ("Select TOP 1 RoomID from Room where BookStatus = 'Booked' order by BookStatus desc");
                 string selectupdatedReservationID = ($"Select TOP 1 ReservationID from Reservation where StudentRegistered = {mainUser.StudentID} order by StudentRegistered desc");
                 string insertRoomID = ($"INSERT INTO Reservation-Room (RoomID) VALUES ({selectupdatedRoomID})");
-                string insertReservationID = ($"INSERT INTO Reservation-Room (ReservationID) where RoomId = '' VALUES ({selectupdatedReservationID})");
+                string insertReservationID = ($"INSERT INTO Reservation-Room (ReservationID) where ReservationID = '' VALUES ({selectupdatedReservationID})");
 
                 //string query3 = ($"DELETE FROM Reservation-Room WHERE ReservationID = [ReservationID].StudentRegistered );
 
@@ -162,11 +171,6 @@ namespace IOOP_assignment
                 cmd8.ExecuteNonQuery();
 
                 MessageBox.Show("Successfully Updated");
-
-
-
-
-
 
 
             }
