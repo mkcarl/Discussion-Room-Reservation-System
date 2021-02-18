@@ -57,7 +57,7 @@ namespace IOOP_assignment
 
             //string sqlQuery = $"select Reservation.ReservationID ,  RoomName, Min(TimeSlot) as 'Starting Time', Pax, count(*) as Hours from Reservation inner join [Reservation-Room] on Reservation.ReservationID = [Reservation-Room].ReservationID inner join Room on [Reservation-Room].RoomID = Room.RoomID where Reservation.StudentRegistered = '{mainUser.StudentID}' group by Reservation.ReservationID, RoomName";
 
-            SqlDataReader dr = Controller.Query($"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', ApprovalStatus, count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = '{mainUser.StudentID}' GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY [Starting Time] DESC");
+            SqlDataReader dr = Controller.Query($"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', ApprovalStatus, count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = '{mainUser.StudentID}' and ApprovalStatus = 'Pending' GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY [Starting Time] DESC");
 
             //SqlDataReader dr = Controller.Query($"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = 100001 GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY [Starting Time] DESC");
 
@@ -132,10 +132,14 @@ namespace IOOP_assignment
 
             if (radAmberNewModify.Enabled == true)
             {
-                string updatereservation = ($"UPDATE Reservation SET Pax = '{comboPeopleNewModify.SelectedItem.ToString()}', ApprovalStatus = 'Pending', Comments = 'Still pending' WHERE StudentRegistered = {mainUser.StudentID}");
+                string updatereservation = ($"UPDATE Reservation SET Pax = '{comboPeopleNewModify.SelectedItem.ToString()}' WHERE StudentRegistered = {mainUser.StudentID}");
                 //string updateroom = ($"UPDATE Room SET BookStatus = 'Booked' WHERE TimeSlot = '{timeslot}' AND Capacity = '10' AND BookStatus = 'Free'");
                 string target = ($"Select ReservationID From Reservation where StudentRegistered = {mainUser.StudentID}");
                 string delete = ($"DELETE FROM [Reservation-Room] WHERE ReservationID = {target}");
+                string selectupdatedRoomID = ("Select TOP 1 RoomID from Room where BookStatus = 'Booked' order by BookStatus desc");
+                string selectupdatedReservationID = ($"Select TOP 1 ReservationID from Reservation where StudentRegistered = {mainUser.StudentID} order by StudentRegistered desc");
+                string insertRoomID = ($"INSERT INTO Reservation-Room (RoomID) VALUES ({selectupdatedRoomID})");
+                string insertReservationID = ($"INSERT INTO Reservation-Room (ReservationID) where RoomId = '' VALUES ({selectupdatedReservationID})");
 
                 //string query3 = ($"DELETE FROM Reservation-Room WHERE ReservationID = [ReservationID].StudentRegistered );
 
@@ -148,6 +152,14 @@ namespace IOOP_assignment
                 cmd3.ExecuteNonQuery();
                 SqlCommand cmd4 = new SqlCommand(delete, conn);
                 cmd4.ExecuteNonQuery();
+                SqlCommand cmd5 = new SqlCommand(selectupdatedRoomID, conn);
+                cmd5.ExecuteNonQuery();
+                SqlCommand cmd6 = new SqlCommand(selectupdatedReservationID, conn);
+                cmd6.ExecuteNonQuery();
+                SqlCommand cmd7 = new SqlCommand(insertRoomID, conn);
+                cmd7.ExecuteNonQuery();
+                SqlCommand cmd8 = new SqlCommand(insertReservationID, conn);
+                cmd8.ExecuteNonQuery();
 
                 MessageBox.Show("Successfully Updated");
 
