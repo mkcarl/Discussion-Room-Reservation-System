@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace IOOP_assignment
 {
@@ -28,11 +29,20 @@ namespace IOOP_assignment
         private void btnSaveUser_Click(object sender, EventArgs e)
         {
             //insert update database codes before this line
-
+            Regex emailRegx = new Regex(@"^([a-zA-Z0-9_\-])([a-zA-Z0-9_\-\.]*)@(\[((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}|((([a-zA-Z0-9\-]+)\.)+))([a-zA-Z]{2,}|(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\])$");
+            // https://stackoverflow.com/a/33278949
+            if (emailRegx.IsMatch(txtEmailUser.Text.Trim()))
+            {
                 mainUser.UpdateInfo(txtPassUser.Text.ToString(), txtSurnameUser.Text.ToString(), txtGivenUser.Text.ToString(), txtEmailUser.Text.ToString());
                 MessageBox.Show("Changes saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 this.Close();
-            
+            }
+            else
+            {
+                MessageBox.Show("Please use a valid email address format.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
         }
 
         private void checkShowPassUser_CheckedChanged(object sender, EventArgs e)
@@ -55,12 +65,15 @@ namespace IOOP_assignment
             {
                 mainUser = Program.LibrarianUser;
                 txtLibrarianIDUser.Text = Program.LibrarianUser.LibrarianID;
+                lblTypeUser.ForeColor = Color.Red; 
             }
             else
             {
                 lblLibrarianIDUser.Hide();
                 txtLibrarianIDUser.Hide();
-                mainUser = Program.StudentUser; 
+                mainUser = Program.StudentUser;
+                lblTypeUser.ForeColor = Color.Green;
+
             }
 
             mainUser.FetchInfo();
