@@ -33,9 +33,16 @@ namespace IOOP_assignment
             // https://stackoverflow.com/a/33278949
             if (emailRegx.IsMatch(txtEmailUser.Text.Trim()))
             {
-                mainUser.UpdateInfo(txtPassUser.Text.ToString(), txtSurnameUser.Text.ToString(), txtGivenUser.Text.ToString(), txtEmailUser.Text.ToString());
-                MessageBox.Show("Changes saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                this.Close();
+                try {
+                    mainUser.UpdateInfo(txtPassUser.Text.ToString(), txtSurnameUser.Text.ToString(), txtGivenUser.Text.ToString(), txtEmailUser.Text.ToString());
+                    MessageBox.Show("Changes saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    this.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Text field cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
             else
             {
