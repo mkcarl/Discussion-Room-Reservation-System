@@ -162,6 +162,7 @@ namespace IOOP_assignment
             this.lblTypeUser.Text = "Account Type";
             this.lblTypeUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblTypeUser.Click += new System.EventHandler(this.lblTypeUser_Click);
+            this.lblTypeUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblTypeUser_MouseClick);
             // 
             // tipBackUser
             // 

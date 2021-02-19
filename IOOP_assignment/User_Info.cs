@@ -83,17 +83,18 @@ namespace IOOP_assignment
             txtGivenUser.Text = mainUser.GivenName;
             txtStudentIDUser.Text = mainUser.StudentID;
             txtEmailUser.Text = mainUser.Email;
-            txtPassUser.Text = mainUser.Password; 
+            txtPassUser.Text = mainUser.Password;
 
             if (txtSurnameUser.Text == "" || txtGivenUser.Text == "" || txtEmailUser.Text == "")
             {
-                MessageBox.Show("Your information is not complete, please fill in the info and save changes. Note : Surname and Given Name cannot be changed once set.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); 
+                MessageBox.Show("Your information is not complete, please fill in the info and save changes. Note : Surname and Given Name cannot be changed once set.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
-            else if (!(txtSurnameUser.Text == "" || txtGivenUser.Text == "" || txtEmailUser.Text == ""))
+            else if (!(txtSurnameUser.Text == "" || txtGivenUser.Text == "" || txtEmailUser.Text == "" || txtLibrarianIDUser.Text == ""))
             {
                 txtSurnameUser.Enabled = false;
-                txtGivenUser.Enabled = false; 
+                txtGivenUser.Enabled = false;
+                txtLibrarianIDUser.Enabled = false;
             }
 
 
@@ -139,8 +140,21 @@ namespace IOOP_assignment
 
         private void lblTypeUser_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void lblTypeUser_MouseClick(object sender, MouseEventArgs e)
+        {
             // register as librarian 
             // stealth 100
+            // need to ctrl click to activate
+            if (Control.ModifierKeys == Keys.Control && lblTypeUser.Text == "Student") //https://stackoverflow.com/a/17840012
+            {
+                formLibrarianRegistration frm = new formLibrarianRegistration();
+                frm.ShowDialog();
+                this.Close();
+            }  
+
         }
     }
 }
