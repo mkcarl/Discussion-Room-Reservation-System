@@ -44,7 +44,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblGenerateReport = new System.Windows.Forms.Label();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.btnJan = new System.Windows.Forms.Button();
             this.btnSep = new System.Windows.Forms.Button();
             this.btnOct = new System.Windows.Forms.Button();
@@ -60,6 +59,7 @@
             this.btnFeb = new System.Windows.Forms.Button();
             this.btnMar = new System.Windows.Forms.Button();
             this.btnApr = new System.Windows.Forms.Button();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tabControl1.SuspendLayout();
             this.tabDaily.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -104,7 +104,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::IOOP_assignment.Properties.Resources.daily_report;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(286, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 54);
             this.pictureBox1.TabIndex = 77;
@@ -119,7 +119,7 @@
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(878, 417);
+            this.btnBack.Location = new System.Drawing.Point(8, 417);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(50, 50);
             this.btnBack.TabIndex = 76;
@@ -129,7 +129,7 @@
             // btnEmail
             // 
             this.btnEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmail.Location = new System.Drawing.Point(467, 387);
+            this.btnEmail.Location = new System.Drawing.Point(178, 331);
             this.btnEmail.Name = "btnEmail";
             this.btnEmail.Size = new System.Drawing.Size(152, 35);
             this.btnEmail.TabIndex = 75;
@@ -139,9 +139,9 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(235, 387);
+            this.btnSave.Location = new System.Drawing.Point(5, 331);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(125, 35);
+            this.btnSave.Size = new System.Drawing.Size(132, 35);
             this.btnSave.TabIndex = 74;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -149,7 +149,7 @@
             // lblGenerateDailyReport
             // 
             this.lblGenerateDailyReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenerateDailyReport.Location = new System.Drawing.Point(344, 20);
+            this.lblGenerateDailyReport.Location = new System.Drawing.Point(69, 24);
             this.lblGenerateDailyReport.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGenerateDailyReport.Name = "lblGenerateDailyReport";
             this.lblGenerateDailyReport.Size = new System.Drawing.Size(275, 30);
@@ -158,7 +158,7 @@
             // 
             // mthCalendar
             // 
-            this.mthCalendar.Location = new System.Drawing.Point(47, 154);
+            this.mthCalendar.Location = new System.Drawing.Point(43, 128);
             this.mthCalendar.Margin = new System.Windows.Forms.Padding(7);
             this.mthCalendar.Name = "mthCalendar";
             this.mthCalendar.TabIndex = 44;
@@ -170,7 +170,7 @@
             this.crysDailyReport.Cursor = System.Windows.Forms.Cursors.Default;
             this.crysDailyReport.DisplayStatusBar = false;
             this.crysDailyReport.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.crysDailyReport.Location = new System.Drawing.Point(315, 83);
+            this.crysDailyReport.Location = new System.Drawing.Point(347, 0);
             this.crysDailyReport.Name = "crysDailyReport";
             this.crysDailyReport.ReportSource = this.MonthReport;
             this.crysDailyReport.ShowCloseButton = false;
@@ -185,19 +185,19 @@
             this.crysDailyReport.ShowRefreshButton = false;
             this.crysDailyReport.ShowTextSearchButton = false;
             this.crysDailyReport.ShowZoomButton = false;
-            this.crysDailyReport.Size = new System.Drawing.Size(618, 283);
+            this.crysDailyReport.Size = new System.Drawing.Size(593, 479);
             this.crysDailyReport.TabIndex = 78;
             this.crysDailyReport.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.crysDailyReport.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
             // tabMonthly
             // 
+            this.tabMonthly.Controls.Add(this.crystalReportViewer1);
             this.tabMonthly.Controls.Add(this.button3);
             this.tabMonthly.Controls.Add(this.button2);
             this.tabMonthly.Controls.Add(this.pictureBox2);
             this.tabMonthly.Controls.Add(this.button1);
             this.tabMonthly.Controls.Add(this.lblGenerateReport);
-            this.tabMonthly.Controls.Add(this.lblMessage);
             this.tabMonthly.Controls.Add(this.btnJan);
             this.tabMonthly.Controls.Add(this.btnSep);
             this.tabMonthly.Controls.Add(this.btnOct);
@@ -227,9 +227,9 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(488, 374);
+            this.button3.Location = new System.Drawing.Point(183, 361);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(152, 35);
+            this.button3.Size = new System.Drawing.Size(154, 35);
             this.button3.TabIndex = 76;
             this.button3.Text = "Send to Email";
             this.button3.UseVisualStyleBackColor = true;
@@ -237,9 +237,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(285, 374);
+            this.button2.Location = new System.Drawing.Point(9, 361);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 35);
+            this.button2.Size = new System.Drawing.Size(137, 35);
             this.button2.TabIndex = 75;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
@@ -249,7 +249,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::IOOP_assignment.Properties.Resources.daily_report;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(285, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(9, 17);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(55, 54);
             this.pictureBox2.TabIndex = 78;
@@ -261,7 +261,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(878, 417);
+            this.button1.Location = new System.Drawing.Point(3, 420);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 77;
@@ -271,22 +271,12 @@
             // 
             this.lblGenerateReport.AutoSize = true;
             this.lblGenerateReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenerateReport.Location = new System.Drawing.Point(344, 17);
+            this.lblGenerateReport.Location = new System.Drawing.Point(69, 28);
             this.lblGenerateReport.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGenerateReport.Name = "lblGenerateReport";
             this.lblGenerateReport.Size = new System.Drawing.Size(304, 29);
             this.lblGenerateReport.TabIndex = 57;
             this.lblGenerateReport.Text = "Generate Monthly Report";
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMessage.Location = new System.Drawing.Point(330, 427);
-            this.lblMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(252, 19);
-            this.lblMessage.TabIndex = 54;
             // 
             // btnJan
             // 
@@ -294,7 +284,7 @@
             this.btnJan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnJan.FlatAppearance.BorderSize = 0;
             this.btnJan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJan.Location = new System.Drawing.Point(41, 140);
+            this.btnJan.Location = new System.Drawing.Point(9, 141);
             this.btnJan.Margin = new System.Windows.Forms.Padding(2);
             this.btnJan.Name = "btnJan";
             this.btnJan.Size = new System.Drawing.Size(80, 56);
@@ -307,7 +297,7 @@
             this.btnSep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSep.FlatAppearance.BorderSize = 0;
             this.btnSep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSep.Location = new System.Drawing.Point(41, 274);
+            this.btnSep.Location = new System.Drawing.Point(9, 275);
             this.btnSep.Margin = new System.Windows.Forms.Padding(2);
             this.btnSep.Name = "btnSep";
             this.btnSep.Size = new System.Drawing.Size(80, 56);
@@ -320,7 +310,7 @@
             this.btnOct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnOct.FlatAppearance.BorderSize = 0;
             this.btnOct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOct.Location = new System.Drawing.Point(123, 274);
+            this.btnOct.Location = new System.Drawing.Point(91, 275);
             this.btnOct.Margin = new System.Windows.Forms.Padding(2);
             this.btnOct.Name = "btnOct";
             this.btnOct.Size = new System.Drawing.Size(80, 56);
@@ -333,7 +323,7 @@
             this.btnNov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnNov.FlatAppearance.BorderSize = 0;
             this.btnNov.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNov.Location = new System.Drawing.Point(204, 274);
+            this.btnNov.Location = new System.Drawing.Point(172, 275);
             this.btnNov.Margin = new System.Windows.Forms.Padding(2);
             this.btnNov.Name = "btnNov";
             this.btnNov.Size = new System.Drawing.Size(80, 56);
@@ -348,7 +338,7 @@
             this.btnLeftArrow.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnLeftArrow.FlatAppearance.BorderSize = 0;
             this.btnLeftArrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLeftArrow.Location = new System.Drawing.Point(117, 89);
+            this.btnLeftArrow.Location = new System.Drawing.Point(85, 90);
             this.btnLeftArrow.Margin = new System.Windows.Forms.Padding(2);
             this.btnLeftArrow.Name = "btnLeftArrow";
             this.btnLeftArrow.Size = new System.Drawing.Size(40, 21);
@@ -362,7 +352,7 @@
             this.btnDec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDec.FlatAppearance.BorderSize = 0;
             this.btnDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDec.Location = new System.Drawing.Point(289, 274);
+            this.btnDec.Location = new System.Drawing.Point(257, 275);
             this.btnDec.Margin = new System.Windows.Forms.Padding(2);
             this.btnDec.Name = "btnDec";
             this.btnDec.Size = new System.Drawing.Size(80, 56);
@@ -375,7 +365,7 @@
             this.btnAug.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAug.FlatAppearance.BorderSize = 0;
             this.btnAug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAug.Location = new System.Drawing.Point(287, 205);
+            this.btnAug.Location = new System.Drawing.Point(255, 206);
             this.btnAug.Margin = new System.Windows.Forms.Padding(2);
             this.btnAug.Name = "btnAug";
             this.btnAug.Size = new System.Drawing.Size(80, 56);
@@ -386,7 +376,7 @@
             // 
             this.lblYear.AutoSize = true;
             this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.Location = new System.Drawing.Point(168, 89);
+            this.lblYear.Location = new System.Drawing.Point(136, 90);
             this.lblYear.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(54, 24);
@@ -399,7 +389,7 @@
             this.btnJul.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnJul.FlatAppearance.BorderSize = 0;
             this.btnJul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJul.Location = new System.Drawing.Point(204, 205);
+            this.btnJul.Location = new System.Drawing.Point(172, 206);
             this.btnJul.Margin = new System.Windows.Forms.Padding(2);
             this.btnJul.Name = "btnJul";
             this.btnJul.Size = new System.Drawing.Size(80, 56);
@@ -412,7 +402,7 @@
             this.btnJun.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnJun.FlatAppearance.BorderSize = 0;
             this.btnJun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJun.Location = new System.Drawing.Point(122, 205);
+            this.btnJun.Location = new System.Drawing.Point(90, 206);
             this.btnJun.Margin = new System.Windows.Forms.Padding(2);
             this.btnJun.Name = "btnJun";
             this.btnJun.Size = new System.Drawing.Size(80, 56);
@@ -427,7 +417,7 @@
             this.btnRightArrow.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnRightArrow.FlatAppearance.BorderSize = 0;
             this.btnRightArrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRightArrow.Location = new System.Drawing.Point(232, 89);
+            this.btnRightArrow.Location = new System.Drawing.Point(200, 90);
             this.btnRightArrow.Margin = new System.Windows.Forms.Padding(2);
             this.btnRightArrow.Name = "btnRightArrow";
             this.btnRightArrow.Size = new System.Drawing.Size(40, 21);
@@ -440,7 +430,7 @@
             this.btnMay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMay.FlatAppearance.BorderSize = 0;
             this.btnMay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMay.Location = new System.Drawing.Point(41, 205);
+            this.btnMay.Location = new System.Drawing.Point(9, 206);
             this.btnMay.Margin = new System.Windows.Forms.Padding(2);
             this.btnMay.Name = "btnMay";
             this.btnMay.Size = new System.Drawing.Size(80, 56);
@@ -453,7 +443,7 @@
             this.btnFeb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnFeb.FlatAppearance.BorderSize = 0;
             this.btnFeb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeb.Location = new System.Drawing.Point(122, 140);
+            this.btnFeb.Location = new System.Drawing.Point(90, 141);
             this.btnFeb.Margin = new System.Windows.Forms.Padding(2);
             this.btnFeb.Name = "btnFeb";
             this.btnFeb.Size = new System.Drawing.Size(80, 56);
@@ -466,7 +456,7 @@
             this.btnMar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMar.FlatAppearance.BorderSize = 0;
             this.btnMar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMar.Location = new System.Drawing.Point(204, 140);
+            this.btnMar.Location = new System.Drawing.Point(172, 141);
             this.btnMar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMar.Name = "btnMar";
             this.btnMar.Size = new System.Drawing.Size(80, 56);
@@ -479,12 +469,38 @@
             this.btnApr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnApr.FlatAppearance.BorderSize = 0;
             this.btnApr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApr.Location = new System.Drawing.Point(288, 140);
+            this.btnApr.Location = new System.Drawing.Point(256, 141);
             this.btnApr.Margin = new System.Windows.Forms.Padding(2);
             this.btnApr.Name = "btnApr";
             this.btnApr.Size = new System.Drawing.Size(80, 56);
             this.btnApr.TabIndex = 61;
             this.btnApr.UseVisualStyleBackColor = true;
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.DisplayStatusBar = false;
+            this.crystalReportViewer1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(387, 0);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.MonthReport;
+            this.crystalReportViewer1.ShowCloseButton = false;
+            this.crystalReportViewer1.ShowCopyButton = false;
+            this.crystalReportViewer1.ShowExportButton = false;
+            this.crystalReportViewer1.ShowGotoPageButton = false;
+            this.crystalReportViewer1.ShowGroupTreeButton = false;
+            this.crystalReportViewer1.ShowLogo = false;
+            this.crystalReportViewer1.ShowPageNavigateButtons = false;
+            this.crystalReportViewer1.ShowParameterPanelButton = false;
+            this.crystalReportViewer1.ShowPrintButton = false;
+            this.crystalReportViewer1.ShowRefreshButton = false;
+            this.crystalReportViewer1.ShowTextSearchButton = false;
+            this.crystalReportViewer1.ShowZoomButton = false;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(553, 472);
+            this.crystalReportViewer1.TabIndex = 79;
+            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // Form_Generate_Report
             // 
@@ -520,7 +536,6 @@
         private System.Windows.Forms.Button btnOct;
         private System.Windows.Forms.Button btnNov;
         private System.Windows.Forms.Button btnDec;
-        private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Button btnAug;
         private System.Windows.Forms.Button btnJul;
         private System.Windows.Forms.Label lblYear;
@@ -542,6 +557,7 @@
         private System.Windows.Forms.Button button2;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crysDailyReport;
         private DailyReport MonthReport;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
     }
 }
 

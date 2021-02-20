@@ -1,0 +1,1 @@
+﻿UPDATE  Room SET BookStatus = 'Free' WHERE RoomName = 'Amber1' AND TimeSlot = '2021-02-22 08:00:00';
