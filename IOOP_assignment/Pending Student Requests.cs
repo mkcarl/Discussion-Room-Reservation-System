@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace IOOP_assignment
 {
@@ -58,7 +59,7 @@ namespace IOOP_assignment
             SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
 
-            string query = "UPDATE Reservation SET Approval Status = 'Declined' WHERE Approval Status = 'Pending'";
+            string query = "UPDATE Reservation SET Approval Status = 'Reject' WHERE Approval Status = 'Pending'";
 
             SqlCommand cmd = new SqlCommand(query, conn);
 

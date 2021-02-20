@@ -42,6 +42,7 @@
       <HintPath>..\packages\Faker.Net.1.4.108\lib\net472\Faker.Net.4.7.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />

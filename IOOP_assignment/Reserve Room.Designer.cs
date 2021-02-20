@@ -62,6 +62,7 @@ namespace IOOP_assignment
             this.radDaphneReserve.TabStop = true;
             this.radDaphneReserve.Text = "Daphne";
             this.radDaphneReserve.UseVisualStyleBackColor = true;
+            this.radDaphneReserve.CheckedChanged += new System.EventHandler(this.radDaphneReserve_CheckedChanged);
             // 
             // radCedarReserve
             // 
@@ -74,6 +75,7 @@ namespace IOOP_assignment
             this.radCedarReserve.TabStop = true;
             this.radCedarReserve.Text = "Cedar";
             this.radCedarReserve.UseVisualStyleBackColor = true;
+            this.radCedarReserve.CheckedChanged += new System.EventHandler(this.radCedarReserve_CheckedChanged);
             // 
             // radBlackThornReserve
             // 
@@ -86,6 +88,7 @@ namespace IOOP_assignment
             this.radBlackThornReserve.TabStop = true;
             this.radBlackThornReserve.Text = "BlackThorn";
             this.radBlackThornReserve.UseVisualStyleBackColor = true;
+            this.radBlackThornReserve.CheckedChanged += new System.EventHandler(this.radBlackThornReserve_CheckedChanged);
             // 
             // radAmberReseve
             // 
@@ -98,6 +101,7 @@ namespace IOOP_assignment
             this.radAmberReseve.TabStop = true;
             this.radAmberReseve.Text = "Amber";
             this.radAmberReseve.UseVisualStyleBackColor = true;
+            this.radAmberReseve.CheckedChanged += new System.EventHandler(this.radAmberReseve_CheckedChanged);
             // 
             // comboTimeReserve
             // 

@@ -38,10 +38,10 @@ namespace IOOP_assignment
             this.Number_of_Students = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPendingStudentReq = new System.Windows.Forms.Label();
-            this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnReject = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnApprove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentRequests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -126,17 +126,17 @@ namespace IOOP_assignment
             this.lblPendingStudentReq.TabIndex = 2;
             this.lblPendingStudentReq.Text = "Pending Student Requests";
             // 
-            // btnConfirm
+            // btnReject
             // 
-            this.btnConfirm.FlatAppearance.BorderSize = 0;
-            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(283, 454);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(125, 37);
-            this.btnConfirm.TabIndex = 78;
-            this.btnConfirm.Text = "Reject";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            this.btnReject.FlatAppearance.BorderSize = 0;
+            this.btnReject.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReject.Location = new System.Drawing.Point(283, 454);
+            this.btnReject.Name = "btnReject";
+            this.btnReject.Size = new System.Drawing.Size(125, 37);
+            this.btnReject.TabIndex = 78;
+            this.btnReject.Text = "Reject";
+            this.btnReject.UseVisualStyleBackColor = true;
+            this.btnReject.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // pictureBox1
             // 
@@ -163,17 +163,17 @@ namespace IOOP_assignment
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // button1
+            // btnApprove
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(505, 454);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 35);
-            this.button1.TabIndex = 80;
-            this.button1.Text = "Approve";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnApprove.FlatAppearance.BorderSize = 0;
+            this.btnApprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApprove.Location = new System.Drawing.Point(505, 454);
+            this.btnApprove.Name = "btnApprove";
+            this.btnApprove.Size = new System.Drawing.Size(125, 35);
+            this.btnApprove.TabIndex = 80;
+            this.btnApprove.Text = "Approve";
+            this.btnApprove.UseVisualStyleBackColor = true;
+            this.btnApprove.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form_Pending_Student_Requests
             // 
@@ -181,9 +181,9 @@ namespace IOOP_assignment
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(944, 501);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnApprove);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.btnReject);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblPendingStudentReq);
             this.Controls.Add(this.dgvStudentRequests);
@@ -207,9 +207,9 @@ namespace IOOP_assignment
         private System.Windows.Forms.DataGridView dgvStudentRequests;
         private System.Windows.Forms.Label lblPendingStudentReq;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnReject;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnApprove;
         private System.Windows.Forms.DataGridViewTextBoxColumn Reservation_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Student_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
