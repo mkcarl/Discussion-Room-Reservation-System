@@ -60,6 +60,7 @@
             this.btnFeb = new System.Windows.Forms.Button();
             this.btnMar = new System.Windows.Forms.Button();
             this.btnApr = new System.Windows.Forms.Button();
+            this.MonthlyReport1 = new IOOP_assignment.MonthlyReport();
             this.tabControl1.SuspendLayout();
             this.tabDaily.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -232,7 +233,7 @@
             this.crystalReportViewer1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.crystalReportViewer1.Location = new System.Drawing.Point(387, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.MonthReport;
+            this.crystalReportViewer1.ReportSource = this.MonthlyReport1;
             this.crystalReportViewer1.ShowCloseButton = false;
             this.crystalReportViewer1.ShowCopyButton = false;
             this.crystalReportViewer1.ShowExportButton = false;
@@ -557,6 +558,7 @@
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crysDailyReport;
         private DailyReport MonthReport;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private MonthlyReport MonthlyReport1;
     }
 }
 
