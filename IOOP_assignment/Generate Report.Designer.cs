@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabDaily = new System.Windows.Forms.TabPage();
+            this.crvDaily = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnEmail = new System.Windows.Forms.Button();
@@ -59,7 +60,6 @@
             this.btnMar = new System.Windows.Forms.Button();
             this.btnApr = new System.Windows.Forms.Button();
             this.MonthReport = new IOOP_assignment.DailyReport();
-            this.crvDaily = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tabControl1.SuspendLayout();
             this.tabDaily.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -98,6 +98,19 @@
             this.tabDaily.TabIndex = 0;
             this.tabDaily.Text = "Daily";
             this.tabDaily.ToolTipText = "Daily";
+            // 
+            // crvDaily
+            // 
+            this.crvDaily.ActiveViewIndex = -1;
+            this.crvDaily.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvDaily.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvDaily.DisplayStatusBar = false;
+            this.crvDaily.DisplayToolbar = false;
+            this.crvDaily.Location = new System.Drawing.Point(349, 0);
+            this.crvDaily.Name = "crvDaily";
+            this.crvDaily.Size = new System.Drawing.Size(587, 475);
+            this.crvDaily.TabIndex = 78;
+            this.crvDaily.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // pictureBox1
             // 
@@ -160,8 +173,10 @@
             // 
             this.mthCalendar.Location = new System.Drawing.Point(43, 128);
             this.mthCalendar.Margin = new System.Windows.Forms.Padding(7);
+            this.mthCalendar.MaxSelectionCount = 1;
             this.mthCalendar.Name = "mthCalendar";
             this.mthCalendar.TabIndex = 44;
+            this.mthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.mthCalendar_DateChanged);
             // 
             // tabMonthly
             // 
@@ -473,19 +488,6 @@
             this.btnApr.Size = new System.Drawing.Size(80, 56);
             this.btnApr.TabIndex = 61;
             this.btnApr.UseVisualStyleBackColor = true;
-            // 
-            // crvDaily
-            // 
-            this.crvDaily.ActiveViewIndex = -1;
-            this.crvDaily.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crvDaily.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crvDaily.DisplayStatusBar = false;
-            this.crvDaily.DisplayToolbar = false;
-            this.crvDaily.Location = new System.Drawing.Point(349, 0);
-            this.crvDaily.Name = "crvDaily";
-            this.crvDaily.Size = new System.Drawing.Size(587, 475);
-            this.crvDaily.TabIndex = 78;
-            this.crvDaily.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // Form_Generate_Report
             // 

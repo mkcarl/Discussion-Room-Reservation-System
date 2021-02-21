@@ -419,7 +419,7 @@ namespace IOOP_assignment {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ReportingRow AddReportingRow(string ReservationID, int StudentRegistered, string RoomName, string LibrarianID, short Duration, string StartingTime, string ApprovalStatus) {
+            public ReportingRow AddReportingRow(string ReservationID, int StudentRegistered, string RoomName, string LibrarianID, short Duration, System.DateTime StartingTime, string ApprovalStatus) {
                 ReportingRow rowReportingRow = ((ReportingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ReservationID,
@@ -473,7 +473,7 @@ namespace IOOP_assignment {
                 base.Columns.Add(this.columnLibrarianID);
                 this.columnDuration = new global::System.Data.DataColumn("Duration", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDuration);
-                this.columnStartingTime = new global::System.Data.DataColumn("StartingTime", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnStartingTime = new global::System.Data.DataColumn("StartingTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStartingTime);
                 this.columnApprovalStatus = new global::System.Data.DataColumn("ApprovalStatus", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnApprovalStatus);
@@ -699,10 +699,10 @@ namespace IOOP_assignment {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string StartingTime {
+            public System.DateTime StartingTime {
                 get {
                     try {
-                        return ((string)(this[this.tableReporting.StartingTimeColumn]));
+                        return ((global::System.DateTime)(this[this.tableReporting.StartingTimeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'StartingTime\' in table \'Reporting\' is DBNull.", e);
