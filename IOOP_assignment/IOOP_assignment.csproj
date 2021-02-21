@@ -71,11 +71,6 @@
       <DependentUpon>DailyReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="dsMonthlyReport.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsMonthlyReport.xsd</DependentUpon>
-    </Compile>
     <Compile Include="dsReservation.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -192,17 +187,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="dsMonthlyReport.xsc">
-      <DependentUpon>dsMonthlyReport.xsd</DependentUpon>
-    </None>
-    <None Include="dsMonthlyReport.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsMonthlyReport.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="dsMonthlyReport.xss">
-      <DependentUpon>dsMonthlyReport.xsd</DependentUpon>
-    </None>
     <None Include="dsReservation.xsc">
       <DependentUpon>dsReservation.xsd</DependentUpon>
     </None>

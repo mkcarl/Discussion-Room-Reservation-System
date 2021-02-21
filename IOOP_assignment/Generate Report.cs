@@ -19,12 +19,18 @@ namespace IOOP_assignment
 
         private void Generate_Report_Load(object sender, EventArgs e)
         {
-            dsMonthlyReport ds = new dsMonthlyReport();
-            dsMonthlyReportTableAdapters.ReservationTableAdapter datC = new dsMonthlyReportTableAdapters.ReservationTableAdapter();
+            dsReservation ds = new dsReservation();
+            dsReservationTableAdapters.ReservationTableAdapter datC = new dsReservationTableAdapters.ReservationTableAdapter();
             datC.Fill(ds.Reservation);
-            MonthlyReport rpt = new MonthlyReport();
-            rpt.SetDataSource(ds);
-            crystalReportViewer1.ReportSource = rpt;
+            MonthlyReport monthrpt = new MonthlyReport();
+            monthrpt.SetDataSource(ds);
+            crystalMontlyReport.ReportSource = monthrpt;
+
+            DailyReport dailyrpt = new DailyReport();
+            dailyrpt.SetDataSource(ds);
+            crysDailyReport.ReportSource = dailyrpt;
+
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)

@@ -39,7 +39,8 @@
             this.crysDailyReport = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.MonthReport = new IOOP_assignment.DailyReport();
             this.tabMonthly = new System.Windows.Forms.TabPage();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crystalMontlyReport = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.MonthlyReport1 = new IOOP_assignment.MonthlyReport();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -60,7 +61,6 @@
             this.btnFeb = new System.Windows.Forms.Button();
             this.btnMar = new System.Windows.Forms.Button();
             this.btnApr = new System.Windows.Forms.Button();
-            this.MonthlyReport1 = new IOOP_assignment.MonthlyReport();
             this.tabControl1.SuspendLayout();
             this.tabDaily.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -183,6 +183,7 @@
             this.crysDailyReport.ShowPageNavigateButtons = false;
             this.crysDailyReport.ShowParameterPanelButton = false;
             this.crysDailyReport.ShowPrintButton = false;
+            this.crysDailyReport.ShowRefreshButton = false;
             this.crysDailyReport.ShowTextSearchButton = false;
             this.crysDailyReport.ShowZoomButton = false;
             this.crysDailyReport.Size = new System.Drawing.Size(593, 479);
@@ -192,7 +193,7 @@
             // 
             // tabMonthly
             // 
-            this.tabMonthly.Controls.Add(this.crystalReportViewer1);
+            this.tabMonthly.Controls.Add(this.crystalMontlyReport);
             this.tabMonthly.Controls.Add(this.button3);
             this.tabMonthly.Controls.Add(this.button2);
             this.tabMonthly.Controls.Add(this.pictureBox2);
@@ -224,31 +225,31 @@
             this.tabMonthly.ToolTipText = "Monthly";
             this.tabMonthly.UseVisualStyleBackColor = true;
             // 
-            // crystalReportViewer1
+            // crystalMontlyReport
             // 
-            this.crystalReportViewer1.ActiveViewIndex = 0;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.DisplayStatusBar = false;
-            this.crystalReportViewer1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(387, 0);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.MonthlyReport1;
-            this.crystalReportViewer1.ShowCloseButton = false;
-            this.crystalReportViewer1.ShowCopyButton = false;
-            this.crystalReportViewer1.ShowExportButton = false;
-            this.crystalReportViewer1.ShowGotoPageButton = false;
-            this.crystalReportViewer1.ShowGroupTreeButton = false;
-            this.crystalReportViewer1.ShowLogo = false;
-            this.crystalReportViewer1.ShowPageNavigateButtons = false;
-            this.crystalReportViewer1.ShowParameterPanelButton = false;
-            this.crystalReportViewer1.ShowPrintButton = false;
-            this.crystalReportViewer1.ShowRefreshButton = false;
-            this.crystalReportViewer1.ShowTextSearchButton = false;
-            this.crystalReportViewer1.ShowZoomButton = false;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(553, 472);
-            this.crystalReportViewer1.TabIndex = 79;
-            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.crystalMontlyReport.ActiveViewIndex = 0;
+            this.crystalMontlyReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalMontlyReport.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalMontlyReport.DisplayStatusBar = false;
+            this.crystalMontlyReport.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.crystalMontlyReport.Location = new System.Drawing.Point(387, 0);
+            this.crystalMontlyReport.Name = "crystalMontlyReport";
+            this.crystalMontlyReport.ReportSource = this.MonthlyReport1;
+            this.crystalMontlyReport.ShowCloseButton = false;
+            this.crystalMontlyReport.ShowCopyButton = false;
+            this.crystalMontlyReport.ShowExportButton = false;
+            this.crystalMontlyReport.ShowGotoPageButton = false;
+            this.crystalMontlyReport.ShowGroupTreeButton = false;
+            this.crystalMontlyReport.ShowLogo = false;
+            this.crystalMontlyReport.ShowPageNavigateButtons = false;
+            this.crystalMontlyReport.ShowParameterPanelButton = false;
+            this.crystalMontlyReport.ShowPrintButton = false;
+            this.crystalMontlyReport.ShowRefreshButton = false;
+            this.crystalMontlyReport.ShowTextSearchButton = false;
+            this.crystalMontlyReport.ShowZoomButton = false;
+            this.crystalMontlyReport.Size = new System.Drawing.Size(553, 472);
+            this.crystalMontlyReport.TabIndex = 79;
+            this.crystalMontlyReport.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // button3
             // 
@@ -557,7 +558,7 @@
         private System.Windows.Forms.Button button2;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crysDailyReport;
         private DailyReport MonthReport;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalMontlyReport;
         private MonthlyReport MonthlyReport1;
     }
 }

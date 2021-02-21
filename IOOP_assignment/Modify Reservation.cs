@@ -107,8 +107,18 @@ namespace IOOP_assignment
 
         private void mthCalendarNewModify_DateChanged(object sender, DateRangeEventArgs e)
         {
-            string roomtype = "";
+            Student mainUser;
 
+            if (Program.LoginRole == "Student")
+            {
+                mainUser = Program.StudentUser;
+            }
+            else
+            {
+                mainUser = Program.LibrarianUser;
+            }
+
+            string roomtype = "";
             if (radAmberNewModify.Enabled)
             {
                 roomtype = "Amber";
@@ -137,6 +147,21 @@ namespace IOOP_assignment
             
             SqlDataReader dr = Controller.Query($"Select distinct TimeSlot from Room where TimeSlot > '{dt.ToString("yyyy-MM-dd")}' and TimeSlot < '{dt.AddDays(1).ToString("yyyy-MM-dd")}' and BookStatus = 'Free' and RoomName Like '{roomtype}%'");
 
+            //SqlDataReader currentReservationID = Controller.Query($"select top 1 rv.ReservationID from Reservation rv inner join [Reservation-Room] rr on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where rv.StudentRegistered = '{mainUser.StudentID}', group by rv.ReservationID;");
+
+            //currentReservationID.Read();
+
+            
+            //string currentID= currentReservationID["ReservationID"].ToString();
+            
+            //SqlDataReader duration = Controller.Query($"Select [Reservation-Room].ReservationID, [Reservation-Room].RoomID count(*) as Duration from Reservation-Room INNER JOIN [Reservation] on [Rerservation-Room].ReservationID = [Room].ReservationID where Reservation.StudentRegistered = '{mainUser.StudentID}'");
+
+            SqlDataReader dr2 = Controller.Query ($"Select rr.ReservationID, rv.StudentRegistered, rm.RoomName, rv.LibrarianReviewed, COUNT(rr.ReservationID) as Duration from [Reservation-Room] rr inner join Reservation rv on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where StudentRegistered = '{mainUser.StudentID}' group by rr.ReservationID, rv.StudentRegistered, rm.RoomName, rv.LibrarianReviewed");
+
+            dr2.Read();
+            int currentduration = (int)dr2["Duration"] ;
+            
+
             if (dr.HasRows)
             {
                 List<DateTime> timeslots;
@@ -145,8 +170,12 @@ namespace IOOP_assignment
 
                 foreach (DateTime time in timeslots)
                 {
-
-                  comboTimeNewModify.Items.Add(time.ToString("hh:mm tt"));
+                        comboTimeNewModify.Items.Add(time.ToString("hh:mm tt"));
+                    
+                }
+                for (int i = 0; i < currentduration; i++)
+                {
+                    comboTimeNewModify.Items.RemoveAt(comboTimeNewModify.Items.Count - 1);
                 }
             }
         }
@@ -347,6 +376,7 @@ namespace IOOP_assignment
 
             MessageBox.Show("Your booking have been successfully cancelled.");
             conn.Close();
+
 
 
         }
