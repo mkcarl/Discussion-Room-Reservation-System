@@ -71,6 +71,14 @@
       <DependentUpon>DailyReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="dsCustom.cs">
+      <DependentUpon>dsCustom.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsCustom.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCustom.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsLibrary.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -177,6 +185,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="dsCustom.xsc">
+      <DependentUpon>dsCustom.xsd</DependentUpon>
+    </None>
+    <None Include="dsCustom.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCustom.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsCustom.xss">
+      <DependentUpon>dsCustom.xsd</DependentUpon>
+    </None>
     <None Include="dsLibrary.xsc">
       <DependentUpon>dsLibrary.xsd</DependentUpon>
     </None>

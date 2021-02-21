@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCustom" targetNamespace="http://tempuri.org/dsCustom.xsd" xmlns:mstns="http://tempuri.org/dsCustom.xsd" xmlns="http://tempuri.org/dsCustom.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCustom" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsCustom" msprop:Generator_UserDSName="dsCustom">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Reporting" msprop:Generator_TableClassName="ReportingDataTable" msprop:Generator_TableVarName="tableReporting" msprop:Generator_TablePropName="Reporting" msprop:Generator_RowDeletingName="ReportingRowDeleting" msprop:Generator_RowChangingName="ReportingRowChanging" msprop:Generator_RowEvHandlerName="ReportingRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportingRowDeleted" msprop:Generator_UserTableName="Reporting" msprop:Generator_RowChangedName="ReportingRowChanged" msprop:Generator_RowEvArgName="ReportingRowChangeEvent" msprop:Generator_RowClassName="ReportingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ReservationID" msprop:Generator_ColumnVarNameInTable="columnReservationID" msprop:Generator_ColumnPropNameInRow="ReservationID" msprop:Generator_ColumnPropNameInTable="ReservationIDColumn" msprop:Generator_UserColumnName="ReservationID" type="xs:string" minOccurs="0" />
+              <xs:element name="StudentRegistered" msprop:Generator_ColumnVarNameInTable="columnStudentRegistered" msprop:Generator_ColumnPropNameInRow="StudentRegistered" msprop:Generator_ColumnPropNameInTable="StudentRegisteredColumn" msprop:Generator_UserColumnName="StudentRegistered" type="xs:int" minOccurs="0" />
+              <xs:element name="RoomName" msprop:Generator_ColumnVarNameInTable="columnRoomName" msprop:Generator_ColumnPropNameInRow="RoomName" msprop:Generator_ColumnPropNameInTable="RoomNameColumn" msprop:Generator_UserColumnName="RoomName" type="xs:string" minOccurs="0" />
+              <xs:element name="LibrarianID" msprop:Generator_ColumnVarNameInTable="columnLibrarianID" msprop:Generator_ColumnPropNameInRow="LibrarianID" msprop:Generator_ColumnPropNameInTable="LibrarianIDColumn" msprop:Generator_UserColumnName="LibrarianID" type="xs:string" minOccurs="0" />
+              <xs:element name="Duration" msprop:Generator_ColumnVarNameInTable="columnDuration" msprop:Generator_ColumnPropNameInRow="Duration" msprop:Generator_ColumnPropNameInTable="DurationColumn" msprop:Generator_UserColumnName="Duration" type="xs:short" minOccurs="0" />
+              <xs:element name="StartingTime" msprop:Generator_ColumnVarNameInTable="columnStartingTime" msprop:Generator_ColumnPropNameInRow="StartingTime" msprop:Generator_ColumnPropNameInTable="StartingTimeColumn" msprop:Generator_UserColumnName="StartingTime" type="xs:string" minOccurs="0" />
+              <xs:element name="ApprovalStatus" msprop:Generator_ColumnVarNameInTable="columnApprovalStatus" msprop:Generator_ColumnPropNameInRow="ApprovalStatus" msprop:Generator_ColumnPropNameInTable="ApprovalStatusColumn" msprop:Generator_UserColumnName="ApprovalStatus" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
