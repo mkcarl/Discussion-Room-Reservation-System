@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using CrystalDecisions.CrystalReports.Engine;
 using System.Net.Mail;
 using CrystalDecisions.Shared;
+using System.Globalization;
 
 namespace IOOP_assignment
 {
@@ -18,7 +19,9 @@ namespace IOOP_assignment
     {
         SqlConnection conn;
         SqlDataAdapter sda;
-        ReportDocument rd; 
+        ReportDocument rd;
+        int selectedMonth;
+        Librarian mainUser; 
 
         public Form_Generate_Report()
         {
@@ -29,17 +32,17 @@ namespace IOOP_assignment
 
         private void Generate_Report_Load(object sender, EventArgs e)
         {
-            Reload_Report();
+            DateTime selectedDay = mthCalendar.SelectionStart;
+            Reload_Report(selectedDay, selectedDay.AddDays(1));
+            lblYear.Text = DateTime.Now.Year.ToString();
+            mainUser = Program.LibrarianUser;
         }
         
-        private void Reload_Report()
+        private void Reload_Report(DateTime start, DateTime end)
         {
-            DateTime selectedDay = mthCalendar.SelectionStart;
-
-
             rd = new ReportDocument();
 
-            sda = new SqlDataAdapter($"select rr.ReservationID, rm.RoomName, MIN(rm.TimeSlot) as StartingTime, rv.ApprovalStatus ,rv.StudentRegistered, COUNT(rr.ReservationID) as Duration, rv.LibrarianReviewed as LibrarianID from [Reservation-Room] rr inner join Reservation rv on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where rm.TimeSlot >= '{selectedDay.ToString("yyyy-MM-dd")}' and rm.TimeSlot < '{selectedDay.AddDays(1).ToString("yyyy-MM-dd")}' group by rr.ReservationID, rv.StudentRegistered, rm.RoomName, rv.LibrarianReviewed, rv.ApprovalStatus; ", conn);
+            sda = new SqlDataAdapter($"select rr.ReservationID, rm.RoomName, MIN(rm.TimeSlot) as StartingTime, rv.ApprovalStatus ,rv.StudentRegistered, COUNT(rr.ReservationID) as Duration, rv.LibrarianReviewed as LibrarianID from [Reservation-Room] rr inner join Reservation rv on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where rm.TimeSlot >= '{start.ToString("yyyy-MM-dd")}' and rm.TimeSlot < '{end.ToString("yyyy-MM-dd")}' group by rr.ReservationID, rv.StudentRegistered, rm.RoomName, rv.LibrarianReviewed, rv.ApprovalStatus; ", conn);
 
             DataSet dst = new DataSet();
             sda.Fill(dst, "Reporting");
@@ -56,11 +59,6 @@ namespace IOOP_assignment
             this.Close();
         }
 
-        private void btnLeftArrow_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
 
@@ -68,7 +66,8 @@ namespace IOOP_assignment
 
         private void mthCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
-            Reload_Report();
+            DateTime selectedDay = mthCalendar.SelectionStart;
+            Reload_Report(selectedDay, selectedDay.AddDays(1));
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -82,8 +81,8 @@ namespace IOOP_assignment
         private void btnEmail_Click(object sender, EventArgs e)
         {
             string filename = $"Report-{mthCalendar.SelectionStart.ToString("ddMMMMyyyy")}";
-            Attachment report = new Attachment(rd.ExportToStream(ExportFormatType.PortableDocFormat), $"{filename}.pdf");
-            sendEmail("munkye29@gmail.com", "no.reply", "", report);
+            Attachment report = new Attachment(rd.ExportToStream(ExportFormatType.PortableDocFormat), $"{filename}.pdf"); //https://www.aspsnippets.com/Articles/Export-Crystal-Report-to-PDF-and-send-as-Email-Attachment-in-ASPNet.aspx
+            sendEmail(mainUser.Email, "no.reply", "", report);
      
         }
 
@@ -106,6 +105,115 @@ namespace IOOP_assignment
             SmtpServer.EnableSsl = true;
 
             SmtpServer.Send(mail);
+        }
+
+        private void btnLeftArrow_Click(object sender, EventArgs e)
+        {
+            lblYear.Text = (int.Parse(lblYear.Text) - 1).ToString();
+        }
+
+        private void btnRightArrow_Click(object sender, EventArgs e)
+        {
+            lblYear.Text = (int.Parse(lblYear.Text) + 1).ToString();
+        }
+
+        private void btnJan_Click(object sender, EventArgs e)
+        {
+            selectedMonth = 1;
+            DateTime targetMonth = DateTime.ParseExact($"{lblYear.Text}-{selectedMonth.ToString("00")}-01 00:00", "yyyy-MM-dd hh:mm", CultureInfo.InvariantCulture);
+            Reload_Report(targetMonth, targetMonth.AddMonths(1));
+        }
+
+        private void btnFeb_Click(object sender, EventArgs e)
+        {
+            selectedMonth = 2;
+            DateTime targetMonth = DateTime.ParseExact($"{lblYear.Text}-{selectedMonth.ToString("00")}-01 00:00", "yyyy-MM-dd hh:mm", CultureInfo.InvariantCulture);
+            Reload_Report(targetMonth, targetMonth.AddMonths(1));
+        }
+
+        private void btnMar_Click(object sender, EventArgs e)
+        {
+            selectedMonth = 3;
+            DateTime targetMonth = DateTime.ParseExact($"{lblYear.Text}-{selectedMonth.ToString("00")}-01 00:00", "yyyy-MM-dd hh:mm", CultureInfo.InvariantCulture);
+            Reload_Report(targetMonth, targetMonth.AddMonths(1));
+        }
+
+        private void btnApr_Click(object sender, EventArgs e)
+        {
+            selectedMonth = 4;
+            DateTime targetMonth = DateTime.ParseExact($"{lblYear.Text}-{selectedMonth.ToString("00")}-01 00:00", "yyyy-MM-dd hh:mm", CultureInfo.InvariantCulture);
+            Reload_Report(targetMonth, targetMonth.AddMonths(1));
+        }
+
+        private void btnMay_Click(object sender, EventArgs e)
+        {
+            selectedMonth = 5;
+            DateTime targetMonth = DateTime.ParseExact($"{lblYear.Text}-{selectedMonth.ToString("00")}-01 00:00", "yyyy-MM-dd hh:mm", CultureInfo.InvariantCulture);
+            Reload_Report(targetMonth, targetMonth.AddMonths(1));
+        }
+
+        private void btnJun_Click(object sender, EventArgs e)
+        {
+            selectedMonth = 6;
+            DateTime targetMonth = DateTime.ParseExact($"{lblYear.Text}-{selectedMonth.ToString("00")}-01 00:00", "yyyy-MM-dd hh:mm", CultureInfo.InvariantCulture);
+            Reload_Report(targetMonth, targetMonth.AddMonths(1));
+        }
+
+        private void btnJul_Click(object sender, EventArgs e)
+        {
+            selectedMonth = 7;
+            DateTime targetMonth = DateTime.ParseExact($"{lblYear.Text}-{selectedMonth.ToString("00")}-01 00:00", "yyyy-MM-dd hh:mm", CultureInfo.InvariantCulture);
+            Reload_Report(targetMonth, targetMonth.AddMonths(1));
+        }
+
+        private void btnAug_Click(object sender, EventArgs e)
+        {
+            selectedMonth = 8;
+            DateTime targetMonth = DateTime.ParseExact($"{lblYear.Text}-{selectedMonth.ToString("00")}-01 00:00", "yyyy-MM-dd hh:mm", CultureInfo.InvariantCulture);
+            Reload_Report(targetMonth, targetMonth.AddMonths(1));
+        }
+
+        private void btnSep_Click(object sender, EventArgs e)
+        {
+            selectedMonth = 9;
+            DateTime targetMonth = DateTime.ParseExact($"{lblYear.Text}-{selectedMonth.ToString("00")}-01 00:00", "yyyy-MM-dd hh:mm", CultureInfo.InvariantCulture);
+            Reload_Report(targetMonth, targetMonth.AddMonths(1));
+        }
+
+        private void btnOct_Click(object sender, EventArgs e)
+        {
+            selectedMonth = 10;
+            DateTime targetMonth = DateTime.ParseExact($"{lblYear.Text}-{selectedMonth.ToString("00")}-01 00:00", "yyyy-MM-dd hh:mm", CultureInfo.InvariantCulture);
+            Reload_Report(targetMonth, targetMonth.AddMonths(1));
+        }
+
+        private void btnNov_Click(object sender, EventArgs e)
+        {
+            selectedMonth = 11;
+            DateTime targetMonth = DateTime.ParseExact($"{lblYear.Text}-{selectedMonth.ToString("00")}-01 00:00", "yyyy-MM-dd hh:mm", CultureInfo.InvariantCulture);
+            Reload_Report(targetMonth, targetMonth.AddMonths(1));
+        }
+
+        private void btnDec_Click(object sender, EventArgs e)
+        {
+            selectedMonth = 12;
+            DateTime targetMonth = DateTime.ParseExact($"{lblYear.Text}-{selectedMonth.ToString("00")}-01 00:00", "yyyy-MM-dd hh:mm", CultureInfo.InvariantCulture);
+            Reload_Report(targetMonth, targetMonth.AddMonths(1));
+        }
+
+        private void btnSaveMonthly_Click(object sender, EventArgs e)
+        {
+            string reportDir = $@"{Environment.CurrentDirectory}\Reports";
+            string filename = $"Report-{mthCalendar.SelectionStart.ToString("MMMMyyyy")}";
+            rd.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, $"{reportDir}\\{filename}.pdf");
+            MessageBox.Show($"Report is saved to location {reportDir}\\{filename}");
+        }
+
+        private void btnEmailMonthly_Click(object sender, EventArgs e)
+        {
+            string filename = $"Report-{mthCalendar.SelectionStart.ToString("MMMMyyyy")}";
+            Attachment report = new Attachment(rd.ExportToStream(ExportFormatType.PortableDocFormat), $"{filename}.pdf"); //https://www.aspsnippets.com/Articles/Export-Crystal-Report-to-PDF-and-send-as-Email-Attachment-in-ASPNet.aspx
+            sendEmail(mainUser.Email, "no.reply", "", report);
         }
     }
 }
