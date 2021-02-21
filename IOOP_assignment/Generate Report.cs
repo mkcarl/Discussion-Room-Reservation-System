@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using CrystalDecisions.CrystalReports.Engine;
+using System.Net.Mail;
+using CrystalDecisions.Shared;
 
 namespace IOOP_assignment
 {
@@ -67,6 +69,43 @@ namespace IOOP_assignment
         private void mthCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
             Reload_Report();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string reportDir = $@"{Environment.CurrentDirectory}\Reports";
+            string filename = $"Report-{mthCalendar.SelectionStart.ToString("ddMMMMyyyy")}";
+            rd.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, $"{reportDir}\\{filename}.pdf");
+            MessageBox.Show($"Report is saved to location {reportDir}\\{filename}");
+        }
+
+        private void btnEmail_Click(object sender, EventArgs e)
+        {
+            string filename = $"Report-{mthCalendar.SelectionStart.ToString("ddMMMMyyyy")}";
+            Attachment report = new Attachment(rd.ExportToStream(ExportFormatType.PortableDocFormat), $"{filename}.pdf");
+            sendEmail("munkye29@gmail.com", "no.reply", "", report);
+     
+        }
+
+        private void sendEmail(string receiverEmail, string subject, string body, Attachment report)
+        {
+            //https://stackoverflow.com/a/10784907
+            MailMessage mail = new MailMessage();
+            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+            mail.From = new MailAddress("HJK.LDRRS@gmail.com");
+            mail.To.Add(receiverEmail);
+            mail.Subject = (subject);
+            mail.Body = (body);
+
+            System.Net.Mail.Attachment attachment;
+            attachment = report;
+            mail.Attachments.Add(attachment);
+
+            SmtpServer.Port = 587;
+            SmtpServer.Credentials = new System.Net.NetworkCredential("HJK.LDRRS@gmail.com", "ioop2006");
+            SmtpServer.EnableSsl = true;
+
+            SmtpServer.Send(mail);
         }
     }
 }

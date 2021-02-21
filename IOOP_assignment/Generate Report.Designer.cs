@@ -148,6 +148,7 @@
             this.btnEmail.TabIndex = 75;
             this.btnEmail.Text = "Send to Email";
             this.btnEmail.UseVisualStyleBackColor = true;
+            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
             // 
             // btnSave
             // 
@@ -158,6 +159,7 @@
             this.btnSave.TabIndex = 74;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // lblGenerateDailyReport
             // 
