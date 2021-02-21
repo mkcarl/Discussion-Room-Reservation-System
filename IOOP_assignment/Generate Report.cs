@@ -32,10 +32,10 @@ namespace IOOP_assignment
 
         private void Generate_Report_Load(object sender, EventArgs e)
         {
+            mainUser = Program.LibrarianUser;
             DateTime selectedDay = mthCalendar.SelectionStart;
             Reload_Report(selectedDay, selectedDay.AddDays(1));
             lblYear.Text = DateTime.Now.Year.ToString();
-            mainUser = Program.LibrarianUser;
         }
         
         private void Reload_Report(DateTime start, DateTime end)
@@ -49,6 +49,8 @@ namespace IOOP_assignment
 
             rd.Load($"{Environment.CurrentDirectory}\\..\\..\\DailyReport.rpt");
             rd.SetDataSource(dst);
+            rd.SetParameterValue("targetdate", start);
+            rd.SetParameterValue("librarian", $"{mainUser.Surname} {mainUser.GivenName} ({mainUser.LibrarianID})");
             crvDaily.ReportSource = rd;
 
 
