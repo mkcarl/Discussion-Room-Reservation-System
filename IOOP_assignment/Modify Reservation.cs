@@ -107,8 +107,48 @@ namespace IOOP_assignment
 
         private void mthCalendarNewModify_DateChanged(object sender, DateRangeEventArgs e)
         {
+            string roomtype = "";
 
+            if (radAmberNewModify.Enabled)
+            {
+                roomtype = "Amber";
+            }
+
+            else if (radBlackThornNewModify.Enabled)
+            {
+                roomtype = "BlackThorn";
+            }
+
+            else if (radCedarNewModify.Enabled)
+            {
+                roomtype = "Cedar";
+            }
+
+            else if (radDaphneNewModify.Enabled)
+            {
+                roomtype = "Daphne";
+            }
             
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
+            conn.Open();
+
+            //dateselected
+            DateTime dt = DateTime.Parse(mthCalendarNewModify.SelectionStart.ToString());
+            
+            SqlDataReader dr = Controller.Query($"Select distinct TimeSlot from Room where TimeSlot > '{dt.ToString("yyyy-MM-dd")}' and TimeSlot < '{dt.AddDays(1).ToString("yyyy-MM-dd")}' and BookStatus = 'Free' and RoomName Like '{roomtype}%'");
+
+            if (dr.HasRows)
+            {
+                List<DateTime> timeslots;
+                timeslots = (from IDataRecord r in dr select (DateTime)r["TimeSlot"]).ToList();
+                comboTimeNewModify.Items.Clear();
+
+                foreach (DateTime time in timeslots)
+                {
+
+                  comboTimeNewModify.Items.Add(time.ToString("hh:mm tt"));
+                }
+            }
         }
 
         private void btnConfirmModification_Click(object sender, EventArgs e)
@@ -265,7 +305,48 @@ namespace IOOP_assignment
 
         private void btnResetModify_Click(object sender, EventArgs e)
         {
-            
+            Student mainUser;
+
+            if (Program.LoginRole == "Student")
+            {
+                mainUser = Program.StudentUser;
+            }
+            else
+            {
+                mainUser = Program.LibrarianUser;
+            }
+
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
+            conn.Open();
+
+            oldReservation = Controller.Query($"select top 1 rv.ReservationID, rv.ApprovalStatus, rv.Pax, MIN(rm.TimeSlot) as 'StartingTime' from Reservation rv inner join [Reservation-Room] rr on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where rv.StudentRegistered = {mainUser.StudentID} and rv.ApprovalStatus = 'Pending' group by rv.Pax, rv.ReservationID, rv.ApprovalStatus order by StartingTime Desc; ");
+            oldReservation.Read();
+            string currentReservationID = oldReservation["ReservationID"].ToString();
+            string approvalstatus = ($"Update Reservation set BookStatus = 'Cancel' where ReservationID = '{currentReservationID}'");
+
+            List<string> currentRooms;
+            SqlDataReader currentBooking = Controller.Query($"SELECT * FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'");
+            currentRooms = (from IDataRecord r in currentBooking select (string)r["RoomID"]).ToList();
+            // https://stackoverflow.com/a/1370592
+
+            string sqlDeleteCurrentReservationID = $"DELETE FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'";
+
+            // delete old records
+            SqlCommand cmdDeleteOld = new SqlCommand(sqlDeleteCurrentReservationID, conn);
+            cmdDeleteOld.ExecuteNonQuery();
+
+
+            // change all old room to free 
+            foreach (string room in currentRooms)
+            {
+                string sqlBookedToFree = ($"UPDATE Room SET BookStatus = 'Free' WHERE RoomID = '{room}'");
+                SqlCommand cmd = new SqlCommand(sqlBookedToFree, conn);
+                cmd.ExecuteNonQuery();
+
+            }
+
+            MessageBox.Show("Your booking have been successfully cancelled.");
+            conn.Close();
 
 
         }

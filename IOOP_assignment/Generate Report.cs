@@ -19,7 +19,14 @@ namespace IOOP_assignment
 
         private void Generate_Report_Load(object sender, EventArgs e)
         {
-
+            dsReservation ds = new dsReservation();
+            dsReservationTableAdapters.ReservationTableAdapter datReservation = new dsReservationTableAdapters.ReservationTableAdapter();
+            datReservation.Fill(ds.Reservation);
+            dsReservationTableAdapters.RoomTableAdapter datRoom = new dsReservationTableAdapters.RoomTableAdapter();
+            datRoom.Fill(ds.Room);
+            DailyReport rpt = new DailyReport();
+            rpt.SetDataSource(ds);
+            crysDailyReport.ReportSource = rpt;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
