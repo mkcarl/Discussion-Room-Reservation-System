@@ -12,6 +12,7 @@ namespace IOOP_assignment
 {
     public partial class Form_Generate_Report : Form
     {
+        DailyReport rpt;
         public Form_Generate_Report()
         {
             InitializeComponent();
@@ -19,7 +20,12 @@ namespace IOOP_assignment
 
         private void Generate_Report_Load(object sender, EventArgs e)
         {
-
+            dsLibrary ds = new dsLibrary();
+            dsLibraryTableAdapters.ReservationTableAdapter datRV = new dsLibraryTableAdapters.ReservationTableAdapter();
+            datRV.Fill(ds.Reservation);
+            rpt = new DailyReport();
+            rpt.SetDataSource(ds);
+            crvDaily.ReportSource = rpt; 
         }
 
         private void btnBack_Click(object sender, EventArgs e)

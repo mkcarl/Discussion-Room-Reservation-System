@@ -65,6 +65,17 @@
     <Compile Include="CustomControl1.Designer.cs">
       <DependentUpon>CustomControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="DailyReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsLibrary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLibrary.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Librarian.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="User_Info.cs">
@@ -128,6 +139,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DailyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="User_Info.resx">
       <DependentUpon>User_Info.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +177,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="dsLibrary.xsc">
+      <DependentUpon>dsLibrary.xsd</DependentUpon>
+    </None>
+    <None Include="dsLibrary.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLibrary.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsLibrary.xss">
+      <DependentUpon>dsLibrary.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <EmbeddedResource Include="Reserve Room.resx">
       <DependentUpon>Reserve Room.cs</DependentUpon>
