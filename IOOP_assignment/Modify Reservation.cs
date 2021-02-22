@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace IOOP_assignment
 {
     public partial class FormModify : Form
     {
-        
+        Student mainUser;
+
+        SqlDataReader oldReservation; 
 
         public FormModify()
         {
@@ -35,15 +38,61 @@ namespace IOOP_assignment
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormModify_Load(object sender, EventArgs e)
         {
+            if (Program.LoginRole == "Student")
+            {
+                mainUser = Program.StudentUser;
+            }
+            else
+            {
+                mainUser = Program.LibrarianUser;
+            }
+
             mthCalendarNewModify.MinDate = DateTime.Now.AddDays(2);
             mthCalendarNewModify.MaxDate = DateTime.Now.AddDays(7);
+
+            //string sqlQuery = $"select Reservation.ReservationID ,  RoomName, Min(TimeSlot) as 'Starting Time', Pax, count(*) as Hours from Reservation inner join [Reservation-Room] on Reservation.ReservationID = [Reservation-Room].ReservationID inner join Room on [Reservation-Room].RoomID = Room.RoomID where Reservation.StudentRegistered = '{mainUser.StudentID}' group by Reservation.ReservationID, RoomName";
+
+            SqlDataReader dr = Controller.Query($"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', ApprovalStatus, count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = '{mainUser.StudentID}' and ApprovalStatus = 'Pending' GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY [Starting Time] DESC");
+
+            //SqlDataReader dr = Controller.Query($"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = 100001 GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY [Starting Time] DESC");
+
+            dr.Read();
+            if (dr.HasRows)
+            {
+                DateTime dtime = (DateTime)dr["Starting Time"];
+                lblNoPeopleCurrentModify.Text = dr["Pax"].ToString();
+                lblDateCurrentModify.Text = dtime.ToString("dd MMMM yyyy");
+                lblTimeCurrentModify.Text = dtime.ToString("hh:mm tt");
+                lblRoomCurrentModify.Text = dr["RoomName"].ToString();
+            }
+
+            else
+            {
+                MessageBox.Show("No Reservations found.");
+
+            }
+
+
+            //SqlDataReader dr = Controller.Query($"SELECT*FROM Reservation where StudentRegistered = '{mainUser.StudentID}'");
+            //dr.Read();
+
+            //if (dr.HasRows)
+            //{
+            //    lblNoPeopleCurrentModify.Text = dr["Pax"].ToString();
+
+            //}
+
+            //SqlDataReader dr2 = Controller.Query($"SELECT* FROM Room");
+            //dr2.Read();
+
+            //if (dr2.HasRows)
+            //{
+            //    lblDateCurrentModify.Text = dr2["TimeSlot"].ToString();
+
+            //}
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -59,56 +108,84 @@ namespace IOOP_assignment
 
         private void btnConfirmModification_Click(object sender, EventArgs e)
         {
+            string roomchoice = ""; 
+            if (radAmberNewModify.Checked) {roomchoice = "Amber";}
+            else if (radBlackThornNewModify.Checked)
+            {roomchoice = "BlackThorn";}
+            else if (radCedarNewModify.Checked){roomchoice = "Cedar";}
+            else {roomchoice = "Daphne";}
+
+
+            string datetime = $"{mthCalendarNewModify.SelectionStart.ToString("yyyy-MM-dd")} {comboTimeNewModify.SelectedItem.ToString()}";
+            DateTime newtime = DateTime.ParseExact(datetime, "yyyy-MM-dd h:mm tt", CultureInfo.InvariantCulture);
+            // https://stackoverflow.com/a/28672247
+
+
+
+            // query the latest reservation of the student (that is pending, and after today)
+            // delete records from rr
+            // change status in rm from booked to free
+            // change status in respective room from free to booked 
+            // create new reservation BUT with current reservation id 
+
+            oldReservation = Controller.Query($"select top 1 rv.ReservationID, rv.ApprovalStatus, rv.Pax, MIN(rm.TimeSlot) as 'StartingTime' from Reservation rv inner join [Reservation-Room] rr on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where rv.StudentRegistered = {mainUser.StudentID} and rv.ApprovalStatus = 'Pending' group by rv.Pax, rv.ReservationID, rv.ApprovalStatus order by StartingTime Desc; ");
+            oldReservation.Read();
+            string currentReservationID = oldReservation["ReservationID"].ToString();
+            string sqlDeleteOld = $"DELETE FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'";
             
-        }
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
+            conn.Open();
 
-        private void lblCurrentTitleModify_Click(object sender, EventArgs e)
-        {
+            // get all the old rooms
+            List<string> oldRooms;
+            SqlDataReader drOldRooms = Controller.Query($"SELECT * FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'");
+            oldRooms = (from IDataRecord r in drOldRooms select (string)r["RoomID"]).ToList();
+            // https://stackoverflow.com/a/1370592
+
+            // delete old records
+            SqlCommand cmdDeleteOld = new SqlCommand(sqlDeleteOld, conn);
+            cmdDeleteOld.ExecuteNonQuery(); 
+
             
-        }
-
-        private void lblDateCurrentModify_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void lblTimeCurrentModify_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void lblNoPeopleCurrentModify_Click(object sender, EventArgs e)
-        {
-            //SqlConnection con = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf=;Integrated Security = True; Connect Timeout = 30");
-
-            //con.Open();
-
-            //SqlCommand cmd = new SqlCommand("SELECT Pax FROM Reservation where StudentRegistered = @StudentID", con);
-            //SqlDataReader dr = cmd.ExecuteReader();
-            ////cmd.Parameters.AddWithValue("@StudentID", 100003);
-            SqlDataReader dr = Controller.Query("SELECT Pax FROM Reservation where StudentRegistered = 100003");
-            dr.Read();
-
-            if (dr.HasRows)
+            // change all old room to free 
+            foreach (string room in oldRooms)
             {
-                lblNoPeopleCurrentModify.Text = dr["Pax"].ToString();
-               
+            string sqlBookedToFree = $"UPDATE Room SET BookStatus = 'Free' WHERE RoomID = '{room}'";
+                SqlCommand cmd = new SqlCommand(sqlBookedToFree, conn);
+                cmd.ExecuteNonQuery(); 
+                
             }
-          
+            // change status for respective room 
+            // find the first n, with starting time of (user input)
 
-            //con.Close();
+            // get all the new rooms
+            List<string> newRooms;
+            SqlDataReader drNewRooms = Controller.Query($"SELECT TOP {oldRooms.Count} * FROM Room WHERE TimeSlot >= '{newtime.ToString("yyyy-MM-dd hh:mm:ss tt")}' and BookStatus = 'Free' and RoomName LIKE '{roomchoice}%'");
+            newRooms = (from IDataRecord r in drNewRooms select (string)r["RoomID"]).ToList();
+            // change all new room to Booked
+            foreach (string room in newRooms)
+            {
+                string sqlBookedToFree = $"UPDATE Room SET BookStatus = 'Booked' WHERE RoomID = '{room}'";
+                SqlCommand cmd = new SqlCommand(sqlBookedToFree, conn);
+                cmd.ExecuteNonQuery();
 
+            }
+            // create new reservation-room pair 
+            foreach (string room in newRooms)
+            {
+                string sqlInsertReservationRoom = $"INSERT INTO [Reservation-Room] (ReservationID, RoomID) VALUES ('{currentReservationID}', '{room}')";
+                SqlCommand cmd = new SqlCommand(sqlInsertReservationRoom, conn);
+                cmd.ExecuteNonQuery();
+
+            }
+            MessageBox.Show("Your request have been modified.", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
-        private void radAmberNewModify_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
 
         private void comboPeopleNewModify_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if ((int.Parse(comboPeopleNewModify.SelectedItem.ToString()) >= 2) && (int.Parse(comboPeopleNewModify.SelectedItem.ToString())<4))
+            if ((int.Parse(comboPeopleNewModify.SelectedItem.ToString()) >= 2) && (int.Parse(comboPeopleNewModify.SelectedItem.ToString())<3))
             {
                 radDaphneNewModify.Enabled = true;
                 radCedarNewModify.Enabled = true;
@@ -116,7 +193,7 @@ namespace IOOP_assignment
                 radAmberNewModify.Enabled = true;
             }
 
-            else if ((int.Parse(comboPeopleNewModify.SelectedItem.ToString()) >= 2) && (int.Parse(comboPeopleNewModify.SelectedItem.ToString()) <8))
+            else if ((int.Parse(comboPeopleNewModify.SelectedItem.ToString()) >= 2) && (int.Parse(comboPeopleNewModify.SelectedItem.ToString()) <5))
             {
                 radDaphneNewModify.Enabled = false;
                 radCedarNewModify.Enabled = true;
@@ -124,7 +201,7 @@ namespace IOOP_assignment
                 radAmberNewModify.Enabled = true;
             }
 
-            else if ((int.Parse(comboPeopleNewModify.SelectedItem.ToString()) >= 2) && (int.Parse(comboPeopleNewModify.SelectedItem.ToString()) < 10))
+            else if ((int.Parse(comboPeopleNewModify.SelectedItem.ToString()) >= 2) && (int.Parse(comboPeopleNewModify.SelectedItem.ToString()) < 9))
             {
                 radDaphneNewModify.Enabled = false;
                 radCedarNewModify.Enabled = false;

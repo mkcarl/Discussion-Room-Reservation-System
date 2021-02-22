@@ -35,7 +35,7 @@ namespace IOOP_assignment
             date >= today , 
             order by reservation id, then take the last reservation
              */
-            string sqlQuery = $"select Reservation.ReservationID ,  RoomName, Min(TimeSlot) as 'Starting Time', ApprovalStatus, count(*) as Hours from Reservation inner join [Reservation-Room] on Reservation.ReservationID = [Reservation-Room].ReservationID inner join Room on [Reservation-Room].RoomID = Room.RoomID where Reservation.StudentRegistered = '{mainUser.StudentID}' group by Reservation.ReservationID, RoomName, ApprovalStatus;";
+            string sqlQuery = $"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', ApprovalStatus, count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = '{mainUser.StudentID}' GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY [Starting Time] DESC;";
             SqlDataReader dr = Controller.Query(sqlQuery);
             dr.Read();
             if (dr.HasRows)
@@ -57,6 +57,16 @@ namespace IOOP_assignment
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtStatusRequest_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDateRequest_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

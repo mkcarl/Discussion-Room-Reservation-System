@@ -84,6 +84,7 @@ namespace IOOP_assignment
             this.txtDateRequest.Size = new System.Drawing.Size(288, 31);
             this.txtDateRequest.TabIndex = 3;
             this.txtDateRequest.TabStop = false;
+            this.txtDateRequest.TextChanged += new System.EventHandler(this.txtDateRequest_TextChanged);
             // 
             // lblDateRequest
             // 
@@ -136,6 +137,7 @@ namespace IOOP_assignment
             this.txtStatusRequest.Size = new System.Drawing.Size(288, 31);
             this.txtStatusRequest.TabIndex = 18;
             this.txtStatusRequest.TabStop = false;
+            this.txtStatusRequest.TextChanged += new System.EventHandler(this.txtStatusRequest_TextChanged);
             // 
             // lblTimeRequest
             // 

@@ -31,5 +31,10 @@ namespace IOOP_assignment
         {
 
         }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
