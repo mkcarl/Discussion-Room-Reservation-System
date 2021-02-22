@@ -78,6 +78,12 @@
       <DependentUpon>dsReservation.xsd</DependentUpon>
     </Compile>
     <Compile Include="Librarian.cs" />
+    <Compile Include="MonthlyReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Student.cs" />
     <Compile Include="User_Info.cs">
       <SubType>Form</SubType>
@@ -143,6 +149,10 @@
     <EmbeddedResource Include="DailyReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DailyReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthlyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Info.resx">
       <DependentUpon>User_Info.cs</DependentUpon>

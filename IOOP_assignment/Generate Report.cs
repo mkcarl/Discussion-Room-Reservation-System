@@ -19,6 +19,17 @@ namespace IOOP_assignment
 
         private void Generate_Report_Load(object sender, EventArgs e)
         {
+            dsReservation ds = new dsReservation();
+            dsReservationTableAdapters.ReservationTableAdapter datC = new dsReservationTableAdapters.ReservationTableAdapter();
+            datC.Fill(ds.Reservation);
+            MonthlyReport monthrpt = new MonthlyReport();
+            monthrpt.SetDataSource(ds);
+            crystalMontlyReport.ReportSource = monthrpt;
+
+            DailyReport dailyrpt = new DailyReport();
+            dailyrpt.SetDataSource(ds);
+            crysDailyReport.ReportSource = dailyrpt;
+
 
         }
 

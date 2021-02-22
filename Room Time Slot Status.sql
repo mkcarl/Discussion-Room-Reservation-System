@@ -1,0 +1,1 @@
+﻿Select distinct TimeSlot from Room where TimeSlot >= '2021-02-17' and TimeSlot < '2021-02-18'  and BookStatus = 'Free' and RoomName Like 'Amber';

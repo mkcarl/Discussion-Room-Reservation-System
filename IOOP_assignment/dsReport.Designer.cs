@@ -20,9 +20,9 @@ namespace IOOP_assignment {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsReservation")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsReport")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsReservation : global::System.Data.DataSet {
+    public partial class dsReport : global::System.Data.DataSet {
         
         private LibrarianDataTable tableLibrarian;
         
@@ -48,7 +48,7 @@ namespace IOOP_assignment {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public dsReservation() {
+        public dsReport() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -59,7 +59,7 @@ namespace IOOP_assignment {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected dsReservation(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsReport(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -197,7 +197,7 @@ namespace IOOP_assignment {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsReservation cln = ((dsReservation)(base.Clone()));
+            dsReport cln = ((dsReport)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -310,9 +310,9 @@ namespace IOOP_assignment {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsReservation";
+            this.DataSetName = "dsReport";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsReservation.xsd";
+            this.Namespace = "http://tempuri.org/dsReport.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableLibrarian = new LibrarianDataTable();
@@ -388,7 +388,7 @@ namespace IOOP_assignment {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsReservation ds = new dsReservation();
+            dsReport ds = new dsReport();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -665,7 +665,7 @@ namespace IOOP_assignment {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsReservation ds = new dsReservation();
+                dsReport ds = new dsReport();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1007,7 +1007,7 @@ namespace IOOP_assignment {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsReservation ds = new dsReservation();
+                dsReport ds = new dsReport();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1291,7 +1291,7 @@ namespace IOOP_assignment {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsReservation ds = new dsReservation();
+                dsReport ds = new dsReport();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1612,7 +1612,7 @@ namespace IOOP_assignment {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsReservation ds = new dsReservation();
+                dsReport ds = new dsReport();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1947,7 +1947,7 @@ namespace IOOP_assignment {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsReservation ds = new dsReservation();
+                dsReport ds = new dsReport();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2661,7 +2661,7 @@ namespace IOOP_assignment {
         }
     }
 }
-namespace IOOP_assignment.dsReservationTableAdapters {
+namespace IOOP_assignment.dsReportTableAdapters {
     
     
     /// <summary>
@@ -2837,7 +2837,7 @@ namespace IOOP_assignment.dsReservationTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsReservation.LibrarianDataTable dataTable) {
+        public virtual int Fill(dsReport.LibrarianDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2850,9 +2850,9 @@ namespace IOOP_assignment.dsReservationTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsReservation.LibrarianDataTable GetData() {
+        public virtual dsReport.LibrarianDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsReservation.LibrarianDataTable dataTable = new dsReservation.LibrarianDataTable();
+            dsReport.LibrarianDataTable dataTable = new dsReport.LibrarianDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2860,14 +2860,14 @@ namespace IOOP_assignment.dsReservationTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsReservation.LibrarianDataTable dataTable) {
+        public virtual int Update(dsReport.LibrarianDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsReservation dataSet) {
+        public virtual int Update(dsReport dataSet) {
             return this.Adapter.Update(dataSet, "Librarian");
         }
         
@@ -3176,7 +3176,7 @@ SELECT ReservationID, ApprovalStatus, Comments, Pax, StudentRegistered, Libraria
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsReservation.ReservationDataTable dataTable) {
+        public virtual int Fill(dsReport.ReservationDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3189,9 +3189,9 @@ SELECT ReservationID, ApprovalStatus, Comments, Pax, StudentRegistered, Libraria
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsReservation.ReservationDataTable GetData() {
+        public virtual dsReport.ReservationDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsReservation.ReservationDataTable dataTable = new dsReservation.ReservationDataTable();
+            dsReport.ReservationDataTable dataTable = new dsReport.ReservationDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3199,14 +3199,14 @@ SELECT ReservationID, ApprovalStatus, Comments, Pax, StudentRegistered, Libraria
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsReservation.ReservationDataTable dataTable) {
+        public virtual int Update(dsReport.ReservationDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsReservation dataSet) {
+        public virtual int Update(dsReport dataSet) {
             return this.Adapter.Update(dataSet, "Reservation");
         }
         
@@ -3564,7 +3564,7 @@ SELECT ReservationID, RoomID FROM [Reservation-Room] WHERE (ReservationID = @Res
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsReservation._Reservation_RoomDataTable dataTable) {
+        public virtual int Fill(dsReport._Reservation_RoomDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3577,9 +3577,9 @@ SELECT ReservationID, RoomID FROM [Reservation-Room] WHERE (ReservationID = @Res
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsReservation._Reservation_RoomDataTable GetData() {
+        public virtual dsReport._Reservation_RoomDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsReservation._Reservation_RoomDataTable dataTable = new dsReservation._Reservation_RoomDataTable();
+            dsReport._Reservation_RoomDataTable dataTable = new dsReport._Reservation_RoomDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3587,14 +3587,14 @@ SELECT ReservationID, RoomID FROM [Reservation-Room] WHERE (ReservationID = @Res
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsReservation._Reservation_RoomDataTable dataTable) {
+        public virtual int Update(dsReport._Reservation_RoomDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsReservation dataSet) {
+        public virtual int Update(dsReport dataSet) {
             return this.Adapter.Update(dataSet, "Reservation-Room");
         }
         
@@ -3921,7 +3921,7 @@ SELECT RoomID, Capacity, TimeSlot, BookStatus, RoomName FROM Room WHERE (RoomID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsReservation.RoomDataTable dataTable) {
+        public virtual int Fill(dsReport.RoomDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3934,9 +3934,9 @@ SELECT RoomID, Capacity, TimeSlot, BookStatus, RoomName FROM Room WHERE (RoomID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsReservation.RoomDataTable GetData() {
+        public virtual dsReport.RoomDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsReservation.RoomDataTable dataTable = new dsReservation.RoomDataTable();
+            dsReport.RoomDataTable dataTable = new dsReport.RoomDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3944,14 +3944,14 @@ SELECT RoomID, Capacity, TimeSlot, BookStatus, RoomName FROM Room WHERE (RoomID 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsReservation.RoomDataTable dataTable) {
+        public virtual int Update(dsReport.RoomDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsReservation dataSet) {
+        public virtual int Update(dsReport dataSet) {
             return this.Adapter.Update(dataSet, "Room");
         }
         
@@ -4318,7 +4318,7 @@ SELECT StudentID, Password, Surname, GivenName, EmailAddress, Role FROM Student 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsReservation.StudentDataTable dataTable) {
+        public virtual int Fill(dsReport.StudentDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4331,9 +4331,9 @@ SELECT StudentID, Password, Surname, GivenName, EmailAddress, Role FROM Student 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsReservation.StudentDataTable GetData() {
+        public virtual dsReport.StudentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsReservation.StudentDataTable dataTable = new dsReservation.StudentDataTable();
+            dsReport.StudentDataTable dataTable = new dsReport.StudentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4341,14 +4341,14 @@ SELECT StudentID, Password, Surname, GivenName, EmailAddress, Role FROM Student 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsReservation.StudentDataTable dataTable) {
+        public virtual int Update(dsReport.StudentDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsReservation dataSet) {
+        public virtual int Update(dsReport dataSet) {
             return this.Adapter.Update(dataSet, "Student");
         }
         
@@ -4758,7 +4758,7 @@ SELECT StudentID, Password, Surname, GivenName, EmailAddress, Role FROM Student 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(dsReservation dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dsReport dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._studentTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Student.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -4813,7 +4813,7 @@ SELECT StudentID, Password, Surname, GivenName, EmailAddress, Role FROM Student 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(dsReservation dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dsReport dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._studentTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Student.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -4863,7 +4863,7 @@ SELECT StudentID, Password, Surname, GivenName, EmailAddress, Role FROM Student 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(dsReservation dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dsReport dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._reservation_RoomTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet._Reservation_Room.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -4937,7 +4937,7 @@ SELECT StudentID, Password, Surname, GivenName, EmailAddress, Role FROM Student 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(dsReservation dataSet) {
+        public virtual int UpdateAll(dsReport dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
