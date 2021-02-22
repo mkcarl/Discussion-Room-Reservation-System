@@ -233,5 +233,10 @@ namespace IOOP_assignment
             Attachment report = new Attachment(rdMonthly.ExportToStream(ExportFormatType.PortableDocFormat), $"{filename}.pdf"); //https://www.aspsnippets.com/Articles/Export-Crystal-Report-to-PDF-and-send-as-Email-Attachment-in-ASPNet.aspx
             sendEmail(mainUser.Email, "no.reply", "", report);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

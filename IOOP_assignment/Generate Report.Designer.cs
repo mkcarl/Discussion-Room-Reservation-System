@@ -220,6 +220,7 @@
             this.crvMonthly.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvMonthly.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvMonthly.DisplayStatusBar = false;
+            this.crvMonthly.DisplayToolbar = false;
             this.crvMonthly.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.crvMonthly.Location = new System.Drawing.Point(387, 0);
             this.crvMonthly.Name = "crvMonthly";
@@ -283,6 +284,7 @@
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 77;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblGenerateReport
             // 

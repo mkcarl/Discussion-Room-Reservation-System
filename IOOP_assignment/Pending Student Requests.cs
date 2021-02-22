@@ -69,7 +69,7 @@ namespace IOOP_assignment
             SqlDataReader drOldRooms = Controller.Query(queryRoom);
             rooms = (from IDataRecord r in drOldRooms select (string)r["RoomID"]).ToList();
 
-            string query = $"UPDATE Reservation SET ApprovalStatus = 'Approve' WHERE ReservationID = '{selectedID}'";
+            string query = $"UPDATE Reservation SET ApprovalStatus = 'Approve' WHERE ApprovalStatus = 'Pending'AND ReservationID = '{selectedID}'";
 
             SqlCommand cmd = new SqlCommand(query, conn);
 
@@ -92,7 +92,7 @@ namespace IOOP_assignment
             SqlDataReader drOldRooms = Controller.Query(queryRoom);
             rooms = (from IDataRecord r in drOldRooms select (string)r["RoomID"]).ToList();
 
-            string query = $"UPDATE Reservation SET ApprovalStatus = 'Reject' WHERE ReservationID = '{selectedID}'";
+            string query = $"UPDATE Reservation SET ApprovalStatus = 'Reject' WHERE ApprovalStatus = 'Pending'AND ReservationID = '{selectedID}'";
 
             SqlCommand cmd = new SqlCommand(query, conn);
 

@@ -36,6 +36,12 @@ namespace IOOP_assignment
 
         private void comboPeopleReserve_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // deselect all radio button 
+            radAmberReseve.Checked = false;
+            radBlackThornReserve.Checked = false;
+            radCedarReserve.Checked = false;
+            radDaphneReserve.Checked = false;
+
             if (int.Parse(comboPeopleReserve.SelectedItem.ToString()) > 8)
             {
                 radAmberReseve.Enabled = true;
@@ -44,23 +50,23 @@ namespace IOOP_assignment
                 radDaphneReserve.Enabled = false;
             }
 
-            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) <= 8) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) >= 4))
+            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) <= 8) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) > 4))
             {
                 radAmberReseve.Enabled = true;
                 radBlackThornReserve.Enabled = true;
                 radCedarReserve.Enabled = false;
                 radDaphneReserve.Enabled = false;
             }
-            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) < 4) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) >= 2))
+            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) <= 4) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) > 2))
             {
                 radAmberReseve.Enabled = true;
                 radBlackThornReserve.Enabled = true;
                 radCedarReserve.Enabled = true;
-                radDaphneReserve.Enabled = true;
+                radDaphneReserve.Enabled = false;
             }
-            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) < 2) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) >= 0))
+            else if ((int.Parse(comboPeopleReserve.SelectedItem.ToString()) <= 2) && (int.Parse(comboPeopleReserve.SelectedItem.ToString()) > 0))
             {
-                radAmberReseve.Enabled = false;
+                radAmberReseve.Enabled = true;
                 radBlackThornReserve.Enabled = true;
                 radCedarReserve.Enabled = true;
                 radDaphneReserve.Enabled = true;
@@ -71,93 +77,6 @@ namespace IOOP_assignment
         {
             monthCalendarReserve.MinDate = DateTime.Now.AddDays(2);
             monthCalendarReserve.MaxDate = DateTime.Now.AddDays(7);
-            //DateTime dt = DateTime.Parse(monthCalendarReserve.SelectionStart.ToString());
-            
-
-            //if (radAmberReseve.Checked == true)
-            //{
-            //    string roomtype = "Amber";
-            //    SqlDataReader dr = Controller.Query($"Select distinct TimeSlot from Room where TimeSlot > '{dt.ToString("yyyy-MM-dd")}' and TimeSlot < '{dt.AddDays(1).ToString("yyyy-MM-dd")}' and BookStatus = 'Free' and RoomName Like '{roomtype}%'");
-
-            //    if (dr.HasRows)
-            //    {
-            //        List<DateTime> timeslots;
-            //        timeslots = (from IDataRecord r in dr select (DateTime)r["TimeSlot"]).ToList();
-            //        comboTimeReserve.Items.Clear();
-
-            //        foreach (DateTime time in timeslots)
-            //        {
-
-            //            comboTimeReserve.Items.Add(time.ToString("hh:mm tt"));
-            //        }
-
-            //    }
-
-            //}
-            //else if (radBlackThornReserve.Checked == true)
-            //{
-            //    string roomtype = "BlackThorn";
-            //    SqlDataReader dr = Controller.Query($"Select distinct TimeSlot from Room where TimeSlot > '{dt.ToString("yyyy-MM-dd")}' and TimeSlot < '{dt.AddDays(1).ToString("yyyy-MM-dd")}' and BookStatus = 'Free' and RoomName Like '{roomtype}%'");
-
-            //    dr.Read();
-
-            //    if (dr.HasRows)
-            //    {
-            //        List<DateTime> timeslots;
-            //        timeslots = (from IDataRecord r in dr select (DateTime)r["TimeSlot"]).ToList();
-            //        comboTimeReserve.Items.Clear();
-
-            //        foreach (DateTime time in timeslots)
-            //        {
-            //            comboTimeReserve.Items.Add(time.ToString("hh:mm tt"));
-            //        }
-            //        for (int i = 0; i < int.Parse(comboDurationReserve.SelectedItem.ToString())-1; i++)
-            //        {
-            //            comboTimeReserve.Items.RemoveAt(comboTimeReserve.Items.Count-1);
-            //        }
-
-
-            //    }
-            //}
-            //else if (radCedarReserve.Enabled == true)
-            //{
-            //    string roomtype = "Cedar";
-            //    SqlDataReader dr = Controller.Query($"Select distinct TimeSlot from Room where TimeSlot > '{dt.ToString("yyyy-MM-dd")}' and TimeSlot < '{dt.AddDays(1).ToString("yyyy-MM-dd")}' and BookStatus = 'Free' and RoomName Like '{roomtype}%'");
-
-            //    if (dr.HasRows)
-            //    {
-            //        List<DateTime> timeslots;
-            //        timeslots = (from IDataRecord r in dr select (DateTime)r["TimeSlot"]).ToList();
-            //        comboTimeReserve.Items.Clear();
-
-            //        foreach (DateTime time in timeslots)
-            //        {
-
-            //            comboTimeReserve.Items.Add(time.ToString("hh:mm tt"));
-            //        }
-
-            //    }
-            //}
-            //else if (radDaphneReserve.Enabled == true)
-            //{
-            //    string roomtype = "Daphne";
-            //    SqlDataReader dr = Controller.Query($"Select distinct TimeSlot from Room where TimeSlot > '{dt.ToString("yyyy-MM-dd")}' and TimeSlot < '{dt.AddDays(1).ToString("yyyy-MM-dd")}' and BookStatus = 'Free' and RoomName Like '{roomtype}%'");
-
-            //    if (dr.HasRows)
-            //    {
-            //        List<DateTime> timeslots;
-            //        timeslots = (from IDataRecord r in dr select (DateTime)r["TimeSlot"]).ToList();
-            //        comboTimeReserve.Items.Clear();
-
-            //        foreach (DateTime time in timeslots)
-            //        {
-
-            //            comboTimeReserve.Items.Add(time.ToString("hh:mm tt"));
-            //        }
-
-            //    }
-            //}
-
 
         }
 
@@ -280,7 +199,7 @@ namespace IOOP_assignment
 
             foreach (string room in rooms)
             {
-                string roomUpdate = ($"UPDATE Room SET BookStatus = 'Book' WHERE RoomID = '{room}'");
+                string roomUpdate = ($"UPDATE Room SET BookStatus = 'Booked' WHERE RoomID = '{room}'");
 
                 SqlCommand cmdRoomUpdate = new SqlCommand(roomUpdate,conn);
                 cmdRoomUpdate.ExecuteNonQuery();

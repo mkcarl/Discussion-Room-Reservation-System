@@ -83,6 +83,7 @@ namespace IOOP_assignment
             this.radAmberNewModify.TabStop = true;
             this.radAmberNewModify.Text = "Amber";
             this.radAmberNewModify.UseVisualStyleBackColor = true;
+            this.radAmberNewModify.CheckedChanged += new System.EventHandler(this.radAmberNewModify_CheckedChanged);
             // 
             // radBlackThornNewModify
             // 
@@ -95,6 +96,7 @@ namespace IOOP_assignment
             this.radBlackThornNewModify.TabStop = true;
             this.radBlackThornNewModify.Text = "BlackThorn";
             this.radBlackThornNewModify.UseVisualStyleBackColor = true;
+            this.radBlackThornNewModify.CheckedChanged += new System.EventHandler(this.radBlackThornNewModify_CheckedChanged);
             // 
             // radCedarNewModify
             // 
@@ -107,6 +109,7 @@ namespace IOOP_assignment
             this.radCedarNewModify.TabStop = true;
             this.radCedarNewModify.Text = "Cedar";
             this.radCedarNewModify.UseVisualStyleBackColor = true;
+            this.radCedarNewModify.CheckedChanged += new System.EventHandler(this.radCedarNewModify_CheckedChanged);
             // 
             // radDaphneNewModify
             // 
@@ -119,6 +122,7 @@ namespace IOOP_assignment
             this.radDaphneNewModify.TabStop = true;
             this.radDaphneNewModify.Text = "Daphne";
             this.radDaphneNewModify.UseVisualStyleBackColor = true;
+            this.radDaphneNewModify.CheckedChanged += new System.EventHandler(this.radDaphneNewModify_CheckedChanged);
             // 
             // btnCancelModify
             // 
@@ -249,7 +253,7 @@ namespace IOOP_assignment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 501);
+            this.ClientSize = new System.Drawing.Size(944, 501);
             this.Controls.Add(this.lblTitleNewModify);
             this.Controls.Add(this.comboPeopleNewModify);
             this.Controls.Add(this.mthCalendarNewModify);

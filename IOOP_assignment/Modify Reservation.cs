@@ -52,11 +52,15 @@ namespace IOOP_assignment
             mthCalendarNewModify.MinDate = DateTime.Now.AddDays(2);
             mthCalendarNewModify.MaxDate = DateTime.Now.AddDays(7);
 
-            //string sqlQuery = $"select Reservation.ReservationID ,  RoomName, Min(TimeSlot) as 'Starting Time', Pax, count(*) as Hours from Reservation inner join [Reservation-Room] on Reservation.ReservationID = [Reservation-Room].ReservationID inner join Room on [Reservation-Room].RoomID = Room.RoomID where Reservation.StudentRegistered = '{mainUser.StudentID}' group by Reservation.ReservationID, RoomName";
+            comboPeopleNewModify.Enabled = false;
+            comboTimeNewModify.Enabled = false;
+            radAmberNewModify.Enabled = false;
+            radBlackThornNewModify.Enabled = false;
+            radCedarNewModify.Enabled = false;
+            radDaphneNewModify.Enabled = false;
+            btnConfirmModification.Enabled = false;
 
             SqlDataReader dr = Controller.Query($"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', ApprovalStatus, count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = '{mainUser.StudentID}' and ApprovalStatus = 'Pending' OR ApprovalStatus = 'Approve' GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY [Starting Time] DESC");
-
-            //SqlDataReader dr = Controller.Query($"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = 100001 GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY [Starting Time] DESC");
 
             dr.Read();
             if (dr.HasRows)
@@ -122,40 +126,31 @@ namespace IOOP_assignment
             
             SqlDataReader dr = Controller.Query($"Select distinct TimeSlot from Room where TimeSlot > '{dt.ToString("yyyy-MM-dd")}' and TimeSlot < '{dt.AddDays(1).ToString("yyyy-MM-dd")}' and BookStatus = 'Free' and RoomName Like '{roomtype}%'");
 
-            //SqlDataReader currentReservationID = Controller.Query($"select top 1 rv.ReservationID from Reservation rv inner join [Reservation-Room] rr on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where rv.StudentRegistered = '{mainUser.StudentID}', group by rv.ReservationID;");
+            SqlDataReader currentbooking = Controller.Query($"Select rr.ReservationID, rv.StudentRegistered, rm.RoomName, rv.LibrarianReviewed, COUNT(rr.ReservationID) as Duration from [Reservation-Room] rr inner join Reservation rv on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where StudentRegistered = '{mainUser.StudentID}' group by rr.ReservationID, rv.StudentRegistered, rm.RoomName, rv.LibrarianReviewed");
 
-            //currentReservationID.Read();
+            currentbooking.Read();
+            int currentduration = (int)currentbooking["Duration"];
 
 
-            //string currentID= currentReservationID["ReservationID"].ToString();
-
-            //SqlDataReader duration = Controller.Query($"Select [Reservation-Room].ReservationID, [Reservation-Room].RoomID count(*) as Duration from Reservation-Room INNER JOIN [Reservation] on [Rerservation-Room].ReservationID = [Room].ReservationID where Reservation.StudentRegistered = '{mainUser.StudentID}'");
-
+            if (dr.HasRows)
             {
-                SqlDataReader currentbooking = Controller.Query($"Select rr.ReservationID, rv.StudentRegistered, rm.RoomName, rv.LibrarianReviewed, COUNT(rr.ReservationID) as Duration from [Reservation-Room] rr inner join Reservation rv on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where StudentRegistered = '{mainUser.StudentID}' group by rr.ReservationID, rv.StudentRegistered, rm.RoomName, rv.LibrarianReviewed");
+                List<DateTime> timeslots;
+                timeslots = (from IDataRecord r in dr select (DateTime)r["TimeSlot"]).ToList();
+                comboTimeNewModify.Items.Clear();
 
-                currentbooking.Read();
-                int currentduration = (int)currentbooking["Duration"];
-
-
-                if (dr.HasRows)
+                foreach (DateTime time in timeslots)
                 {
-                    List<DateTime> timeslots;
-                    timeslots = (from IDataRecord r in dr select (DateTime)r["TimeSlot"]).ToList();
-                    comboTimeNewModify.Items.Clear();
+                    comboTimeNewModify.Items.Add(time.ToString("hh:mm tt"));
 
-                    foreach (DateTime time in timeslots)
-                    {
-                        comboTimeNewModify.Items.Add(time.ToString("hh:mm tt"));
-
-                    }
-                    for (int i = 0; i < currentduration; i++)
-                    {
-                        comboTimeNewModify.Items.RemoveAt(comboTimeNewModify.Items.Count - 1);
-                    }
                 }
-               
+                for (int i = 0; i < currentduration; i++)
+                {
+                    comboTimeNewModify.Items.RemoveAt(comboTimeNewModify.Items.Count - 1);
+                }
+                comboPeopleNewModify.Enabled = true; 
             }
+               
+            
         }
 
         private void btnConfirmModification_Click(object sender, EventArgs e)
@@ -237,6 +232,12 @@ namespace IOOP_assignment
 
         private void comboPeopleNewModify_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // deselect all radio button 
+            radAmberNewModify.Checked = false;
+            radBlackThornNewModify.Checked = false;
+            radCedarNewModify.Checked = false;
+            radDaphneNewModify.Checked = false;
+
             if ((int.Parse(comboPeopleNewModify.SelectedItem.ToString()) >= 2) && (int.Parse(comboPeopleNewModify.SelectedItem.ToString())<3))
             {
                 radDaphneNewModify.Enabled = true;
@@ -268,11 +269,12 @@ namespace IOOP_assignment
                 radBlackThornNewModify.Enabled = false;
                 radAmberNewModify.Enabled = true;
             }
+
         }
 
         private void comboTimeNewModify_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            btnConfirmModification.Enabled = true;
         }
 
         private void btnResetModify_Click(object sender, EventArgs e)
@@ -302,11 +304,11 @@ namespace IOOP_assignment
             currentRooms = (from IDataRecord r in currentBooking select (string)r["RoomID"]).ToList();
             // https://stackoverflow.com/a/1370592
 
-            string sqlDeleteCurrentReservationID = $"DELETE FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'";
+            //string sqlDeleteCurrentReservationID = $"DELETE FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'";
 
-            // delete old records
-            SqlCommand cmdDeleteOld = new SqlCommand(sqlDeleteCurrentReservationID, conn);
-            cmdDeleteOld.ExecuteNonQuery();
+            //// delete old records
+            //SqlCommand cmdDeleteOld = new SqlCommand(sqlDeleteCurrentReservationID, conn);
+            //cmdDeleteOld.ExecuteNonQuery();
 
             SqlCommand cmdChangeApproval = new SqlCommand(approvalstatus, conn);
             cmdChangeApproval.ExecuteNonQuery();
@@ -326,5 +328,27 @@ namespace IOOP_assignment
             this.Close();
             }
 
+        private void radAmberNewModify_CheckedChanged(object sender, EventArgs e)
+        {
+            comboTimeNewModify.Enabled = true; 
         }
+
+        private void radBlackThornNewModify_CheckedChanged(object sender, EventArgs e)
+        {
+            comboTimeNewModify.Enabled = true;
+
+        }
+
+        private void radCedarNewModify_CheckedChanged(object sender, EventArgs e)
+        {
+            comboTimeNewModify.Enabled = true;
+
+        }
+
+        private void radDaphneNewModify_CheckedChanged(object sender, EventArgs e)
+        {
+            comboTimeNewModify.Enabled = true;
+
+        }
+    }
     }
