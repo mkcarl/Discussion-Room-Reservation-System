@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace IOOP_assignment
 {
@@ -15,6 +16,7 @@ namespace IOOP_assignment
     {
         string roomname = "";
         string roomtype = "";
+        Student mainUser;
 
         public FormReserve()
         {
@@ -24,7 +26,7 @@ namespace IOOP_assignment
         
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            btnConfirmReservation.Enabled = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -63,6 +65,7 @@ namespace IOOP_assignment
                 radCedarReserve.Enabled = true;
                 radDaphneReserve.Enabled = true;
             }
+            comboDurationReserve.Enabled = true;
         }
         private void monthCalendarReserve_DateChanged(object sender, DateRangeEventArgs e)
         {
@@ -160,8 +163,22 @@ namespace IOOP_assignment
 
         private void FormReserve_Load(object sender, EventArgs e)
         {
+            
+            if (Program.LoginRole == "Student")
+            {
+                mainUser = Program.StudentUser;
+            }
+            else
+            {
+                mainUser = Program.LibrarianUser;
+            }
+
             monthCalendarReserve.MinDate = DateTime.Now.AddDays(2);
             monthCalendarReserve.MaxDate = DateTime.Now.AddDays(7);
+            comboDurationReserve.Enabled = false;
+            comboTimeReserve.Enabled = false;
+            btnConfirmReservation.Enabled = false;
+
         }
 
         string timeSlot = string.Empty;
@@ -203,7 +220,7 @@ namespace IOOP_assignment
             DateTime dt = DateTime.Parse(monthCalendarReserve.SelectionStart.ToString());
             SqlDataReader dr = Controller.Query($"Select distinct TimeSlot from Room where TimeSlot > '{dt.ToString("yyyy-MM-dd")}' and TimeSlot < '{dt.AddDays(1).ToString("yyyy-MM-dd")}' and BookStatus = 'Free' and RoomName Like '{roomtype}%'");
 
-            dr.Read();
+            dr.Read(); 
 
             if (dr.HasRows)
             {
@@ -222,6 +239,7 @@ namespace IOOP_assignment
 
 
             }
+            comboTimeReserve.Enabled = true;
         }
 
         
@@ -229,14 +247,54 @@ namespace IOOP_assignment
         {
             SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
 
-
             conn.Open();
 
-            string query = ("INSERT INTO Reservation-Room (RoomName) VALUES (@BookStatus)");
+            int counter;
+            try
+            {
+                SqlDataReader dr = Controller.Query("SELECT TOP 1 ReservationID FROM Reservation ORDER BY ReservationID DESC;");
+                dr.Read();
+                counter = int.Parse(dr["ReservationID"].ToString().Substring(2)); // basically selecting the last row and extract the number from it 
+                counter++;
+            }
+            catch (InvalidOperationException)
+            {
+                counter = 0;
+            }
 
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@BookStatus", roomname);
-            SqlDataReader reader = cmd.ExecuteReader();
+            string alterTime = $"{monthCalendarReserve.SelectionStart.ToString("yyyy-MM-dd")} {comboTimeReserve.SelectedItem.ToString()}";
+
+            //create a reservation with latest reservation ID
+            //set room status that are selected from free to booked
+            //create an entry in reservation room table to signify which reservation is taking which room
+
+            string createReservation = $"INSERT INTO Reservation (ReservationID, ApprovalStatus,Comments,Pax,StudentRegistered) VALUES ('RV{counter.ToString("000000")}','Pending','',{comboPeopleReserve.SelectedItem.ToString()},{mainUser.StudentID})";
+            SqlCommand cmdCreateReservation = new SqlCommand(createReservation, conn);
+            cmdCreateReservation.ExecuteNonQuery();
+
+            string queryRoom = $"SELECT TOP {int.Parse(comboDurationReserve.SelectedItem.ToString())} RoomID FROM Room WHERE RoomName LIKE '{roomname}%' AND TimeSlot >= '{alterTime}' AND BookStatus = 'Free'";
+
+            List<string> rooms;
+            SqlDataReader drOldRooms = Controller.Query(queryRoom);
+            rooms = (from IDataRecord r in drOldRooms select (string)r["RoomID"]).ToList();
+
+            foreach (string room in rooms)
+            {
+                string roomUpdate = ($"UPDATE Room SET BookStatus = 'Book' WHERE RoomID = '{room}'");
+
+                SqlCommand cmdRoomUpdate = new SqlCommand(roomUpdate,conn);
+                cmdRoomUpdate.ExecuteNonQuery();
+            }
+
+            foreach (string room in rooms)
+            {
+                string reservationEntry = $"INSERT INTO [Reservation-Room] (ReservationID,RoomID) VALUES ('RV{counter.ToString("000000")}','{room}')";
+                SqlCommand cmdReservationEntry = new SqlCommand(reservationEntry, conn);
+                cmdReservationEntry.ExecuteNonQuery();
+            }
+
+
+
 
             MessageBox.Show("Your room reservation is complete");
 
@@ -250,7 +308,7 @@ namespace IOOP_assignment
 
         private void radBlackThornReserve_CheckedChanged(object sender, EventArgs e)
         {
-            roomname = "Black Thorn";
+            roomname = "BlackThorn";
         }
 
         private void radCedarReserve_CheckedChanged(object sender, EventArgs e)

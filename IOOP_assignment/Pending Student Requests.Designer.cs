@@ -30,13 +30,6 @@ namespace IOOP_assignment
         private void InitializeComponent()
         {
             this.dgvStudentRequests = new System.Windows.Forms.DataGridView();
-            this.Reservation_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Student_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Room_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number_of_Students = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPendingStudentReq = new System.Windows.Forms.Label();
             this.btnReject = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,70 +43,16 @@ namespace IOOP_assignment
             // 
             this.dgvStudentRequests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStudentRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudentRequests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Reservation_ID,
-            this.Student_ID,
-            this.Date,
-            this.Time,
-            this.Room_Name,
-            this.Number_of_Students,
-            this.Status});
             this.dgvStudentRequests.Location = new System.Drawing.Point(56, 68);
             this.dgvStudentRequests.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvStudentRequests.MultiSelect = false;
             this.dgvStudentRequests.Name = "dgvStudentRequests";
             this.dgvStudentRequests.RowHeadersWidth = 51;
             this.dgvStudentRequests.RowTemplate.Height = 24;
+            this.dgvStudentRequests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStudentRequests.Size = new System.Drawing.Size(838, 367);
             this.dgvStudentRequests.TabIndex = 0;
             this.dgvStudentRequests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Reservation_ID
-            // 
-            this.Reservation_ID.FillWeight = 50F;
-            this.Reservation_ID.HeaderText = "Reservation ID";
-            this.Reservation_ID.MinimumWidth = 6;
-            this.Reservation_ID.Name = "Reservation_ID";
-            // 
-            // Student_ID
-            // 
-            this.Student_ID.FillWeight = 50F;
-            this.Student_ID.HeaderText = "Student ID";
-            this.Student_ID.MinimumWidth = 6;
-            this.Student_ID.Name = "Student_ID";
-            // 
-            // Date
-            // 
-            this.Date.FillWeight = 60F;
-            this.Date.HeaderText = "Date";
-            this.Date.MinimumWidth = 6;
-            this.Date.Name = "Date";
-            // 
-            // Time
-            // 
-            this.Time.FillWeight = 40F;
-            this.Time.HeaderText = "Time";
-            this.Time.MinimumWidth = 6;
-            this.Time.Name = "Time";
-            // 
-            // Room_Name
-            // 
-            this.Room_Name.HeaderText = "Room Name";
-            this.Room_Name.MinimumWidth = 6;
-            this.Room_Name.Name = "Room_Name";
-            // 
-            // Number_of_Students
-            // 
-            this.Number_of_Students.FillWeight = 65F;
-            this.Number_of_Students.HeaderText = "Number of Students";
-            this.Number_of_Students.MinimumWidth = 6;
-            this.Number_of_Students.Name = "Number_of_Students";
-            // 
-            // Status
-            // 
-            this.Status.FillWeight = 50F;
-            this.Status.HeaderText = "Status";
-            this.Status.MinimumWidth = 6;
-            this.Status.Name = "Status";
             // 
             // lblPendingStudentReq
             // 
@@ -210,12 +149,5 @@ namespace IOOP_assignment
         private System.Windows.Forms.Button btnReject;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnApprove;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Reservation_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Student_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Room_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Number_of_Students;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }
