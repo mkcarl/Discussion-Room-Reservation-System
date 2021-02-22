@@ -72,10 +72,18 @@
       <DependentUpon>DailyReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="dsReservation.Designer.cs">
+    <Compile Include="dsCustom.cs">
+      <DependentUpon>dsCustom.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsCustom.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsReservation.xsd</DependentUpon>
+      <DependentUpon>dsCustom.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsLibrary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLibrary.xsd</DependentUpon>
     </Compile>
     <Compile Include="Librarian.cs" />
     <Compile Include="LibrarianRegistration.cs">
@@ -160,9 +168,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>MonthlyReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="LibrarianRegistration.resx">
-      <DependentUpon>LibrarianRegistration.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="User_Info.resx">
       <DependentUpon>User_Info.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,16 +202,27 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="dsReservation.xsc">
-      <DependentUpon>dsReservation.xsd</DependentUpon>
+    <None Include="dsCustom.xsc">
+      <DependentUpon>dsCustom.xsd</DependentUpon>
     </None>
-    <None Include="dsReservation.xsd">
+    <None Include="dsCustom.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsReservation.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsCustom.Designer.cs</LastGenOutput>
     </None>
-    <None Include="dsReservation.xss">
-      <DependentUpon>dsReservation.xsd</DependentUpon>
+    <None Include="dsCustom.xss">
+      <DependentUpon>dsCustom.xsd</DependentUpon>
+    </None>
+    <None Include="dsLibrary.xsc">
+      <DependentUpon>dsLibrary.xsd</DependentUpon>
+    </None>
+    <None Include="dsLibrary.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLibrary.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsLibrary.xss">
+      <DependentUpon>dsLibrary.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <EmbeddedResource Include="Reserve Room.resx">

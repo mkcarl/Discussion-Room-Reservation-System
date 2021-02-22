@@ -30,19 +30,17 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabDaily = new System.Windows.Forms.TabPage();
+            this.crvDaily = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnEmail = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnEmailDaily = new System.Windows.Forms.Button();
+            this.btnSaveDaily = new System.Windows.Forms.Button();
             this.lblGenerateDailyReport = new System.Windows.Forms.Label();
             this.mthCalendar = new System.Windows.Forms.MonthCalendar();
-            this.crysDailyReport = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.MonthReport = new IOOP_assignment.DailyReport();
             this.tabMonthly = new System.Windows.Forms.TabPage();
-            this.crystalMontlyReport = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.MonthlyReport1 = new IOOP_assignment.MonthlyReport();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.crvMonthly = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.btnEmailMonthly = new System.Windows.Forms.Button();
+            this.btnSaveMonthly = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblGenerateReport = new System.Windows.Forms.Label();
@@ -61,6 +59,7 @@
             this.btnFeb = new System.Windows.Forms.Button();
             this.btnMar = new System.Windows.Forms.Button();
             this.btnApr = new System.Windows.Forms.Button();
+            this.MonthReport = new IOOP_assignment.DailyReport();
             this.tabControl1.SuspendLayout();
             this.tabDaily.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,13 +82,13 @@
             // tabDaily
             // 
             this.tabDaily.BackColor = System.Drawing.Color.White;
+            this.tabDaily.Controls.Add(this.crvDaily);
             this.tabDaily.Controls.Add(this.pictureBox1);
             this.tabDaily.Controls.Add(this.btnBack);
-            this.tabDaily.Controls.Add(this.btnEmail);
-            this.tabDaily.Controls.Add(this.btnSave);
+            this.tabDaily.Controls.Add(this.btnEmailDaily);
+            this.tabDaily.Controls.Add(this.btnSaveDaily);
             this.tabDaily.Controls.Add(this.lblGenerateDailyReport);
             this.tabDaily.Controls.Add(this.mthCalendar);
-            this.tabDaily.Controls.Add(this.crysDailyReport);
             this.tabDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDaily.Location = new System.Drawing.Point(4, 22);
             this.tabDaily.Margin = new System.Windows.Forms.Padding(2);
@@ -99,6 +98,19 @@
             this.tabDaily.TabIndex = 0;
             this.tabDaily.Text = "Daily";
             this.tabDaily.ToolTipText = "Daily";
+            // 
+            // crvDaily
+            // 
+            this.crvDaily.ActiveViewIndex = -1;
+            this.crvDaily.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvDaily.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvDaily.DisplayStatusBar = false;
+            this.crvDaily.DisplayToolbar = false;
+            this.crvDaily.Location = new System.Drawing.Point(349, 0);
+            this.crvDaily.Name = "crvDaily";
+            this.crvDaily.Size = new System.Drawing.Size(587, 475);
+            this.crvDaily.TabIndex = 78;
+            this.crvDaily.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // pictureBox1
             // 
@@ -127,25 +139,27 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnEmail
+            // btnEmailDaily
             // 
-            this.btnEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmail.Location = new System.Drawing.Point(178, 331);
-            this.btnEmail.Name = "btnEmail";
-            this.btnEmail.Size = new System.Drawing.Size(152, 35);
-            this.btnEmail.TabIndex = 75;
-            this.btnEmail.Text = "Send to Email";
-            this.btnEmail.UseVisualStyleBackColor = true;
+            this.btnEmailDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmailDaily.Location = new System.Drawing.Point(178, 331);
+            this.btnEmailDaily.Name = "btnEmailDaily";
+            this.btnEmailDaily.Size = new System.Drawing.Size(152, 35);
+            this.btnEmailDaily.TabIndex = 75;
+            this.btnEmailDaily.Text = "Send to Email";
+            this.btnEmailDaily.UseVisualStyleBackColor = true;
+            this.btnEmailDaily.Click += new System.EventHandler(this.btnEmail_Click);
             // 
-            // btnSave
+            // btnSaveDaily
             // 
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(5, 331);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(132, 35);
-            this.btnSave.TabIndex = 74;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSaveDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveDaily.Location = new System.Drawing.Point(5, 331);
+            this.btnSaveDaily.Name = "btnSaveDaily";
+            this.btnSaveDaily.Size = new System.Drawing.Size(132, 35);
+            this.btnSaveDaily.TabIndex = 74;
+            this.btnSaveDaily.Text = "Save";
+            this.btnSaveDaily.UseVisualStyleBackColor = true;
+            this.btnSaveDaily.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // lblGenerateDailyReport
             // 
@@ -161,41 +175,16 @@
             // 
             this.mthCalendar.Location = new System.Drawing.Point(43, 128);
             this.mthCalendar.Margin = new System.Windows.Forms.Padding(7);
+            this.mthCalendar.MaxSelectionCount = 1;
             this.mthCalendar.Name = "mthCalendar";
             this.mthCalendar.TabIndex = 44;
-            // 
-            // crysDailyReport
-            // 
-            this.crysDailyReport.ActiveViewIndex = 0;
-            this.crysDailyReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crysDailyReport.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crysDailyReport.DisplayStatusBar = false;
-            this.crysDailyReport.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.crysDailyReport.Location = new System.Drawing.Point(347, 0);
-            this.crysDailyReport.Name = "crysDailyReport";
-            this.crysDailyReport.ReportSource = this.MonthReport;
-            this.crysDailyReport.ShowCloseButton = false;
-            this.crysDailyReport.ShowCopyButton = false;
-            this.crysDailyReport.ShowExportButton = false;
-            this.crysDailyReport.ShowGotoPageButton = false;
-            this.crysDailyReport.ShowGroupTreeButton = false;
-            this.crysDailyReport.ShowLogo = false;
-            this.crysDailyReport.ShowPageNavigateButtons = false;
-            this.crysDailyReport.ShowParameterPanelButton = false;
-            this.crysDailyReport.ShowPrintButton = false;
-            this.crysDailyReport.ShowRefreshButton = false;
-            this.crysDailyReport.ShowTextSearchButton = false;
-            this.crysDailyReport.ShowZoomButton = false;
-            this.crysDailyReport.Size = new System.Drawing.Size(593, 479);
-            this.crysDailyReport.TabIndex = 78;
-            this.crysDailyReport.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
-            this.crysDailyReport.Load += new System.EventHandler(this.crystalReportViewer1_Load);
+            this.mthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.mthCalendar_DateChanged);
             // 
             // tabMonthly
             // 
-            this.tabMonthly.Controls.Add(this.crystalMontlyReport);
-            this.tabMonthly.Controls.Add(this.button3);
-            this.tabMonthly.Controls.Add(this.button2);
+            this.tabMonthly.Controls.Add(this.crvMonthly);
+            this.tabMonthly.Controls.Add(this.btnEmailMonthly);
+            this.tabMonthly.Controls.Add(this.btnSaveMonthly);
             this.tabMonthly.Controls.Add(this.pictureBox2);
             this.tabMonthly.Controls.Add(this.button1);
             this.tabMonthly.Controls.Add(this.lblGenerateReport);
@@ -225,51 +214,52 @@
             this.tabMonthly.ToolTipText = "Monthly";
             this.tabMonthly.UseVisualStyleBackColor = true;
             // 
-            // crystalMontlyReport
+            // crvMonthly
             // 
-            this.crystalMontlyReport.ActiveViewIndex = 0;
-            this.crystalMontlyReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalMontlyReport.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalMontlyReport.DisplayStatusBar = false;
-            this.crystalMontlyReport.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.crystalMontlyReport.Location = new System.Drawing.Point(387, 0);
-            this.crystalMontlyReport.Name = "crystalMontlyReport";
-            this.crystalMontlyReport.ReportSource = this.MonthlyReport1;
-            this.crystalMontlyReport.ShowCloseButton = false;
-            this.crystalMontlyReport.ShowCopyButton = false;
-            this.crystalMontlyReport.ShowExportButton = false;
-            this.crystalMontlyReport.ShowGotoPageButton = false;
-            this.crystalMontlyReport.ShowGroupTreeButton = false;
-            this.crystalMontlyReport.ShowLogo = false;
-            this.crystalMontlyReport.ShowPageNavigateButtons = false;
-            this.crystalMontlyReport.ShowParameterPanelButton = false;
-            this.crystalMontlyReport.ShowPrintButton = false;
-            this.crystalMontlyReport.ShowRefreshButton = false;
-            this.crystalMontlyReport.ShowTextSearchButton = false;
-            this.crystalMontlyReport.ShowZoomButton = false;
-            this.crystalMontlyReport.Size = new System.Drawing.Size(553, 472);
-            this.crystalMontlyReport.TabIndex = 79;
-            this.crystalMontlyReport.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.crvMonthly.ActiveViewIndex = -1;
+            this.crvMonthly.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvMonthly.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvMonthly.DisplayStatusBar = false;
+            this.crvMonthly.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.crvMonthly.Location = new System.Drawing.Point(387, 0);
+            this.crvMonthly.Name = "crvMonthly";
+            this.crvMonthly.ShowCloseButton = false;
+            this.crvMonthly.ShowCopyButton = false;
+            this.crvMonthly.ShowExportButton = false;
+            this.crvMonthly.ShowGotoPageButton = false;
+            this.crvMonthly.ShowGroupTreeButton = false;
+            this.crvMonthly.ShowLogo = false;
+            this.crvMonthly.ShowPageNavigateButtons = false;
+            this.crvMonthly.ShowParameterPanelButton = false;
+            this.crvMonthly.ShowPrintButton = false;
+            this.crvMonthly.ShowRefreshButton = false;
+            this.crvMonthly.ShowTextSearchButton = false;
+            this.crvMonthly.ShowZoomButton = false;
+            this.crvMonthly.Size = new System.Drawing.Size(553, 472);
+            this.crvMonthly.TabIndex = 79;
+            this.crvMonthly.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
-            // button3
+            // btnEmailMonthly
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(183, 361);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(154, 35);
-            this.button3.TabIndex = 76;
-            this.button3.Text = "Send to Email";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEmailMonthly.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmailMonthly.Location = new System.Drawing.Point(183, 361);
+            this.btnEmailMonthly.Name = "btnEmailMonthly";
+            this.btnEmailMonthly.Size = new System.Drawing.Size(154, 35);
+            this.btnEmailMonthly.TabIndex = 76;
+            this.btnEmailMonthly.Text = "Send to Email";
+            this.btnEmailMonthly.UseVisualStyleBackColor = true;
+            this.btnEmailMonthly.Click += new System.EventHandler(this.btnEmailMonthly_Click);
             // 
-            // button2
+            // btnSaveMonthly
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(9, 361);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 35);
-            this.button2.TabIndex = 75;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSaveMonthly.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveMonthly.Location = new System.Drawing.Point(9, 361);
+            this.btnSaveMonthly.Name = "btnSaveMonthly";
+            this.btnSaveMonthly.Size = new System.Drawing.Size(137, 35);
+            this.btnSaveMonthly.TabIndex = 75;
+            this.btnSaveMonthly.Text = "Save";
+            this.btnSaveMonthly.UseVisualStyleBackColor = true;
+            this.btnSaveMonthly.Click += new System.EventHandler(this.btnSaveMonthly_Click);
             // 
             // pictureBox2
             // 
@@ -317,6 +307,7 @@
             this.btnJan.Size = new System.Drawing.Size(80, 56);
             this.btnJan.TabIndex = 72;
             this.btnJan.UseVisualStyleBackColor = true;
+            this.btnJan.Click += new System.EventHandler(this.btnJan_Click);
             // 
             // btnSep
             // 
@@ -330,6 +321,7 @@
             this.btnSep.Size = new System.Drawing.Size(80, 56);
             this.btnSep.TabIndex = 71;
             this.btnSep.UseVisualStyleBackColor = true;
+            this.btnSep.Click += new System.EventHandler(this.btnSep_Click);
             // 
             // btnOct
             // 
@@ -343,6 +335,7 @@
             this.btnOct.Size = new System.Drawing.Size(80, 56);
             this.btnOct.TabIndex = 70;
             this.btnOct.UseVisualStyleBackColor = true;
+            this.btnOct.Click += new System.EventHandler(this.btnOct_Click);
             // 
             // btnNov
             // 
@@ -356,6 +349,7 @@
             this.btnNov.Size = new System.Drawing.Size(80, 56);
             this.btnNov.TabIndex = 69;
             this.btnNov.UseVisualStyleBackColor = true;
+            this.btnNov.Click += new System.EventHandler(this.btnNov_Click);
             // 
             // btnLeftArrow
             // 
@@ -385,6 +379,7 @@
             this.btnDec.Size = new System.Drawing.Size(80, 56);
             this.btnDec.TabIndex = 68;
             this.btnDec.UseVisualStyleBackColor = true;
+            this.btnDec.Click += new System.EventHandler(this.btnDec_Click);
             // 
             // btnAug
             // 
@@ -398,6 +393,7 @@
             this.btnAug.Size = new System.Drawing.Size(80, 56);
             this.btnAug.TabIndex = 67;
             this.btnAug.UseVisualStyleBackColor = true;
+            this.btnAug.Click += new System.EventHandler(this.btnAug_Click);
             // 
             // lblYear
             // 
@@ -422,6 +418,7 @@
             this.btnJul.Size = new System.Drawing.Size(80, 56);
             this.btnJul.TabIndex = 66;
             this.btnJul.UseVisualStyleBackColor = true;
+            this.btnJul.Click += new System.EventHandler(this.btnJul_Click);
             // 
             // btnJun
             // 
@@ -435,6 +432,7 @@
             this.btnJun.Size = new System.Drawing.Size(80, 56);
             this.btnJun.TabIndex = 65;
             this.btnJun.UseVisualStyleBackColor = true;
+            this.btnJun.Click += new System.EventHandler(this.btnJun_Click);
             // 
             // btnRightArrow
             // 
@@ -450,6 +448,7 @@
             this.btnRightArrow.Size = new System.Drawing.Size(40, 21);
             this.btnRightArrow.TabIndex = 58;
             this.btnRightArrow.UseVisualStyleBackColor = false;
+            this.btnRightArrow.Click += new System.EventHandler(this.btnRightArrow_Click);
             // 
             // btnMay
             // 
@@ -463,6 +462,7 @@
             this.btnMay.Size = new System.Drawing.Size(80, 56);
             this.btnMay.TabIndex = 64;
             this.btnMay.UseVisualStyleBackColor = true;
+            this.btnMay.Click += new System.EventHandler(this.btnMay_Click);
             // 
             // btnFeb
             // 
@@ -476,6 +476,7 @@
             this.btnFeb.Size = new System.Drawing.Size(80, 56);
             this.btnFeb.TabIndex = 59;
             this.btnFeb.UseVisualStyleBackColor = true;
+            this.btnFeb.Click += new System.EventHandler(this.btnFeb_Click);
             // 
             // btnMar
             // 
@@ -489,6 +490,7 @@
             this.btnMar.Size = new System.Drawing.Size(80, 56);
             this.btnMar.TabIndex = 60;
             this.btnMar.UseVisualStyleBackColor = true;
+            this.btnMar.Click += new System.EventHandler(this.btnMar_Click);
             // 
             // btnApr
             // 
@@ -502,6 +504,7 @@
             this.btnApr.Size = new System.Drawing.Size(80, 56);
             this.btnApr.TabIndex = 61;
             this.btnApr.UseVisualStyleBackColor = true;
+            this.btnApr.Click += new System.EventHandler(this.btnApr_Click);
             // 
             // Form_Generate_Report
             // 
@@ -548,18 +551,17 @@
         private System.Windows.Forms.Button btnApr;
         private System.Windows.Forms.Button btnJan;
         private System.Windows.Forms.Button btnLeftArrow;
-        private System.Windows.Forms.Button btnEmail;
+        private System.Windows.Forms.Button btnEmailDaily;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnSaveDaily;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crysDailyReport;
+        private System.Windows.Forms.Button btnEmailMonthly;
+        private System.Windows.Forms.Button btnSaveMonthly;
         private DailyReport MonthReport;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalMontlyReport;
-        private MonthlyReport MonthlyReport1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvMonthly;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvDaily;
     }
 }
 
