@@ -77,6 +77,7 @@ namespace IOOP_assignment
         {
             monthCalendarReserve.MinDate = DateTime.Now.AddDays(2);
             monthCalendarReserve.MaxDate = DateTime.Now.AddDays(7);
+            comboPeopleReserve.Enabled = true; 
 
         }
 
@@ -97,6 +98,12 @@ namespace IOOP_assignment
             comboDurationReserve.Enabled = false;
             comboTimeReserve.Enabled = false;
             btnConfirmReservation.Enabled = false;
+            comboPeopleReserve.Enabled = false;
+            radAmberReseve.Enabled = false;
+            radBlackThornReserve.Enabled = false;
+            radCedarReserve.Enabled = false;
+            radDaphneReserve.Enabled = false;
+
 
         }
 

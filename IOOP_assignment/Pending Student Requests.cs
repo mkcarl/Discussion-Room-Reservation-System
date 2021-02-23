@@ -32,14 +32,10 @@ namespace IOOP_assignment
 
         private void Form_Pending_Student_Requests_Load(object sender, EventArgs e)
         {
-
-            //string query = ("SELECT [Reservation-Room].ReservationID,[Reservation-Room].RoomID,Room.RoomName,Room.TimeSlot,Room.BookStatus FROM [Reservation-Room] INNER JOIN Room ON Room.RoomID=[Reservation-Room].RoomID FROM Room INNER JOIN ");
-
-            //SqlDataReader dr = Controller.Query("select rr.ReservationID, rv.StudentRegistered, MIN(rm.TimeSlot) as 'Start time',count(rm.TimeSlot) as 'Hours Booked',rm.RoomName as 'Room Name', rv.Pax, rv.ApprovalStatus from[Reservation - Room] rr inner join[Room] rm on rr.RoomID = rm.RoomID inner join Reservation rv on rv.ReservationID = rr.ReservationID group by rr.ReservationID, rv.StudentRegistered, rm.RoomName, rv.Pax, rv.ApprovalStatus;");
-            var query = "select rr.ReservationID, rv.StudentRegistered, MIN(rm.TimeSlot) as 'Start time',count(rm.TimeSlot) as 'Hours Booked',rm.RoomName as 'Room Name', rv.Pax, rv.ApprovalStatus from[Reservation-Room] rr inner join[Room] rm on rr.RoomID = rm.RoomID inner join Reservation rv on rv.ReservationID = rr.ReservationID WHERE rv.ApprovalStatus = 'Pending' group by rr.ReservationID, rv.StudentRegistered, rm.RoomName, rv.Pax, rv.ApprovalStatus;";
-            var conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
-            var dataAdapter = new SqlDataAdapter(query, conn);
-            var ds = new DataSet();
+            string query = "select rr.ReservationID, rv.StudentRegistered, MIN(rm.TimeSlot) as 'Start time',count(rm.TimeSlot) as 'Hours Booked',rm.RoomName as 'Room Name', rv.Pax, rv.ApprovalStatus from[Reservation-Room] rr inner join[Room] rm on rr.RoomID = rm.RoomID inner join Reservation rv on rv.ReservationID = rr.ReservationID WHERE rv.ApprovalStatus = 'Pending' group by rr.ReservationID, rv.StudentRegistered, rm.RoomName, rv.Pax, rv.ApprovalStatus;";
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
+            DataSet ds = new DataSet();
 
             dataAdapter.Fill(ds);
             dgvStudentRequests.ReadOnly = true;
@@ -49,12 +45,11 @@ namespace IOOP_assignment
             {
                 mainUser = Program.LibrarianUser;
             }
- 
-
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void btnApprove_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
@@ -62,8 +57,6 @@ namespace IOOP_assignment
             string selectedID = dgvStudentRequests.CurrentRow.Cells["ReservationID"].Value.ToString();
 
             string queryRoom = $"SELECT * FROM [Reservation-Room] WHERE ReservationID = '{selectedID}'";
-            
-            
 
             List<string> rooms;
             SqlDataReader drOldRooms = Controller.Query(queryRoom);
@@ -76,10 +69,9 @@ namespace IOOP_assignment
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void btnReject_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();

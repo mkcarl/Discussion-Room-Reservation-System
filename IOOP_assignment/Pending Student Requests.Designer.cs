@@ -52,7 +52,6 @@ namespace IOOP_assignment
             this.dgvStudentRequests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStudentRequests.Size = new System.Drawing.Size(838, 367);
             this.dgvStudentRequests.TabIndex = 0;
-            this.dgvStudentRequests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // lblPendingStudentReq
             // 
@@ -75,7 +74,7 @@ namespace IOOP_assignment
             this.btnReject.TabIndex = 78;
             this.btnReject.Text = "Reject";
             this.btnReject.UseVisualStyleBackColor = true;
-            this.btnReject.Click += new System.EventHandler(this.btnConfirm_Click);
+            this.btnReject.Click += new System.EventHandler(this.btnReject_Click);
             // 
             // pictureBox1
             // 
@@ -112,7 +111,7 @@ namespace IOOP_assignment
             this.btnApprove.TabIndex = 80;
             this.btnApprove.Text = "Approve";
             this.btnApprove.UseVisualStyleBackColor = true;
-            this.btnApprove.Click += new System.EventHandler(this.button1_Click);
+            this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
             // 
             // Form_Pending_Student_Requests
             // 

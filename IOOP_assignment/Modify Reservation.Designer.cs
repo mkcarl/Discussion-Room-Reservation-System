@@ -148,6 +148,7 @@ namespace IOOP_assignment
             // 
             // mthCalendarNewModify
             // 
+            this.mthCalendarNewModify.Enabled = false;
             this.mthCalendarNewModify.Location = new System.Drawing.Point(366, 113);
             this.mthCalendarNewModify.MaxSelectionCount = 1;
             this.mthCalendarNewModify.Name = "mthCalendarNewModify";

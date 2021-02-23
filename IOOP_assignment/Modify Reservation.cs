@@ -15,8 +15,8 @@ namespace IOOP_assignment
     public partial class FormModify : Form
     {
         Student mainUser;
-
-        SqlDataReader oldReservation; 
+        SqlDataReader oldReservation;
+        string approvalStatus; 
 
         public FormModify()
         {
@@ -52,6 +52,24 @@ namespace IOOP_assignment
             mthCalendarNewModify.MinDate = DateTime.Now.AddDays(2);
             mthCalendarNewModify.MaxDate = DateTime.Now.AddDays(7);
 
+            SqlDataReader dr = Controller.Query($"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', ApprovalStatus, count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = '{mainUser.StudentID}' GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY rv.ReservationID DESC");
+
+            dr.Read();
+            approvalStatus = dr["ApprovalStatus"].ToString();
+            if (dr.HasRows && approvalStatus != "Cancel" && approvalStatus != "Reject")
+            {
+                DateTime dtime = (DateTime)dr["Starting Time"];
+                lblNoPeopleCurrentModify.Text = "Number of People: " + dr["Pax"].ToString();
+                lblDateCurrentModify.Text = "Date: " + dtime.ToString("dd MMMM yyyy");
+                lblTimeCurrentModify.Text = "Time: " + dtime.ToString("hh:mm tt");
+                lblRoomCurrentModify.Text = "Room Name: " + dr["RoomName"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("No Reservations found.");
+                this.Close();
+            }
+
             comboPeopleNewModify.Enabled = false;
             comboTimeNewModify.Enabled = false;
             radAmberNewModify.Enabled = false;
@@ -59,24 +77,7 @@ namespace IOOP_assignment
             radCedarNewModify.Enabled = false;
             radDaphneNewModify.Enabled = false;
             btnConfirmModification.Enabled = false;
-
-            SqlDataReader dr = Controller.Query($"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', ApprovalStatus, count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = '{mainUser.StudentID}' and ApprovalStatus = 'Pending' OR ApprovalStatus = 'Approve' GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY [Starting Time] DESC");
-
-            dr.Read();
-            if (dr.HasRows)
-            {
-                DateTime dtime = (DateTime)dr["Starting Time"];
-                lblNoPeopleCurrentModify.Text = "Number of People: "+dr["Pax"].ToString();
-                lblDateCurrentModify.Text = "Date: "+dtime.ToString("dd MMMM yyyy");
-                lblTimeCurrentModify.Text = "Time: "+dtime.ToString("hh:mm tt");
-                lblRoomCurrentModify.Text = "Room Name: "+dr["RoomName"].ToString();
-            }
-
-            else
-            {
-                MessageBox.Show("No Reservations found.");
-                this.Close();
-            }
+            if (approvalStatus == "Approve" ? mthCalendarNewModify.Enabled = false : mthCalendarNewModify.Enabled = true) ;
         }
 
         private void button4_Click(object sender, EventArgs e)
