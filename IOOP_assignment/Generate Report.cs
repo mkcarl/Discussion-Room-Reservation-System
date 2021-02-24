@@ -99,29 +99,8 @@ namespace IOOP_assignment
         {
             string filename = $"Report-{mthCalendar.SelectionStart.ToString("ddMMMMyyyy")}";
             Attachment report = new Attachment(rdDaily.ExportToStream(ExportFormatType.PortableDocFormat), $"{filename}.pdf"); //https://www.aspsnippets.com/Articles/Export-Crystal-Report-to-PDF-and-send-as-Email-Attachment-in-ASPNet.aspx
-            sendEmail(mainUser.Email, "no.reply", "", report);
+            mainUser.SendEmail("no.reply", "", report);
      
-        }
-
-        private void sendEmail(string receiverEmail, string subject, string body, Attachment report)
-        {
-            //https://stackoverflow.com/a/10784907
-            MailMessage mail = new MailMessage();
-            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-            mail.From = new MailAddress("HJK.LDRRS@gmail.com");
-            mail.To.Add(receiverEmail);
-            mail.Subject = (subject);
-            mail.Body = (body);
-
-            System.Net.Mail.Attachment attachment;
-            attachment = report;
-            mail.Attachments.Add(attachment);
-
-            SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("HJK.LDRRS@gmail.com", "ioop2006");
-            SmtpServer.EnableSsl = true;
-
-            SmtpServer.Send(mail);
         }
 
         private void btnLeftArrow_Click(object sender, EventArgs e)
@@ -231,7 +210,7 @@ namespace IOOP_assignment
         {
             string filename = $"Report-{mthCalendar.SelectionStart.ToString("MMMMyyyy")}";
             Attachment report = new Attachment(rdMonthly.ExportToStream(ExportFormatType.PortableDocFormat), $"{filename}.pdf"); //https://www.aspsnippets.com/Articles/Export-Crystal-Report-to-PDF-and-send-as-Email-Attachment-in-ASPNet.aspx
-            sendEmail(mainUser.Email, "no.reply", "", report);
+            mainUser.SendEmail("no.reply", "", report);
         }
 
         private void button1_Click(object sender, EventArgs e)
