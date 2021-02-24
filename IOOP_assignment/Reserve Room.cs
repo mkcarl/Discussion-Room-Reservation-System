@@ -170,54 +170,12 @@ namespace IOOP_assignment
         
         private void btnConfirmReservation_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
+            DateTime date = monthCalendarReserve.SelectionStart;
+            string time = comboTimeReserve.SelectedItem.ToString();
+            int pax = int.Parse(comboPeopleReserve.SelectedItem.ToString());
+            int duration = int.Parse(comboDurationReserve.SelectedItem.ToString()); 
 
-            conn.Open();
-
-            int counter;
-            try
-            {
-                SqlDataReader dr = Controller.Query("SELECT TOP 1 ReservationID FROM Reservation ORDER BY ReservationID DESC;");
-                dr.Read();
-                counter = int.Parse(dr["ReservationID"].ToString().Substring(2)); // basically selecting the last row and extract the number from it 
-                counter++;
-            }
-            catch (InvalidOperationException)
-            {
-                counter = 0;
-            }
-
-            string alterTime = $"{monthCalendarReserve.SelectionStart.ToString("yyyy-MM-dd")} {comboTimeReserve.SelectedItem.ToString()}";
-
-            //create a reservation with latest reservation ID
-            //set room status that are selected from free to booked
-            //create an entry in reservation room table to signify which reservation is taking which room
-
-            string createReservation = $"INSERT INTO Reservation (ReservationID, ApprovalStatus,Comments,Pax,StudentRegistered) VALUES ('RV{counter.ToString("000000")}','Pending','',{comboPeopleReserve.SelectedItem.ToString()},{mainUser.StudentID})";
-            SqlCommand cmdCreateReservation = new SqlCommand(createReservation, conn);
-            cmdCreateReservation.ExecuteNonQuery();
-
-            string queryRoom = $"SELECT TOP {int.Parse(comboDurationReserve.SelectedItem.ToString())} RoomID FROM Room WHERE RoomName LIKE '{roomname}%' AND TimeSlot >= '{alterTime}' AND BookStatus = 'Free'";
-
-            List<string> rooms;
-            SqlDataReader drOldRooms = Controller.Query(queryRoom);
-            rooms = (from IDataRecord r in drOldRooms select (string)r["RoomID"]).ToList();
-
-            foreach (string room in rooms)
-            {
-                string roomUpdate = ($"UPDATE Room SET BookStatus = 'Booked' WHERE RoomID = '{room}'");
-
-                SqlCommand cmdRoomUpdate = new SqlCommand(roomUpdate,conn);
-                cmdRoomUpdate.ExecuteNonQuery();
-            }
-
-            foreach (string room in rooms)
-            {
-                string reservationEntry = $"INSERT INTO [Reservation-Room] (ReservationID,RoomID) VALUES ('RV{counter.ToString("000000")}','{room}')";
-                SqlCommand cmdReservationEntry = new SqlCommand(reservationEntry, conn);
-                cmdReservationEntry.ExecuteNonQuery();
-            }
-            conn.Close();
+            mainUser.MakeNewReservation(date , time, pax, duration, roomname);
             MessageBox.Show("Your room reservation is complete");
             this.Close();
         }
