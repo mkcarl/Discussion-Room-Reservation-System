@@ -169,63 +169,8 @@ namespace IOOP_assignment
             // https://stackoverflow.com/a/28672247
 
 
-
-            // query the latest reservation of the student (that is pending, and after today)
-            // delete records from rr
-            // change status in rm from booked to free
-            // change status in respective room from free to booked 
-            // create new reservation BUT with current reservation id 
-
-            oldReservation = Controller.Query($"select top 1 rv.ReservationID, rv.ApprovalStatus, rv.Pax, MIN(rm.TimeSlot) as 'StartingTime' from Reservation rv inner join [Reservation-Room] rr on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where rv.StudentRegistered = {mainUser.StudentID} and rv.ApprovalStatus = 'Pending' group by rv.Pax, rv.ReservationID, rv.ApprovalStatus order by rv.ReservationID Desc; ");
-            oldReservation.Read();
-            string currentReservationID = oldReservation["ReservationID"].ToString();
-            string sqlDeleteOld = $"DELETE FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'";
+            mainUser.ModifyReservation(newtime, roomchoice);
             
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
-            conn.Open();
-
-            // get all the old rooms
-            List<string> oldRooms;
-            SqlDataReader drOldRooms = Controller.Query($"SELECT * FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'");
-            oldRooms = (from IDataRecord r in drOldRooms select (string)r["RoomID"]).ToList();
-            // https://stackoverflow.com/a/1370592
-
-            // delete old records
-            SqlCommand cmdDeleteOld = new SqlCommand(sqlDeleteOld, conn);
-            cmdDeleteOld.ExecuteNonQuery(); 
-
-            
-            // change all old room to free 
-            foreach (string room in oldRooms)
-            {
-            string sqlBookedToFree = $"UPDATE Room SET BookStatus = 'Free' WHERE RoomID = '{room}'";
-                SqlCommand cmd = new SqlCommand(sqlBookedToFree, conn);
-                cmd.ExecuteNonQuery(); 
-                
-            }
-            // change status for respective room 
-            // find the first n, with starting time of (user input)
-
-            // get all the new rooms
-            List<string> newRooms;
-            SqlDataReader drNewRooms = Controller.Query($"SELECT TOP {oldRooms.Count} * FROM Room WHERE TimeSlot >= '{newtime.ToString("yyyy-MM-dd hh:mm:ss tt")}' and BookStatus = 'Free' and RoomName LIKE '{roomchoice}%'");
-            newRooms = (from IDataRecord r in drNewRooms select (string)r["RoomID"]).ToList();
-            // change all new room to Booked
-            foreach (string room in newRooms)
-            {
-                string sqlBookedToFree = $"UPDATE Room SET BookStatus = 'Booked' WHERE RoomID = '{room}'";
-                SqlCommand cmd = new SqlCommand(sqlBookedToFree, conn);
-                cmd.ExecuteNonQuery();
-
-            }
-            // create new reservation-room pair 
-            foreach (string room in newRooms)
-            {
-                string sqlInsertReservationRoom = $"INSERT INTO [Reservation-Room] (ReservationID, RoomID) VALUES ('{currentReservationID}', '{room}')";
-                SqlCommand cmd = new SqlCommand(sqlInsertReservationRoom, conn);
-                cmd.ExecuteNonQuery();
-
-            }
             MessageBox.Show("Your request have been modified.", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
