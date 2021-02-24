@@ -60,9 +60,8 @@ namespace IOOP_assignment
             cmdUpdateStudentInfo.Parameters.AddWithValue("@email", this.email);
             cmdUpdateStudentInfo.Parameters.AddWithValue("@sid", int.Parse(this.studentID));
             cmdUpdateStudentInfo.Parameters.AddWithValue("@pw", this.password);
-            cmdUpdateStudentInfo.ExecuteNonQuery(); 
+            cmdUpdateStudentInfo.ExecuteNonQuery();
             conn.Close();
-
         }
 
         public void MakeNewReservation(DateTime startDate, string startTime, int pax, int duration, string roomtype)
@@ -112,6 +111,41 @@ namespace IOOP_assignment
             }
             conn.Close();
             
+        }
+
+        public void CancelCurrentReservation()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
+            conn.Open();
+            SqlDataReader oldReservation;
+            oldReservation = Controller.Query($"select top 1 rv.ReservationID, rv.ApprovalStatus, rv.Pax, MIN(rm.TimeSlot) as 'StartingTime' from Reservation rv inner join [Reservation-Room] rr on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where rv.StudentRegistered = {this.StudentID} and rv.ApprovalStatus = 'Pending' or rv.ApprovalStatus = 'Approve' group by rv.Pax, rv.ReservationID, rv.ApprovalStatus order by rv.ReservationID Desc; ");
+            oldReservation.Read();
+            string currentReservationID = oldReservation["ReservationID"].ToString();
+
+            List<string> currentRooms;
+            SqlDataReader currentBooking = Controller.Query($"SELECT * FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'");
+            currentRooms = (from IDataRecord r in currentBooking select (string)r["RoomID"]).ToList();
+            // https://stackoverflow.com/a/1370592
+
+            //// delete old records
+            //string sqlDeleteCurrentReservationID = $"DELETE FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'";
+            //SqlCommand cmdDeleteOld = new SqlCommand(sqlDeleteCurrentReservationID, conn);
+            //cmdDeleteOld.ExecuteNonQuery();
+
+            // update reservation status to 'Cancel' 
+            string approvalstatus = ($"Update Reservation set ApprovalStatus = 'Cancel' where ReservationID = '{currentReservationID}'");
+            SqlCommand cmdChangeApproval = new SqlCommand(approvalstatus, conn);
+            cmdChangeApproval.ExecuteNonQuery();
+
+            // change all old room to free 
+            foreach (string room in currentRooms)
+            {
+                string sqlBookedToFree = ($"UPDATE Room SET BookStatus = 'Free' WHERE RoomID = '{room}'");
+                SqlCommand cmd = new SqlCommand(sqlBookedToFree, conn);
+                cmd.ExecuteNonQuery();
+
+            }
+            conn.Close();
         }
 
         public string StudentID { get => studentID; set => studentID = value; }

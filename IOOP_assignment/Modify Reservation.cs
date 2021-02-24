@@ -176,7 +176,7 @@ namespace IOOP_assignment
             // change status in respective room from free to booked 
             // create new reservation BUT with current reservation id 
 
-            oldReservation = Controller.Query($"select top 1 rv.ReservationID, rv.ApprovalStatus, rv.Pax, MIN(rm.TimeSlot) as 'StartingTime' from Reservation rv inner join [Reservation-Room] rr on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where rv.StudentRegistered = {mainUser.StudentID} and rv.ApprovalStatus = 'Pending' group by rv.Pax, rv.ReservationID, rv.ApprovalStatus order by StartingTime Desc; ");
+            oldReservation = Controller.Query($"select top 1 rv.ReservationID, rv.ApprovalStatus, rv.Pax, MIN(rm.TimeSlot) as 'StartingTime' from Reservation rv inner join [Reservation-Room] rr on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where rv.StudentRegistered = {mainUser.StudentID} and rv.ApprovalStatus = 'Pending' group by rv.Pax, rv.ReservationID, rv.ApprovalStatus order by rv.ReservationID Desc; ");
             oldReservation.Read();
             string currentReservationID = oldReservation["ReservationID"].ToString();
             string sqlDeleteOld = $"DELETE FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'";
@@ -280,52 +280,8 @@ namespace IOOP_assignment
 
         private void btnResetModify_Click(object sender, EventArgs e)
         {
-            Student mainUser;
-
-            if (Program.LoginRole == "Student")
-            {
-                mainUser = Program.StudentUser;
-            }
-            else
-            {
-                mainUser = Program.LibrarianUser;
-            }
-
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
-            conn.Open();
-
-           
-            oldReservation = Controller.Query($"select top 1 rv.ReservationID, rv.ApprovalStatus, rv.Pax, MIN(rm.TimeSlot) as 'StartingTime' from Reservation rv inner join [Reservation-Room] rr on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where rv.StudentRegistered = {mainUser.StudentID} and rv.ApprovalStatus = 'Pending' or rv.ApprovalStatus = 'Approve' group by rv.Pax, rv.ReservationID, rv.ApprovalStatus order by StartingTime Desc; ");
-            oldReservation.Read();
-            string currentReservationID = oldReservation["ReservationID"].ToString();
-            string approvalstatus = ($"Update Reservation set ApprovalStatus = 'Cancel' where ReservationID = '{currentReservationID}'");
-
-            List<string> currentRooms;
-            SqlDataReader currentBooking = Controller.Query($"SELECT * FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'");
-            currentRooms = (from IDataRecord r in currentBooking select (string)r["RoomID"]).ToList();
-            // https://stackoverflow.com/a/1370592
-
-            //string sqlDeleteCurrentReservationID = $"DELETE FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'";
-
-            //// delete old records
-            //SqlCommand cmdDeleteOld = new SqlCommand(sqlDeleteCurrentReservationID, conn);
-            //cmdDeleteOld.ExecuteNonQuery();
-
-            SqlCommand cmdChangeApproval = new SqlCommand(approvalstatus, conn);
-            cmdChangeApproval.ExecuteNonQuery();
-
-
-            // change all old room to free 
-            foreach (string room in currentRooms)
-            {
-               string sqlBookedToFree = ($"UPDATE Room SET BookStatus = 'Free' WHERE RoomID = '{room}'");
-               SqlCommand cmd = new SqlCommand(sqlBookedToFree, conn);
-               cmd.ExecuteNonQuery();
-
-            }
-
+            mainUser.CancelCurrentReservation(); 
             MessageBox.Show("Your booking have been successfully cancelled.");
-            conn.Close();
             this.Close();
             }
 
