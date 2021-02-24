@@ -129,13 +129,6 @@ namespace IOOP_assignment
             }
             lblWelcome_LHomepage.Text = "Welcome " + librarianSurname;
 
-            // determine if they can make a reservation 
-            SqlDataReader dr = Controller.Query($"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', ApprovalStatus, count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = '{mainUser.StudentID}' GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY rv.ReservationID DESC");
-            dr.Read(); 
-            if (((string)dr["ApprovalStatus"]=="Approve"&&(DateTime)dr["Starting Time"] <= DateTime.Now) || (string)dr["ApprovalStatus"] == "Pending")
-            {
-                btnReserveRoom_LHomepage.Enabled = false;
-            }
         }
     }
 }

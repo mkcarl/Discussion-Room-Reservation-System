@@ -55,29 +55,29 @@ namespace IOOP_assignment
             SqlDataReader dr = Controller.Query($"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', ApprovalStatus, count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = '{mainUser.StudentID}' GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY rv.ReservationID DESC");
 
             dr.Read();
-            approvalStatus = dr["ApprovalStatus"].ToString();
-            if (dr.HasRows && approvalStatus != "Cancel" && approvalStatus != "Reject")
+
+            if (dr.HasRows && dr["ApprovalStatus"].ToString() != "Cancel" && dr["ApprovalStatus"].ToString() != "Reject")
             {
                 DateTime dtime = (DateTime)dr["Starting Time"];
                 lblNoPeopleCurrentModify.Text = "Number of People: " + dr["Pax"].ToString();
                 lblDateCurrentModify.Text = "Date: " + dtime.ToString("dd MMMM yyyy");
                 lblTimeCurrentModify.Text = "Time: " + dtime.ToString("hh:mm tt");
                 lblRoomCurrentModify.Text = "Room Name: " + dr["RoomName"].ToString();
+                comboPeopleNewModify.Enabled = false;
+                comboTimeNewModify.Enabled = false;
+                radAmberNewModify.Enabled = false;
+                radBlackThornNewModify.Enabled = false;
+                radCedarNewModify.Enabled = false;
+                radDaphneNewModify.Enabled = false;
+                btnConfirmModification.Enabled = false;
+                if (dr["ApprovalStatus"].ToString() == "Approve" ? mthCalendarNewModify.Enabled = false : mthCalendarNewModify.Enabled = true) ;
             }
             else
             {
-                MessageBox.Show("No Reservations found.");
+                MessageBox.Show("No Reservations found.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
 
-            comboPeopleNewModify.Enabled = false;
-            comboTimeNewModify.Enabled = false;
-            radAmberNewModify.Enabled = false;
-            radBlackThornNewModify.Enabled = false;
-            radCedarNewModify.Enabled = false;
-            radDaphneNewModify.Enabled = false;
-            btnConfirmModification.Enabled = false;
-            if (approvalStatus == "Approve" ? mthCalendarNewModify.Enabled = false : mthCalendarNewModify.Enabled = true) ;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -227,7 +227,7 @@ namespace IOOP_assignment
 
             }
             MessageBox.Show("Your request have been modified.", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            this.Close();
         }
 
 

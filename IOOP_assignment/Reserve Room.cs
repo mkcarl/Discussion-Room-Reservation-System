@@ -93,16 +93,30 @@ namespace IOOP_assignment
                 mainUser = Program.LibrarianUser;
             }
 
-            monthCalendarReserve.MinDate = DateTime.Now.AddDays(2);
-            monthCalendarReserve.MaxDate = DateTime.Now.AddDays(7);
-            comboDurationReserve.Enabled = false;
-            comboTimeReserve.Enabled = false;
-            btnConfirmReservation.Enabled = false;
-            comboPeopleReserve.Enabled = false;
-            radAmberReseve.Enabled = false;
-            radBlackThornReserve.Enabled = false;
-            radCedarReserve.Enabled = false;
-            radDaphneReserve.Enabled = false;
+            // determine if they can make a reservation 
+            SqlDataReader dr = Controller.Query($"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', ApprovalStatus, count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = '{mainUser.StudentID}' GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY rv.ReservationID DESC");
+            dr.Read();
+            if (dr.HasRows)
+            {
+                if (((string)dr["ApprovalStatus"] == "Approve" && DateTime.Now <= (DateTime)dr["Starting Time"]) || (string)dr["ApprovalStatus"] == "Pending")
+                {
+                    MessageBox.Show("A reservation has already been made.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    monthCalendarReserve.MinDate = DateTime.Now.AddDays(2);
+                    monthCalendarReserve.MaxDate = DateTime.Now.AddDays(7);
+                    comboDurationReserve.Enabled = false;
+                    comboTimeReserve.Enabled = false;
+                    btnConfirmReservation.Enabled = false;
+                    comboPeopleReserve.Enabled = false;
+                    radAmberReseve.Enabled = false;
+                    radBlackThornReserve.Enabled = false;
+                    radCedarReserve.Enabled = false;
+                    radDaphneReserve.Enabled = false;
+                }
+            }
 
 
         }
@@ -110,21 +124,6 @@ namespace IOOP_assignment
         string timeSlot = string.Empty;
         private void comboDurationReserve_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //var reserveDuration = new BindingList<KeyValuePair<string, string>>();
-
-            //reserveDuration.Add(new KeyValuePair<string, string>("0", "1 hour"));
-            //reserveDuration.Add(new KeyValuePair<string, string>("1", "2 hours"));
-            //reserveDuration.Add(new KeyValuePair<string, string>("2", "3 hours"));
-            //reserveDuration.Add(new KeyValuePair<string, string>("3", "4 hours"));
-            //reserveDuration.Add(new KeyValuePair<string, string>("4", "5 hours"));
-            //reserveDuration.Add(new KeyValuePair<string, string>("5", "6 hours"));
-
-            //comboDurationReserve.DataSource = reserveDuration;
-            //comboDurationReserve.ValueMember = "Key";
-            //comboDurationReserve.DisplayMember = "Value";
-            //comboDurationReserve.SelectedIndex = 0;
-
-            //comboDurationReserve.SelectedIndex = comboDurationReserve.FindString(timeSlot, reserveDuration);
             if (radAmberReseve.Checked)
             {
                 roomtype = "Amber";
@@ -218,13 +217,9 @@ namespace IOOP_assignment
                 SqlCommand cmdReservationEntry = new SqlCommand(reservationEntry, conn);
                 cmdReservationEntry.ExecuteNonQuery();
             }
-
-
-
-
-            MessageBox.Show("Your room reservation is complete");
-
             conn.Close();
+            MessageBox.Show("Your room reservation is complete");
+            this.Close();
         }
 
         private void radAmberReseve_CheckedChanged(object sender, EventArgs e)

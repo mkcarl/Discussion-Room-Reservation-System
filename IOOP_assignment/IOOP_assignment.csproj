@@ -164,6 +164,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DailyReport.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="LibrarianRegistration.resx">
+      <DependentUpon>LibrarianRegistration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MonthlyReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>MonthlyReport.cs</LastGenOutput>

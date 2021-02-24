@@ -88,7 +88,7 @@ namespace IOOP_assignment
             this.txtGivenUser.Location = new System.Drawing.Point(189, 237);
             this.txtGivenUser.Name = "txtGivenUser";
             this.txtGivenUser.Size = new System.Drawing.Size(235, 32);
-            this.txtGivenUser.TabIndex = 3;
+            this.txtGivenUser.TabIndex = 2;
             // 
             // lblStudentIDUser
             // 
@@ -109,6 +109,7 @@ namespace IOOP_assignment
             this.txtStudentIDUser.ReadOnly = true;
             this.txtStudentIDUser.Size = new System.Drawing.Size(235, 32);
             this.txtStudentIDUser.TabIndex = 5;
+            this.txtStudentIDUser.TabStop = false;
             // 
             // lblPassUser
             // 
@@ -126,7 +127,7 @@ namespace IOOP_assignment
             this.txtPassUser.Location = new System.Drawing.Point(576, 237);
             this.txtPassUser.Name = "txtPassUser";
             this.txtPassUser.Size = new System.Drawing.Size(266, 32);
-            this.txtPassUser.TabIndex = 7;
+            this.txtPassUser.TabIndex = 4;
             this.txtPassUser.TabStop = false;
             this.txtPassUser.UseSystemPasswordChar = true;
             // 
@@ -202,6 +203,7 @@ namespace IOOP_assignment
             this.checkShowPassUser.Name = "checkShowPassUser";
             this.checkShowPassUser.Size = new System.Drawing.Size(86, 30);
             this.checkShowPassUser.TabIndex = 14;
+            this.checkShowPassUser.TabStop = false;
             this.checkShowPassUser.Text = "Show";
             this.tipShowPassUser.SetToolTip(this.checkShowPassUser, "Reveals User Password.");
             this.checkShowPassUser.UseVisualStyleBackColor = true;
@@ -233,8 +235,7 @@ namespace IOOP_assignment
             this.txtEmailUser.Location = new System.Drawing.Point(576, 152);
             this.txtEmailUser.Name = "txtEmailUser";
             this.txtEmailUser.Size = new System.Drawing.Size(266, 32);
-            this.txtEmailUser.TabIndex = 16;
-            this.txtEmailUser.TabStop = false;
+            this.txtEmailUser.TabIndex = 3;
             // 
             // lblLibrarianIDUser
             // 
@@ -248,9 +249,11 @@ namespace IOOP_assignment
             // 
             // txtLibrarianIDUser
             // 
+            this.txtLibrarianIDUser.Enabled = false;
             this.txtLibrarianIDUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.txtLibrarianIDUser.Location = new System.Drawing.Point(576, 322);
             this.txtLibrarianIDUser.Name = "txtLibrarianIDUser";
+            this.txtLibrarianIDUser.ReadOnly = true;
             this.txtLibrarianIDUser.Size = new System.Drawing.Size(266, 32);
             this.txtLibrarianIDUser.TabIndex = 18;
             this.txtLibrarianIDUser.TabStop = false;
