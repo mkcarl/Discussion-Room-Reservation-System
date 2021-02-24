@@ -92,6 +92,16 @@ namespace IOOP_assignment
             {
                 mainUser = Program.LibrarianUser;
             }
+            monthCalendarReserve.MinDate = DateTime.Now.AddDays(2);
+            monthCalendarReserve.MaxDate = DateTime.Now.AddDays(7);
+            comboDurationReserve.Enabled = false;
+            comboTimeReserve.Enabled = false;
+            btnConfirmReservation.Enabled = false;
+            comboPeopleReserve.Enabled = false;
+            radAmberReseve.Enabled = false;
+            radBlackThornReserve.Enabled = false;
+            radCedarReserve.Enabled = false;
+            radDaphneReserve.Enabled = false;
 
             // determine if they can make a reservation 
             SqlDataReader dr = Controller.Query($"SELECT TOP 1 rv.ReservationID, rv.Pax ,RoomName, Min(TimeSlot) AS 'Starting Time', ApprovalStatus, count(*) AS Hours, rv.LibrarianReviewed FROM Reservation rv INNER JOIN [Reservation-Room] ON rv.ReservationID = [Reservation-Room].ReservationID INNER JOIN Room ON [Reservation-Room].RoomID = Room.RoomID LEFT JOIN Librarian ON rv.LibrarianReviewed = Librarian.LibrarianID WHERE rv.StudentRegistered = '{mainUser.StudentID}' GROUP BY rv.ReservationID, RoomName, ApprovalStatus, rv.Pax, rv.LibrarianReviewed ORDER BY rv.ReservationID DESC");
@@ -102,19 +112,6 @@ namespace IOOP_assignment
                 {
                     MessageBox.Show("A reservation has already been made.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
-                }
-                else
-                {
-                    monthCalendarReserve.MinDate = DateTime.Now.AddDays(2);
-                    monthCalendarReserve.MaxDate = DateTime.Now.AddDays(7);
-                    comboDurationReserve.Enabled = false;
-                    comboTimeReserve.Enabled = false;
-                    btnConfirmReservation.Enabled = false;
-                    comboPeopleReserve.Enabled = false;
-                    radAmberReseve.Enabled = false;
-                    radBlackThornReserve.Enabled = false;
-                    radCedarReserve.Enabled = false;
-                    radDaphneReserve.Enabled = false;
                 }
             }
 
@@ -145,8 +142,6 @@ namespace IOOP_assignment
             DateTime dt = DateTime.Parse(monthCalendarReserve.SelectionStart.ToString());
             SqlDataReader dr = Controller.Query($"Select distinct TimeSlot from Room where TimeSlot > '{dt.ToString("yyyy-MM-dd")}' and TimeSlot < '{dt.AddDays(1).ToString("yyyy-MM-dd")}' and BookStatus = 'Free' and RoomName Like '{roomtype}%'");
 
-            dr.Read(); 
-
             if (dr.HasRows)
             {
                 List<DateTime> timeslots;
@@ -161,10 +156,8 @@ namespace IOOP_assignment
                 {
                     comboTimeReserve.Items.RemoveAt(comboTimeReserve.Items.Count - 1);
                 }
-
-
-            }
             comboTimeReserve.Enabled = true;
+            }
         }
 
         
@@ -175,9 +168,16 @@ namespace IOOP_assignment
             int pax = int.Parse(comboPeopleReserve.SelectedItem.ToString());
             int duration = int.Parse(comboDurationReserve.SelectedItem.ToString()); 
 
-            mainUser.MakeNewReservation(date , time, pax, duration, roomname);
-            MessageBox.Show("Your room reservation is complete");
-            this.Close();
+            bool reservationMade = mainUser.MakeNewReservation(date , time, pax, duration, roomname);
+            if (reservationMade)
+            {
+                MessageBox.Show("Your room reservation is complete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Sorry, please choose another timeslot or room as your current choice is fully booked.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void radAmberReseve_CheckedChanged(object sender, EventArgs e)

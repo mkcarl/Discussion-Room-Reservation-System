@@ -144,7 +144,7 @@ namespace IOOP_assignment
                     comboTimeNewModify.Items.Add(time.ToString("hh:mm tt"));
 
                 }
-                for (int i = 0; i < currentduration; i++)
+                for (int i = 0; i < currentduration - 1; i++)
                 {
                     comboTimeNewModify.Items.RemoveAt(comboTimeNewModify.Items.Count - 1);
                 }

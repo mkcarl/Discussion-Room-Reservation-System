@@ -41,7 +41,7 @@ namespace IOOP_assignment
                 switch (dr["ApprovalStatus"].ToString())
                 {
                     case "Pending":
-                        statusMessage = "Your reservation is currently peding for approval from a librarian. Thank you for your patience.";
+                        statusMessage = "Your reservation is currently pending for approval from a librarian. Thank you for your patience.";
                         break;
                     case "Cancel":
                         statusMessage = "Your reservation have been cancelled.";
