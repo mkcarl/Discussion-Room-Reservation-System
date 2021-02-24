@@ -57,34 +57,10 @@ namespace IOOP_assignment
         {
             if (dgvStudentRequests.CurrentRow != null)
             {
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
-            conn.Open();
-
-            string selectedID = dgvStudentRequests.CurrentRow.Cells["ReservationID"].Value.ToString();
-
-            string queryRoom = $"SELECT * FROM [Reservation-Room] WHERE ReservationID = '{selectedID}'";
-
-            List<string> rooms;
-            SqlDataReader drOldRooms = Controller.Query(queryRoom);
-            rooms = (from IDataRecord r in drOldRooms select (string)r["RoomID"]).ToList();
-
-            string query = $"UPDATE Reservation SET ApprovalStatus = 'Approve', LibrarianReviewed = '{mainUser.LibrarianID}' WHERE ApprovalStatus = 'Pending'AND ReservationID = '{selectedID}'";
-            SqlCommand cmd = new SqlCommand(query, conn);
-
-            if(dgvStudentRequests.CurrentRow.Cells["StudentRegistered"].Value.ToString() == mainUser.StudentID)
-            {
-                MessageBox.Show("Librarians cannot approve or reject their own reservations.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                if (MessageBox.Show($"Are you sure you want to aprove the reservation for the ReservationID: {selectedID} ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    cmd.ExecuteNonQuery();
-                }
-            }
+                string selectedID = dgvStudentRequests.CurrentRow.Cells["ReservationID"].Value.ToString();
+                string studentID = dgvStudentRequests.CurrentRow.Cells["StudentRegistered"].Value.ToString();
+                mainUser.ApproveReservation(selectedID, studentID);
                 dgvUpdate();
-                conn.Close();
-
             }
         }
 
@@ -92,42 +68,10 @@ namespace IOOP_assignment
         {
             if (dgvStudentRequests.CurrentRow != null)
             {
-                SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\library_discussion_room.mdf;Integrated Security=True;Connect Timeout=30");
-                conn.Open();
-
                 string selectedID = dgvStudentRequests.CurrentRow.Cells["ReservationID"].Value.ToString();
-
-                string queryRoom = $"SELECT * FROM [Reservation-Room] WHERE ReservationID = '{selectedID}'";
-
-                List<string> rooms;
-                SqlDataReader drOldRooms = Controller.Query(queryRoom);
-                rooms = (from IDataRecord r in drOldRooms select (string)r["RoomID"]).ToList();
-
-                string query = $"UPDATE Reservation SET ApprovalStatus = 'Reject', LibrarianReviewed = '{mainUser.LibrarianID}' WHERE ApprovalStatus = 'Pending'AND ReservationID = '{selectedID}'";
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                foreach (string room in rooms)
-                {
-                    string updateRoomFree = $"UPDATE Room SET BookStatus = 'Free' WHERE RoomID = '{room}'";
-
-                    SqlCommand cmdUpdateRoomFree = new SqlCommand(updateRoomFree, conn);
-                    cmdUpdateRoomFree.ExecuteNonQuery();
-                }
-
-                if (dgvStudentRequests.CurrentRow.Cells["StudentRegistered"].Value.ToString() == mainUser.StudentID)
-                {
-                    MessageBox.Show("Librarians cannot approve or reject their own reservations.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    if (MessageBox.Show($"Are you sure you want to reject the reservation for the ReservationID: {selectedID} ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    dgvUpdate();    
-                    conn.Close();
-                }
+                string studentID = dgvStudentRequests.CurrentRow.Cells["StudentRegistered"].Value.ToString();
+                mainUser.RejectReservation(selectedID, studentID);
+                dgvUpdate();
             }
         }
     }
