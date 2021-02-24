@@ -41,6 +41,8 @@ namespace IOOP_assignment
 
         private void Reload_Report_Daily(DateTime start, DateTime end)
         {
+            // https://www.youtube.com/watch?v=iSNIOPeCiuw&ab_channel=codefactory2016
+            // https://www.youtube.com/watch?v=HwfI6gUz2e4&ab_channel=SwiftLearn
             rdDaily = new ReportDocument();
 
             sda = new SqlDataAdapter($"select rr.ReservationID, rm.RoomName, MIN(rm.TimeSlot) as StartingTime, rv.ApprovalStatus ,rv.StudentRegistered, COUNT(rr.ReservationID) as Duration, rv.LibrarianReviewed as LibrarianID from [Reservation-Room] rr inner join Reservation rv on rr.ReservationID = rv.ReservationID inner join Room rm on rm.RoomID = rr.RoomID where rm.TimeSlot >= '{start.ToString("yyyy-MM-dd")}' and rm.TimeSlot < '{end.ToString("yyyy-MM-dd")}' group by rr.ReservationID, rv.StudentRegistered, rm.RoomName, rv.LibrarianReviewed, rv.ApprovalStatus; ", conn);
