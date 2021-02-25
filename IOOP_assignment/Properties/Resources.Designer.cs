@@ -63,6 +63,16 @@ namespace IOOP_assignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3082134_200 {
+            get {
+                object obj = ResourceManager.GetObject("3082134-200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _360_F_216967096_bKABKaGs7sp5lTUleicjwkdtgR5bEvtg {
             get {
                 object obj = ResourceManager.GetObject("360_F_216967096_bKABKaGs7sp5lTUleicjwkdtgR5bEvtg", resourceCulture);

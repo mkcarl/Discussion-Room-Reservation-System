@@ -44,11 +44,22 @@ namespace IOOP_assignment
             this.lblDateCurrentModify = new System.Windows.Forms.Label();
             this.lblTimeCurrentModify = new System.Windows.Forms.Label();
             this.lblRoomCurrentModify = new System.Windows.Forms.Label();
+            this.lblTitleUser = new System.Windows.Forms.Label();
+            this.picUserUser = new System.Windows.Forms.PictureBox();
             this.btnBackModify = new System.Windows.Forms.Button();
+            this.lblDurationCurrentModify = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblPeopleReserve = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picUserUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // comboTimeNewModify
             // 
+            this.comboTimeNewModify.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboTimeNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTimeNewModify.FormattingEnabled = true;
             this.comboTimeNewModify.Items.AddRange(new object[] {
@@ -65,18 +76,17 @@ namespace IOOP_assignment
             "6:00 pm",
             "7:00 pm",
             ""});
-            this.comboTimeNewModify.Location = new System.Drawing.Point(640, 156);
+            this.comboTimeNewModify.Location = new System.Drawing.Point(635, 306);
             this.comboTimeNewModify.Name = "comboTimeNewModify";
             this.comboTimeNewModify.Size = new System.Drawing.Size(224, 33);
             this.comboTimeNewModify.TabIndex = 3;
-            this.comboTimeNewModify.Text = "-Select a Time-";
             this.comboTimeNewModify.SelectedIndexChanged += new System.EventHandler(this.comboTimeNewModify_SelectedIndexChanged);
             // 
             // radAmberNewModify
             // 
             this.radAmberNewModify.AutoSize = true;
             this.radAmberNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.radAmberNewModify.Location = new System.Drawing.Point(645, 203);
+            this.radAmberNewModify.Location = new System.Drawing.Point(635, 203);
             this.radAmberNewModify.Name = "radAmberNewModify";
             this.radAmberNewModify.Size = new System.Drawing.Size(85, 28);
             this.radAmberNewModify.TabIndex = 4;
@@ -89,7 +99,7 @@ namespace IOOP_assignment
             // 
             this.radBlackThornNewModify.AutoSize = true;
             this.radBlackThornNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.radBlackThornNewModify.Location = new System.Drawing.Point(645, 243);
+            this.radBlackThornNewModify.Location = new System.Drawing.Point(635, 243);
             this.radBlackThornNewModify.Name = "radBlackThornNewModify";
             this.radBlackThornNewModify.Size = new System.Drawing.Size(124, 28);
             this.radBlackThornNewModify.TabIndex = 5;
@@ -102,7 +112,7 @@ namespace IOOP_assignment
             // 
             this.radCedarNewModify.AutoSize = true;
             this.radCedarNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.radCedarNewModify.Location = new System.Drawing.Point(645, 283);
+            this.radCedarNewModify.Location = new System.Drawing.Point(775, 203);
             this.radCedarNewModify.Name = "radCedarNewModify";
             this.radCedarNewModify.Size = new System.Drawing.Size(79, 28);
             this.radCedarNewModify.TabIndex = 6;
@@ -115,7 +125,7 @@ namespace IOOP_assignment
             // 
             this.radDaphneNewModify.AutoSize = true;
             this.radDaphneNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.radDaphneNewModify.Location = new System.Drawing.Point(645, 323);
+            this.radDaphneNewModify.Location = new System.Drawing.Point(775, 243);
             this.radDaphneNewModify.Name = "radDaphneNewModify";
             this.radDaphneNewModify.Size = new System.Drawing.Size(95, 28);
             this.radDaphneNewModify.TabIndex = 7;
@@ -127,7 +137,7 @@ namespace IOOP_assignment
             // btnCancelModify
             // 
             this.btnCancelModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelModify.Location = new System.Drawing.Point(372, 367);
+            this.btnCancelModify.Location = new System.Drawing.Point(381, 387);
             this.btnCancelModify.Name = "btnCancelModify";
             this.btnCancelModify.Size = new System.Drawing.Size(185, 49);
             this.btnCancelModify.TabIndex = 8;
@@ -138,7 +148,7 @@ namespace IOOP_assignment
             // btnConfirmModification
             // 
             this.btnConfirmModification.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmModification.Location = new System.Drawing.Point(609, 367);
+            this.btnConfirmModification.Location = new System.Drawing.Point(604, 387);
             this.btnConfirmModification.Name = "btnConfirmModification";
             this.btnConfirmModification.Size = new System.Drawing.Size(219, 49);
             this.btnConfirmModification.TabIndex = 9;
@@ -149,7 +159,7 @@ namespace IOOP_assignment
             // mthCalendarNewModify
             // 
             this.mthCalendarNewModify.Enabled = false;
-            this.mthCalendarNewModify.Location = new System.Drawing.Point(366, 113);
+            this.mthCalendarNewModify.Location = new System.Drawing.Point(355, 178);
             this.mthCalendarNewModify.MaxSelectionCount = 1;
             this.mthCalendarNewModify.Name = "mthCalendarNewModify";
             this.mthCalendarNewModify.TabIndex = 17;
@@ -157,6 +167,7 @@ namespace IOOP_assignment
             // 
             // comboPeopleNewModify
             // 
+            this.comboPeopleNewModify.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPeopleNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPeopleNewModify.FormattingEnabled = true;
             this.comboPeopleNewModify.Items.AddRange(new object[] {
@@ -169,18 +180,17 @@ namespace IOOP_assignment
             "8",
             "9",
             "10"});
-            this.comboPeopleNewModify.Location = new System.Drawing.Point(640, 111);
+            this.comboPeopleNewModify.Location = new System.Drawing.Point(635, 160);
             this.comboPeopleNewModify.Name = "comboPeopleNewModify";
             this.comboPeopleNewModify.Size = new System.Drawing.Size(224, 33);
             this.comboPeopleNewModify.TabIndex = 19;
-            this.comboPeopleNewModify.Text = "-Number of People-";
             this.comboPeopleNewModify.SelectedIndexChanged += new System.EventHandler(this.comboPeopleNewModify_SelectedIndexChanged);
             // 
             // lblTitleNewModify
             // 
             this.lblTitleNewModify.AutoSize = true;
             this.lblTitleNewModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitleNewModify.Location = new System.Drawing.Point(366, 69);
+            this.lblTitleNewModify.Location = new System.Drawing.Point(350, 131);
             this.lblTitleNewModify.Name = "lblTitleNewModify";
             this.lblTitleNewModify.Size = new System.Drawing.Size(216, 26);
             this.lblTitleNewModify.TabIndex = 20;
@@ -190,7 +200,7 @@ namespace IOOP_assignment
             // 
             this.lblNoPeopleCurrentModify.AutoSize = true;
             this.lblNoPeopleCurrentModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblNoPeopleCurrentModify.Location = new System.Drawing.Point(58, 205);
+            this.lblNoPeopleCurrentModify.Location = new System.Drawing.Point(52, 267);
             this.lblNoPeopleCurrentModify.Name = "lblNoPeopleCurrentModify";
             this.lblNoPeopleCurrentModify.Size = new System.Drawing.Size(188, 26);
             this.lblNoPeopleCurrentModify.TabIndex = 11;
@@ -200,7 +210,7 @@ namespace IOOP_assignment
             // 
             this.lblCurrentTitleModify.AutoSize = true;
             this.lblCurrentTitleModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.lblCurrentTitleModify.Location = new System.Drawing.Point(58, 69);
+            this.lblCurrentTitleModify.Location = new System.Drawing.Point(52, 131);
             this.lblCurrentTitleModify.Name = "lblCurrentTitleModify";
             this.lblCurrentTitleModify.Size = new System.Drawing.Size(225, 26);
             this.lblCurrentTitleModify.TabIndex = 12;
@@ -210,7 +220,7 @@ namespace IOOP_assignment
             // 
             this.lblDateCurrentModify.AutoSize = true;
             this.lblDateCurrentModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblDateCurrentModify.Location = new System.Drawing.Point(58, 113);
+            this.lblDateCurrentModify.Location = new System.Drawing.Point(52, 175);
             this.lblDateCurrentModify.Name = "lblDateCurrentModify";
             this.lblDateCurrentModify.Size = new System.Drawing.Size(64, 26);
             this.lblDateCurrentModify.TabIndex = 13;
@@ -220,7 +230,7 @@ namespace IOOP_assignment
             // 
             this.lblTimeCurrentModify.AutoSize = true;
             this.lblTimeCurrentModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblTimeCurrentModify.Location = new System.Drawing.Point(58, 159);
+            this.lblTimeCurrentModify.Location = new System.Drawing.Point(52, 221);
             this.lblTimeCurrentModify.Name = "lblTimeCurrentModify";
             this.lblTimeCurrentModify.Size = new System.Drawing.Size(60, 26);
             this.lblTimeCurrentModify.TabIndex = 14;
@@ -230,11 +240,31 @@ namespace IOOP_assignment
             // 
             this.lblRoomCurrentModify.AutoSize = true;
             this.lblRoomCurrentModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblRoomCurrentModify.Location = new System.Drawing.Point(58, 251);
+            this.lblRoomCurrentModify.Location = new System.Drawing.Point(52, 313);
             this.lblRoomCurrentModify.Name = "lblRoomCurrentModify";
             this.lblRoomCurrentModify.Size = new System.Drawing.Size(71, 26);
             this.lblRoomCurrentModify.TabIndex = 15;
             this.lblRoomCurrentModify.Text = "Room";
+            // 
+            // lblTitleUser
+            // 
+            this.lblTitleUser.AutoSize = true;
+            this.lblTitleUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.lblTitleUser.Location = new System.Drawing.Point(138, 56);
+            this.lblTitleUser.Name = "lblTitleUser";
+            this.lblTitleUser.Size = new System.Drawing.Size(271, 36);
+            this.lblTitleUser.TabIndex = 21;
+            this.lblTitleUser.Text = "Modify Reservation";
+            // 
+            // picUserUser
+            // 
+            this.picUserUser.Image = global::IOOP_assignment.Properties.Resources._3082134_200;
+            this.picUserUser.Location = new System.Drawing.Point(57, 39);
+            this.picUserUser.Name = "picUserUser";
+            this.picUserUser.Size = new System.Drawing.Size(75, 78);
+            this.picUserUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picUserUser.TabIndex = 22;
+            this.picUserUser.TabStop = false;
             // 
             // btnBackModify
             // 
@@ -250,11 +280,68 @@ namespace IOOP_assignment
             this.btnBackModify.UseVisualStyleBackColor = true;
             this.btnBackModify.Click += new System.EventHandler(this.button4_Click);
             // 
+            // lblDurationCurrentModify
+            // 
+            this.lblDurationCurrentModify.AutoSize = true;
+            this.lblDurationCurrentModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblDurationCurrentModify.Location = new System.Drawing.Point(52, 356);
+            this.lblDurationCurrentModify.Name = "lblDurationCurrentModify";
+            this.lblDurationCurrentModify.Size = new System.Drawing.Size(94, 26);
+            this.lblDurationCurrentModify.TabIndex = 23;
+            this.lblDurationCurrentModify.Text = "Duration";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::IOOP_assignment.Properties.Resources.people_icon;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(604, 132);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblPeopleReserve
+            // 
+            this.lblPeopleReserve.AutoSize = true;
+            this.lblPeopleReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeopleReserve.Location = new System.Drawing.Point(630, 131);
+            this.lblPeopleReserve.Name = "lblPeopleReserve";
+            this.lblPeopleReserve.Size = new System.Drawing.Size(204, 26);
+            this.lblPeopleReserve.TabIndex = 24;
+            this.lblPeopleReserve.Text = "Number of People";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::IOOP_assignment.Properties.Resources.time;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(604, 278);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.TabIndex = 27;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(630, 277);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 26);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Time";
+            // 
             // FormModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 501);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblPeopleReserve);
+            this.Controls.Add(this.lblDurationCurrentModify);
+            this.Controls.Add(this.picUserUser);
+            this.Controls.Add(this.lblTitleUser);
             this.Controls.Add(this.lblTitleNewModify);
             this.Controls.Add(this.comboPeopleNewModify);
             this.Controls.Add(this.mthCalendarNewModify);
@@ -278,6 +365,9 @@ namespace IOOP_assignment
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modify Reservation";
             this.Load += new System.EventHandler(this.FormModify_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picUserUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,5 +390,12 @@ namespace IOOP_assignment
         private System.Windows.Forms.Label lblTimeCurrentModify;
         private System.Windows.Forms.Label lblRoomCurrentModify;
         private System.Windows.Forms.ComboBox comboTimeNewModify;
+        private System.Windows.Forms.PictureBox picUserUser;
+        private System.Windows.Forms.Label lblTitleUser;
+        private System.Windows.Forms.Label lblDurationCurrentModify;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblPeopleReserve;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
     }
 }

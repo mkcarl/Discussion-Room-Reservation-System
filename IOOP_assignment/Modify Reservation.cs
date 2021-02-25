@@ -15,9 +15,6 @@ namespace IOOP_assignment
     public partial class FormModify : Form
     {
         Student mainUser;
-        SqlDataReader oldReservation;
-        string approvalStatus; 
-
         public FormModify()
         {
             InitializeComponent();
@@ -48,6 +45,7 @@ namespace IOOP_assignment
                 lblDateCurrentModify.Text = "Date: " + dtime.ToString("dd MMMM yyyy");
                 lblTimeCurrentModify.Text = "Time: " + dtime.ToString("hh:mm tt");
                 lblRoomCurrentModify.Text = "Room Name: " + dr["RoomName"].ToString();
+                lblDurationCurrentModify.Text = "Duration: " + dr["Hours"].ToString();
                 comboPeopleNewModify.Enabled = false;
                 comboTimeNewModify.Enabled = false;
                 radAmberNewModify.Enabled = false;
@@ -135,8 +133,8 @@ namespace IOOP_assignment
                 }
                 comboPeopleNewModify.Enabled = true; 
             }
-               
-            
+
+
         }
 
         private void btnConfirmModification_Click(object sender, EventArgs e)
@@ -217,7 +215,8 @@ namespace IOOP_assignment
 
         private void radAmberNewModify_CheckedChanged(object sender, EventArgs e)
         {
-            comboTimeNewModify.Enabled = true; 
+            comboTimeNewModify.Enabled = true;
+
         }
 
         private void radBlackThornNewModify_CheckedChanged(object sender, EventArgs e)
