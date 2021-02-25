@@ -23,21 +23,6 @@ namespace IOOP_assignment
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormModify_Load(object sender, EventArgs e)
         {
             if (Program.LoginRole == "Student")

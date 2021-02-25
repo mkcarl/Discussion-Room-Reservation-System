@@ -160,10 +160,6 @@ namespace IOOP_assignment
             currentRooms = (from IDataRecord r in currentBooking select (string)r["RoomID"]).ToList();
             // https://stackoverflow.com/a/1370592
 
-            //// delete old records
-            //string sqlDeleteCurrentReservationID = $"DELETE FROM [Reservation-Room] WHERE ReservationID = '{currentReservationID}'";
-            //SqlCommand cmdDeleteOld = new SqlCommand(sqlDeleteCurrentReservationID, conn);
-            //cmdDeleteOld.ExecuteNonQuery();
 
             // update reservation status to 'Cancel' 
             string approvalstatus = ($"Update Reservation set ApprovalStatus = 'Cancel' where ReservationID = '{currentReservationID}'");

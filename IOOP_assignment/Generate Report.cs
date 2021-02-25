@@ -78,11 +78,6 @@ namespace IOOP_assignment
             this.Close();
         }
 
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void mthCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
             DateTime selectedDay = mthCalendar.SelectionStart;

@@ -152,9 +152,6 @@ namespace IOOP_assignment
                 }
             }
             conn.Close();
-            //SqlCommand cmdCreateRoom = new SqlCommand("INSERT INTO Room (RoomID, Capacity, TimeSlot, RoomName) VALUES ('RM001', 10, @time, 'Amber1')", conn);
-            //cmdCreateRoom.Parameters.AddWithValue("@time", DateTime.Now.ToString());
-            //cmdCreateRoom.ExecuteNonQuery(); 
 
             /*
              counter = last row of the table, if null, counter = 0

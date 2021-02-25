@@ -60,17 +60,6 @@ namespace IOOP_assignment
         private void btnLogout_SHomepage_Click(object sender, EventArgs e)
         {
             this.Close();
-
-            //DialogResult logoutConfirm = MessageBox.Show("Logout?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            //if (logoutConfirm == DialogResult.Yes)
-            //{
-            //}
-        }
-
-        private void lblWelcome_SHomepage_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pbxProfilePic_SHomepage_Click(object sender, EventArgs e)

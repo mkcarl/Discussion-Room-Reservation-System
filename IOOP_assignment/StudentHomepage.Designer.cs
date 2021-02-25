@@ -55,7 +55,6 @@ namespace IOOP_assignment
             this.lblWelcome_SHomepage.Size = new System.Drawing.Size(311, 37);
             this.lblWelcome_SHomepage.TabIndex = 0;
             this.lblWelcome_SHomepage.Text = "Welcome (Surname)";
-            this.lblWelcome_SHomepage.Click += new System.EventHandler(this.lblWelcome_SHomepage_Click);
             // 
             // lblPrompt_SHomepage
             // 
