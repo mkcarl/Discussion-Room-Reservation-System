@@ -104,7 +104,7 @@
             this.crvDaily.ActiveViewIndex = -1;
             this.crvDaily.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvDaily.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crvDaily.Location = new System.Drawing.Point(349, 0);
+            this.crvDaily.Location = new System.Drawing.Point(386, 0);
             this.crvDaily.Name = "crvDaily";
             this.crvDaily.ShowCloseButton = false;
             this.crvDaily.ShowCopyButton = false;
@@ -116,7 +116,7 @@
             this.crvDaily.ShowPrintButton = false;
             this.crvDaily.ShowRefreshButton = false;
             this.crvDaily.ShowTextSearchButton = false;
-            this.crvDaily.Size = new System.Drawing.Size(587, 475);
+            this.crvDaily.Size = new System.Drawing.Size(550, 475);
             this.crvDaily.TabIndex = 78;
             this.crvDaily.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -125,7 +125,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::IOOP_assignment.Properties.Resources.daily_report;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 54);
             this.pictureBox1.TabIndex = 77;
@@ -140,7 +140,7 @@
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(8, 417);
+            this.btnBack.Location = new System.Drawing.Point(1, 424);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(50, 50);
             this.btnBack.TabIndex = 76;
@@ -150,9 +150,9 @@
             // btnEmailDaily
             // 
             this.btnEmailDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmailDaily.Location = new System.Drawing.Point(178, 331);
+            this.btnEmailDaily.Location = new System.Drawing.Point(198, 361);
             this.btnEmailDaily.Name = "btnEmailDaily";
-            this.btnEmailDaily.Size = new System.Drawing.Size(152, 35);
+            this.btnEmailDaily.Size = new System.Drawing.Size(137, 35);
             this.btnEmailDaily.TabIndex = 75;
             this.btnEmailDaily.Text = "Send to Email";
             this.btnEmailDaily.UseVisualStyleBackColor = true;
@@ -161,9 +161,9 @@
             // btnSaveDaily
             // 
             this.btnSaveDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveDaily.Location = new System.Drawing.Point(5, 331);
+            this.btnSaveDaily.Location = new System.Drawing.Point(38, 361);
             this.btnSaveDaily.Name = "btnSaveDaily";
-            this.btnSaveDaily.Size = new System.Drawing.Size(132, 35);
+            this.btnSaveDaily.Size = new System.Drawing.Size(137, 35);
             this.btnSaveDaily.TabIndex = 74;
             this.btnSaveDaily.Text = "Save";
             this.btnSaveDaily.UseVisualStyleBackColor = true;
@@ -172,7 +172,7 @@
             // lblGenerateDailyReport
             // 
             this.lblGenerateDailyReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenerateDailyReport.Location = new System.Drawing.Point(69, 24);
+            this.lblGenerateDailyReport.Location = new System.Drawing.Point(69, 29);
             this.lblGenerateDailyReport.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGenerateDailyReport.Name = "lblGenerateDailyReport";
             this.lblGenerateDailyReport.Size = new System.Drawing.Size(275, 30);
@@ -181,7 +181,7 @@
             // 
             // mthCalendar
             // 
-            this.mthCalendar.Location = new System.Drawing.Point(43, 128);
+            this.mthCalendar.Location = new System.Drawing.Point(63, 125);
             this.mthCalendar.Margin = new System.Windows.Forms.Padding(7);
             this.mthCalendar.MaxSelectionCount = 1;
             this.mthCalendar.Name = "mthCalendar";
@@ -228,7 +228,7 @@
             this.crvMonthly.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvMonthly.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvMonthly.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.crvMonthly.Location = new System.Drawing.Point(387, 0);
+            this.crvMonthly.Location = new System.Drawing.Point(386, 0);
             this.crvMonthly.Name = "crvMonthly";
             this.crvMonthly.ShowCloseButton = false;
             this.crvMonthly.ShowCopyButton = false;
@@ -240,16 +240,16 @@
             this.crvMonthly.ShowPrintButton = false;
             this.crvMonthly.ShowRefreshButton = false;
             this.crvMonthly.ShowTextSearchButton = false;
-            this.crvMonthly.Size = new System.Drawing.Size(553, 472);
+            this.crvMonthly.Size = new System.Drawing.Size(550, 472);
             this.crvMonthly.TabIndex = 79;
             this.crvMonthly.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // btnEmailMonthly
             // 
             this.btnEmailMonthly.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmailMonthly.Location = new System.Drawing.Point(183, 361);
+            this.btnEmailMonthly.Location = new System.Drawing.Point(198, 361);
             this.btnEmailMonthly.Name = "btnEmailMonthly";
-            this.btnEmailMonthly.Size = new System.Drawing.Size(154, 35);
+            this.btnEmailMonthly.Size = new System.Drawing.Size(137, 35);
             this.btnEmailMonthly.TabIndex = 76;
             this.btnEmailMonthly.Text = "Send to Email";
             this.btnEmailMonthly.UseVisualStyleBackColor = true;
@@ -258,7 +258,7 @@
             // btnSaveMonthly
             // 
             this.btnSaveMonthly.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveMonthly.Location = new System.Drawing.Point(9, 361);
+            this.btnSaveMonthly.Location = new System.Drawing.Point(38, 361);
             this.btnSaveMonthly.Name = "btnSaveMonthly";
             this.btnSaveMonthly.Size = new System.Drawing.Size(137, 35);
             this.btnSaveMonthly.TabIndex = 75;
@@ -283,7 +283,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(3, 420);
+            this.button1.Location = new System.Drawing.Point(1, 424);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 77;
