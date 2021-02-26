@@ -97,7 +97,8 @@ namespace IOOP_assignment
             string filename = $"Report-{mthCalendar.SelectionStart.ToString("ddMMMMyyyy")}";
             Attachment report = new Attachment(rdDaily.ExportToStream(ExportFormatType.PortableDocFormat), $"{filename}.pdf"); //https://www.aspsnippets.com/Articles/Export-Crystal-Report-to-PDF-and-send-as-Email-Attachment-in-ASPNet.aspx
             mainUser.SendEmail("no.reply", "", report);
-     
+            MessageBox.Show($"Report is sent to: {mainUser.Email}");
+
         }
 
         private void btnLeftArrow_Click(object sender, EventArgs e)
@@ -208,6 +209,7 @@ namespace IOOP_assignment
             string filename = $"Report-{mthCalendar.SelectionStart.ToString("MMMMyyyy")}";
             Attachment report = new Attachment(rdMonthly.ExportToStream(ExportFormatType.PortableDocFormat), $"{filename}.pdf"); //https://www.aspsnippets.com/Articles/Export-Crystal-Report-to-PDF-and-send-as-Email-Attachment-in-ASPNet.aspx
             mainUser.SendEmail("no.reply", "", report);
+            MessageBox.Show($"Report is sent to: {mainUser.Email}");
         }
 
         private void button1_Click(object sender, EventArgs e)

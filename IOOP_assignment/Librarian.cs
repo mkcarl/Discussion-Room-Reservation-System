@@ -58,7 +58,7 @@ namespace IOOP_assignment
             }
             else
             {
-                if (MessageBox.Show($"Are you sure you want to aprove the reservation for the ReservationID: {reservationID} ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show($"Are you sure you want to approve the reservation for the ReservationID: {reservationID} ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cmd.ExecuteNonQuery();
                 }
@@ -87,7 +87,7 @@ namespace IOOP_assignment
             }
             else
             {
-                if (MessageBox.Show($"Are you sure you want to aprove the reservation for the ReservationID: {reservationID} ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show($"Are you sure you want to reject the reservation for the ReservationID: {reservationID} ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cmd.ExecuteNonQuery();
                 }
