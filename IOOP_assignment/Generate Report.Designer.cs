@@ -60,6 +60,7 @@
             this.btnMar = new System.Windows.Forms.Button();
             this.btnApr = new System.Windows.Forms.Button();
             this.MonthReport = new IOOP_assignment.DailyReport();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabDaily.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,6 +83,7 @@
             // tabDaily
             // 
             this.tabDaily.BackColor = System.Drawing.Color.White;
+            this.tabDaily.Controls.Add(this.button2);
             this.tabDaily.Controls.Add(this.crvDaily);
             this.tabDaily.Controls.Add(this.pictureBox1);
             this.tabDaily.Controls.Add(this.btnBack);
@@ -181,7 +183,7 @@
             // 
             // mthCalendar
             // 
-            this.mthCalendar.Location = new System.Drawing.Point(63, 125);
+            this.mthCalendar.Location = new System.Drawing.Point(71, 125);
             this.mthCalendar.Margin = new System.Windows.Forms.Padding(7);
             this.mthCalendar.MaxSelectionCount = 1;
             this.mthCalendar.Name = "mthCalendar";
@@ -512,6 +514,17 @@
             this.btnApr.UseVisualStyleBackColor = true;
             this.btnApr.Click += new System.EventHandler(this.btnApr_Click);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(89, 307);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(191, 35);
+            this.button2.TabIndex = 79;
+            this.button2.Text = "Generate Preview ->";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form_Generate_Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -568,6 +581,7 @@
         private DailyReport MonthReport;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvMonthly;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvDaily;
+        private System.Windows.Forms.Button button2;
     }
 }
 

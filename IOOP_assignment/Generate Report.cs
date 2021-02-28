@@ -80,8 +80,6 @@ namespace IOOP_assignment
 
         private void mthCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
-            DateTime selectedDay = mthCalendar.SelectionStart;
-            Reload_Report_Daily(selectedDay, selectedDay.AddDays(1));
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -215,6 +213,12 @@ namespace IOOP_assignment
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DateTime selectedDay = mthCalendar.SelectionStart;
+            Reload_Report_Daily(selectedDay, selectedDay.AddDays(1));
         }
     }
 }
